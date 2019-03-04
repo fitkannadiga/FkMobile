@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Home</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="!fakeslider">
+        <ion-slides *ngIf="slideData" pager="true" [options]="slideOpts">
+            <ion-slide *ngFor="let slide of slideData" (click)="openSlideInfo(slide);">
+                <img [src]="slide.img_path" />
+            </ion-slide>
+        </ion-slides>
+    </div>
+    <div id="fake-slider-wrapper" *ngIf="fakeslider">
+        <ion-slides pager="true" [options]="slideOpts">
+            <ion-slide>
+                <div class="black-animation">Fit Kannadiga</div>
+            </ion-slide>
+            <ion-slide>
+                <div class="green-animation">Fit Kannadiga</div>
+            </ion-slide>
+            <ion-slide>
+                <div class="purple-animation">Fit Kannadiga</div>
+            </ion-slide>
+        </ion-slides>
+    </div>
+</ion-content>

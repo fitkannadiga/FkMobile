@@ -1,0 +1,41 @@
+[{
+        "muscle": "bicep",
+        "description": "<div><p>The biceps is a muscle on the front part of the upper arm. The biceps includes a &ldquo;short head&rdquo; and a &ldquo;long head&rdquo; that work as a single muscle.</p><p>The biceps is attached to the arm bones by tough connective tissues called tendons. The tendons that connect the biceps muscle to the shoulder joint in two places are called the proximal biceps tendons. The tendon that attaches the biceps muscle to the forearm bones (radius and ulna) is called the distal biceps tendon. When the biceps contracts, it pulls the forearm up and rotates it outward.</p></div>",
+        "img_path": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/MuscleGroup%2Fbicep.jpg?alt=media&token=1a9f6bf5-0e0b-43f2-8fdf-21c70a1316d3",
+        "workouts": [{
+                "exercise_name": "Bicep Curl",
+                "exercise_image": "https://media.giphy.com/media/3oriNY7jFpuXvzBBTO/giphy.gif",
+                "exercise_info": "Bicep Curl",
+                "exercise_video": "Bicep Curl",
+                "exercise_note": "Bicep Curl"
+            },
+            {
+                "exercise_name": "Bicep Curl",
+                "exercise_image": "https://media.giphy.com/media/3oriNY7jFpuXvzBBTO/giphy.gif",
+                "exercise_info": "Bicep Curl",
+                "exercise_video": "Bicep Curl",
+                "exercise_note": "Bicep Curl"
+            }
+        ]
+    },
+    {
+        "muscle": "chest",
+        "description": "<div><p>The biceps is a muscle on the front part of the upper arm. The biceps includes a &ldquo;short head&rdquo; and a &ldquo;long head&rdquo; that work as a single muscle.</p><p>The biceps is attached to the arm bones by tough connective tissues called tendons. The tendons that connect the biceps muscle to the shoulder joint in two places are called the proximal biceps tendons. The tendon that attaches the biceps muscle to the forearm bones (radius and ulna) is called the distal biceps tendon. When the biceps contracts, it pulls the forearm up and rotates it outward.</p></div>",
+        "img_path": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/MuscleGroup%2Fbicep.jpg?alt=media&token=1a9f6bf5-0e0b-43f2-8fdf-21c70a1316d3",
+        "workouts": [{
+                "exercise_name": "Bicep Curl",
+                "exercise_image": "https://media.giphy.com/media/3oriNY7jFpuXvzBBTO/giphy.gif",
+                "exercise_info": "Bicep Curl",
+                "exercise_video": "Bicep Curl",
+                "exercise_note": "Bicep Curl"
+            },
+            {
+                "exercise_name": "Bicep Curl",
+                "exercise_image": "https://media.giphy.com/media/3oriNY7jFpuXvzBBTO/giphy.gif",
+                "exercise_info": "Bicep Curl",
+                "exercise_video": "Bicep Curl",
+                "exercise_note": "Bicep Curl"
+            }
+        ]
+    }
+]

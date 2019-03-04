@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <span slot="end" class="close-text" (click)="closeModal();">close</span>
+        <ion-title>Client Story</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <img class="testimonial-image" [src]="value.img" />
+    <ion-grid>
+        <ion-row>
+            <ion-col size="12" class="name-wrapper">
+                <p>{{value.name}}</p>
+            </ion-col>
+            <ion-col size="12" class="story-wrapper">
+                <div class="user-short-story" [innerHTML]="value.testimonial"></div>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

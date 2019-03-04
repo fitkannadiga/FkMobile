@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Fitness Chat Support</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding *ngIf="isClient">
+    <div id="comment-wrapper">
+        <div *ngFor="let comment of commentData" [ngClass]="comment.userID == userID ? 'userClass' : 'adminClass'">
+            <p class="message">
+                {{comment.message}}
+            </p>
+            <p class="time">{{timeDifference(comment.time)}}</p>
+        </div>
+    </div>
+</ion-content>
+<ion-content *ngIf="!isClient">
+    <div id="non-client-text">
+        <ion-icon name="chatboxes" color="success"></ion-icon>
+        <p>Please contact admin for online coaching and chat support</p>
+    </div>
+</ion-content>
+<ion-footer *ngIf="isClient">
+    <ion-toolbar>
+        <ion-row>
+            <ion-col id="text-area-wrapper">
+                <!-- <ion-input placeholder="Type a message..." id="diet-chat-message" [(ngModel)]="userDietComment"></ion-input> -->
+                <ion-textarea placeholder="Type a message..." id="diet-chat-message" [(ngModel)]="userDietComment"></ion-textarea>
+            </ion-col>
+            <ion-col size="2">
+                <ion-button color="primary" icon-only (click)="addUserComment();">
+                    <ion-icon name="send"></ion-icon>
+                </ion-button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,68 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Interval Timer</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="timer-content-wrapper" padding *ngIf="!changeDisplay">
+    <div id="timer-wrapper">
+        <div id="set-wrapper">
+            <ion-row>
+                <ion-col>Sets</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5 (press)="removeSetsInterval()" (pressup)="stopSetsInterval()" (click)="remove('setCount')" text-right>
+                    <ion-icon name="remove-circle"></ion-icon>
+                </ion-col>
+                <ion-col col-2 text-center>{{setCount}}</ion-col>
+                <ion-col col-5 (press)="addSetsInterval()" (pressup)="stopSetsInterval()" (click)="add('setCount')" text-left>
+                    <ion-icon name="add-circle"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div id="interval-wrapper">
+            <ion-row>
+                <ion-col>Workout Interval (sec)</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5 (press)="removeWorkoutInterval()" (pressup)="stopWorkoutInterval()" (click)="remove('intervalCount')" text-right>
+                    <ion-icon name="remove-circle"></ion-icon>
+                </ion-col>
+                <ion-col col-2 text-center>{{intervalCount}}</ion-col>
+                <ion-col col-5 (press)="addWorkoutInterval()" (pressup)="stopWorkoutInterval()" (click)="add('intervalCount')" text-left>
+                    <ion-icon name="add-circle"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </div>
+        <div id="set-wrapper">
+            <ion-row>
+                <ion-col>Rest Interval (sec)</ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col col-5 (press)="removeRestInterval()" (pressup)="stopRestInterval()" (click)="remove('restCount')" text-right>
+                    <ion-icon name="remove-circle"></ion-icon>
+                </ion-col>
+                <ion-col col-2 text-center>{{restCount}}</ion-col>
+                <ion-col col-5 (press)="addRestInterval()" (pressup)="stopRestInterval()" (click)="add('restCount')" text-left>
+                    <ion-icon name="add-circle"></ion-icon>
+                </ion-col>
+            </ion-row>
+        </div>
+        <ion-button id="start-btn" color="primary" size="medium" shape="round" (click)="initTimer();">Start Workout</ion-button>
+    </div>
+</ion-content>
+<div id="timer-map" *ngIf="changeDisplay" [ngStyle]="{'background-color': bgColor}">
+    <p id="blink-text">{{timerText}}</p>
+    <div id="counter">
+        <p>Sets Remaining<br/><strong id="set">{{tempSet}}</strong></p>
+        <p>Exercise Interval Left<br/><strong id="interval">{{tempInterval}}</strong> sec</p>
+        <p>Rest Time Left<br/><strong id="rest">{{tempRest}} sec</strong></p>
+        <p text-center class="fk-paddingTop-1" id="stop-play-icon">
+            <ion-icon [name]="statusChange" (click)="playPauseTimer();"></ion-icon>
+            <ion-icon name="close-circle" (click)="exitTimer();"></ion-icon>
+        </p>
+    </div>
+</div>

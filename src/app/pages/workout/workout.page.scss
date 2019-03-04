@@ -1,0 +1,61 @@
+ion-segment {
+    ion-segment-button {
+        height: 40px;
+        text-align: center;
+        font-size: 1rem;
+        background-color: #dcdcdc !important;
+        font-weight: bold;
+    }
+    ion-segment-button.segment-button-checked {
+        background-color: #3B4EAC !important;
+        color: #FFF !important;
+    }
+}
+
+ion-content#split-wrapper {
+    span.tags {
+        padding: 5px;
+        background-color: #dcdcdc;
+        margin: 5px;
+        font-weight: bold;
+    }
+    p.card-title {
+        font-weight: bold;
+        margin-top: 0px !important;
+    }
+}
+
+ion-content#individual-wrapper {
+    ion-row {
+        ion-col {
+            text-align: center;
+        }
+    }
+}
+
+div#fake-workout-wrapper {
+    ion-card {
+        height: 120px;
+        ion-row.workout-content {
+            height: 70%;
+            ion-col {
+                div {
+                    height: 100%;
+                }
+                p {
+                    height: 25px;
+                    margin: 0px !important;
+                }
+            }
+        }
+        ion-row.workout-tags {
+            height: 30%;
+            span {
+                height: 15px;
+                width: 60px;
+                display: inline-block;
+                margin: 5px 10px;
+            }
+        }
+    }
+}

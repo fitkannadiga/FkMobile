@@ -1,0 +1,56 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Articles</ion-title>
+        <ion-button slot="end" (click)="presentLangSelector()" color="light">{{presentLang}}</ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div *ngIf="!fakeData">
+        <ion-card *ngFor="let article of articleDataObject; let i = index;">
+            <ion-grid>
+                <ion-row class="content-row" (click)="openArticle(article, i);">
+                    <ion-col size="4">
+                        <img class="article-img" [src]="article.img_path" />
+                    </ion-col>
+                    <ion-col size="8" class="article-desc">
+                        {{article.title}}
+                    </ion-col>
+                </ion-row>
+                <ion-row class="count">
+                    <ion-col size="6" class="fk-center">
+                        <ion-icon color="primary" ios="ios-eye" md="md-eye"></ion-icon> {{article.view}} Views
+                    </ion-col>
+                    <ion-col size="6" class="fk-center">
+                        <ion-icon color="secondary" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon> {{article.comment ? totalComments(article.comment) : 0 }} Comments
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+    </div>
+    <div *ngIf="fakeData" id="fake-article-wrapper">
+        <ion-card *ngFor="let list of fakeList">
+            <ion-grid>
+                <ion-row class="content">
+                    <ion-col size="4">
+                        <div class="animate-skeleton-background"></div>
+                    </ion-col>
+                    <ion-col size="8">
+                        <p class="animate-skeleton-background"></p>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="count">
+                    <ion-col size="6">
+                        <p class="animate-skeleton-background"></p>
+                    </ion-col>
+                    <ion-col size="6">
+                        <p class="animate-skeleton-background"></p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+    </div>
+</ion-content>

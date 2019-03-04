@@ -1,0 +1,28 @@
+ion-toolbar {
+    span.close-text {
+        color: #3B4EAC;
+        font-weight: bold;
+        padding-right: 10px;
+    }
+}
+
+ion-content {
+    text-align: center;
+    img.testimonial-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        margin: auto;
+    }
+    ion-grid {
+        text-align: left;
+        ion-col.name-wrapper {
+            p {
+                font-weight: bold;
+                text-align: center;
+                font-size: 1.2rem;
+                margin-bottom: 0px;
+            }
+        }
+    }
+}

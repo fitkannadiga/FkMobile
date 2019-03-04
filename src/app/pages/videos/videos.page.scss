@@ -1,0 +1,79 @@
+    ion-toolbar {
+        ion-icon.search-icon {
+            float: right;
+            position: absolute;
+            right: 20px;
+            font-size: 1.2rem;
+        }
+    }
+    
+    ion-card {
+        margin: 10px 0px !important;
+        width: 100% !important;
+        position: relative;
+        img {
+            display: inline-block !important;
+            width: 35% !important;
+            float: right;
+        }
+        span.counts {
+            color: #000;
+            display: inline-block !important;
+            padding: 10px 5px !important;
+            height: 10px !important;
+        }
+        ion-card-content {
+            display: inline-block !important;
+            width: 65% !important;
+            padding: 2px 5px !important;
+            float: left !important;
+            ion-row {
+                position: absolute;
+                display: block !important;
+                bottom: 0;
+            }
+            ion-card-title {
+                width: 100% !important;
+                font-size: 1.3rem !important;
+                padding-left: 5px !important;
+            }
+        }
+        span.video-card-title {
+            display: block;
+            font-weight: bold;
+            font-size: 1rem !important;
+            padding-bottom: 4px;
+        }
+        span.video-card-desc {
+            font-size: 0.8rem !important;
+            display: block;
+            line-height: 1rem;
+            overflow: auto;
+            word-break: break-all;
+            /* text-overflow: ellipsis; */
+            height: 30px;
+        }
+    }
+    
+    #fake-wrapper {
+        div#fake-video-wrapper {
+            height: 180px;
+        }
+        ion-card {
+            height: 100px;
+            ion-row {
+                height: 100%;
+                ion-col {
+                    p {
+                        height: 25px;
+                        margin-bottom: 10px;
+                    }
+                }
+                ion-col.fake-img-wrapper {
+                    div {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }

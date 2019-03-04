@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Workout Plan</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 id="plan-header">{{clientWorkoutData.header}}</h3>
+    <div class="videowrapper embed-responsive embed-responsive-16by9">
+        <video #videoPlayer id="yt_video_player" autoplay width="100%" class="embed-responsive-item" autobuffer controls playsinline [src]="clientWorkoutData.video_src"></video>
+    </div>
+    <div [innerHTML]="clientWorkoutData.workoutPlan"></div>
+    <p *ngIf="clientWorkoutData.notes != ''" class="note-text"><span color="danger">Note:</span> {{clientWorkoutData.notes}}</p>
+</ion-content>

@@ -1,0 +1,53 @@
+<ion-app>
+    <ion-split-pane>
+        <ion-menu type="push" id="myFitnessMenu">
+            <ion-header>
+                <ion-toolbar id="user-toolbar" color="medium">
+                    <div id="user-img-wrapper">
+                        <img id="user-img" [src]="imgPath" (click)="openPage('/profile')" onError="src = 'assets/default.png'" />
+                    </div>
+                    <span class="user-name fk-bold">{{userProfile?.fullname}}</span>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <ion-list>
+                    <ion-item (click)="openPage('/profile')">
+                        <ion-icon ios="ios-person" md="md-person"></ion-icon>&nbsp;&nbsp;&nbsp;My Profile
+                    </ion-item>
+                    <ion-item (click)="openPage('/articles')">
+                        <ion-icon ios="ios-document" md="md-document"></ion-icon>&nbsp;&nbsp;&nbsp;Articles
+                    </ion-item>
+                    <ion-item (click)="openPage('/workout')">
+                        <ion-icon ios="ios-body" md="md-body"></ion-icon>&nbsp;&nbsp;&nbsp;Workouts
+                    </ion-item>
+                    <ion-item (click)="openPage('/tools')">
+                        <ion-icon name="hammer"></ion-icon>&nbsp;&nbsp;&nbsp;Tools
+                    </ion-item>
+                    <ion-item (click)="openPage('/hire-coach')">
+                        <ion-icon name="bicycle"></ion-icon>&nbsp;&nbsp;&nbsp;Hire Coach
+                    </ion-item>
+                    <ion-item (click)="openPage('/custom-diet-workout')">
+                        <ion-icon name="build"></ion-icon>&nbsp;&nbsp;&nbsp;Diet & Workout
+                    </ion-item>
+                    <ion-item (click)="openPage('/chat')">
+                        <ion-icon name="chatbubbles"></ion-icon>&nbsp;&nbsp;&nbsp;Chat
+                        <span *ngIf="newMsgCount > 0" id="new-message">{{newMsgCount}}</span>
+                    </ion-item>
+                    <ion-item (click)="openPage('/faq')">
+                        <ion-icon name="help"></ion-icon>&nbsp;&nbsp;&nbsp;FAQ's
+                    </ion-item>
+                    <ion-item (click)="openPage('/feedback')">
+                        <ion-icon name="create"></ion-icon>&nbsp;&nbsp;&nbsp;Feedback
+                    </ion-item>
+                    <ion-item (click)="openPage('/about')">
+                        <ion-icon name="contacts"></ion-icon>&nbsp;&nbsp;&nbsp;About Us
+                    </ion-item>
+                    <ion-item (click)="logout()">
+                        <ion-icon name="log-out"></ion-icon>&nbsp;&nbsp;&nbsp;Logout
+                    </ion-item>
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet main></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>

@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Workout Details</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <div class="videowrapper embed-responsive embed-responsive-16by9" *ngIf="workoutDetails.workout_video != ''">
+            <video #videoPlayer id="yt_video_player" autoplay width="100%" class="embed-responsive-item" autobuffer controls [poster]="firebasePoster" playsinline [src]="firebaseSource"></video>
+        </div>
+        <img *ngIf="workoutDetails.workout_video == ''" [src]="workoutDetails.workout_img" [alt]="workoutDetails.workout_title" />
+        <ion-card-content>
+            <ion-card-title>
+                {{workoutDetails.workout_title}}
+            </ion-card-title>
+            <div [innerHTML]="workoutDetails.workout_desc"></div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

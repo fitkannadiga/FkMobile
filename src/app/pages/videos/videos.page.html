@@ -1,0 +1,53 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title *ngIf="!toggled">
+            Videos
+            <ion-icon class="search-icon" (click)="toggleSearch();" ios="ios-search" md="md-search"></ion-icon>
+        </ion-title>
+        <ion-searchbar *ngIf="toggled" (ionInput)="getItems($event)" [showCancelButton]="true" (ionCancel)="toggleSearch()"></ion-searchbar>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content id="listScroll">
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="Pull to refresh" refreshingSpinner="circles" refreshingText="Refreshing...">
+        </ion-refresher-content>
+    </ion-refresher>
+    <div *ngIf="!fakeData">
+        <div class="videowrapper embed-responsive embed-responsive-16by9">
+            <video #videoPlayer id="yt_video_player" autoplay width="100%" class="embed-responsive-item" autobuffer controls [poster]="firebasePoster" playsinline [src]="firebaseSource"></video>
+        </div>
+
+        <ion-card [id]="video.video_id" *ngFor="let video of videoList" (click)="changeVideo(video)">
+            <img class="" [src]="'https://i4.ytimg.com/vi/'+video.video_id+'/hqdefault.jpg'" />
+            <ion-card-content>
+                <ion-card-title>
+                    <span class="video-card-title">{{video.video_title}}</span>
+                    <span class="video-card-desc">{{video.video_sd}}</span>
+                </ion-card-title>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <div *ngIf="fakeData" id="fake-wrapper">
+        <div id="fake-video-wrapper" class="animate-skeleton-background"></div>
+        <ion-card *ngFor="let list of fakelist">
+            <ion-row>
+                <ion-col size="8">
+                    <ion-card-content>
+                        <ion-card-title>
+                            <p class="animate-skeleton-background"></p>
+                            <p class="animate-skeleton-background"></p>
+                        </ion-card-title>
+                    </ion-card-content>
+                </ion-col>
+                <ion-col class="fake-img-wrapper" size="4">
+                    <div class="animate-skeleton-background"></div>
+                </ion-col>
+            </ion-row>
+
+        </ion-card>
+    </div>
+</ion-content>

@@ -1,0 +1,57 @@
+ion-content {
+    p#info-text {
+        color: #0000FF;
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+    div.macros-slider {
+        margin-top: 50px;
+    }
+    ion-item {
+        div.item-native {
+            padding-left: 0px !important;
+        }
+    }
+    ion-range {
+        padding: 0px !important;
+    }
+    ion-label {
+        margin-bottom: 0px !important;
+    }
+    ion-range#carbs {
+        pointer-events: none !important;
+        --bar-background-active: #F19733 !important;
+        --knob-background: #F19733 !important;
+        .range-bar-active,
+        .range-knob,
+        .range-disabled {
+            background: var(--ion-color-carbs) !important;
+            background-color: var(--ion-color-carbs) !important;
+            color: var(--ion-color-carbs-contrast) !important;
+        }
+    }
+    ion-range#proteins {
+        pointer-events: none !important;
+        --bar-background-active: #E2573F !important;
+        --knob-background: #E2573F !important;
+        .range-bar-active,
+        .range-knob,
+        .range-disabled {
+            background: var(--ion-color-proteins) !important;
+            background-color: var(--ion-color-proteins) !important;
+            color: var(--ion-color-proteins-contrast);
+        }
+    }
+    ion-range#fats {
+        pointer-events: none !important;
+        --bar-background-active: #FDF731 !important;
+        --knob-background: #FDF731 !important;
+        .range-bar-active,
+        .range-knob,
+        .range-disabled {
+            background: var(--ion-color-fats) !important;
+            background-color: var(--ion-color-fats) !important;
+            color: var(--ion-color-fats-contrast);
+        }
+    }
+}

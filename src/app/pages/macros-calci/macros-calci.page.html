@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Macros Calculator</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label color="dark" position="floating">Your daily calorie intake</ion-label>
+        <ion-input type="number" [(ngModel)]="calories" name="calories" required (ionBlur)="showMacros()"></ion-input>
+    </ion-item>
+    <p id="info-text" (click)="showBmrCalci();" text-left>Don't know your daily calorie intake?</p>
+    <ion-item>
+        <ion-label color="dark" position="floating">Diet Type</ion-label>
+        <ion-select [(ngModel)]="dietType" name="type" required (ionChange)="showMacros();">
+            <ion-select-option value="keto">Keto (05:35:60)</ion-select-option>
+            <ion-select-option value="lcd">Low Carb (25:35:40)</ion-select-option>
+            <ion-select-option value="zone">Zone Diet (40:30:30)</ion-select-option>
+            <ion-select-option value="moderate">Moderate carb Diet (50:30:20)</ion-select-option>
+            <ion-select-option value="high">High carb Diet (60:25:15)</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <div class="macros-slider">
+        <ion-label>Carbohydrate <span *ngIf="in_carbs > 0">- {{in_carbs}}gms</span><span float-right *ngIf="carbs > 0">{{carbs}}%</span></ion-label>
+        <ion-range id="carbs" min="0" max="100" color="carbs" [(ngModel)]="carbs"></ion-range>
+        <ion-label>Protein <span *ngIf="in_proteins > 0">- {{in_proteins}}gms</span><span float-right *ngIf="proteins > 0">{{proteins}}%</span></ion-label>
+        <ion-range id="proteins" min="0" max="100" color="proteins" [(ngModel)]="proteins"></ion-range>
+        <ion-label>Fat <span *ngIf="in_fats > 0">- {{in_fats}}gms</span><span float-right *ngIf="fats > 0">{{fats}}%</span></ion-label>
+        <ion-range id="fats" min="0" max="100" color="fats" [(ngModel)]="fats"></ion-range>
+    </div>
+</ion-content>

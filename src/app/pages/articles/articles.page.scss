@@ -1,0 +1,29 @@
+ion-content {
+    --background: var(--ion-background-color, #dcdcdc);
+    ion-card {
+        background-color: #FFF;
+        margin: 20px 15px;
+    }
+}
+
+div#fake-article-wrapper {
+    ion-card {
+        height: 100px;
+        ion-grid {
+            height: 100%;
+        }
+        ion-row.count {
+            height: 30%;
+        }
+        ion-row.content {
+            height: 70%;
+            div {
+                height: 100%;
+            }
+        }
+        p {
+            height: 20px;
+            margin: 0px !important;
+        }
+    }
+}

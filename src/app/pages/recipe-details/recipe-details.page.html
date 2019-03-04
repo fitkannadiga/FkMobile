@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Recipe Detail</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img *ngIf="recipeData.recipe_img" [src]="recipeData.recipe_img" />
+        <ion-card-content>
+            <ion-card-title>
+                {{recipeData.recipe_title}}
+            </ion-card-title>
+            <div [innerHTML]="recipeData.recipe_desc"></div>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

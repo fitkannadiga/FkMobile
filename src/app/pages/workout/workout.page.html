@@ -1,0 +1,84 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Fitness Playground</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-segment [value]="selectedSegment" color="medium">
+        <ion-segment-button value="split" (click)="segmentChanged('split');">
+            <ion-label>Workouts</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="individual" (click)="segmentChanged('individual');">
+            <ion-label>Muscle Groups</ion-label>
+        </ion-segment-button>
+    </ion-segment>
+    <ion-content *ngIf="selectedSegment == 'split'" id="split-wrapper">
+        <ion-searchbar (ionInput)="getItems($event)" showCancelButton (ionCancel)="cancelSearch()" [(ngModel)]="workoutSearchText"></ion-searchbar>
+        <div *ngIf="!fakeWorkout">
+            <ion-card *ngFor="let list of workoutsList">
+                <ion-row (click)="displayWorkout(list);">
+                    <ion-col>
+                        <img [src]="list.workout_img" />
+                    </ion-col>
+                    <ion-col class="description">
+                        <p class="card-title">{{list.workout_title}}</p>
+                        <span class="card-subtitle">{{list.workout_sd}}</span>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <span class="tags" *ngFor="let tag of list.workout_tags" (click)="searchTags(tag);">{{tag}}</span>
+                </ion-row>
+            </ion-card>
+        </div>
+        <div *ngIf="fakeWorkout" id="fake-workout-wrapper">
+            <ion-card *ngFor="let list of fakeWorkoutList">
+                <ion-row class="workout-content">
+                    <ion-col>
+                        <div class="animate-skeleton-background"></div>
+                    </ion-col>
+                    <ion-col class="description">
+                        <p class="animate-skeleton-background"></p>
+                    </ion-col>
+                </ion-row>
+                <ion-row class="workout-tags">
+                    <span class="animate-skeleton-background"></span>
+                    <span class="animate-skeleton-background"></span>
+                </ion-row>
+            </ion-card>
+        </div>
+    </ion-content>
+    <ion-content *ngIf="selectedSegment == 'individual'" padding id="individual-wrapper">
+        <ion-row>
+            <ion-col (click)="openWorkouts('bicep');">
+                <img src="assets/icon/bicep.png" />
+                <p>Biceps</p>
+            </ion-col>
+            <ion-col (click)="openWorkouts('chest');">
+                <img src="assets/icon/bicep.png" />
+                <p>Biceps</p>
+            </ion-col>
+            <ion-col (click)="openWorkouts('back');">
+                <img src="assets/icon/bicep.png" />
+                <p>Biceps</p>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col (click)="openWorkouts('bicep');">
+                <img src="assets/icon/bicep.png" />
+                <p>Biceps</p>
+            </ion-col>
+            <ion-col (click)="openWorkouts('chest');">
+                <img src="assets/icon/bicep.png" />
+                <p>Biceps</p>
+            </ion-col>
+            <ion-col (click)="openWorkouts('back');">
+                <img src="assets/icon/bicep.png" />
+                <p>Biceps</p>
+            </ion-col>
+        </ion-row>
+    </ion-content>
+</ion-content>

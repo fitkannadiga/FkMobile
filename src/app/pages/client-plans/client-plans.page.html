@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>My Plans</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h2 text-center color="carbs">Lifestyle Plans (Monthly)</h2>
+    <ion-card id="lifestyle-diet" (click)="openPaymentOption();">
+        <ion-card-header>
+            Diet Plan
+        </ion-card-header>
+        <ion-card-content>
+            Just &#8377; 1299/- <br/> Includes one time consultation & customized diet plan based on your lifestyle/Need.
+        </ion-card-content>
+    </ion-card>
+    <ion-card id="lifestyle-workout">
+        <ion-card-header>
+            Workout Plan
+        </ion-card-header>
+        <ion-card-content>
+            Just &#8377; 799/- <br/> Customized workout plan which perfectly fits as per your busy schedule.
+        </ion-card-content>
+    </ion-card>
+    <h2 text-center color="carbs">Transformation Plans (3 Months)</h2>
+    <ion-card id="transformation-fat-shredder" (click)="openPaymentOption();">
+        <ion-card-header>
+            Fat Shredder
+        </ion-card-header>
+        <ion-card-content>
+            Just &#8377; 8770/- <br/> Includes one time consultation, daily updates from coach & revision of diet plan as and when needed to loss fat faster.
+        </ion-card-content>
+    </ion-card>
+    <ion-card id="transformation-be-fit">
+        <ion-card-header>
+            Be Fit
+        </ion-card-header>
+        <ion-card-content>
+            Just &#8377; 9990/- <br/> Completely customized diet and workout plan with multiple voice call consultation and daily updates.
+        </ion-card-content>
+    </ion-card>
+</ion-content>

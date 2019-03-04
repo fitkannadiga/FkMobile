@@ -1,0 +1,24 @@
+    ion-card.fake-data-wrapper {
+        div.fake-img-wrapper {
+            height: 120px;
+        }
+        ion-card-content {
+            p {
+                height: 25px;
+                margin: 10px 0px;
+            }
+        }
+    }
+    
+    ion-card-header {
+        padding: 0px !important;
+    }
+    
+    ion-card.recipe-card {
+        ion-card-content {
+            padding-top: 10px;
+            ion-card-title {
+                padding: 5px 0px;
+            }
+        }
+    }

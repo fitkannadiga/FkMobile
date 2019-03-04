@@ -1,0 +1,20 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>FAQ</ion-title>
+        <!-- <ion-button slot="end" (click)="presentLangSelector()" color="light">{{presentLang}}</ion-button> -->
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list class="accordion-list">
+        <div *ngFor="let item of finalFaqObject; let i = index" no-lines no-padding>
+            <p class="question" (click)="toggleSection(i)">
+                <span class="q-text">Q &nbsp;</span> {{item.question}}
+            </p>
+            <p class="answer" *ngIf="item.open" no-lines>{{item.answer}}</p>
+        </div>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-content padding>
+    <div id="login-wrapper">
+        <img id="logo-img" src="./assets/logo.png" />
+        <form id="login-form" #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+            <ion-item>
+                <ion-label position="floating">Email</ion-label>
+                <ion-input type="email" required [(ngModel)]="email" name="email"></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label position="floating">Password</ion-label>
+                <ion-input type="Password" required [(ngModel)]="password" name="password"></ion-input>
+            </ion-item>
+            <ion-button class="fk-marginTop-25" id="login-btn" expand="full" size="large" type="submit">Login</ion-button>
+        </form>
+        <ion-row>
+            <ion-col>
+                <p>New User? <a routerLink="/registration">Sign Up</a></p>
+                <p>Forgot Password? <span id="reset-link" (click)="resetPassword()">Reset Password</span></p>
+                <p id="google-login-btn" (click)="loginWithGoogle()">
+                    <img src="./assets/icon/google.png" /> <span>Login with Google</span>
+                </p>
+                <!-- <ion-button expand="full" size="large" color="light" (click)="loginWithGoogle()">Google Login</ion-button> -->
+            </ion-col>
+        </ion-row>
+    </div>
+</ion-content>

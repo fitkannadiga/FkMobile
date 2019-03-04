@@ -1,0 +1,51 @@
+div.adminClass {
+    width: 80%;
+    float: left;
+    p.message {
+        background: #3880ff;
+        padding: 8px 15px;
+        border-radius: 15px;
+        margin-bottom: 0px;
+    }
+    p.time {
+        padding: 0px;
+        margin: 0px;
+        text-align: left;
+        opacity: 0.8;
+        font-size: 0.7rem;
+    }
+}
+
+div.userClass {
+    width: 80%;
+    float: right;
+    p.message {
+        background: #dcdcdc;
+        padding: 8px 15px;
+        border-radius: 15px;
+        margin-bottom: 0px;
+    }
+    p.time {
+        padding: 0px;
+        margin: 0px;
+        text-align: right;
+        opacity: 0.8;
+        font-size: 0.7rem;
+    }
+}
+
+div#non-client-text {
+    position: absolute;
+    padding: 20px;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+    height: 300px;
+    text-align: center;
+    font-weight: bold;
+    ion-icon {
+        font-size: 5rem;
+    }
+}

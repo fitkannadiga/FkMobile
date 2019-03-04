@@ -1,0 +1,33 @@
+div#non-customer {
+    text-align: center;
+    p#alert-icon {
+        font-size: 4rem;
+        color: #d43b3d;
+        margin-bottom: 0px;
+    }
+}
+
+div#customer {
+    ion-card {
+        ion-row {
+            ion-col.text {
+                text-align: center;
+                font-size: 1.5rem;
+                font-weight: bold;
+                display: block;
+                padding-top: 30px;
+                color: #000;
+            }
+            span#new-msg-count {
+                display: block;
+                font-size: 0.8rem;
+                padding: 7px;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background-color: #633ce0;
+                color: #FFF;
+            }
+        }
+    }
+}

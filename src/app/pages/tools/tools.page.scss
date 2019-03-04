@@ -1,0 +1,17 @@
+ion-content {
+    text-align: center;
+    margin-top: 60px !important;
+    ion-row {
+        ion-col {
+            margin: 20px 5px;
+            border: 1px solid #DCDCDC;
+            border-radius: 15px;
+            padding: 10px;
+            font-weight: bold;
+            font-size: 1rem;
+            -webkit-box-shadow: 5px 5px 3px 0px rgba(237, 237, 237, 1);
+            -moz-box-shadow: 5px 5px 3px 0px rgba(237, 237, 237, 1);
+            box-shadow: 5px 5px 3px 0px rgba(237, 237, 237, 1);
+        }
+    }
+}

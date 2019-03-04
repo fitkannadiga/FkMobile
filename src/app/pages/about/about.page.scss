@@ -1,0 +1,27 @@
+.background-color-fb {
+    --background-color: #3B5998 !important;
+}
+
+.background-color-insta {
+    //background-color: #3B5998 !important;
+    --background: linear-gradient(to bottom right, #515BD4 0%, #8134AF 25%, #DD2A7B 50%, #FEDA77 75%, #F58529 100%);
+}
+
+.background-color-youtube {
+    --background: linear-gradient(to bottom right, rgb(238, 49, 49) 0%, #FF0000 100%);
+}
+
+p#social-icons {
+    font-size: 2rem;
+    text-align: center;
+    ion-icon {
+        padding: 10px;
+        border-radius: 30px;
+        margin: 0px 15px;
+    }
+    #facebook,
+    #instagram,
+    #youtube {
+        color: #FFF;
+    }
+}

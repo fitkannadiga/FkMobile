@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Meal Plan</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 id="plan-header">{{clientDietData.header}}</h3>
+    <div [innerHTML]="clientDietData.dietPlan"></div>
+    <p *ngIf="clientDietData.notes != ''" class="note-text"><span color="danger">Note:</span> {{clientDietData.notes}}</p>
+</ion-content>

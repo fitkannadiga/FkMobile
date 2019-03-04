@@ -1,0 +1,42 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Customized Plans</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div id="non-customer" *ngIf="!customer">
+        <p text-center id="alert-icon">
+            <ion-icon ios="ios-alert" md="md-alert"></ion-icon>
+        </p>
+        <p>
+            Looks like you have not enrolled for online coaching. To get trained by us, please drop a mail to <a href="mailto:fitkannadiga@gmail.com">fitkannadiga@gmail.com</a>
+        </p>
+        <p>**Terms & Conditions applied**</p>
+    </div>
+    <div *ngIf="customer" id="customer">
+        <ion-card (click)="openDetailsPage('diet')">
+            <ion-row>
+                <ion-col size="3">
+                    <img src="https://cdn2.iconfinder.com/data/icons/healthy-flat-style-1/64/clean-diet-food-fruit-vegetarian-128.png" />
+                </ion-col>
+                <ion-col class="text">
+                    Diet Plan
+                </ion-col>
+            </ion-row>
+        </ion-card>
+        <ion-card (click)="openDetailsPage('workout')">
+            <ion-row>
+                <ion-col size="3">
+                    <img src="https://cdn2.iconfinder.com/data/icons/healthy-flat-style-1/64/activity-running-sport-128.png" />
+                </ion-col>
+                <ion-col class="text">
+                    Workout Plan
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </div>
+</ion-content>

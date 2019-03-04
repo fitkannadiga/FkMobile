@@ -1,0 +1,22 @@
+[{
+        "img_path": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/banner%2Fslide1.png?alt=media&token=b710a0d0-ce2e-45c7-9dca-c0132aaafe31",
+        "lowRes_img": "",
+        "redirectType": "iab",
+        "redirectLink": "https://www.facebook.com/fitkannadiga",
+        "video_src": ""
+    },
+    {
+        "img_path": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/banner%2Fslide2.png?alt=media&token=a0076f72-ce79-4924-8f06-572cbbe432f4",
+        "lowRes_img": "",
+        "redirectType": "video",
+        "redirectLink": "/tabs/videos",
+        "video_src": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/videos%2Fyoutube%2Fmuscle%20building%20tips.mp4?alt=media&token=cce568cb-041e-43c3-8033-408f1643c5eb"
+    },
+    {
+        "img_path": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/banner%2Fslide3.png?alt=media&token=5dfb7232-f298-4275-a741-9f2564629467",
+        "lowRes_img": "",
+        "redirectType": "video",
+        "redirectLink": "/tabs/videos",
+        "video_src": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/videos%2Fyoutube%2Fherbal%20life%20product%20review%20-%20fit%20kannadiga.mp4?alt=media&token=de1efc24-d84d-47f0-a562-d3c025366eb0"
+    }
+]

@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Fitness Tools</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-row>
+        <ion-col (click)="openPage('/bmrcalculator');">
+            <img src="https://cdn3.iconfinder.com/data/icons/ketogenic-diet-color/64/calories-burn-metabolism-energy-food-64.png" />
+            <p>BMR Calculator</p>
+        </ion-col>
+        <ion-col (click)="openPage('/interval-timer');">
+            <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Stopwatch-64.png" />
+            <p>Fitness Timer</p>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col (click)="openPage('/macros-calci');">
+            <img src="https://cdn3.iconfinder.com/data/icons/business-icons-4/128/chart-6-64.png" />
+            <p>Macros Finder</p>
+        </ion-col>
+        <!-- <ion-col (click)="openPage('WeightCalciPage');">
+            <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Weigher-64.png" />
+            <p>Weight Calculator</p>
+        </ion-col> -->
+    </ion-row>
+</ion-content>

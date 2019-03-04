@@ -1,0 +1,17 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Feedback</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <img src="./assets/imgs/comment.png" id="comment-icon" />
+    <p id="feedback-info">We are constantly trying to improve our services and would like to hear your feedback.</p>
+    <ion-item class="fk-marginTop-1">
+        <ion-textarea rows="6" height="200px;" [(ngModel)]="feedbackText" placeholder="Your Feedback is valuable......."></ion-textarea>
+    </ion-item>
+    <ion-button expand="full" size="large" color="primary" (click)="sendFeedback()" class="fk-marginTop-25">Submit</ion-button>
+</ion-content>

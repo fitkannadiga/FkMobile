@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Registration</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <!--<h1 class="fk-center"></h1>-->
+    <form id="login-form" #registrationForm="ngForm" (ngSubmit)="signInUser()" autocomplete="off">
+        <ion-item>
+            <ion-label position="floating">Full Name<span class="danger">*</span></ion-label>
+            <ion-input type="text" name="fullname" required [(ngModel)]="profile.fullname"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Email<span class="danger">*</span></ion-label>
+            <ion-input type="email" name="email" required [(ngModel)]="profile.email"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">Password<span class="danger">*</span></ion-label>
+            <ion-input type="password" name="password" required [(ngModel)]="profile.password"></ion-input>
+        </ion-item>
+        <ion-button class="fk-marginTop-25" id="login-btn" color="secondary" expand="full" size="large" type="submit" [disabled]="!registrationForm.form.valid">Register</ion-button>
+    </form>
+</ion-content>

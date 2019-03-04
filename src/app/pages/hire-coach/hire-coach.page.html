@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Hire Coach</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <!-- <div id="transformation-slider">
+        <ion-slides *ngIf="transformationArray" autoplay="3000" loop="true" speed="1000" autoplayDisableOnInteraction="false">
+            <ion-slide *ngFor="let slide of transformationArray">
+                <img [src]="slide" />
+            </ion-slide>
+        </ion-slides>
+    </div> -->
+    <p>
+        We as wellness consultants, we not just focus on your weight-loss/weight-gain goals, Rather we focus on providing a better lifestyle solutions which will help you to lead a happy life by transforming you completely and also help to reach your fitness/lifestyle
+        goals.
+    </p>
+    <p>Below are few of our clients testimonials on how their experience was with us.</p>
+    <div id="testimonial-wrapper">
+        <ion-slides *ngIf="testimonials" pager="true" [options]="slideOpts">
+            <ion-slide *ngFor="let item of testimonials" class="testimonial-card">
+                <img class="testimonial-image" [src]="item.img" />
+                <ion-grid>
+                    <ion-row>
+                        <!-- <ion-col size="12" class="img-wrapper">
+                            <img class="testimonial-image" [src]="item.img" />
+                        </ion-col> -->
+                        <ion-col size="12" class="name-wrapper">
+                            <p>{{item.name}}</p>
+                        </ion-col>
+                        <ion-col size="12" class="story-wrapper">
+                            <div class="user-short-story" [innerHTML]="item.short_desc"></div>
+                            <span *ngIf="item.read_more" class="read-more-text" (click)="showStory(item);">Read more...</span>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </ion-slide>
+        </ion-slides>
+    </div>
+</ion-content>
+<ion-footer>
+    <ion-toolbar color="primary" (click)="openPlansPage();">
+        <ion-title text-center>View Plans</ion-title>
+        <!-- <a ion-button full large href="mailto:fitkannadiga@gmail.com">Hire Me</a> -->
+    </ion-toolbar>
+</ion-footer>
