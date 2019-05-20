@@ -10,7 +10,7 @@
 <ion-content padding>
     <h3 id="plan-header">{{clientWorkoutData.header}}</h3>
     <div class="videowrapper embed-responsive embed-responsive-16by9">
-        <video #videoPlayer id="yt_video_player" autoplay width="100%" class="embed-responsive-item" autobuffer controls playsinline [src]="clientWorkoutData.video_src"></video>
+        <video #videoPlayer id="yt_video_player" autoplay width="100%" controlsList="nodownload" class="embed-responsive-item" autobuffer controls playsinline [src]="clientWorkoutData.video_src"></video>
     </div>
     <div [innerHTML]="clientWorkoutData.workoutPlan"></div>
     <p *ngIf="clientWorkoutData.notes != ''" class="note-text"><span color="danger">Note:</span> {{clientWorkoutData.notes}}</p>

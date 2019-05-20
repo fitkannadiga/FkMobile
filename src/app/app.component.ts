@@ -16,6 +16,10 @@ import { TabsPage } from './tabs/tabs.page';
 import { LoginPage } from './pages/login/login.page';
 import { CommonService } from './api/common.service';
 
+import { NetworkService } from './api/network.service';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { BackgroundMode } from '@ionic-native/background-mode/ngx';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -28,20 +32,99 @@ export class AppComponent {
   imgPath: any;
   count = 0;
   newMsgCount: any;
-
+  userLogin: boolean = false;
   // chat support
   userCommentLength: number = 0;
   subscription;
   userID: any;
+  isConnected: any;
 
-  constructor(public platform: Platform, public db: AngularFirestore,private splashScreen: SplashScreen,private statusBar: StatusBar,public menuCtrl: MenuController,private router: Router, public afDataBase: AngularFireDatabase, public events: Events, public globalComp: GlobalService, public loadingController: LoadingController, public toastr: ToastController, public network: Network, private fcm: FcmService, public navCtrl: NavController, public commonService: CommonService) {
+
+  constructor(public platform: Platform, public db: AngularFirestore,private splashScreen: SplashScreen,private statusBar: StatusBar,public menuCtrl: MenuController,private router: Router, public afDataBase: AngularFireDatabase, public events: Events, public globalComp: GlobalService, public loadingController: LoadingController, public toastr: ToastController, public network: Network, private fcm: FcmService, public navCtrl: NavController, public commonService: CommonService, public networkService: NetworkService, private screenOrientation: ScreenOrientation, private backgroundMode: BackgroundMode) {
+    // this.splashScreen.show();
+    if(window.localStorage.getItem("login-success") == "success"){
+      this.rootPage = TabsPage;
+      this.userLogin = true;
+    } else {
+      this.rootPage = LoginPage;
+      this.userLogin = false;
+    }
     this.initializeApp();
-    
-    events.subscribe('loadData', () => {
-      this.getUserInformation();
+    // Below line enables the background mode on which consumes more battery power.
+    // hence turning this off
+    // this.backgroundMode.enable();
+  }
+
+  ngOnInit() {
+    this.router.events.subscribe((event: RouterEvent) => {
+      if (event instanceof NavigationEnd && event.url === '/login') {
+        this.menuCtrl.enable(false);
+      } else {
+        this.menuCtrl.enable(true);
+      }
     });
 
-    platform.backButton.subscribe((data)=> {
+    this.events.subscribe('loadData', () => {
+      this.getUserInformation();
+    });
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+      // this.statusBar.styleDefault();
+      this.statusBar.styleLightContent();
+      if(this.userLogin){
+        this.userID = window.localStorage.getItem('authID');
+        this.navCtrl.navigateRoot('/tabs');
+        this.subscribeToMsgCount();
+        this.getUserInformation();
+        this.menuCtrl.enable(true);
+        this.splashScreen.hide();
+
+        setTimeout(()=> {
+          this.notificationSetup();
+        }, 2000);
+      } else {
+        this.navCtrl.navigateRoot('/login');
+        setTimeout(() =>{
+          this.splashScreen.hide();
+        },1000);
+        setTimeout(() =>{
+          this.menuCtrl.enable(false);
+        },500);
+        window.localStorage.removeItem("authID");
+        window.localStorage.removeItem("login-success");
+      }
+
+      this.networkSubscriber();
+      this.subscribeBackButton();
+      this.lockOrientation();
+    });
+  }
+
+  networkSubscriber(): void {
+    this.networkService
+        .getNetworkStatus()
+        .pipe()
+        .subscribe((connected: boolean) => {
+            this.isConnected = connected;
+            console.log('[Home] isConnected', this.isConnected);
+            this.handleNotConnected(connected);
+        });
+  }
+
+  handleNotConnected(status){
+    console.log("internte status >>>",status);
+    if(!status){
+      this.presentToast("Please check your internet connection!");
+    }
+  }
+
+  
+
+  subscribeBackButton(){
+    // Showing message while user exit app
+    this.platform.backButton.subscribe((data)=> {
       if(this.router.url.indexOf('tabs') > -1){
         if (this.count == 0) {
           this.count++;
@@ -55,44 +138,22 @@ export class AppComponent {
         navigator['app'].exitApp();
       }
     });
-
   }
 
-  ngOnInit() {
-    this.router.events.subscribe((event: RouterEvent) => {
-      if (event instanceof NavigationEnd && event.url === '/login') {
-        this.menuCtrl.enable(false);
-      } else {
-        this.menuCtrl.enable(true);
-      }
-    });
-  }
+  lockOrientation(){
+    // get current
+    // console.log(this.screenOrientation.type);
 
-  initializeApp() {
-    this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
+    // set to portaait
+    this.screenOrientation.lock(this.screenOrientation.ORIENTATIONS.PORTRAIT);
 
-      if(window.localStorage.getItem("login-success") == "success"){
-        // onsuccess, check if user is not disabled
-        this.userID = window.localStorage.getItem('authID');
-        this.navCtrl.navigateRoot('/tabs');
-        // this.router.navigateByUrl('/tabs');
-        this.rootPage = TabsPage;
-        this.subscribeToMsgCount();
-        this.menuCtrl.enable(true);
-        setTimeout(()=> {
-          this.notificationSetup();
-        }, 10000);
-      } else {
-        this.menuCtrl.enable(false);
-        this.navCtrl.navigateRoot('/login');
-        this.rootPage = LoginPage;
-        window.localStorage.removeItem("authID");
-        window.localStorage.removeItem("login-success");
-      }
+    // // allow user rotate
+    // this.screenOrientation.unlock();
 
-      this.splashScreen.hide();
-    });
+    // // detect orientation changes
+    // this.screenOrientation.onChange().subscribe(() => {
+    //   console.log("Orientation Changed");
+    // });
   }
 
   private notificationSetup() {
@@ -125,8 +186,11 @@ export class AppComponent {
   }
   
   getUserInformation(){
+    console.log("getUserInformation fn");
     this.imgPath = this.globalComp.getUserImage();
+    console.log("this.imgPath", this.imgPath);
     this.userProfile = this.globalComp.getUserData();
+    console.log("this.userProfile", this.userProfile);
   }
 
   openPage(pageName) {

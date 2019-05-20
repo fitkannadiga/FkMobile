@@ -1,0 +1,12 @@
+[
+    {
+        "workout_img": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/workout%2FPerfectSquatFeature.png?alt=media&token=62f99153-1e37-490c-95d0-93da913409f7",
+        "title": "Home Workout",
+        "intensity": 4
+    },
+    {
+        "workout_img": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/workout%2Fabs.jpg?alt=media&token=50ce6e22-f86e-410f-825a-469ab3ef0609",
+        "title": "Shredded Abs",
+        "intensity": 5
+    }
+]

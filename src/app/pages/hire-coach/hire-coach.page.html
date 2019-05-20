@@ -23,7 +23,7 @@
     <div id="testimonial-wrapper">
         <ion-slides *ngIf="testimonials" pager="true" [options]="slideOpts">
             <ion-slide *ngFor="let item of testimonials" class="testimonial-card">
-                <img class="testimonial-image" [src]="item.img" />
+                <img class="testimonial-image" [src]="item.img" onError="src = './assets/imgs/default.png'"/>
                 <ion-grid>
                     <ion-row>
                         <!-- <ion-col size="12" class="img-wrapper">

@@ -62,7 +62,7 @@ var BMRcalculatorPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>BMR Calculator</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <form #bmrForm=\"ngForm\" (ngSubmit)=\"calculateBMR()\">\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Age<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" [(ngModel)]=\"userInfo.age\" name=\"age\" required></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n            <ion-select [(ngModel)]=\"userInfo.gender\" name=\"gender\" required>\n                <ion-select-option value=\"female\">Female</ion-select-option>\n                <ion-select-option value=\"male\">Male</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Weight[kg]<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" [(ngModel)]=\"userInfo.weight\" name=\"weight\" required></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Height[cms]<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" [(ngModel)]=\"userInfo.height\" name=\"height\" required></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Goal<span class=\"danger\">*</span></ion-label>\n            <ion-select [(ngModel)]=\"userInfo.goal\" name=\"goal\" required>\n                <ion-select-option value=\"fl\">Fat Loss</ion-select-option>\n                <ion-select-option value=\"mw\">Maintain Weight</ion-select-option>\n                <ion-select-option value=\"mb\">Muscle Building</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Activity Level<span class=\"danger\">*</span></ion-label>\n            <ion-select [(ngModel)]=\"userInfo.activity\" name=\"activity\" required>\n                <ion-select-option value=\"1.2\">No exercise</ion-select-option>\n                <ion-select-option value=\"1.375\">1-3 days/week</ion-select-option>\n                <ion-select-option value=\"1.55\">3-5 days/week</ion-select-option>\n                <ion-select-option value=\"1.725\">6-7 days/week</ion-select-option>\n                <ion-select-option value=\"1.9\">Intense 6-7 days/week</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-button class=\"fk-marginTop-25\" id=\"update-profile-btn\" color=\"primary\" expand=\"full\" size=\"large\" type=\"submit\" [disabled]=\"!bmrForm.valid\">Calculate BMR</ion-button>\n    </form>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>BMR Calculator</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <form #bmrForm=\"ngForm\" (ngSubmit)=\"calculateBMR()\">\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Age<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" [(ngModel)]=\"userInfo.age\" name=\"age\" required></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n            <ion-select [(ngModel)]=\"userInfo.gender\" name=\"gender\" required>\n                <ion-select-option value=\"female\">Female</ion-select-option>\n                <ion-select-option value=\"male\">Male</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Weight[kg]<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" [(ngModel)]=\"userInfo.weight\" name=\"weight\" required></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Height[cms]<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" [(ngModel)]=\"userInfo.height\" name=\"height\" required></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Goal<span class=\"danger\">*</span></ion-label>\n            <ion-select [(ngModel)]=\"userInfo.goal\" name=\"goal\" required>\n                <ion-select-option value=\"fl\">Fat Loss</ion-select-option>\n                <ion-select-option value=\"mw\">Maintain Weight</ion-select-option>\n                <ion-select-option value=\"mb\">Muscle Building</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label color=\"dark\" position=\"floating\">Activity Level<span class=\"danger\">*</span></ion-label>\n            <ion-select [(ngModel)]=\"userInfo.activity\" name=\"activity\" required>\n                <ion-select-option value=\"1.0\">No exercise</ion-select-option>\n                <ion-select-option value=\"1.15\">1-3 days/week</ion-select-option>\n                <ion-select-option value=\"1.3\">3-5 days/week</ion-select-option>\n                <ion-select-option value=\"1.4\">6-7 days/week</ion-select-option>\n                <ion-select-option value=\"1.6\">Intense 6-7 days/week</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-button class=\"fk-marginTop-25\" id=\"update-profile-btn\" color=\"primary\" expand=\"full\" size=\"large\" type=\"submit\" [disabled]=\"!bmrForm.valid\">Calculate BMR</ion-button>\n    </form>\n</ion-content>"
 
 /***/ }),
 
@@ -197,13 +197,13 @@ var BMRcalculatorPage = /** @class */ (function () {
     BMRcalculatorPage.prototype.calculateCalorieIntake = function () {
         // console.log("Goal Selected", this.userInfo.goal);
         if (this.userInfo.goal == "fl") {
-            this.IntakeCalories = Math.round(Math.round(this.BMR) - 200);
+            this.IntakeCalories = Math.round(Math.round(this.TEE) - 200);
         }
         else if (this.userInfo.goal == "mb") {
-            this.IntakeCalories = Math.round(Math.round(this.BMR) + 600);
+            this.IntakeCalories = Math.round(Math.round(this.TEE) + 400);
         }
         else if (this.userInfo.goal == "mw") {
-            this.IntakeCalories = Math.round(Math.round(this.BMR) + 50);
+            this.IntakeCalories = Math.round(Math.round(this.TEE) + 50);
         }
         else {
             // nothing
@@ -212,17 +212,19 @@ var BMRcalculatorPage = /** @class */ (function () {
         // console.log("Intake calculated", this.IntakeCalories);
         // After calculating the calorie intake, load the next page to display graph
         // set data for the BMI graph
-        this.nutrientService.setGrapgData(this.userInfo, this.BMR, this.IntakeCalories);
+        this.nutrientService.setGrapgData(this.userInfo, this.BMR, this.TEE, this.IntakeCalories);
         this.router.navigateByUrl('/nutrient-graph');
     };
     BMRcalculatorPage.prototype.calculateBMR = function () {
         if (this.userInfo.gender == "male") {
             var metabolicRate = Math.round((10 * this.userInfo.weight) + (6.25 * this.userInfo.height) - (5 * this.userInfo.age) + 5);
-            this.BMR = Math.round(metabolicRate * this.userInfo.activity);
+            this.BMR = metabolicRate;
+            this.TEE = Math.round(metabolicRate * this.userInfo.activity);
         }
         else {
             var metabolicRate = Math.round((10 * this.userInfo.weight) + (6.25 * this.userInfo.height) - (5 * this.userInfo.age) - 161);
-            this.BMR = Math.round(metabolicRate * this.userInfo.activity);
+            this.BMR = metabolicRate;
+            this.TEE = Math.round(metabolicRate * this.userInfo.activity);
         }
         // console.log("BMR", this.BMR);
         this.calculateCalorieIntake();

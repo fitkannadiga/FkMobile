@@ -1,0 +1,14 @@
+<ion-header>
+    <ion-toolbar>
+        <span slot="end" class="close-text" (click)="closeModal();">close</span>
+        <ion-title>{{workout.exercise_name}}</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <img class="testimonial-image" [src]="workout.exercise_image" *ngIf="workout.exercise_video == ''" />
+    <div class="videowrapper embed-responsive embed-responsive-16by9" *ngIf="workout.exercise_video != ''">
+        <video #videoPlayer id="yt_video_player" autoplay width="100%" class="embed-responsive-item" autobuffer controls playsinline [src]="workout.exercise_video "></video>
+    </div>
+    <div id="workout-instruction" [innerHTML]="workout.exercise_info"></div>
+</ion-content>

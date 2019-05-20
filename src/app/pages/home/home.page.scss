@@ -1,13 +1,76 @@
+div#slider-container {
+    height: 40%;
+    ion-slide{
+        img {
+            min-height: 32vh;
+        }
+    }
+}
 div#fake-slider-wrapper {
     height: 40%;
     ion-slides {
         height: 100%;
         ion-slide {
             height: 100%;
+
             div {
                 width: 100%;
                 height: 100%;
                 padding-top: 10%;
+            }
+        }
+    }
+}
+
+#workout-list-wrapper {
+    padding: 5px;
+    ion-row#header {
+        font-weight: bold;
+    }
+    span.link {
+        color: #3B4EAC;
+        font-size: 0.8rem;
+    }
+    ion-row#real-worouts{
+        ion-col {
+            height: 140px;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            margin: 2px;
+            padding: 0;
+            img{
+                width: 100%;
+                border-radius: 10px 10px 0px 0px;
+                height: 90px;
+            }
+            p.title {
+                font-weight: bold;
+                font-size: 0.8rem;
+                color: #222428;
+            }
+            p {
+                margin: 1px 5px;
+                ion-icon {
+                    color: #ffde25;
+                }
+            }
+        }
+    }
+    ion-row#fake-workout{
+        ion-col {
+            height: 140px;
+            border: 1px solid #dcdcdc;
+            border-radius: 10px;
+            margin: 5px;
+            padding: 0;
+            div.image{
+                height: 70px;
+                border: 1px solid #ededed;
+                border-radius: 10px 10px 0px 0px;
+            }
+            p {
+                height: 15px;
+                margin: 10px 5px;
             }
         }
     }

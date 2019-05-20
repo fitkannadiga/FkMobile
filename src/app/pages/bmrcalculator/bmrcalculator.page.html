@@ -39,11 +39,11 @@
         <ion-item>
             <ion-label color="dark" position="floating">Activity Level<span class="danger">*</span></ion-label>
             <ion-select [(ngModel)]="userInfo.activity" name="activity" required>
-                <ion-select-option value="1.2">No exercise</ion-select-option>
-                <ion-select-option value="1.375">1-3 days/week</ion-select-option>
-                <ion-select-option value="1.55">3-5 days/week</ion-select-option>
-                <ion-select-option value="1.725">6-7 days/week</ion-select-option>
-                <ion-select-option value="1.9">Intense 6-7 days/week</ion-select-option>
+                <ion-select-option value="1.0">No exercise</ion-select-option>
+                <ion-select-option value="1.15">1-3 days/week</ion-select-option>
+                <ion-select-option value="1.3">3-5 days/week</ion-select-option>
+                <ion-select-option value="1.4">6-7 days/week</ion-select-option>
+                <ion-select-option value="1.6">Intense 6-7 days/week</ion-select-option>
             </ion-select>
         </ion-item>
         <ion-button class="fk-marginTop-25" id="update-profile-btn" color="primary" expand="full" size="large" type="submit" [disabled]="!bmrForm.valid">Calculate BMR</ion-button>

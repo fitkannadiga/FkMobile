@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons slot="start">
-            <ion-back-button></ion-back-button>
+            <ion-back-button (click)="removeData();"></ion-back-button>
         </ion-buttons>
         <ion-title>Registration</ion-title>
     </ion-toolbar>
@@ -14,6 +14,20 @@
             <ion-input type="text" name="fullname" required [(ngModel)]="profile.fullname"></ion-input>
         </ion-item>
         <ion-item>
+            <ion-label position="floating">Gender<span class="danger">*</span></ion-label>
+            <ion-select name="gender" required [(ngModel)]="profile.gender">
+                <ion-select-option value="female">Female</ion-select-option>
+                <ion-select-option value="male">Male</ion-select-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label position="floating">User Name<span class="danger">*</span></ion-label>
+            <ion-input type="text" name="username" required [(ngModel)]="profile.username" (keyup)="checkUserName($event)"></ion-input>
+        </ion-item>
+        <span id="user-name-info">
+            <i>User Name is for unique identity</i>
+        </span>
+        <ion-item>
             <ion-label position="floating">Email<span class="danger">*</span></ion-label>
             <ion-input type="email" name="email" required [(ngModel)]="profile.email"></ion-input>
         </ion-item>
@@ -21,6 +35,6 @@
             <ion-label position="floating">Password<span class="danger">*</span></ion-label>
             <ion-input type="password" name="password" required [(ngModel)]="profile.password"></ion-input>
         </ion-item>
-        <ion-button class="fk-marginTop-25" id="login-btn" color="secondary" expand="full" size="large" type="submit" [disabled]="!registrationForm.form.valid">Register</ion-button>
+        <ion-button class="fk-marginTop-25" id="login-btn" expand="full" size="large" type="submit" [disabled]="!registrationForm.form.valid">Register</ion-button>
     </form>
 </ion-content>

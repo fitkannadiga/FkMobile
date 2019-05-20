@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {TextToSpeech} from '@ionic-native/text-to-speech/ngx';
 import { Insomnia } from '@ionic-native/insomnia/ngx';
+import { Platform } from '@ionic/angular';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-interval-timer',
@@ -16,7 +18,7 @@ export class IntervalTimerPage implements OnInit {
   setCount: number = 0;
   intervalCount: number = 0;
   restCount: number = 0;
-  changeDisplay: boolean = true;
+  changeDisplay: boolean = false;
   statusChange: any = 'pause';
 
   tempSet: number = 0;
@@ -29,7 +31,18 @@ export class IntervalTimerPage implements OnInit {
   workoutInterval: any;
   restInterval: any;
 
-  constructor(private tts: TextToSpeech, private insomnia: Insomnia) {
+  constructor(private tts: TextToSpeech, private insomnia: Insomnia, public platform: Platform, private router: Router) {
+    // subscribe to back button as we need to stop the timer on user back
+    this.platform.backButton.subscribe((data)=> {
+      if(this.router.url.indexOf('interval-timer') > -1){
+        // clear the timers and stop everything
+        this.exitTimer();
+        this.tempRest = 0;
+        this.SetTimer = 0;
+        this.RestTimer = 0;
+        this.insomnia.allowSleepAgain();
+      }
+    });
   }
 
 

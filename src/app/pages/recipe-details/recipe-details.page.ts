@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { switchMap } from 'rxjs/operators';
@@ -8,6 +8,7 @@ import { RecipeDetailServiceService } from '../../api/recipe-detail-service.serv
   selector: 'app-recipe-details',
   templateUrl: './recipe-details.page.html',
   styleUrls: ['./recipe-details.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class RecipeDetailsPage implements OnInit {
 

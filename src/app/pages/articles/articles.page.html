@@ -4,24 +4,24 @@
             <ion-back-button></ion-back-button>
         </ion-buttons>
         <ion-title>Articles</ion-title>
-        <ion-button slot="end" (click)="presentLangSelector()" color="light">{{presentLang}}</ion-button>
+        <!-- <ion-button slot="end" (click)="presentLangSelector()" color="light">{{presentLang}}</ion-button> -->
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <div *ngIf="!fakeData">
+    <div *ngIf="!fakeData" id="article-wrapper">
         <ion-card *ngFor="let article of articleDataObject; let i = index;">
             <ion-grid>
                 <ion-row class="content-row" (click)="openArticle(article, i);">
                     <ion-col size="4">
-                        <img class="article-img" [src]="article.img_path" />
+                        <img class="article-img" [src]="article.img_path" onError="src = './assets/imgs/default.png'"/>
                     </ion-col>
                     <ion-col size="8" class="article-desc">
                         {{article.title}}
                     </ion-col>
                 </ion-row>
                 <ion-row class="count">
-                    <ion-col size="6" class="fk-center">
+                    <ion-col size="6" class="fk-center views">
                         <ion-icon color="primary" ios="ios-eye" md="md-eye"></ion-icon> {{article.view}} Views
                     </ion-col>
                     <ion-col size="6" class="fk-center">

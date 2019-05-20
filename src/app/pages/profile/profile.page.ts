@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController, LoadingController } from '@ionic/angular';
 import { AngularFireDatabase } from '@angular/fire/database';
-import { AngularFireStorage } from '@angular/fire/storage';
+import { AngularFireStorage, AngularFireUploadTask } from '@angular/fire/storage';
 
 import { Events } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { GlobalService } from '../../api/global.service';
+import { Crop } from '@ionic-native/crop/ngx';
+import { Observable } from 'rxjs';
+
+
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
+import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
 
 @Component({
   selector: 'app-profile',
@@ -17,26 +23,20 @@ export class ProfilePage implements OnInit {
   profile : any = {};
 
   imgPath: any;
-  filePath = 'images/' + window.localStorage.getItem("authID") + '/';
+  filePath = 'profileImage/' + window.localStorage.getItem("authID") + '/';
   uid: any;
   profileLoader: any;
 
-  constructor(public toastr: ToastController, public loadingController: LoadingController, public afDataBase: AngularFireDatabase, public storage: AngularFireStorage, public events: Events,public router: Router, public globalComp: GlobalService) {
-    // this.profile = {
-    //   'uid':window.localStorage.getItem("authID"),
-    //   'dob': '',
-    //   'email': '',
-    //   'fullname': '',
-    //   'gender': '',
-    //   'height':'',
-    //   'weight':'',
-    //   'client': '',
-    //   'username': '',
-    //   'description': '',
-    //   'fbTermAcceptance': '',
-    //   'disabled': ''
-    // }
-   }
+  // Main task 
+  task: AngularFireUploadTask;
+
+  // Progress monitoring
+  percentage: Observable<number>;
+
+  fileUrl: any = null;
+  respData: any;
+
+  constructor(public toastr: ToastController, public loadingController: LoadingController, public afDataBase: AngularFireDatabase, public storage: AngularFireStorage, public events: Events,public router: Router, public globalComp: GlobalService, public crop: Crop, private imagePicker: ImagePicker,private transfer: FileTransfer) {}
 
   ngOnInit() {
     this.presentLoading('Loading data...');
@@ -58,24 +58,81 @@ export class ProfilePage implements OnInit {
   }
 
   uploadFile(event) {
-    this.presentLoading('Uploading Image...');
+    console.log("file length>>>>", event.target.files.length);
+    if(event.target.files.length >= 1) {
+      this.presentLoading('Uploading Image...');
+      const file = event.target.files[0];
+      const fileRef = this.storage.ref(this.filePath);
 
-    const file = event.target.files[0];
-    const fileRef = this.storage.ref(this.filePath);
-    this.storage.ref(this.filePath).put(file).then((data) => {
-      if(data.state == "success"){
-        this.imgPath = this.globalComp.getUserImage();
-        // loading data explicitly after the image loaded as we are not setting root page as tab.
-        // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
-        this.events.publish('loadData');
-        this.presentToast('Profile image updated');
-      } else {
-        this.presentToast('Problem uploading image. Please try after sometime.');
+      this.storage.ref(this.filePath).put(file).then((data) => {
+        console.log("data from upload image", data);
+        if(data.state == "success"){
+          // this.imgPath = this.globalComp.getUserImage();
+          this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F'+this.uid+'?alt=media'+'&random='+Math.floor(Math.random()*230)+90;
+          // loading data explicitly after the image loaded as we are not setting root page as tab.
+          // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
+          this.events.publish('loadData');
+          this.presentToast('Profile image updated');
+        } else {
+          this.presentToast('Problem uploading image. Please try after sometime.');
+        }
+        this.dismissLoader();
+      }).catch((err)=>{
+        this.presentToast('There was a problem uploading image. Try after sometime');
+      });
+    }
+  }
+
+
+  cropUpload() {
+    this.imagePicker.getPictures({ maximumImagesCount: 1, outputType: 0 }).then((results) => {
+      for (let i = 0; i < results.length; i++) {
+          console.log('Image URI: ' + results[i]);
+          this.crop.crop(results[i], { quality: 100 })
+            .then(
+              newImage => {
+                console.log('new image path is: ' + newImage);
+                const fileTransfer: FileTransferObject = this.transfer.create();
+                const uploadOpts: FileUploadOptions = {
+                   fileKey: 'file',
+                   fileName: newImage.substr(newImage.lastIndexOf('/') + 1)
+                };
+  
+                // fileTransfer.upload(newImage, this.filePath, uploadOpts).then((data) => {
+                //    console.log(data);
+                //    this.respData = JSON.parse(data.response);
+                //    console.log(this.respData);
+                //    this.fileUrl = this.respData.fileUrl;
+                //    this.presentToast(this.fileUrl);
+                //  }, (err) => {
+                //    console.log(err);
+                //  });
+                this.storage.ref(this.filePath).put(newImage).then((data) => {
+                  console.log("data from upload image", data);
+                  if(data.state == "success"){
+                    // this.imgPath = this.globalComp.getUserImage();
+                    this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F'+this.uid+'?alt=media'+'&random='+Math.floor(Math.random()*230)+90;
+                    // loading data explicitly after the image loaded as we are not setting root page as tab.
+                    // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
+                    this.events.publish('loadData');
+                    this.presentToast('Profile image updated');
+                  } else {
+                    this.presentToast('Problem uploading image. Please try after sometime.');
+                  }
+                  this.dismissLoader();
+                }).catch((err)=>{
+                  this.presentToast('There was a problem uploading image. Try after sometime');
+                });
+              },
+              error => {
+                this.presentToast('Error cropping image >> ERROR BLOCK');
+                console.error('Error cropping image', error)
+              }
+            );
       }
-      this.dismissLoader();
-    }).catch((err)=>{
-      this.presentToast('There was a problem uploading image. Try after sometime');
-    });
+    }, (err) => { 
+      console.log(err); 
+      this.presentToast('Error cropping image >> Image picker BLOCK');});
   }
 
   validateForm(form){
@@ -101,7 +158,7 @@ export class ProfilePage implements OnInit {
     this.afDataBase.database.ref(`profiles/`+this.uid).set(this.profile)
     .then(() => {
       this.presentToast('Profile Updated!');
-      this.globalComp.updateUserData();
+      this.globalComp.getUserInformationFirebase();
       this.dismissLoader();
       this.router.navigateByUrl('/tabs');
     }, function(error) {

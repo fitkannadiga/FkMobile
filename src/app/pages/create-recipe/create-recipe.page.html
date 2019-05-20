@@ -16,8 +16,7 @@
         <ion-label position="floating">Short Description</ion-label>
         <ion-input type="text" required [(ngModel)]="short_desc" name="recipe_sd"></ion-input>
     </ion-item>
-    <!-- <ckeditor [config]="editorConfig" [(ngModel)]="description"></ckeditor> -->
-    <ckeditor [(ngModel)]="ckeditorContent" [config]="{uiColor: '#99000'}" [readonly]="false" (change)="onChange($event)" (editorChange)="onEditorChange($event)" (ready)="onReady($event)" (focus)="onFocus($event)" (blur)="onBlur($event)" (contentDom)="onContentDom($event)"
+    <ckeditor [(ngModel)]="ckeditorContent" (change)="onChange($event)" (editorChange)="onEditorChange($event)" (ready)="onReady($event)" (focus)="onFocus($event)" (blur)="onBlur($event)" (contentDom)="onContentDom($event)"
         (fileUploadRequest)="onFileUploadRequest($event)" (fileUploadResponse)="onFileUploadResponse($event)" (paste)="onPaste($event)" (drop)="onDrop($event)" debounce="500">
     </ckeditor>
 

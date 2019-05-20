@@ -18,11 +18,11 @@
     </ion-segment>
     <ion-content *ngIf="selectedSegment == 'split'" id="split-wrapper">
         <ion-searchbar (ionInput)="getItems($event)" showCancelButton (ionCancel)="cancelSearch()" [(ngModel)]="workoutSearchText"></ion-searchbar>
-        <div *ngIf="!fakeWorkout">
+        <div id="workout-card-list" *ngIf="!fakeWorkout">
             <ion-card *ngFor="let list of workoutsList">
                 <ion-row (click)="displayWorkout(list);">
                     <ion-col>
-                        <img [src]="list.workout_img" />
+                        <img [src]="list.workout_img" onError="src = './assets/imgs/default.png'"/>
                     </ion-col>
                     <ion-col class="description">
                         <p class="card-title">{{list.workout_title}}</p>
@@ -31,6 +31,7 @@
                 </ion-row>
                 <ion-row>
                     <span class="tags" *ngFor="let tag of list.workout_tags" (click)="searchTags(tag);">{{tag}}</span>
+                    <ion-icon *ngIf="list.premium" id="premium-icon" name="ribbon"></ion-icon>
                 </ion-row>
             </ion-card>
         </div>
@@ -53,32 +54,43 @@
     </ion-content>
     <ion-content *ngIf="selectedSegment == 'individual'" padding id="individual-wrapper">
         <ion-row>
-            <ion-col (click)="openWorkouts('bicep');">
-                <img src="assets/icon/bicep.png" />
-                <p>Biceps</p>
+            <ion-col (click)="openWorkouts('Bicep');">
+                <img src="assets/icon/muscle_icon/bicep.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Bicep</p>
             </ion-col>
-            <ion-col (click)="openWorkouts('chest');">
-                <img src="assets/icon/bicep.png" />
-                <p>Biceps</p>
+            <ion-col (click)="openWorkouts('Back');">
+                <img src="assets/icon/muscle_icon/back.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Back</p>
             </ion-col>
-            <ion-col (click)="openWorkouts('back');">
-                <img src="assets/icon/bicep.png" />
-                <p>Biceps</p>
+            <ion-col (click)="openWorkouts('Legs');">
+                <img src="assets/icon/muscle_icon/quads.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Legs</p>
             </ion-col>
         </ion-row>
         <ion-row>
-            <ion-col (click)="openWorkouts('bicep');">
-                <img src="assets/icon/bicep.png" />
-                <p>Biceps</p>
+            <ion-col (click)="openWorkouts('Abdominals');">
+                <img src="assets/icon/muscle_icon/abs.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Abs</p>
             </ion-col>
-            <ion-col (click)="openWorkouts('chest');">
-                <img src="assets/icon/bicep.png" />
-                <p>Biceps</p>
+            <ion-col (click)="openWorkouts('Chest');">
+                <img src="assets/icon/muscle_icon/chest.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Chest</p>
             </ion-col>
-            <ion-col (click)="openWorkouts('back');">
-                <img src="assets/icon/bicep.png" />
-                <p>Biceps</p>
+            <ion-col (click)="openWorkouts('Tricep');">
+                <img src="assets/icon/muscle_icon/tricep.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Tricep</p>
             </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col (click)="openWorkouts('Shoulder');">
+                <img src="assets/icon/muscle_icon/shoulder.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Shoulder</p>
+            </ion-col>
+            <ion-col (click)="openWorkouts('Calves');">
+                <img src="assets/icon/muscle_icon/calves.png" onError="src = './assets/imgs/default.png'"/>
+                <p>Calves</p>
+            </ion-col>
+            <ion-col></ion-col>
         </ion-row>
     </ion-content>
 </ion-content>

@@ -1,3 +1,14 @@
+ion-header {
+    position: relative;
+    div#progress-bar-wrapper {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: -3px;
+        z-index: 9999;
+    }
+}
+
 ion-item {
     padding-left: 0px !important;
 }
@@ -29,4 +40,9 @@ ion-item {
         margin: auto;
         opacity: 0.6
     }
+}
+p#user-name {
+    text-align: center;
+    color: #3B4EAC;
+    font-weight: bold;
 }

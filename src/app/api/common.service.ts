@@ -12,8 +12,10 @@ import { AngularFireDatabase } from '@angular/fire/database';
 export class CommonService {
 
     userPushToken: any;
-    
-    constructor(public http: HttpClient, private afDataBase: AngularFireDatabase, private fire:AngularFireAuth, public toastr: ToastController) { }
+    initialComments: any  = [];
+
+    constructor(public http: HttpClient, private afDataBase: AngularFireDatabase, private fire:AngularFireAuth, public toastr: ToastController) {
+    }
 
     // Get the user profile from the firebase database
     getprofile(uid) {
@@ -65,6 +67,29 @@ export class CommonService {
         return promise;
     }
 
+    // set initial comment
+    setComments(data){
+        this.initialComments = [];
+        this.initialComments = JSON.parse(JSON.stringify(data));
+    }
+
+    getInitialComments(){
+        return this.initialComments;
+    }
+
+    // get the Faq section
+    // Never used
+    getComments(url) {
+        var promise = new Promise((resolve, reject) => {
+            this.afDataBase.database.ref(url).once('value', (snapshot) => {
+                resolve(snapshot.val());
+            }).catch((err) => {
+                reject(err);
+            })
+        })
+        return promise;
+    }
+
     // get the Diet and Workout
     getClientsData(authId) {
         var promise = new Promise((resolve, reject) => {
@@ -101,6 +126,18 @@ export class CommonService {
         return promise;
     }
 
+    // get usernames in the registered list
+    getUserNames(){
+        var promise = new Promise((resolve, reject) => {
+            this.afDataBase.database.ref(`/userNames`).once('value', (snapshot) => {
+                resolve(snapshot.val());
+            }).catch((err) => {
+                reject(err);
+            })
+            })
+            return promise;
+    }
+
     // get banner images
     getBannerImages(){
         var promise = new Promise((resolve, reject) => {
@@ -117,6 +154,18 @@ export class CommonService {
     getTransformatioImages(){
         var promise = new Promise((resolve, reject) => {
             this.afDataBase.database.ref(`/transformation`).once('value', (snapshot) => {
+                resolve(snapshot.val());
+            }).catch((err) => {
+                reject(err);
+            })
+        })
+        return promise;
+    }
+
+    // get home page workout list
+    getHomeWorkoutList(){
+        var promise = new Promise((resolve, reject) => {
+            this.afDataBase.database.ref(`/homePageWorkout`).once('value', (snapshot) => {
                 resolve(snapshot.val());
             }).catch((err) => {
                 reject(err);

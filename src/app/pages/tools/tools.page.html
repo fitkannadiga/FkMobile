@@ -8,24 +8,48 @@
 </ion-header>
 
 <ion-content padding>
-    <ion-row>
+    <!-- <ion-row>
         <ion-col (click)="openPage('/bmrcalculator');">
-            <img src="https://cdn3.iconfinder.com/data/icons/ketogenic-diet-color/64/calories-burn-metabolism-energy-food-64.png" />
+            <img src="https://cdn3.iconfinder.com/data/icons/ketogenic-diet-color/64/calories-burn-metabolism-energy-food-64.png" onError="src = './assets/imgs/default.png'"/>
             <p>BMR Calculator</p>
         </ion-col>
         <ion-col (click)="openPage('/interval-timer');">
-            <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Stopwatch-64.png" />
+            <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Stopwatch-64.png" onError="src = './assets/imgs/default.png'"/>
             <p>Fitness Timer</p>
         </ion-col>
     </ion-row>
     <ion-row>
         <ion-col (click)="openPage('/macros-calci');">
-            <img src="https://cdn3.iconfinder.com/data/icons/business-icons-4/128/chart-6-64.png" />
+            <img src="https://cdn3.iconfinder.com/data/icons/business-icons-4/128/chart-6-64.png" onError="src = './assets/imgs/default.png'"/>
             <p>Macros Finder</p>
         </ion-col>
-        <!-- <ion-col (click)="openPage('WeightCalciPage');">
+        <ion-col (click)="openPage('WeightCalciPage');">
             <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Weigher-64.png" />
             <p>Weight Calculator</p>
-        </ion-col> -->
-    </ion-row>
+        </ion-col>
+    </ion-row> -->
+    <div class="tool-wrapper" (click)="openPage('/bmrcalculator');">
+        <div class="img-wrapper tool-sections">
+            <img src="https://cdn3.iconfinder.com/data/icons/ketogenic-diet-color/64/calories-burn-metabolism-energy-food-64.png" onError="src = './assets/imgs/default.png'"/>
+        </div>
+        <div id="bmr-calci" class="headling-wrapper tool-sections">
+            <p class="title">BMR Calculator</p>
+        </div>
+    </div>
+    <div class="tool-wrapper" (click)="openPage('/interval-timer');">
+        <div class="img-wrapper tool-sections">
+                <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Stopwatch-64.png" onError="src = './assets/imgs/default.png'"/>
+        </div>
+        <div id="fit-timer" class="headling-wrapper tool-sections">
+            <p class="title">Fitness Timer</p>
+        </div>
+    </div>
+    <div class="tool-wrapper" (click)="openPage('/macros-calci');">
+        <div class="img-wrapper tool-sections">
+                <img src="https://cdn3.iconfinder.com/data/icons/business-icons-4/128/chart-6-64.png" onError="src = './assets/imgs/default.png'"/>
+        </div>
+        <div id="macro-calci" class="headling-wrapper tool-sections">
+            <p class="title">Macros Finder</p>
+        </div>
+    </div>
 </ion-content>

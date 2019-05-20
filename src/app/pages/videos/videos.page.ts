@@ -6,12 +6,23 @@ import { HttpClient } from '@angular/common/http';
 
 import { IonContent } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+
+interface Document {
+  exitFullscreen: any;
+  mozCancelFullScreen: any;
+  webkitExitFullscreen: any;
+  fullscreenElement: any;
+  mozFullScreenElement: any;
+  webkitFullscreenElement: any;
+}
 
 @Component({
   selector: 'app-videos',
   templateUrl: './videos.page.html',
   styleUrls: ['./videos.page.scss'],
 })
+
 export class VideosPage implements OnInit {
 
   @ViewChild(IonContent) content: IonContent;
@@ -31,7 +42,7 @@ export class VideosPage implements OnInit {
   sub: any;
   redirectVideoLink: any
 
-  constructor(public http:HttpClient, public commonService: CommonService, public loadingController: LoadingController, public toastr: ToastController, private activeRoute: ActivatedRoute, public router: Router) {
+  constructor(public http:HttpClient, public commonService: CommonService, public loadingController: LoadingController, public toastr: ToastController, private activeRoute: ActivatedRoute, public router: Router, public screenOrientation: ScreenOrientation) {
     this.toggled = false;
   }
 
@@ -39,23 +50,41 @@ export class VideosPage implements OnInit {
     this.loadVideos();
   }
 
+  addFullscreenEvent(){
+    var self = this;
+    setTimeout(() => {
+      document.getElementById("yt_video_player").addEventListener('webkitfullscreenchange', onFullScreen);
+      function onFullScreen(event) {
+        console.log("event on full screen>>", event);
+        // console.log("document.webkitFullscreenEnabled", document.webkitIsFullScreen);
+        
+        
+        var isFullscreenNow = event.target.webkitDisplayingFullscreen;
+        console.log("isFullscreenNow data>>", isFullscreenNow);
+        if(isFullscreenNow){
+          self.screenOrientation.lock(self.screenOrientation.ORIENTATIONS.LANDSCAPE);
+        } else {
+          self.screenOrientation.lock(self.screenOrientation.ORIENTATIONS.PORTRAIT);
+        }
+        // alert('Fullscreen ' + isFullscreenNow);
+      }
+    }, 1000);
+  }
+
   ionViewWillEnter() {
     console.log("user entered the tab again");
     // before making call to the video list, check if it is from redirection
-    this.sub = this.activeRoute.queryParams.subscribe(value => {
-      console.log("redirected from home", value)
-      if(value.length == 0){
-        this.isRedirected = false;
-        this.redirectVideoLink = "";
-      } else {
-        let videoLink = this.router.url.split('=');
-
-        this.isRedirected = true;
-        this.redirectVideoLink = "";
-        this.redirectVideoLink = decodeURIComponent(videoLink[1]);
-        this.changeRedirectedVideo(this.redirectVideoLink);
-      }
-    });
+    console.log("URL>>", this.router.url);
+    if(this.router.url.indexOf("link=") > -1){
+      let videoLink = this.router.url.split('=');
+      this.isRedirected = true;
+      this.redirectVideoLink = "";
+      this.redirectVideoLink = decodeURIComponent(videoLink[1]);
+      this.changeRedirectedVideo(this.redirectVideoLink);
+    } else {
+      this.isRedirected = false;
+      this.redirectVideoLink = "";
+    }
   }
 
   ionViewDidLeave(){
@@ -65,9 +94,7 @@ export class VideosPage implements OnInit {
 
   loadVideos(){
     // this.presentLoading('Loading Videos..');
-
     this.commonService.getVideoList().then((data)=> {
-      // console.log("video data", data);
       this.mainVideoList = data;
       this.videoList = data;
       if(this.isRedirected){
@@ -79,14 +106,12 @@ export class VideosPage implements OnInit {
         this.firebaseSource = this.videoList[0].video_src;
         this.firebasePoster = this.videoList[0].video_thumbnail;
       }
-
       setTimeout(()=> {
-        // this.dismissLoader();
         this.fakeData = false;
+        this.addFullscreenEvent();
       },1000);
     }).catch(error => {
       this.presentToast(error.message);
-      // this.dismissLoader();
     })
   }
 
@@ -98,7 +123,6 @@ export class VideosPage implements OnInit {
   }
   
   changeRedirectedVideo(src){
-    console.log("changeRedirectedVideo called >>>");
     this.video_id = '';
     this.firebaseSource = src;
     this.firebasePoster = '';

@@ -62,7 +62,7 @@ var ProfilePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Profile Page</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <input id=\"file-uploader\" type=\"file\" (change)=\"uploadFile($event)\" name=\"Upload Image\" hidden/>\n    <div id=\"image-upload-wrapper\">\n        <img id=\"user-img\" [src]=\"imgPath\" (click)=\"triggerUpload()\" onError=\"src = 'assets/default.png'\" />\n        <img id=\"edit-icon\" src=\"assets/icon/edit-image.png\" (click)=\"triggerUpload()\" />\n    </div>\n    <form id=\"user-profile-form\" #userProfileForm=\"ngForm\" (ngSubmit)=\"validateForm(userProfileForm)\" autocomplete=\"off\">\n        <ion-item>\n            <ion-label position=\"floating\">Full Name<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"fullname\" required [(ngModel)]=\"profile.fullname\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Email<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"email\" required [(ngModel)]=\"profile.email\" disabled=\"disabled\"></ion-input>\n        </ion-item>\n        <!--<ion-item>\n            <ion-label position=\"floating\">Age<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" name=\"age\" required [(ngModel)]=\"profile.age\"></ion-input>\n        </ion-item>-->\n        <ion-item>\n            <ion-label position=\"floating\">Date Of Birth<span class=\"danger\">*</span></ion-label>\n            <ion-datetime display-format=\"DD/MM/YYYY\" picker-format=\"DD MMMM YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime>\n            <!-- <ion-datetime displayFormat=\"MMM DD, YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime> -->\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n            <ion-select name=\"gender\" required [(ngModel)]=\"profile.gender\">\n                <ion-select-option value=\"female\">Female</ion-select-option>\n                <ion-select-option value=\"male\">Male</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Weight[kg]</ion-label>\n            <ion-input type=\"number\" name=\"weight\" [(ngModel)]=\"profile.weight\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Height[cms]</ion-label>\n            <ion-input type=\"number\" name=\"height\" [(ngModel)]=\"profile.height\"></ion-input>\n        </ion-item>\n        <ion-button class=\"fk-marginTop-25\" id=\"update-profile-btn\" color=\"secondary\" expand=\"full\" size=\"large\" type=\"submit\">Update Profile</ion-button>\n    </form>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Profile Page</ion-title>\n    </ion-toolbar>\n    <div id=\"progress-bar-wrapper\" *ngIf=\"percentage | async as pct\">\n        <ion-progress-bar color=\"primary\" buffer=\"0.5\" class=\"progress is-info\" [value]=\"pct/100\"></ion-progress-bar>\n    </div>\n</ion-header>\n\n<ion-content padding>\n    <input id=\"file-uploader\" type=\"file\" (change)=\"uploadFile($event)\" name=\"Upload Image\" hidden accept=\"image/x-png,image/gif,image/jpeg\" />\n    <div id=\"image-upload-wrapper\">\n        <img id=\"user-img\" [src]=\"imgPath\" (click)=\"triggerUpload()\" onError=\"src = 'assets/default.png'\" />\n        <img id=\"edit-icon\" src=\"assets/icon/edit-image.png\" onError=\"src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'\" (click)=\"triggerUpload()\" />\n    </div>\n    <p id=\"user-name\">@{{profile.username}}</p>\n    <form id=\"user-profile-form\" #userProfileForm=\"ngForm\" (ngSubmit)=\"validateForm(userProfileForm)\" autocomplete=\"off\">\n        <ion-item>\n            <ion-label position=\"floating\">Full Name<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"fullname\" required [(ngModel)]=\"profile.fullname\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Email<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"email\" required [(ngModel)]=\"profile.email\" disabled=\"disabled\"></ion-input>\n        </ion-item>\n        <!--<ion-item>\n            <ion-label position=\"floating\">Age<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" name=\"age\" required [(ngModel)]=\"profile.age\"></ion-input>\n        </ion-item>-->\n        <ion-item>\n            <ion-label position=\"floating\">Date Of Birth<span class=\"danger\">*</span></ion-label>\n            <ion-datetime display-format=\"DD/MM/YYYY\" picker-format=\"DD MMMM YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime>\n            <!-- <ion-datetime displayFormat=\"MMM DD, YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime> -->\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n            <ion-select name=\"gender\" required [(ngModel)]=\"profile.gender\">\n                <ion-select-option value=\"female\">Female</ion-select-option>\n                <ion-select-option value=\"male\">Male</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Weight[kg]</ion-label>\n            <ion-input type=\"number\" name=\"weight\" [(ngModel)]=\"profile.weight\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Height[cms]</ion-label>\n            <ion-input type=\"number\" name=\"height\" [(ngModel)]=\"profile.height\"></ion-input>\n        </ion-item>\n        <ion-button class=\"fk-marginTop-25\" id=\"update-profile-btn\" color=\"secondary\" expand=\"full\" size=\"large\" type=\"submit\">Update Profile</ion-button>\n    </form>\n</ion-content>"
 
 /***/ }),
 
@@ -73,7 +73,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-item {\n  padding-left: 0px !important; }\n\n#image-upload-wrapper {\n  position: relative;\n  width: 150px;\n  height: 150px;\n  border-radius: 75px;\n  margin: auto; }\n\n#image-upload-wrapper img#user-img {\n    opacity: 0.7;\n    width: 150px;\n    height: 150px;\n    border-radius: 75px;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto; }\n\n#image-upload-wrapper img#edit-icon {\n    position: absolute;\n    width: 60%;\n    right: 0;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    margin: auto;\n    opacity: 0.6; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9wcm9maWxlL3Byb2ZpbGUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksNEJBQTRCLEVBQUE7O0FBR2hDO0VBQ0ksa0JBQWtCO0VBQ2xCLFlBQVk7RUFDWixhQUFhO0VBQ2IsbUJBQW1CO0VBQ25CLFlBQVksRUFBQTs7QUFMaEI7SUFPUSxZQUFZO0lBQ1osWUFBWTtJQUNaLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsT0FBTztJQUNQLFFBQVE7SUFDUixNQUFNO0lBQ04sU0FBUztJQUNULFlBQVksRUFBQTs7QUFmcEI7SUFrQlEsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixRQUFRO0lBQ1IsTUFBTTtJQUNOLE9BQU87SUFDUCxTQUFTO0lBQ1QsWUFBWTtJQUNaLFlBQ0osRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3Byb2ZpbGUvcHJvZmlsZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24taXRlbSB7XG4gICAgcGFkZGluZy1sZWZ0OiAwcHggIWltcG9ydGFudDtcbn1cblxuI2ltYWdlLXVwbG9hZC13cmFwcGVyIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IDE1MHB4O1xuICAgIGhlaWdodDogMTUwcHg7XG4gICAgYm9yZGVyLXJhZGl1czogNzVweDtcbiAgICBtYXJnaW46IGF1dG87XG4gICAgaW1nI3VzZXItaW1nIHtcbiAgICAgICAgb3BhY2l0eTogMC43O1xuICAgICAgICB3aWR0aDogMTUwcHg7XG4gICAgICAgIGhlaWdodDogMTUwcHg7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDc1cHg7XG4gICAgICAgIGxlZnQ6IDA7XG4gICAgICAgIHJpZ2h0OiAwO1xuICAgICAgICB0b3A6IDA7XG4gICAgICAgIGJvdHRvbTogMDtcbiAgICAgICAgbWFyZ2luOiBhdXRvO1xuICAgIH1cbiAgICBpbWcjZWRpdC1pY29uIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB3aWR0aDogNjAlO1xuICAgICAgICByaWdodDogMDtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICBib3R0b206IDA7XG4gICAgICAgIG1hcmdpbjogYXV0bztcbiAgICAgICAgb3BhY2l0eTogMC42XG4gICAgfVxufSJdfQ== */"
+module.exports = "ion-header {\n  position: relative; }\n  ion-header div#progress-bar-wrapper {\n    position: absolute;\n    width: 100%;\n    left: 0;\n    bottom: -3px;\n    z-index: 9999; }\n  ion-item {\n  padding-left: 0px !important; }\n  #image-upload-wrapper {\n  position: relative;\n  width: 150px;\n  height: 150px;\n  border-radius: 75px;\n  margin: auto; }\n  #image-upload-wrapper img#user-img {\n    opacity: 0.7;\n    width: 150px;\n    height: 150px;\n    border-radius: 75px;\n    left: 0;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    margin: auto; }\n  #image-upload-wrapper img#edit-icon {\n    position: absolute;\n    width: 60%;\n    right: 0;\n    top: 0;\n    left: 0;\n    bottom: 0;\n    margin: auto;\n    opacity: 0.6; }\n  p#user-name {\n  text-align: center;\n  color: #3B4EAC;\n  font-weight: bold; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9wcm9maWxlL3Byb2ZpbGUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksa0JBQWtCLEVBQUE7RUFEdEI7SUFHUSxrQkFBa0I7SUFDbEIsV0FBVztJQUNYLE9BQU87SUFDUCxZQUFZO0lBQ1osYUFBYSxFQUFBO0VBSXJCO0VBQ0ksNEJBQTRCLEVBQUE7RUFHaEM7RUFDSSxrQkFBa0I7RUFDbEIsWUFBWTtFQUNaLGFBQWE7RUFDYixtQkFBbUI7RUFDbkIsWUFBWSxFQUFBO0VBTGhCO0lBT1EsWUFBWTtJQUNaLFlBQVk7SUFDWixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLE9BQU87SUFDUCxRQUFRO0lBQ1IsTUFBTTtJQUNOLFNBQVM7SUFDVCxZQUFZLEVBQUE7RUFmcEI7SUFrQlEsa0JBQWtCO0lBQ2xCLFVBQVU7SUFDVixRQUFRO0lBQ1IsTUFBTTtJQUNOLE9BQU87SUFDUCxTQUFTO0lBQ1QsWUFBWTtJQUNaLFlBQ0osRUFBQTtFQUVKO0VBQ0ksa0JBQWtCO0VBQ2xCLGNBQWM7RUFDZCxpQkFBaUIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3Byb2ZpbGUvcHJvZmlsZS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24taGVhZGVyIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgZGl2I3Byb2dyZXNzLWJhci13cmFwcGVyIHtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbGVmdDogMDtcbiAgICAgICAgYm90dG9tOiAtM3B4O1xuICAgICAgICB6LWluZGV4OiA5OTk5O1xuICAgIH1cbn1cblxuaW9uLWl0ZW0ge1xuICAgIHBhZGRpbmctbGVmdDogMHB4ICFpbXBvcnRhbnQ7XG59XG5cbiNpbWFnZS11cGxvYWQtd3JhcHBlciB7XG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xuICAgIHdpZHRoOiAxNTBweDtcbiAgICBoZWlnaHQ6IDE1MHB4O1xuICAgIGJvcmRlci1yYWRpdXM6IDc1cHg7XG4gICAgbWFyZ2luOiBhdXRvO1xuICAgIGltZyN1c2VyLWltZyB7XG4gICAgICAgIG9wYWNpdHk6IDAuNztcbiAgICAgICAgd2lkdGg6IDE1MHB4O1xuICAgICAgICBoZWlnaHQ6IDE1MHB4O1xuICAgICAgICBib3JkZXItcmFkaXVzOiA3NXB4O1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICByaWdodDogMDtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBib3R0b206IDA7XG4gICAgICAgIG1hcmdpbjogYXV0bztcbiAgICB9XG4gICAgaW1nI2VkaXQtaWNvbiB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgd2lkdGg6IDYwJTtcbiAgICAgICAgcmlnaHQ6IDA7XG4gICAgICAgIHRvcDogMDtcbiAgICAgICAgbGVmdDogMDtcbiAgICAgICAgYm90dG9tOiAwO1xuICAgICAgICBtYXJnaW46IGF1dG87XG4gICAgICAgIG9wYWNpdHk6IDAuNlxuICAgIH1cbn1cbnAjdXNlci1uYW1lIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgY29sb3I6ICMzQjRFQUM7XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG59Il19 */"
 
 /***/ }),
 
@@ -93,6 +93,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _api_global_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api/global.service */ "./src/app/api/global.service.ts");
+/* harmony import */ var _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/crop/ngx */ "./node_modules/@ionic-native/crop/ngx/index.js");
+/* harmony import */ var _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/image-picker/ngx */ "./node_modules/@ionic-native/image-picker/ngx/index.js");
+/* harmony import */ var _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/file-transfer/ngx */ "./node_modules/@ionic-native/file-transfer/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -144,8 +147,11 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
+
+
 var ProfilePage = /** @class */ (function () {
-    function ProfilePage(toastr, loadingController, afDataBase, storage, events, router, globalComp) {
+    function ProfilePage(toastr, loadingController, afDataBase, storage, events, router, globalComp, crop, imagePicker, transfer) {
         this.toastr = toastr;
         this.loadingController = loadingController;
         this.afDataBase = afDataBase;
@@ -153,22 +159,12 @@ var ProfilePage = /** @class */ (function () {
         this.events = events;
         this.router = router;
         this.globalComp = globalComp;
+        this.crop = crop;
+        this.imagePicker = imagePicker;
+        this.transfer = transfer;
         this.profile = {};
-        this.filePath = 'images/' + window.localStorage.getItem("authID") + '/';
-        // this.profile = {
-        //   'uid':window.localStorage.getItem("authID"),
-        //   'dob': '',
-        //   'email': '',
-        //   'fullname': '',
-        //   'gender': '',
-        //   'height':'',
-        //   'weight':'',
-        //   'client': '',
-        //   'username': '',
-        //   'description': '',
-        //   'fbTermAcceptance': '',
-        //   'disabled': ''
-        // }
+        this.filePath = 'profileImage/' + window.localStorage.getItem("authID") + '/';
+        this.fileUrl = null;
     }
     ProfilePage.prototype.ngOnInit = function () {
         var _this = this;
@@ -188,23 +184,77 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage.prototype.uploadFile = function (event) {
         var _this = this;
-        this.presentLoading('Uploading Image...');
-        var file = event.target.files[0];
-        var fileRef = this.storage.ref(this.filePath);
-        this.storage.ref(this.filePath).put(file).then(function (data) {
-            if (data.state == "success") {
-                _this.imgPath = _this.globalComp.getUserImage();
-                // loading data explicitly after the image loaded as we are not setting root page as tab.
-                // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
-                _this.events.publish('loadData');
-                _this.presentToast('Profile image updated');
+        console.log("file length>>>>", event.target.files.length);
+        if (event.target.files.length >= 1) {
+            this.presentLoading('Uploading Image...');
+            var file = event.target.files[0];
+            var fileRef = this.storage.ref(this.filePath);
+            this.storage.ref(this.filePath).put(file).then(function (data) {
+                console.log("data from upload image", data);
+                if (data.state == "success") {
+                    // this.imgPath = this.globalComp.getUserImage();
+                    _this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F' + _this.uid + '?alt=media' + '&random=' + Math.floor(Math.random() * 230) + 90;
+                    // loading data explicitly after the image loaded as we are not setting root page as tab.
+                    // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
+                    _this.events.publish('loadData');
+                    _this.presentToast('Profile image updated');
+                }
+                else {
+                    _this.presentToast('Problem uploading image. Please try after sometime.');
+                }
+                _this.dismissLoader();
+            }).catch(function (err) {
+                _this.presentToast('There was a problem uploading image. Try after sometime');
+            });
+        }
+    };
+    ProfilePage.prototype.cropUpload = function () {
+        var _this = this;
+        this.imagePicker.getPictures({ maximumImagesCount: 1, outputType: 0 }).then(function (results) {
+            for (var i = 0; i < results.length; i++) {
+                console.log('Image URI: ' + results[i]);
+                _this.crop.crop(results[i], { quality: 100 })
+                    .then(function (newImage) {
+                    console.log('new image path is: ' + newImage);
+                    var fileTransfer = _this.transfer.create();
+                    var uploadOpts = {
+                        fileKey: 'file',
+                        fileName: newImage.substr(newImage.lastIndexOf('/') + 1)
+                    };
+                    // fileTransfer.upload(newImage, this.filePath, uploadOpts).then((data) => {
+                    //    console.log(data);
+                    //    this.respData = JSON.parse(data.response);
+                    //    console.log(this.respData);
+                    //    this.fileUrl = this.respData.fileUrl;
+                    //    this.presentToast(this.fileUrl);
+                    //  }, (err) => {
+                    //    console.log(err);
+                    //  });
+                    _this.storage.ref(_this.filePath).put(newImage).then(function (data) {
+                        console.log("data from upload image", data);
+                        if (data.state == "success") {
+                            // this.imgPath = this.globalComp.getUserImage();
+                            _this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F' + _this.uid + '?alt=media' + '&random=' + Math.floor(Math.random() * 230) + 90;
+                            // loading data explicitly after the image loaded as we are not setting root page as tab.
+                            // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
+                            _this.events.publish('loadData');
+                            _this.presentToast('Profile image updated');
+                        }
+                        else {
+                            _this.presentToast('Problem uploading image. Please try after sometime.');
+                        }
+                        _this.dismissLoader();
+                    }).catch(function (err) {
+                        _this.presentToast('There was a problem uploading image. Try after sometime');
+                    });
+                }, function (error) {
+                    _this.presentToast('Error cropping image >> ERROR BLOCK');
+                    console.error('Error cropping image', error);
+                });
             }
-            else {
-                _this.presentToast('Problem uploading image. Please try after sometime.');
-            }
-            _this.dismissLoader();
-        }).catch(function (err) {
-            _this.presentToast('There was a problem uploading image. Try after sometime');
+        }, function (err) {
+            console.log(err);
+            _this.presentToast('Error cropping image >> Image picker BLOCK');
         });
     };
     ProfilePage.prototype.validateForm = function (form) {
@@ -229,7 +279,7 @@ var ProfilePage = /** @class */ (function () {
         this.afDataBase.database.ref("profiles/" + this.uid).set(this.profile)
             .then(function () {
             _this.presentToast('Profile Updated!');
-            _this.globalComp.updateUserData();
+            _this.globalComp.getUserInformationFirebase();
             _this.dismissLoader();
             _this.router.navigateByUrl('/tabs');
         }, function (error) {
@@ -302,7 +352,7 @@ var ProfilePage = /** @class */ (function () {
             template: __webpack_require__(/*! ./profile.page.html */ "./src/app/pages/profile/profile.page.html"),
             styles: [__webpack_require__(/*! ./profile.page.scss */ "./src/app/pages/profile/profile.page.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"], _angular_fire_storage__WEBPACK_IMPORTED_MODULE_3__["AngularFireStorage"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Events"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _api_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"]])
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"], _angular_fire_storage__WEBPACK_IMPORTED_MODULE_3__["AngularFireStorage"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Events"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _api_global_service__WEBPACK_IMPORTED_MODULE_5__["GlobalService"], _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_6__["Crop"], _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_7__["ImagePicker"], _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_8__["FileTransfer"]])
     ], ProfilePage);
     return ProfilePage;
 }());

@@ -160,6 +160,7 @@ var FeedbackPage = /** @class */ (function () {
                 "userName": this.userData.fullname,
                 "email": this.userData.email,
                 "uid": this.userData.uid,
+                "date": new Date(),
             };
             // console.log("Feedback", feedbackObj);
             this.afDataBase.database.ref("/feedbacks").push(feedbackObj).then(function (data) {

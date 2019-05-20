@@ -56,7 +56,7 @@
                                 <ion-icon color="primary" item-right ios="ios-undo" md="md-undo" (click)="showPrompt(comment.id);"></ion-icon>
                             </ion-col>
                         </ion-row>
-                        <ion-row *ngFor="let cComment of comment.childComment">
+                        <ion-row class="child-comments" *ngFor="let cComment of comment.childComment">
                             <ion-col size="2">
                                 <div class="child-comment-img-wrapper">
                                     <img class="user-img-icon" [src]="cComment.userImg" onError="src = 'assets/default.png'" />

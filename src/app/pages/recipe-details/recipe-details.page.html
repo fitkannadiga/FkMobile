@@ -9,7 +9,7 @@
 
 <ion-content>
     <ion-card>
-        <img *ngIf="recipeData.recipe_img" [src]="recipeData.recipe_img" />
+        <img *ngIf="recipeData.recipe_img" [src]="recipeData.recipe_img" onError="src = './assets/imgs/default.png'"/>
         <ion-card-content>
             <ion-card-title>
                 {{recipeData.recipe_title}}

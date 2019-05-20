@@ -10,7 +10,7 @@ import { FitBookPage } from './pages/fit-book/fit-book.page';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/login',pathMatch: 'full'},
+  // { path: '', redirectTo: '/login',pathMatch: 'full'},
   { path: 'tabs', loadChildren: './tabs/tabs.module#TabsPageModule' },
   { path: 'login', component: LoginPage },
   // { path: 'registration', component: RegistrationPage },

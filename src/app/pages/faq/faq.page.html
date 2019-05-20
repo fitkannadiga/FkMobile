@@ -10,9 +10,10 @@
 
 <ion-content padding>
     <ion-list class="accordion-list">
-        <div *ngFor="let item of finalFaqObject; let i = index" no-lines no-padding>
-            <p class="question" (click)="toggleSection(i)">
-                <span class="q-text">Q &nbsp;</span> {{item.question}}
+        <div class="accordion-container" *ngFor="let item of finalFaqObject; let i = index">
+            <p class="question" (click)="toggleSection(i, $event)">
+                <span class="question-text"><ion-icon [name]="(item.open) ? 'remove' : 'add'"></ion-icon></span> 
+                <span class="quesion">{{item.question}}</span>
             </p>
             <p class="answer" *ngIf="item.open" no-lines>{{item.answer}}</p>
         </div>

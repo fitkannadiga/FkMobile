@@ -1,19 +1,21 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 @font-face {
-    font-family: 'gitchgitch';
+    font-family: 'Avenir-Next-LT-Pro-Italic_5191';
     font-weight: 300;
     font-style: normal;
     src: url('../assets/fonts/gitchgitch/gitchgitch-italic.otf');
     src: url('../assets/fonts/ketchup/ketchup-Bold.otf');
     src: url('../assets/fonts/caviar/CaviarDreams.ttf');
+    src: url('../assets/fonts/Avenir-LT-Std-95-Black-Oblique_5178.ttf');
+    src: url('../assets/fonts/Avenir-Next-LT-Pro-Italic_5191.ttf');
 }
 
 :root,
 :root[mode=ios],
 :root[mode=md] {
-    --ion-font-family: "gitchgitch" !important;
-    font-family: "gitchgitch" !important;
+    --ion-font-family: "Avenir-Next-LT-Pro-Italic_5191" !important;
+    font-family: "Avenir-Next-LT-Pro-Italic_5191" !important;
 }
 
 
@@ -85,6 +87,15 @@
     --ion-color-light-tint: #f5f6f9;
 }
 
+.ion-color-green {
+    --ion-color-base: #5DB85C;
+    --ion-color-base-rgb: 93,184,92;
+    --ion-color-contrast: #000000;
+    --ion-color-contrast-rgb: 0,0,0;
+    --ion-color-shade: #52a251;
+    --ion-color-tint: #6dbf6c;
+}
+
 .ion-color-carbs {
     --ion-color-base: #F19733;
     --ion-color-base-rgb: 241, 151, 51;
@@ -110,4 +121,22 @@
     --ion-color-contrast-rgb: 0, 0, 0;
     --ion-color-shade: #dfd92b;
     --ion-color-tint: #fdf846;
+}
+
+.ion-color-purple {
+    --ion-color-purple: #38009c;
+    --ion-color-purple-rgb: 56, 0, 156;
+    --ion-color-purple-contrast: #ffffff;
+    --ion-color-purple-contrast-rgb: 255, 255, 255;
+    --ion-color-purple-shade: #310089;
+    --ion-color-purple-tint: #4c1aa6;
+}
+
+.ion-color-feedback {
+    --ion-color-feedback: #42ABEE;
+    --ion-color-feedback-rgb: 66, 171, 238;
+    --ion-color-feedback-contrast: #000000;
+    --ion-color-feedback-contrast-rgb: 0, 0, 0;
+    --ion-color-feedback-shade: #3a96d1;
+    --ion-color-feedback-tint: #55b3f0;
 }

@@ -1,13 +1,31 @@
 ion-content {
     --background: var(--ion-background-color, #dcdcdc);
-    ion-card {
-        background-color: #FFF;
-        margin: 20px 15px;
+    div#article-wrapper {
+        ion-card {
+            color: #000 !important;
+            background-color: #FFF;
+            margin: 20px 15px;
+            ion-grid {
+                padding: 5px 0px;
+            }
+            ion-row.count {
+                border-top: 1px solid #ededed;
+                padding: 5px 0px 0px;
+                margin-top: 5px;
+                ion-col.views {
+                    border-right: 1px solid #ededed;
+                }
+                ion-icon {
+                    vertical-align: middle;
+                }
+            }
+        }
     }
 }
 
 div#fake-article-wrapper {
     ion-card {
+        background-color: #FFF;
         height: 100px;
         ion-grid {
             height: 100%;

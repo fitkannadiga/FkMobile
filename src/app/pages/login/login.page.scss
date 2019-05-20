@@ -14,8 +14,13 @@ ion-content {
                 --background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
             }
         }
+        p#new-user {
+            a {
+                text-decoration: none;
+            }
+        }
         span#reset-link {
-            text-decoration: underline;
+            // text-decoration: underline;
             color: #3B4EAC;
         }
         p#google-login-btn {

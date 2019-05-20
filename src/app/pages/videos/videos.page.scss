@@ -7,14 +7,30 @@
         }
     }
     
+    div.videowrapper {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+        background-color: #000;
+        video {
+            background-color: #000;
+        }
+    }
+
+    div#video-list-wrapper {
+        padding: 10px;
+    }
+    
     ion-card {
         margin: 10px 0px !important;
         width: 100% !important;
-        position: relative;
+        // position: relative;
         img {
-            display: inline-block !important;
-            width: 35% !important;
-            float: right;
+            // display: inline-block !important;
+            // width: 35% !important;
+            // float: right;
         }
         span.counts {
             color: #000;
@@ -23,10 +39,11 @@
             height: 10px !important;
         }
         ion-card-content {
-            display: inline-block !important;
-            width: 65% !important;
-            padding: 2px 5px !important;
-            float: left !important;
+            // display: inline-block !important;
+            // width: 65% !important;
+            // padding: 2px 5px !important;
+            // float: left !important;
+            padding: 0px;
             ion-row {
                 position: absolute;
                 display: block !important;
@@ -34,24 +51,29 @@
             }
             ion-card-title {
                 width: 100% !important;
-                font-size: 1.3rem !important;
+                // font-size: 1.3rem !important;
                 padding-left: 5px !important;
             }
         }
         span.video-card-title {
             display: block;
             font-weight: bold;
-            font-size: 1rem !important;
+            font-size: 0.9rem !important;
             padding-bottom: 4px;
+            line-height: 1.2rem;
         }
         span.video-card-desc {
+            // font-size: 0.6rem !important;
+            // display: block;
+            // line-height: 1rem;
+            // overflow: hidden;
+            // white-space: nowrap;
+            // width: 100%;
+            // text-overflow: ellipsis;
             font-size: 0.8rem !important;
             display: block;
             line-height: 1rem;
-            overflow: auto;
-            word-break: break-all;
-            /* text-overflow: ellipsis; */
-            height: 30px;
+            width: 100%;
         }
     }
     
@@ -59,13 +81,16 @@
         div#fake-video-wrapper {
             height: 180px;
         }
+        div#fake-video-list {
+            padding: 10px;
+        }
         ion-card {
-            height: 100px;
+            height: 80px;
             ion-row {
                 height: 100%;
                 ion-col {
                     p {
-                        height: 25px;
+                        height: 18px;
                         margin-bottom: 10px;
                     }
                 }

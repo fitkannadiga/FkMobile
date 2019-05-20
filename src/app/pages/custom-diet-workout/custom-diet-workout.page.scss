@@ -1,33 +1,64 @@
 div#non-customer {
     text-align: center;
+    padding: 20px;
     p#alert-icon {
-        font-size: 4rem;
+        font-size: 6rem;
         color: #d43b3d;
         margin-bottom: 0px;
+        opacity: 0.9;
     }
 }
 
 div#customer {
-    ion-card {
-        ion-row {
-            ion-col.text {
-                text-align: center;
-                font-size: 1.5rem;
-                font-weight: bold;
-                display: block;
-                padding-top: 30px;
-                color: #000;
+    margin: 100px 5px !important;
+    div.wrapper {
+        text-align: center;
+        position: relative;
+        img {
+            width: 100px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            top: -60px;
+            padding: 10px;
+            z-index: 999;
+        }
+        img.diet {
+            padding: 8px !important;
+        }
+        ion-card {
+            ion-card-content {
+                p {
+                    color: #fff;
+                }
             }
-            span#new-msg-count {
-                display: block;
-                font-size: 0.8rem;
-                padding: 7px;
-                position: absolute;
-                right: 0;
-                top: 0;
-                background-color: #633ce0;
-                color: #FFF;
-            }
+        }
+        ion-card.diet {
+            margin: 0px 10px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 60px;
+            background: rgba(41,92,0,1);
+            background: -moz-linear-gradient(left, rgba(41,92,0,1) 0%, rgba(4,180,86,0.86) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(41,92,0,1)), color-stop(100%, rgba(4,180,86,0.86)));
+            background: -webkit-linear-gradient(left, rgba(41,92,0,1) 0%, rgba(4,180,86,0.86) 100%);
+            background: -o-linear-gradient(left, rgba(41,92,0,1) 0%, rgba(4,180,86,0.86) 100%);
+            background: -ms-linear-gradient(left, rgba(41,92,0,1) 0%, rgba(4,180,86,0.86) 100%);
+            background: linear-gradient(to right, rgba(41,92,0,1) 0%, rgba(4,180,86,0.86) 100%);
+        }
+        ion-card.workout {
+            margin: 0px 10px;
+            padding: 20px;
+            text-align: center;
+            margin-top: 60px;
+            background: rgba(207,198,235,1);
+            background: -moz-linear-gradient(left, rgba(207,198,235,1) 0%, rgba(82,68,193,1) 0%, rgba(57,143,219,0.85) 100%);
+            background: -webkit-gradient(left top, right top, color-stop(0%, rgba(207,198,235,1)), color-stop(0%, rgba(82,68,193,1)), color-stop(100%, rgba(57,143,219,0.85)));
+            background: -webkit-linear-gradient(left, rgba(207,198,235,1) 0%, rgba(82,68,193,1) 0%, rgba(57,143,219,0.85) 100%);
+            background: -o-linear-gradient(left, rgba(207,198,235,1) 0%, rgba(82,68,193,1) 0%, rgba(57,143,219,0.85) 100%);
+            background: -ms-linear-gradient(left, rgba(207,198,235,1) 0%, rgba(82,68,193,1) 0%, rgba(57,143,219,0.85) 100%);
+            background: linear-gradient(to right, rgba(207,198,235,1) 0%, rgba(82,68,193,1) 0%, rgba(57,143,219,0.85) 100%);
         }
     }
 }

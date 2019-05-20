@@ -13,9 +13,11 @@ export class HomePage implements OnInit {
   homeLoader: any;
   slideData: any;
   fakeslider: boolean = true;
+  fakeWorkout: boolean = true;
   fakeSlideData: any = Array<number>(3);
+  homeWorkoutList: any = [];
   slideOpts = {
-    autoplay: true,
+    autoplay: false,
     effect: 'flip',
     speeed: 300,
     loop: true,
@@ -23,6 +25,7 @@ export class HomePage implements OnInit {
   };
   constructor(public menuCtrl: MenuController, public loadingController: LoadingController, public toastr: ToastController, public commonService: CommonService, public router: Router, private iab: InAppBrowser) {
     this.getBannerImages();
+    this.getHomeWorkout();
    }
 
   ngOnInit() {
@@ -43,6 +46,25 @@ export class HomePage implements OnInit {
     function(error){
       console.log("banner image error", error);
     });
+  }
+
+  getHomeWorkout(){
+    this.commonService.getHomeWorkoutList().then(data => {
+      this.homeWorkoutList = data;
+      setTimeout(() => {
+        this.fakeWorkout = false;
+      }, 1000);
+    }, function(err){
+      console.log("home workout error", err);
+    });
+  }
+
+  getArray(index){
+    return Array<number>(index);
+  }
+
+  openWorkoutPage(){
+    this.router.navigateByUrl('/workout');
   }
 
   openSlideInfo(slideData){

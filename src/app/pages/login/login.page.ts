@@ -7,6 +7,7 @@ import * as firebase from 'firebase';
 import { Observable } from 'rxjs';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { AngularFireDatabase } from '@angular/fire/database';
+import { GlobalService } from '../../api/global.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,7 @@ export class LoginPage implements OnInit {
   loading: any;
   user: Observable<firebase.User>;
 
-  constructor(public navCtrl:NavController, public loadingController: LoadingController, private fire:AngularFireAuth, public toastr: ToastController, public router: Router, public menuCtrl: MenuController, public platform: Platform, private gplus: GooglePlus, public afDataBase: AngularFireDatabase) { 
+  constructor(public navCtrl:NavController, public loadingController: LoadingController, private fire:AngularFireAuth, public toastr: ToastController, public router: Router, public menuCtrl: MenuController, public platform: Platform, private gplus: GooglePlus, public afDataBase: AngularFireDatabase, public globalService: GlobalService) { 
     this.user = this.fire.authState;
   }
 
@@ -38,6 +39,7 @@ export class LoginPage implements OnInit {
       .then( (data) => {
         // this.menu.enable(true);
         window.localStorage.setItem("authID", data.user.uid);
+        this.globalService.getUserInformationFirebase();
         window.localStorage.setItem("login-success", "success");
         this.dismissLoader();
         this.navCtrl.navigateRoot('/tabs');

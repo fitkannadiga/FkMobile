@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingController, ToastController } from '@ionic/angular';
+import { LoadingController, ToastController, AlertController } from '@ionic/angular';
 import { CommonService } from '../../api/common.service';
 import { SplitDataServiceService } from '../../api/split-data-service.service';
 import { Router } from '@angular/router';
 import { MuscleGroupServiceService } from '../../api/muscle-group-service.service';
+import { GlobalService } from '../../api/global.service';
 
 @Component({
   selector: 'app-workout',
@@ -21,7 +22,7 @@ export class WorkoutPage implements OnInit {
   fakeWorkoutList: any = Array<number>(7);
   fakeWorkout: boolean = true;
 
-  constructor(public loadingController: LoadingController, public commonService: CommonService, public toastr: ToastController, public splitService:SplitDataServiceService, public router: Router, public musclGroupService: MuscleGroupServiceService) {
+  constructor(public loadingController: LoadingController, public commonService: CommonService, public toastr: ToastController, public splitService:SplitDataServiceService, public router: Router, public musclGroupService: MuscleGroupServiceService, public globalService: GlobalService, public alertCtrl: AlertController) {
     this.getWorkoutList();
     this.getMuscleGroupList();
   }
@@ -50,9 +51,20 @@ export class WorkoutPage implements OnInit {
   }
 
   displayWorkout(workoutData){
-    // console.log("displayWorkout", workoutData);
-    this.splitService.setWorkoutSplit(workoutData);
-    this.router.navigateByUrl('split-details');
+    // before we push the data, check for premium users or client data
+    if(workoutData.premium){
+      this.globalService.getUserInformationFirebase().then(data => {
+        if(data['userProfile'].client == true){
+          this.splitService.setWorkoutSplit(workoutData);
+          this.router.navigateByUrl('split-details');
+        } else {
+          this.showPrompt('This workout is only for premium members & clients. Please register with us to have unlimited access to simillar kind of workouts and much more!');
+        }
+      });
+    } else {
+      this.splitService.setWorkoutSplit(workoutData);
+      this.router.navigateByUrl('split-details');
+    }
   }
 
   searchTags(tagVal){
@@ -115,6 +127,22 @@ export class WorkoutPage implements OnInit {
       duration: 3000
     });
     toast.present();
+  }
+
+  async showPrompt(message) {
+    const prompt = await this.alertCtrl.create({
+      header: 'Note',
+      message: message,
+      buttons: [
+        {
+          text: 'Ok',
+          handler: data => {
+            // console.log('Cancel clicked');
+          }
+        }
+      ]
+    });
+    return await prompt.present();
   }
 
 }

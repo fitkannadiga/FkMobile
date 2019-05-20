@@ -3,23 +3,29 @@
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-title>Workout List</ion-title>
+        <ion-title>{{muscleData.muscle}}</ion-title>
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <h3>{{muscleData.muscle}}</h3>
-    <img [src]="muscleData.img_path" />
-    <div [innerHTML]="muscleData.description"></div>
-    <ion-card *ngFor="let exercise of muscleData.workouts">
-        <ion-row>
-            <ion-col size="3">
-                <img [src]="exercise.exercise_image" />
-            </ion-col>
-            <ion-col>
-                <p>{{exercise.exercise_name}}</p>
-                <p>{{exercise.exercise_info}}</p>
-            </ion-col>
-        </ion-row>
-    </ion-card>
+<ion-content>
+    <div padding>
+        <!-- <h3>{{muscleData.muscle}}</h3> -->
+        <img [src]="muscleData.img_path" />
+        <div [innerHTML]="muscleData.description"></div>
+    </div>
+    <div id="search-wrapper">
+        <ion-searchbar (ionInput)="getItems($event)" placeholder="search workout" showCancelButton (ionCancel)="cancelSearch()"></ion-searchbar>
+    </div>
+    <div padding>
+        <ion-card *ngFor="let exercise of exerciseList" (click)="showWorkoutModal(exercise);">
+            <ion-row>
+                <ion-col size="3">
+                    <img [src]="exercise.exercise_image" onError="src = './assets/imgs/default.png'"/>
+                </ion-col>
+                <ion-col>
+                    <p>{{exercise.exercise_name}}</p>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </div>
 </ion-content>

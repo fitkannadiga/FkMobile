@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NutrientGraphService } from '../../api/nutrient-graph.service';
+import { Router } from '@angular/router';
 
 declare var AmCharts: any;
 
@@ -12,19 +13,20 @@ export class NutrientGraphPage implements OnInit {
 
   userInfo = {};
   BMR: any;
+  TEE: any;
   IntakeCalories: any;
   goal: string;
   breakRation: string;
   carbs: any;
   proteins: any;
   fats: any;
-  
 
-  constructor(public nutrientService: NutrientGraphService) {
+  constructor(public nutrientService: NutrientGraphService, public router: Router) {
     let userData = this.nutrientService.getGraphData();
     this.userInfo = userData[0];
     this.BMR = userData[1];
-    this.IntakeCalories = userData[2];
+    this.TEE = userData[2];
+    this.IntakeCalories = userData[3];
     
     if(this.userInfo['goal'] == "fl"){
       this.goal = "Fat Loss";
@@ -46,6 +48,10 @@ export class NutrientGraphPage implements OnInit {
 
   ngOnInit() {
     this.calculateCaloriesForGoal(this.IntakeCalories, this.breakRation);
+  }
+
+  showMacroCalci(){
+    this.router.navigateByUrl('/macros-calci');
   }
 
 

@@ -39,23 +39,40 @@ import { File } from '@ionic-native/file/ngx';
 import { CKEditorModule } from 'ng2-ckeditor';
 import {FormsModule} from '@angular/forms';
 import { CreateRecipeComponent } from './components/create-recipe/create-recipe.component';
-import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { WorkoutInfoComponent } from './components/workout-info/workout-info.component';
+
+
+import { Camera } from '@ionic-native/camera/ngx';
+import { Crop } from '@ionic-native/crop/ngx';
+import { WebView } from '@ionic-native/ionic-webview/ngx';
+import { FilePath } from '@ionic-native/file-path/ngx';
+import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ngx';
+
+import { NetworkService } from './api/network.service';
+import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
+import { BackgroundMode } from '@ionic-native/background-mode/ngx';
+import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserStoryComponent,
-    CreateRecipeComponent
+    CreateRecipeComponent,
+    WorkoutInfoComponent
   ],
   entryComponents: [
     UserStoryComponent,
-    CreateRecipeComponent
+    CreateRecipeComponent,
+    WorkoutInfoComponent
   ],
   imports: [
     BrowserModule, 
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    IonicModule.forRoot(), 
+    IonicModule.forRoot(),
     AppRoutingModule,
+    HttpClientModule,
+    CKEditorModule,
+    FormsModule,
     AngularFirestoreModule,
     AngularFireStorageModule,
     AngularFireAuthModule,
@@ -66,13 +83,9 @@ import { GooglePlus } from '@ionic-native/google-plus/ngx';
     FitBookPageModule,
     RecipesPageModule,
     RegistrationPageModule,
-    HomePageModule,
-    HttpClientModule,
-    CKEditorModule,
-    FormsModule
+    HomePageModule
   ],
   providers: [
-    GooglePlus,
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
@@ -82,7 +95,17 @@ import { GooglePlus } from '@ionic-native/google-plus/ngx';
     Insomnia,
     Firebase,
     SocialSharing,
-    File    
+    NetworkService,
+    File,
+    Camera,
+    Crop,
+    WebView,
+    FilePath,
+    FileTransfer,
+    FileTransferObject,
+    ScreenOrientation,
+    BackgroundMode,
+    ImagePicker
   ],
   bootstrap: [AppComponent]
 })

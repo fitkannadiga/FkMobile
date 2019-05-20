@@ -21,7 +21,7 @@
             <video #videoPlayer id="yt_video_player" autoplay width="100%" class="embed-responsive-item" autobuffer controls [poster]="firebasePoster" playsinline [src]="firebaseSource"></video>
         </div>
 
-        <ion-card [id]="video.video_id" *ngFor="let video of videoList" (click)="changeVideo(video)">
+        <!-- <ion-card [id]="video.video_id" *ngFor="let video of videoList" (click)="changeVideo(video)">
             <img class="" [src]="'https://i4.ytimg.com/vi/'+video.video_id+'/hqdefault.jpg'" />
             <ion-card-content>
                 <ion-card-title>
@@ -29,25 +29,43 @@
                     <span class="video-card-desc">{{video.video_sd}}</span>
                 </ion-card-title>
             </ion-card-content>
-        </ion-card>
+        </ion-card> -->
+        <div id="video-list-wrapper">
+            <ion-card [id]="video.video_id" *ngFor="let video of videoList" (click)="changeVideo(video)">
+                <ion-row>
+                    <ion-col size="8">
+                        <ion-card-content>
+                            <ion-card-title>
+                                <span class="video-card-title">{{video.video_title}}</span>
+                                <span class="video-card-desc">{{video.video_sd}}</span>
+                            </ion-card-title>
+                        </ion-card-content>
+                    </ion-col>
+                    <ion-col size="4">
+                        <img class="" [src]="'https://i4.ytimg.com/vi/'+video.video_id+'/hqdefault.jpg'" onError="src = './assets/imgs/default.png'"/>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </div>
     </div>
     <div *ngIf="fakeData" id="fake-wrapper">
         <div id="fake-video-wrapper" class="animate-skeleton-background"></div>
-        <ion-card *ngFor="let list of fakelist">
-            <ion-row>
-                <ion-col size="8">
-                    <ion-card-content>
-                        <ion-card-title>
-                            <p class="animate-skeleton-background"></p>
-                            <p class="animate-skeleton-background"></p>
-                        </ion-card-title>
-                    </ion-card-content>
-                </ion-col>
-                <ion-col class="fake-img-wrapper" size="4">
-                    <div class="animate-skeleton-background"></div>
-                </ion-col>
-            </ion-row>
-
-        </ion-card>
+        <div id="fake-video-list">
+            <ion-card *ngFor="let list of fakelist">
+                <ion-row>
+                    <ion-col size="8">
+                        <ion-card-content>
+                            <ion-card-title>
+                                <p class="animate-skeleton-background"></p>
+                                <p class="animate-skeleton-background"></p>
+                            </ion-card-title>
+                        </ion-card-content>
+                    </ion-col>
+                    <ion-col class="fake-img-wrapper" size="4">
+                        <div class="animate-skeleton-background"></div>
+                    </ion-col>
+                </ion-row>
+            </ion-card>
+        </div>
     </div>
 </ion-content>

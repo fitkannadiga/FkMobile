@@ -17,6 +17,7 @@ export class BMRcalculatorPage implements OnInit {
   IntakeCalories: any;
   userData: any = {};
   bmrLoader: any;
+  TEE: any;
 
   constructor(private toastr: ToastController, public loadingController: LoadingController,  private globalComp: GlobalService, public commonService:CommonService, public router: Router, public nutrientService: NutrientGraphService) {
     this.userInfo = {
@@ -70,11 +71,11 @@ export class BMRcalculatorPage implements OnInit {
   calculateCalorieIntake(){
     // console.log("Goal Selected", this.userInfo.goal);
     if(this.userInfo.goal == "fl"){
-      this.IntakeCalories = Math.round(Math.round(this.BMR) - 200);
+      this.IntakeCalories = Math.round(Math.round(this.TEE) - 200);
     } else if(this.userInfo.goal == "mb"){
-      this.IntakeCalories = Math.round(Math.round(this.BMR) + 600);
+      this.IntakeCalories = Math.round(Math.round(this.TEE) + 400);
     } else if(this.userInfo.goal == "mw"){
-      this.IntakeCalories = Math.round(Math.round(this.BMR) + 50);
+      this.IntakeCalories = Math.round(Math.round(this.TEE) + 50);
     } else {
       // nothing
     }
@@ -84,17 +85,19 @@ export class BMRcalculatorPage implements OnInit {
 
     // After calculating the calorie intake, load the next page to display graph
     // set data for the BMI graph
-    this.nutrientService.setGrapgData(this.userInfo, this.BMR, this.IntakeCalories);
+    this.nutrientService.setGrapgData(this.userInfo, this.BMR, this.TEE, this.IntakeCalories);
     this.router.navigateByUrl('/nutrient-graph');
   }
 
   calculateBMR(){
     if(this.userInfo.gender == "male"){
       let metabolicRate = Math.round((10*this.userInfo.weight)+(6.25*this.userInfo.height)-(5*this.userInfo.age)+5);
-      this.BMR = Math.round(metabolicRate*this.userInfo.activity);
+      this.BMR = metabolicRate;
+      this.TEE = Math.round(metabolicRate*this.userInfo.activity);
     } else {
       let metabolicRate = Math.round((10*this.userInfo.weight)+(6.25*this.userInfo.height)-(5*this.userInfo.age)-161);
-      this.BMR = Math.round(metabolicRate*this.userInfo.activity);
+      this.BMR = metabolicRate;
+      this.TEE = Math.round(metabolicRate*this.userInfo.activity);
     }
     // console.log("BMR", this.BMR);
     this.calculateCalorieIntake();

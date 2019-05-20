@@ -3,47 +3,65 @@
         <ion-menu type="push" id="myFitnessMenu">
             <ion-header>
                 <ion-toolbar id="user-toolbar" color="medium">
-                    <div id="user-img-wrapper">
-                        <img id="user-img" [src]="imgPath" (click)="openPage('/profile')" onError="src = 'assets/default.png'" />
-                    </div>
-                    <span class="user-name fk-bold">{{userProfile?.fullname}}</span>
+                    <ion-row>
+                        <ion-col size="3">
+                            <div id="user-img-wrapper">
+                                <img id="user-img" *ngIf="userProfile?.gender == 'male'" [src]="imgPath" (click)="openPage('/profile')" onError="src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'" />
+                                <img id="user-img" *ngIf="userProfile?.gender == 'female'" [src]="imgPath" (click)="openPage('/profile')" onError="src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_women.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'" />
+                            </div>
+                        </ion-col>
+                        <ion-col id="user-data-wrapper" (click)="openPage('/profile')">
+                            <p class="user-full-name fk-bold">{{userProfile?.fullname}}</p>
+                            <p class="user-name fk-bold">@{{userProfile?.username}}</p>
+                        </ion-col>
+                    </ion-row>
                 </ion-toolbar>
             </ion-header>
             <ion-content>
                 <ion-list>
-                    <ion-item (click)="openPage('/profile')">
+                    <!-- <ion-item (click)="openPage('/profile')">
                         <ion-icon ios="ios-person" md="md-person"></ion-icon>&nbsp;&nbsp;&nbsp;My Profile
-                    </ion-item>
+                    </ion-item> -->
                     <ion-item (click)="openPage('/articles')">
-                        <ion-icon ios="ios-document" md="md-document"></ion-icon>&nbsp;&nbsp;&nbsp;Articles
+                        <ion-icon ios="ios-document" md="md-document"></ion-icon>
+                        <span class="title">Articles</span>
                     </ion-item>
                     <ion-item (click)="openPage('/workout')">
-                        <ion-icon ios="ios-body" md="md-body"></ion-icon>&nbsp;&nbsp;&nbsp;Workouts
+                        <ion-icon ios="ios-body" md="md-body"></ion-icon>
+                        <span class="title">Workouts</span>
                     </ion-item>
                     <ion-item (click)="openPage('/tools')">
-                        <ion-icon name="hammer"></ion-icon>&nbsp;&nbsp;&nbsp;Tools
+                        <ion-icon name="hammer"></ion-icon>
+                        <span class="title">Tools</span>
                     </ion-item>
                     <ion-item (click)="openPage('/hire-coach')">
-                        <ion-icon name="bicycle"></ion-icon>&nbsp;&nbsp;&nbsp;Hire Coach
+                        <ion-icon name="bicycle"></ion-icon>
+                        <span class="title">Hire Coach</span>
                     </ion-item>
                     <ion-item (click)="openPage('/custom-diet-workout')">
-                        <ion-icon name="build"></ion-icon>&nbsp;&nbsp;&nbsp;Diet & Workout
+                        <ion-icon name="build"></ion-icon>
+                        <span class="title">Diet & Workout</span>
                     </ion-item>
                     <ion-item (click)="openPage('/chat')">
-                        <ion-icon name="chatbubbles"></ion-icon>&nbsp;&nbsp;&nbsp;Chat
+                        <ion-icon name="chatbubbles"></ion-icon>
+                        <span class="title">Chat</span>
                         <span *ngIf="newMsgCount > 0" id="new-message">{{newMsgCount}}</span>
                     </ion-item>
                     <ion-item (click)="openPage('/faq')">
-                        <ion-icon name="help"></ion-icon>&nbsp;&nbsp;&nbsp;FAQ's
+                        <ion-icon name="help"></ion-icon>
+                        <span class="title">FAQ's</span>
                     </ion-item>
                     <ion-item (click)="openPage('/feedback')">
-                        <ion-icon name="create"></ion-icon>&nbsp;&nbsp;&nbsp;Feedback
+                        <ion-icon name="create"></ion-icon>
+                        <span class="title">Feedback</span>
                     </ion-item>
                     <ion-item (click)="openPage('/about')">
-                        <ion-icon name="contacts"></ion-icon>&nbsp;&nbsp;&nbsp;About Us
+                        <ion-icon name="contacts"></ion-icon>
+                        <span class="title">About Us</span>
                     </ion-item>
                     <ion-item (click)="logout()">
-                        <ion-icon name="log-out"></ion-icon>&nbsp;&nbsp;&nbsp;Logout
+                        <ion-icon name="log-out"></ion-icon>
+                        <span class="title">Logout</span>
                     </ion-item>
                 </ion-list>
             </ion-content>

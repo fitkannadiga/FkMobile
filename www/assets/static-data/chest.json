@@ -1,0 +1,180 @@
+{
+    "muscle": "Chest",
+    "description": "<div><p>Pectoral muscles (colloquially referred to as 'pecs') are the muscles that connect the front of the human chest with the bones of the upper arm and shoulder.</p></div>",
+    "img_path": "./assets/imgs/anatomy/chest_anatomy.png",
+    "workouts": [{
+            "exercise_name": "Isometric Wipers",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Assume a push-up position, supporting your weight on your hands and toes while keeping your body straight. Your hands should be just outside of shoulder width. This will be your starting position.</li><li >Begin by shifting your body weight as far to one side as possible, allowing the elbow on that side to flex as you lower your body.</li><li >Reverse the motion by extending the flexed arm, pushing yourself up and then dropping to the other side.</li><li >Repeat for the desired number of repetitions.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Incline Dumbbell Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Lie back on an incline bench with a dumbbell in each hand atop your thighs. The palms of your hands will be facing each other.</li><li >Then, using your thighs to help push the dumbbells up, lift the dumbbells one at a time so that you can hold them at shoulder width.</li><li >Once you have the dumbbells raised to shoulder width, rotate your wrists forward so that the palms of your hands are facing away from you. This will be your starting position.</li><li >Be sure to keep full control of the dumbbells at all times. Then breathe out and push the dumbbells up with your chest.</li><li >Lock your arms at the top, hold for a second, and then start slowly lowering the weight. Tip Ideally, lowering the weights should take about twice as long as raising them.</li><li >Repeat the movement for the prescribed amount of repetitions.</li><li >When you are done, place the dumbbells back on your thighs and then on the floor. This is the safest manner to release the dumbbells.</li></ol><p>&nbsp;</p><p><strong>Variations:</strong>&nbsp;You can use several angles on the incline bench if the bench you are using is adjustable.</p><p>Another variation of this exercise is to perform it with the palms of the hands facing each other.</p><p>Also, you can perform the exercise with the palms facing each other and then twisting the wrist as you lift the dumbbells so that at the top of the movement the palms are facing away from the body. I personally do not use this variation very often as it seems to be hard on my shoulders.</p>",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Low Cable Crossover",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >o move into the starting position, place the pulleys at the low position, select the resistance to be used and grasp a handle in each hand.</li><li >Step forward, gaining tension in the pulleys. Your palms should be facing forward, hands below the waist, and your arms straight. This will be your starting position.</li><li >With a slight bend in your arms, draw your hands upward and toward the midline of your body. Your hands should come together in front of your chest, palms facing up.</li><li >Return your arms back to the starting position after a brief pause.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Dumbbell Flyes",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Lie down on a flat bench with a dumbbell on each hand resting on top of your thighs. The palms of your hand will be facing each other.</li><li >Then using your thighs to help raise the dumbbells, lift the dumbbells one at a time so you can hold them in front of you at shoulder width with the palms of your hands facing each other. Raise the dumbbells up like you're pressing them, but stop and hold just before you lock out. This will be your starting position.</li><li >With a slight bend on your elbows in order to prevent stress at the biceps tendon, lower your arms out at both sides in a wide arc until you feel a stretch on your chest. Breathe in as you perform this portion of the movement.&nbsp;<strong>Tip:</strong>&nbsp;Keep in mind that throughout the movement, the arms should remain stationary; the movement should only occur at the shoulder joint.</li><li >Return your arms back to the starting position as you squeeze your chest muscles and breathe out.&nbsp;<strong>Tip:</strong>&nbsp;Make sure to use the same arc of motion used to lower the weights.</li><li >Hold for a second at the contracted position and repeat the movement for the prescribed amount of repetitions.</li></ol><p>&nbsp;</p><p><strong>Variations:</strong>&nbsp;You may want to use a palms facing forward version for different stimulation.</p>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Decline Dumbbell Flyes",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Secure your legs at the end of the decline bench and lie down with a dumbbell on each hand on top of your thighs. The palms of your hand will be facing each other.</li><li >Once you are laying down, move the dumbbells in front of you at shoulder width. The palms of the hands should be facing each other and the arms should be perpendicular to the floor and fully extended. This will be your starting position.</li><li >With a slight bend on your elbows in order to prevent stress at the biceps tendon, lower your arms out at both sides in a wide arc until you feel a stretch on your chest. Breathe in as you perform this portion of the movement.&nbsp;<strong>Tip:</strong>&nbsp;Keep in mind that throughout the movement, the arms should remain stationary; the movement should only occur at the shoulder joint.</li><li >Return your arms back to the starting position as you squeeze your chest muscles and breathe out.&nbsp;<strong>Tip:</strong>&nbsp;Make sure to use the same arc of motion used to lower the weights.</li><li >Hold for a second at the contracted position and repeat the movement for the prescribed amount of repetitions.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Pushups",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Lie on the floor face down and place your hands about 36 inches apart while holding your torso up at arms length.</li><li >Next, lower yourself downward until your chest almost touches the floor as you inhale.</li><li >Now breathe out and press your upper body back up to the starting position while squeezing your chest.</li><li >After a brief pause at the top contracted position, you can begin to lower yourself downward again for as many repetitions as needed.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Dumbbell Bench Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Lie down on a flat bench with a dumbbell in each hand resting on top of your thighs. The palms of your hands will be facing each other.</li><li >Then, using your thighs to help raise the dumbbells up, lift the dumbbells one at a time so that you can hold them in front of you at shoulder width.</li><li >Once at shoulder width, rotate your wrists forward so that the palms of your hands are facing away from you. The dumbbells should be just to the sides of your chest, with your upper arm and forearm creating a 90 degree angle. Be sure to maintain full control of the dumbbells at all times. This will be your starting position.</li><li >Then, as you breathe out, use your chest to push the dumbbells up. Lock your arms at the top of the lift and squeeze your chest, hold for a second and then begin coming down slowly. Tip: Ideally, lowering the weight should take about twice as long as raising it.</li><li >Repeat the movement for the prescribed amount of repetitions of your training program.</li></ol><p>&nbsp;</p><p><strong>Caution:</strong>&nbsp;When you are done, do not drop the dumbbells next to you as this is dangerous to your rotator cuff in your shoulders and others working out around you.</p>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Dips - Chest Version",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >For this exercise you will need access to parallel bars. To get yourself into the starting position, hold your body at arms length (arms locked) above the bars.</li><li >While breathing in, lower yourself slowly with your torso leaning forward around 30 degrees or so and your elbows flared out slightly until you feel a slight stretch in the chest.</li><li >Once you feel the stretch, use your chest to bring your body back to the starting position as you breathe out. Tip: Remember to squeeze the chest at the top of the movement for a second.</li><li >Repeat the movement for the prescribed amount of repetitions</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Barbell Bench Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Lie back on a flat bench. Using a medium width grip (a grip that creates a 90-degree angle in the middle of the movement between the forearms and the upper arms), lift the bar from the rack and hold it straight over you with your arms locked. This will be your starting position.</li><li >From the starting position, breathe in and begin coming down slowly until the bar touches your middle chest.</li><li >After a brief pause, push the bar back to the starting position as you breathe out. Focus on pushing the bar using your chest muscles. Lock your arms and squeeze your chest in the contracted position at the top of the motion, hold for a second and then start coming down slowly again. Tip: Ideally, lowering the weight should take about twice as long as raising it.</li><li >Repeat the movement for the prescribed amount of repetitions.</li><li >When you are done, place the bar back in the rack.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Decline Barbell Bench Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Secure your legs at the end of the decline bench and slowly lay down on the bench.</li><li >Using a medium width grip (a grip that creates a 90-degree angle in the middle of the movement between the forearms and the upper arms), lift the bar from the rack and hold it straight over you with your arms locked. The arms should be perpendicular to the floor. This will be your starting position.&nbsp;<strong>Tip:</strong>&nbsp;In order to protect your rotator cuff, it is best if you have a spotter help you lift the barbell off the rack.</li><li >As you breathe in, come down slowly until you feel the bar on your lower chest.</li><li >After a second pause, bring the bar back to the starting position as you breathe out and push the bar using your chest muscles. Lock your arms and squeeze your chest in the contracted position, hold for a second and then start coming down slowly again.&nbsp;<strong>Tip:</strong>&nbsp;It should take at least twice as long to go down than to come up).</li><li >Repeat the movement for the prescribed amount of repetitions.</li><li >When you are done, place the bar back in the rack.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Incline Cable Flye",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >To get yourself into the starting position, set the pulleys at the floor level (lowest level possible on the machine that is below your torso).</li><li >Place an incline bench (set at 45 degrees) in between the pulleys, select a weight on each one and grab a pulley on each hand.</li><li >With a handle on each hand, lie on the incline bench and bring your hands together at arms length in front of your face. This will be your starting position.</li><li >With a slight bend of your elbows (in order to prevent stress at the biceps tendon), lower your arms out at both sides in a wide arc until you feel a stretch on your chest. Breathe in as you perform this portion of the movement.&nbsp;<strong>Tip:</strong>&nbsp;Keep in mind that throughout the movement, the arms should remain stationary. The movement should only occur at the shoulder joint.</li><li >Return your arms back to the starting position as you squeeze your chest muscles and exhale. Hold the contracted position for a second.&nbsp;<strong>Tip:</strong>&nbsp;Make sure to use the same arc of motion used to lower the weights.</li><li >Repeat the movement for the prescribed amount of repetitions.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Drop Push",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Position low boxes or other platforms 2-3 feet apart.</li><li >Move to a pushup position between them, supporting yourself by placing your hands on the boxes.</li><li >With good posture, drop from the platforms by pressing up and moving your hands to shoulder width, cushioning your landing by absorbing the impact through the arm.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Barbell Incline Bench Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Load the bar to an appropriate weight for your training.</li><li >Lay on the bench with your feet flat on the ground, driving through to your hips. Your back should be arched, and your shoulder blades retracted.</li><li >Take a medium, pronated grip covering the rings on the bar. Remove the bar from the rack, holding the weight above your chest with your arms extended. This will be your starting position.</li><li >Lower the bar to the sternum by flexing the elbows. Maintain control and do not bounce the bar off of your chest. Your lats should stay tight and elbows slightly drawn in.</li><li >After touching your torso with the bar, extend the elbows to return the bar to the starting position.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Incline Push-Up",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Stand facing bench or sturdy elevated platform. Place hands on edge of bench or platform, slightly wider than shoulder width.</li><li >Position forefoot back from bench or platform with arms and body straight. Arms should be perpendicular to body. Keeping body straight, lower chest to edge of box or platform by bending arms.</li><li >Push body up until arms are extended. Repeat.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Cable Crossover",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >To get yourself into the starting position, place the pulleys on a high position (above your head), select the resistance to be used and hold the pulleys in each hand.</li><li >Step forward in front of an imaginary straight line between both pulleys while pulling your arms together in front of you. Your torso should have a small forward bend from the waist. This will be your starting position.</li><li >With a slight bend on your elbows in order to prevent stress at the biceps tendon, extend your arms to the side (straight out at both sides) in a wide arc until you feel a stretch on your chest. Breathe in as you perform this portion of the movement. Tip: Keep in mind that throughout the movement, the arms and torso should remain stationary; the movement should only occur at the shoulder joint.</li><li >Return your arms back to the starting position as you breathe out. Make sure to use the same arc of motion used to lower the weights.</li><li >Hold for a second at the starting position and repeat the movement for the prescribed amount of repetitions.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Incline Push-Up Medium",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Stand facing a Smith machine bar or sturdy elevated platform at an appropriate height.</li><li >Place your hands on the bar, with your hands about shoulder width apart.</li><li >Position your feet back from the bar with arms and body straight. This will be your starting position.</li><li >Keeping your body straight, lower your chest to the bar by bending the arms.</li><li >Return to the starting position by extending the elbows, pressing yourself back up.</li></ol>",
+            "exercise_video": "",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Medicine-Ball Push-Up",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Start in the push-up position on the floor, keeping your hips down and back flat.</li><li >Place one hand on a medicine ball, while your other hand remains on the floor. Keep your feet spread fairly wide to help with stability. This will be your starting position.</li><li >Keeping your body straight, bend your elbows and descend towards the ground, allowing your chest to approach the floor but stop before touching.</li><li >Push back up to full arm extension and repeat for reps.</li><li >Do the next set with the ball on the other side.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Standing Cable Chest Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Position dual pulleys to chest height and select an appropriate weight. Stand a foot or two in front of the cables, holding one in each hand. You can stagger your stance for better stability.</li><li >Position the upper arm at a 90 degree angle with the shoulder blades together. This will be your starting position.</li><li >Keeping the rest of the body stationary, extend through the elbows to press the handles forward, drawing them together in front of you.</li><li >Pause at the top of the motion, and return to the starting position.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Plyo Kettlebell Pushups",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Place a kettlebell on the floor. Place yourself in a pushup position, on your toes with one hand on the ground and one hand holding the kettlebell, with your elbows extended. This will be your starting position.</li><li >Begin by lowering yourself as low as you can, keeping your back straight.</li><li >Quickly and forcefully reverse direction, pushing yourself up to the other side of the kettlebell, switching hands as you do so. Continue the movement by descending and repeating the movement back and forth.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Wide-Grip Decline Barbell Pullover",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Lie down on a decline bench with both legs securely locked in position. Reach for the barbell behind the head using a pronated grip (palms facing out). Make sure to grab the barbell wider than shoulder width apart for this exercise. Slowly lift the barbell up from the floor by using your arms.</li><li >When positioned properly, your arms should be fully extended and perpendicular to the floor. This is the starting position.</li><li >Begin by moving the barbell back down in a semicircular motion as if you were going to place it on the floor, but instead, stop when the arms are parallel to the floor.&nbsp;<strong>Tip:</strong>&nbsp;Keep the arms fully extended at all times. The movement should only happen at the shoulder joint. Inhale as you perform this portion of the movement.</li><li >Now bring the barbell up while exhaling until you are back at the starting position. Remember to keep full control of the barbell at all times.</li><li >Repeat the movement for the prescribed amount of repetitions of your training program.</li><li >When finished with your set, slowly lower the barbell back down until it is level with your head and release it.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Machine Bench Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Sit down on the Chest Press Machine and select the weight.</li><li >Step on the lever provided by the machine since it will help you to bring the handles forward so that you can grab the handles and fully extend the arms.</li><li >Grab the handles with a palms-down grip and lift your elbows so that your upper arms are parallel to the floor to the sides of your torso.&nbsp;<strong>Tip:</strong>&nbsp;Your forearms will be pointing forward since you are grabbing the handles. Once you bring the handles forward and extend the arms you will be at the starting position.</li><li >Now bring the handles back towards you as you breathe in.</li><li >Push the handles away from you as you flex your pecs and you breathe out. Hold the contraction for a second before going back to the starting position.</li><li >Repeat for the recommended amount of reps.</li><li >When finished step on the lever again and slowly get the handles back to their original place.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Dumbbell Bench Press with Neutral Grip",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Take a dumbbell in each hand and lay back onto a flat bench. Your feet should be flat on the floor and your shoulder blades retracted.</li><li >Maintaining a neutral grip, palms facing each other, begin with your arms extended directly above you, perpendicular to the floor. This will be your starting position.</li><li >Begin the movement by flexing the elbow, lowering the upper arms to the side. Descend until the dumbbells are to your torso.</li><li >Pause, then extend the elbow and return to the starting position.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Single-Arm Cable Crossover",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Begin by moving the pulleys to the high position, select the resistance to be used, and take a handle in each hand.</li><li >Step forward in front of both pulleys with your arms extended in front of you, bringing your hands together. Your head and chest should be up as you lean forward, while your feet should be staggered. This will be your starting position.</li><li >Keeping your left arm in place, allow your right arm to extend out to the side, maintaining a slight bend at the elbow. The right arm should be perpendicular to the body at approximately shoulder level.</li><li >Return your arm back to the starting position by pulling your hand back to the midline of the body.</li><li >Hold for a second at the starting position and repeat the movement on the opposite side. Continue alternating back and forth for the prescribed number of repetitions.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Decline Push-Up",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Lie on the floor face down and place your hands about 36 inches apart while holding your torso up at arms length. Move your feet up to a box or bench. This will be your starting position.</li><li >Next, lower yourself downward until your chest almost touches the floor as you inhale.</li><li >Now breathe out and press your upper body back up to the starting position while squeezing your chest.</li><li >After a brief pause at the top contracted position, you can begin to lower yourself downward again for as many repetitions as needed.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        },
+        {
+            "exercise_name": "Cable Chest Press",
+            "exercise_image": "https://www.demilked.com/magazine/wp-content/uploads/2016/07/studio-ghibli-totoro-gifs-exercise-motivation-cl-terry-thumb640.gif",
+            "exercise_info": "<ol><li >Adjust the weight to an appropriate amount and be seated, grasping the handles. Your upper arms should be about 45 degrees to the body, with your head and chest up. The elbows should be bent to about 90 degrees. This will be your starting position.</li><li >Begin by extending through the elbow, pressing the handles together straight in front of you. Keep your shoulder blades retracted as you execute the movement.</li><li >After pausing at full extension, return to th starting position, keeping tension on the cables.</li><li >You can also execute this movement with your back off the pad, at an incline or decline, or alternate hands.</li></ol>",
+            "exercise_video": "coming soon...",
+            "exercise_note": ""
+        }
+    ]
+}

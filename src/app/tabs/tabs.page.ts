@@ -13,7 +13,7 @@ export class TabsPage {
   userData: any = {};
 
   constructor(public menuCtrl: MenuController, public events: Events, public globalComp: GlobalService, public router: Router, public toastr: ToastController){
-    this.globalComp.updateUserData().then( (data) => {
+    this.globalComp.getUserInformationFirebase().then( (data) => {
       // console.log("tabs data", data);
       this.userData = data;
       if(this.userData.userProfile.disabled == true){
@@ -25,7 +25,7 @@ export class TabsPage {
         this.router.navigateByUrl('/login');
         this.presentToast("Your account is locked. Please contact admin for help");
       } else {
-        // console.log("user disabled else block");
+        console.log("user disabled else block");
         this.events.publish('loadData');
         this.menuCtrl.enable(true);
       }

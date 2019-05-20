@@ -3,7 +3,7 @@
         <ion-buttons slot="start">
             <ion-back-button></ion-back-button>
         </ion-buttons>
-        <ion-title>Customized Plans</ion-title>
+        <ion-title>Your Plans</ion-title>
     </ion-toolbar>
 </ion-header>
 
@@ -18,25 +18,31 @@
         <p>**Terms & Conditions applied**</p>
     </div>
     <div *ngIf="customer" id="customer">
-        <ion-card (click)="openDetailsPage('diet')">
-            <ion-row>
-                <ion-col size="3">
-                    <img src="https://cdn2.iconfinder.com/data/icons/healthy-flat-style-1/64/clean-diet-food-fruit-vegetarian-128.png" />
-                </ion-col>
-                <ion-col class="text">
-                    Diet Plan
-                </ion-col>
-            </ion-row>
-        </ion-card>
-        <ion-card (click)="openDetailsPage('workout')">
-            <ion-row>
-                <ion-col size="3">
-                    <img src="https://cdn2.iconfinder.com/data/icons/healthy-flat-style-1/64/activity-running-sport-128.png" />
-                </ion-col>
-                <ion-col class="text">
-                    Workout Plan
-                </ion-col>
-            </ion-row>
-        </ion-card>
+        <div class="wrapper" (click)="openDetailsPage('diet')">
+                <img id="diet" src="./assets/icon/diet.png"/>
+            <ion-card class="diet">
+                <ion-card-content>
+                    <ion-card-title>
+                        Diet Plan
+                    </ion-card-title>
+                    <p>
+                        Your customized diet plan to reach your goal which will be revised based on your progress and updates.
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </div>
+        <div class="wrapper" (click)="openDetailsPage('workout')">
+            <img id="workout" src="./assets/icon/workout.jpg"/>
+            <ion-card class="workout">
+                <ion-card-content>
+                    <ion-card-title>
+                        Workout Plan
+                    </ion-card-title>
+                    <p>
+                        Your customized workout plan to help you reach the fitness goal you opted duering the membership.
+                    </p>
+                </ion-card-content>
+            </ion-card>
+        </div>
     </div>
 </ion-content>

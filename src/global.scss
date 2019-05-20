@@ -84,14 +84,21 @@
 
 ion-menu#myFitnessMenu {
     ion-toolbar#user-toolbar {
-        padding: 20px 0px !important;
-        div.toolbar-background {
-            background-color: #767473 !important;
+        padding: 5px 0px !important;
+        background-color: #222428 !important;
+        --ion-color-base: #222428 !important;
+        ion-col#user-data-wrapper {
+            p {
+                margin: 5px !important;
+                font-size: 0.8rem;
+                color: #FFF;
+            }
+            p.user-name {
+                color: #e0b500 !important;
+            }
         }
         div#user-img-wrapper {
-            width: 20%;
             display: inline-block;
-            float: left;
             padding-left: 10px;
             img#user-img {
                 width: 45px;
@@ -100,15 +107,25 @@ ion-menu#myFitnessMenu {
                 border-radius: 25px;
             }
         }
-        span.user-name {
-            font-size: 0.8rem;
-            color: #222428;
-            display: inline-block;
-            text-align: left;
-            padding: 10px 5px 10px 15px;
-            width: 80%;
-        }
     }
+    ion-toolbar::after {
+        content: "";
+        background-image: url('./assets/logo.png');
+        opacity: 0.1;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+        background-size: 100px; 
+    }
+    
+    span.title {
+        padding: 5px 20px 0px;
+        font-size: 1rem;
+    }
+
     span#new-message {
         width: 2em;
         height: 2em;
@@ -165,5 +182,29 @@ ion-menu#myFitnessMenu {
     }
     100% {
         background: #f2f2f2;
+    }
+}
+
+ion-header {
+    ion-toolbar{
+        ion-title{
+            font-weight: bold;
+        }
+    }
+}
+
+ion-tab-bar{
+    ion-tab-button{
+        ion-label {
+            font-weight: bold;
+        }
+    }
+    ion-tab-button.tab-selected {
+        ion-icon {
+            color: #3B4EAC;
+        }
+    }
+    ion-icon {
+        color: #86888f;
     }
 }

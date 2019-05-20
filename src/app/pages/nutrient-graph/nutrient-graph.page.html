@@ -9,7 +9,11 @@
 
 <ion-content padding>
     <h3> Goal - {{goal}}</h3>
-    <p>Calculated Daily calorie intake based on selected <i>Activity Level</i> came upto - <strong>{{BMR}} Cal/day</strong></p>
-    <p>To reach your goal, you will have to consume - <strong>{{IntakeCalories}} Cal/day</strong></p>
+    <P>BMR (Basal Metabolic Rate) - {{BMR}}</P>
+    <p>Daily calorie intake based on your <i>Activity Level</i> came upto - <strong>{{TEE}} Cal/day</strong></p>
+    <p>To reach your goal, you will have to consume - <strong>{{IntakeCalories}} Cal/day</strong> with an approximate of below breakdown.</p>
     <div id="chartdiv" style="width: 100%; height: 300px; background-color: #FFFFFF;"></div>
+    <p id="note">
+        <i>Note: The ratio of <strong>C/P/F</strong> may also vary based on your body type. Feel free to change the ratio of macro's using our <span id="macro-calci-link" (click)="showMacroCalci();">Macro Calculator</span></i>
+    </p>
 </ion-content>

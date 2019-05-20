@@ -7,6 +7,12 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
@@ -14,10 +20,6 @@
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
     "cordova-plugin-firebase": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-googleplus": {
-      "PLAY_SERVICES_VERSION": "11.8.0",
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
     "cordova-plugin-inappbrowser": {
@@ -50,6 +52,21 @@
     },
     "cordova-plugin-x-socialsharing": {
       "ANDROID_SUPPORT_V4_VERSION": "24.1.1+",
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-filepath": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-telerik-imagepicker": {
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     }
   },

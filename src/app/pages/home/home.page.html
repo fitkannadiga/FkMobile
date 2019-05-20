@@ -8,10 +8,10 @@
 </ion-header>
 
 <ion-content>
-    <div *ngIf="!fakeslider">
+    <div *ngIf="!fakeslider" id="slider-container">
         <ion-slides *ngIf="slideData" pager="true" [options]="slideOpts">
             <ion-slide *ngFor="let slide of slideData" (click)="openSlideInfo(slide);">
-                <img [src]="slide.img_path" />
+                <img [src]="slide.img_path" onError="src = './assets/imgs/default.png'"/>
             </ion-slide>
         </ion-slides>
     </div>
@@ -27,5 +27,32 @@
                 <div class="purple-animation">Fit Kannadiga</div>
             </ion-slide>
         </ion-slides>
+    </div>
+    <div id="workout-list-wrapper">
+        <ion-row id="header">
+            <ion-col>Trending Workouts</ion-col>
+            <ion-col class="ion-text-right"><span class="link" color="primary" (click)="openWorkoutPage()">See All ></span></ion-col>
+        </ion-row>
+        <ion-row *ngIf="!fakeWorkout" id="real-worouts">
+            <ion-col *ngFor="let workout of homeWorkoutList" (click)="openWorkoutPage()">
+                <img [src]="workout.workout_img" onError="src = './assets/imgs/default.png'"/>
+                <p class="title">{{workout.title}}</p>
+                <p>
+                    <ion-icon name="star" *ngFor="let intenstity of getArray(workout.intensity)"></ion-icon>
+                </p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="fakeWorkout" id="fake-workout">
+                <ion-col>
+                    <div class="image animate-skeleton-background"></div>
+                    <p class="animate-skeleton-background"></p>
+                    <p class="animate-skeleton-background"></p>
+                </ion-col>
+                <ion-col>
+                    <div class="image animate-skeleton-background"></div>
+                    <p class="animate-skeleton-background"></p>
+                    <p class="animate-skeleton-background"></p>
+                </ion-col>
+            </ion-row>
     </div>
 </ion-content>
