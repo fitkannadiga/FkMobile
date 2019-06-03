@@ -45,7 +45,7 @@
             <ion-col id="text-area-wrapper">
                 <!-- <ion-input placeholder="Type a message..." id="diet-chat-message" [(ngModel)]="userDietComment"></ion-input> -->
                 <ion-textarea #myInput id="input-field" (ionFocus)="scroll()" rows="2" (keyup)="showImageIcon()" (ionBlur)="showImageIcon()" placeholder="Type a message..." id="diet-chat-message" [(ngModel)]="userDietComment"></ion-textarea>
-                <input id="file-uploader" type="file" (change)="uploadFile($event)" name="Upload Image" hidden accept="image/x-png,image/gif,image/jpeg"/>
+                <input id="file-uploader" type="file" (change)="uploadFile($event)" name="Upload Image" hidden accept="image/*" capture="filesystem"/>
                 <div id="image-icon" *ngIf="addImage">
                     <!-- <ion-icon name="camera" (click)="openCamera();"></ion-icon> -->
                     <ion-icon name="attach" (click)="openGallery();"></ion-icon>

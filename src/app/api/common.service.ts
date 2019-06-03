@@ -174,6 +174,18 @@ export class CommonService {
         return promise;
     }
 
+    //get home short information card
+    getHomeShortCard(){
+        var promise = new Promise((resolve, reject) => {
+            this.afDataBase.database.ref(`/homeShortCard`).once('value', (snapshot) => {
+                resolve(snapshot.val());
+            }).catch((err) => {
+                reject(err);
+            })
+        })
+        return promise;
+    }
+
     // get client testimonials
     getTestimonials(){
         var promise = new Promise((resolve, reject) => {

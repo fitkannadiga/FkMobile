@@ -55,4 +55,25 @@
                 </ion-col>
             </ion-row>
     </div>
+    <div id="hire-mentor-wrapper">
+        <ion-row *ngIf="!fakeHomeCard" id="mentor-wrapper" (click)="showHireCoach();">
+            <ion-col size="5" id="coach-img">
+                    <img [src]="shortCard.img_src"/>
+            </ion-col>
+            <ion-col id="content">
+                    <p id="title">{{shortCard.title}}</p>
+                    <p>{{shortCard.description}}</p>
+            </ion-col>
+        </ion-row>
+        <ion-row *ngIf="fakeHomeCard" id="fake-short-home-card">
+                <ion-col size="5" id="coach-img">
+                        <p id="img" class="animate-skeleton-background"></p>
+                </ion-col>
+                <ion-col id="content">
+                        <p id="title" class="animate-skeleton-background"></p>
+                        <p class="description animate-skeleton-background"></p>
+                        <p class="description animate-skeleton-background"></p>
+                </ion-col>
+            </ion-row>
+    </div>
 </ion-content>

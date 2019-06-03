@@ -7,10 +7,25 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-crop": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
     "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-filepath": {
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
     "cordova-plugin-firebase": {
@@ -31,10 +46,17 @@
     "cordova-plugin-network-information": {
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
     "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-telerik-imagepicker": {
+      "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
     "cordova-plugin-tts": {
@@ -44,28 +66,6 @@
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     },
     "cordova-plugin-x-socialsharing": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-crop": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-filepath": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-screen-orientation": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-background-mode": {
-      "PACKAGE_NAME": "com.ionic.fitkannadiga"
-    },
-    "cordova-plugin-telerik-imagepicker": {
-      "PHOTO_LIBRARY_USAGE_DESCRIPTION": " ",
       "PACKAGE_NAME": "com.ionic.fitkannadiga"
     }
   },

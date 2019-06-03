@@ -17,7 +17,7 @@
             Just &#8377; 1299/- <br/> Includes one time consultation & customized diet plan based on your lifestyle/Need.
         </ion-card-content>
     </ion-card>
-    <ion-card id="lifestyle-workout">
+    <ion-card id="lifestyle-workout" (click)="openPaymentOption();">
         <ion-card-header>
             Workout Plan
         </ion-card-header>
@@ -25,7 +25,7 @@
             Just &#8377; 799/- <br/> Customized workout plan which perfectly fits as per your busy schedule.
         </ion-card-content>
     </ion-card>
-    <ion-card id="lifestyle-daily-workout-video">
+    <ion-card id="lifestyle-daily-workout-video" (click)="openPaymentOption();">
         <ion-card-header>
             Daily Workout Video
         </ion-card-header>
@@ -33,12 +33,12 @@
             Just &#8377; 2499/- <br/> Single customized video which demonstrates your workout to meet your goal.
         </ion-card-content>
     </ion-card>
-    <ion-card id="lifestyle-weekly-workout-video">
+    <ion-card id="lifestyle-weekly-workout-video" (click)="openPaymentOption();">
         <ion-card-header>
             Weekly Workout Plan
         </ion-card-header>
         <ion-card-content>
-            Just &#8377; 2999/- <br/> Multiple video to demonstrates your weekly workout based on your split to meet your goal.
+            Just &#8377; 4999/- <br/> Multiple video to demonstrates your weekly workout based on your split to meet your goal.
         </ion-card-content>
     </ion-card>
     <h2 text-center color="carbs">Transformation Plans (3 Months)</h2>
@@ -50,7 +50,7 @@
             Just &#8377; 8999/- <br/> Includes one time consultation, daily updates from coach & revision of diet plan as and when needed to loss fat faster.
         </ion-card-content>
     </ion-card>
-    <ion-card id="transformation-be-fit">
+    <ion-card id="transformation-be-fit" (click)="openPaymentOption();">
         <ion-card-header>
             Be Fit
         </ion-card-header>
@@ -58,8 +58,4 @@
             Just &#8377; 9990/- <br/> Completely customized diet and workout plan with multiple voice call consultation and daily updates.
         </ion-card-content>
     </ion-card>
-    <br/>
-    <p (click)="openPayment();">In App Browser Payment</p>
-    <!-- <a href="https://www.instamojo.com/@fitkannadiga/lbd11a43293af4f85b604ba341b4d7ddb/" rel="im-checkout" data-behaviour="link" data-style="flat" data-text="Checkout">Checkout</a> -->
-
 </ion-content>

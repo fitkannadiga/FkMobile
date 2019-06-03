@@ -62,7 +62,7 @@ var RecipeDetailsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Recipe Detail</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card>\n        <img *ngIf=\"recipeData.recipe_img\" [src]=\"recipeData.recipe_img\" />\n        <ion-card-content>\n            <ion-card-title>\n                {{recipeData.recipe_title}}\n            </ion-card-title>\n            <div [innerHTML]=\"recipeData.recipe_desc\"></div>\n        </ion-card-content>\n    </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\" (click)=\"checkBack($event);\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Recipe Detail</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card>\n        <img *ngIf=\"recipeData.recipe_img\" [src]=\"recipeData.recipe_img\" onError=\"src = './assets/imgs/default.png'\"/>\n        <ion-card-content>\n            <ion-card-title>\n                {{recipeData.recipe_title}}\n            </ion-card-title>\n            <div [innerHTML]=\"recipeData.recipe_desc\"></div>\n        </ion-card-content>\n    </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -73,7 +73,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JlY2lwZS1kZXRhaWxzL3JlY2lwZS1kZXRhaWxzLnBhZ2Uuc2NzcyJ9 */"
+module.exports = "ion-content {\n  color: #000; }\n  ion-content ion-card ion-card-content {\n    color: #000; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9yZWNpcGUtZGV0YWlscy9yZWNpcGUtZGV0YWlscy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFXLEVBQUE7RUFEZjtJQUlZLFdBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JlY2lwZS1kZXRhaWxzL3JlY2lwZS1kZXRhaWxzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jb250ZW50IHtcbiAgICBjb2xvcjogIzAwMDtcbiAgICBpb24tY2FyZCB7XG4gICAgICAgIGlvbi1jYXJkLWNvbnRlbnQge1xuICAgICAgICAgICAgY29sb3I6ICMwMDA7XG4gICAgICAgIH1cbiAgICB9XG59Il19 */"
 
 /***/ }),
 
@@ -90,6 +90,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _api_recipe_detail_service_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../api/recipe-detail-service.service */ "./src/app/api/recipe-detail-service.service.ts");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -102,8 +103,10 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 
 
 
+
 var RecipeDetailsPage = /** @class */ (function () {
-    function RecipeDetailsPage(route, router, recipeService) {
+    function RecipeDetailsPage(nav, route, router, recipeService) {
+        this.nav = nav;
         this.route = route;
         this.router = router;
         this.recipeService = recipeService;
@@ -112,13 +115,18 @@ var RecipeDetailsPage = /** @class */ (function () {
     }
     RecipeDetailsPage.prototype.ngOnInit = function () {
     };
+    RecipeDetailsPage.prototype.checkBack = function (event) {
+        // set the nav back to recipe page as it redirects to home page
+        this.nav.navigateRoot('/tabs/recipes');
+    };
     RecipeDetailsPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-recipe-details',
             template: __webpack_require__(/*! ./recipe-details.page.html */ "./src/app/pages/recipe-details/recipe-details.page.html"),
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
             styles: [__webpack_require__(/*! ./recipe-details.page.scss */ "./src/app/pages/recipe-details/recipe-details.page.scss")]
         }),
-        __metadata("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _api_recipe_detail_service_service__WEBPACK_IMPORTED_MODULE_2__["RecipeDetailServiceService"]])
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["NavController"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["ActivatedRoute"], _angular_router__WEBPACK_IMPORTED_MODULE_1__["Router"], _api_recipe_detail_service_service__WEBPACK_IMPORTED_MODULE_2__["RecipeDetailServiceService"]])
     ], RecipeDetailsPage);
     return RecipeDetailsPage;
 }());

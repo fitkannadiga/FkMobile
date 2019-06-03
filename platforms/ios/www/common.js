@@ -246,13 +246,14 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
 var NutrientGraphService = /** @class */ (function () {
     function NutrientGraphService() {
     }
-    NutrientGraphService.prototype.setGrapgData = function (param1, param2, param3) {
+    NutrientGraphService.prototype.setGrapgData = function (param1, param2, param3, param4) {
         this.userInfo = param1;
         this.BMR = param2;
-        this.intakeCalories = param3;
+        this.TEE = param3;
+        this.intakeCalories = param4;
     };
     NutrientGraphService.prototype.getGraphData = function () {
-        var data = [this.userInfo, this.BMR, this.intakeCalories];
+        var data = [this.userInfo, this.BMR, this.TEE, this.intakeCalories];
         return data;
     };
     NutrientGraphService = __decorate([

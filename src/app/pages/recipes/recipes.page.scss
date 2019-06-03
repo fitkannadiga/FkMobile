@@ -1,6 +1,6 @@
     ion-card.fake-data-wrapper {
         div.fake-img-wrapper {
-            height: 120px;
+            height: 200px;
         }
         ion-card-content {
             p {
@@ -12,6 +12,9 @@
     
     ion-card-header {
         padding: 0px !important;
+        img.recipe-img {
+            min-height: 200px;
+        }
     }
     
     ion-card.recipe-card {

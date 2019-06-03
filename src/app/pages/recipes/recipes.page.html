@@ -18,7 +18,7 @@
     <div *ngIf="!fakeData">
         <ion-card *ngFor="let item of foodList" (click)="openFullRecipe(item);" class="recipe-card">
             <ion-card-header>
-                <img [src]="item.recipe_img" onError="src = './assets/imgs/default.png'"/>
+                <img class="recipe-img" [src]="item.recipe_img" onError="src = './assets/imgs/default.png'"/>
             </ion-card-header>
             <ion-card-content>
                 <ion-card-title>

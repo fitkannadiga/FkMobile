@@ -62,7 +62,7 @@ var ClientPlansPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>My Plans</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <h2 text-center color=\"carbs\">Lifestyle Plans</h2>\n    <ion-card id=\"lifestyle-diet\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Diet Plan\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 1299/- <br/> Includes one time consultation & customized diet plan based on your lifestyle/Need.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"lifestyle-workout\">\n        <ion-card-header>\n            Workout Plan\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 799/- <br/> Customized workout plan which perfectly fits as per your busy schedule.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"lifestyle-daily-workout-video\">\n        <ion-card-header>\n            Daily Workout Video\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 2499/- <br/> Single customized video which demonstrates your workout to meet your goal.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"lifestyle-weekly-workout-video\">\n        <ion-card-header>\n            Weekly Workout Plan\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 2999/- <br/> Multiple video to demonstrates your weekly workout based on your split to meet your goal.\n        </ion-card-content>\n    </ion-card>\n    <h2 text-center color=\"carbs\">Transformation Plans (3 Months)</h2>\n    <ion-card id=\"transformation-fat-shredder\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Fat Shredder\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 8999/- <br/> Includes one time consultation, daily updates from coach & revision of diet plan as and when needed to loss fat faster.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"transformation-be-fit\">\n        <ion-card-header>\n            Be Fit\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 9990/- <br/> Completely customized diet and workout plan with multiple voice call consultation and daily updates.\n        </ion-card-content>\n    </ion-card>\n    <br/>\n    <p (click)=\"openPayment();\">In App Browser Payment</p>\n    <!-- <a href=\"https://www.instamojo.com/@fitkannadiga/lbd11a43293af4f85b604ba341b4d7ddb/\" rel=\"im-checkout\" data-behaviour=\"link\" data-style=\"flat\" data-text=\"Checkout\">Checkout</a> -->\n\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>My Plans</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <h2 text-center color=\"carbs\">Lifestyle Plans</h2>\n    <ion-card id=\"lifestyle-diet\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Diet Plan\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 1299/- <br/> Includes one time consultation & customized diet plan based on your lifestyle/Need.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"lifestyle-workout\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Workout Plan\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 799/- <br/> Customized workout plan which perfectly fits as per your busy schedule.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"lifestyle-daily-workout-video\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Daily Workout Video\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 2499/- <br/> Single customized video which demonstrates your workout to meet your goal.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"lifestyle-weekly-workout-video\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Weekly Workout Plan\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 2999/- <br/> Multiple video to demonstrates your weekly workout based on your split to meet your goal.\n        </ion-card-content>\n    </ion-card>\n    <h2 text-center color=\"carbs\">Transformation Plans (3 Months)</h2>\n    <ion-card id=\"transformation-fat-shredder\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Fat Shredder\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 8999/- <br/> Includes one time consultation, daily updates from coach & revision of diet plan as and when needed to loss fat faster.\n        </ion-card-content>\n    </ion-card>\n    <ion-card id=\"transformation-be-fit\" (click)=\"openPaymentOption();\">\n        <ion-card-header>\n            Be Fit\n        </ion-card-header>\n        <ion-card-content>\n            Just &#8377; 9990/- <br/> Completely customized diet and workout plan with multiple voice call consultation and daily updates.\n        </ion-card-content>\n    </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -140,41 +140,85 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 var ClientPlansPage = /** @class */ (function () {
-    function ClientPlansPage(loadingController, toastr, afDataBase, IAB) {
+    function ClientPlansPage(loadingController, toastr, afDataBase, IAB, alertCtrl) {
         this.loadingController = loadingController;
         this.toastr = toastr;
         this.afDataBase = afDataBase;
         this.IAB = IAB;
+        this.alertCtrl = alertCtrl;
     }
     ClientPlansPage.prototype.ngOnInit = function () {
     };
     ClientPlansPage.prototype.openPaymentOption = function () {
-        this.presentToast('At present we are not accepting online payments. Please contach us at fitkannadiga@gmail.com');
+        // this.presentToast('At present we are not accepting online payments. Please drop a mail to fitkannadiga@gmail.com to hire coach.');
         // <a href="https://www.instamojo.com/@fitkannadiga/lbd11a43293af4f85b604ba341b4d7ddb/" rel="im-checkout" data-behaviour="remote" data-style="light" data-text="Checkout With Instamojo"></a>
         // <script src="https://js.instamojo.com/v1/button.js"></script>
-        Instamojo.open("https://www.instamojo.com/@fitkannadiga/lbd11a43293af4f85b604ba341b4d7ddb/");
-        Instamojo.configure({
-            handlers: {
-                onOpen: function () {
-                    alert("instamoko opened");
-                },
-                onClose: function () {
-                    alert("instamoko closed");
-                    document.getElementsByTagName('body')[0].style.height = '100%';
-                },
-                onSuccess: function (response) {
-                    alert("instamoko payment success");
-                },
-                onFailure: function (response) {
-                    alert("instamoko payment failure");
+        // Instamojo.open("https://www.instamojo.com/@fitkannadiga/lbd11a43293af4f85b604ba341b4d7ddb/");
+        // Instamojo.configure({
+        //   handlers: {
+        //     onOpen: function() {
+        //       alert("instamoko opened");
+        //     },
+        //     onClose: function() {
+        //       alert("instamoko closed");
+        //       document.getElementsByTagName('body')[0].style.height = '100%';
+        //     },
+        //     onSuccess: function(response) {
+        //       alert("instamoko payment success");
+        //     },
+        //     onFailure: function(response) {
+        //       alert("instamoko payment failure");
+        //     }
+        //   }
+        // });
+        this.showPrompt();
+    };
+    ClientPlansPage.prototype.showPrompt = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var prompt;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.alertCtrl.create({
+                            header: 'Sorry for the Inconvenience',
+                            message: "All the slots are booked for online coaching. Please drop a mail to fitkannadiga@gmail.com to check availability",
+                            buttons: [
+                                {
+                                    text: 'Cancel',
+                                    handler: function (data) {
+                                        // console.log('Cancel clicked');
+                                    }
+                                },
+                                {
+                                    text: 'Ok',
+                                    handler: function (data) {
+                                        // console.log('Saved clicked', data);
+                                        var Link = "mailto:fitkannadiga@gmail.com?subject=Enrollment%20for%20Online%20Caoching";
+                                        window.open(Link, "_system");
+                                        // window.open('mailto:fitkannadiga@gmail.com');
+                                    }
+                                }
+                            ]
+                        })];
+                    case 1:
+                        prompt = _a.sent();
+                        return [4 /*yield*/, prompt.present()];
+                    case 2: return [2 /*return*/, _a.sent()];
                 }
-            }
+            });
         });
     };
     ClientPlansPage.prototype.openPayment = function () {
         var browser = cordova.InAppBrowser.open('https://www.instamojo.com/@fitkannadiga/lbd11a43293af4f85b604ba341b4d7ddb/', '_blank', 'location=yes');
         browser.addEventListener("loadstop", function (event) {
-            console.log("browser event on load stop>>", event);
+            console.log("browser event on load stop>>", JSON.stringify(event));
+            // if ((event.url).indexOf('?token=') !== -1) {
+            //   let token = event.url.slice(event.url.indexOf('?token=') + '?token='.length);
+            //   // here is your token, now you can close the InAppBrowser
+            //   browser.close();
+            // }
+        });
+        browser.addEventListener("exit", function (event) {
+            console.log("browser event on EXIT>>", JSON.stringify(event));
             // if ((event.url).indexOf('?token=') !== -1) {
             //   let token = event.url.slice(event.url.indexOf('?token=') + '?token='.length);
             //   // here is your token, now you can close the InAppBrowser
@@ -237,7 +281,7 @@ var ClientPlansPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./client-plans.page.html */ "./src/app/pages/client-plans/client-plans.page.html"),
             styles: [__webpack_require__(/*! ./client-plans.page.scss */ "./src/app/pages/client-plans/client-plans.page.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_3__["InAppBrowser"]])
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_2__["AngularFireDatabase"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_3__["InAppBrowser"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["AlertController"]])
     ], ClientPlansPage);
     return ClientPlansPage;
 }());

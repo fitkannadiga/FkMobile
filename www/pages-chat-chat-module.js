@@ -62,7 +62,7 @@ var ChatPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Wellness Chat</ion-title>\n    </ion-toolbar>\n    <div id=\"progress-bar-wrapper\" *ngIf=\"percentage | async as pct\">\n        <ion-progress-bar color=\"green\" type=\"indeterminate\" buffer=\"0.2\" class=\"progress is-info\" [value]=\"pct/100\"></ion-progress-bar>\n    </div>\n</ion-header>\n\n<ion-content id=\"chat-app\" padding *ngIf=\"isClient\">\n    <div id=\"comment-wrapper\" *ngIf=\"!fakeChat\">\n        <div *ngFor=\"let comment of commentData\" [ngClass]=\"comment.userID == userID ? 'userClass' : 'adminClass'\">\n            <!-- <p class=\"msg-date\">{{getDateToDisplay(comment.time)}}</p> -->\n            <p class=\"msg-date\">{{comment.day}}</p>\n            <div class=\"chat-content-wrapper\">\n                <div class=\"message\" [innerHTML]=\"comment.message\" (click)=\"openImg(comment);\"></div>\n                <p class=\"time\">{{comment.time}}</p>\n                <!-- <p class=\"time\">{{timeDifference(comment.time)}}</p> -->\n            </div>\n        </div>\n    </div>\n    <div id=\"fake-chat\" *ngIf=\"fakeChat\">\n        <p class=\"left\"></p>\n        <p class=\"right\"></p>\n        <p class=\"left\"></p>\n        <p class=\"right\"></p>\n        <p class=\"right\"></p>\n        <p class=\"left\"></p>\n        <p class=\"left\"></p>\n        <p class=\"right\"></p>\n    </div>\n</ion-content>\n<ion-content *ngIf=\"!isClient\">\n    <div id=\"non-client-text\">\n        <ion-icon name=\"chatboxes\" color=\"success\"></ion-icon>\n        <p>Please contact admin for online coaching and chat support</p>\n    </div>\n</ion-content>\n<ion-footer *ngIf=\"isClient\">\n    <ion-toolbar>\n        <ion-row>\n            <ion-col id=\"text-area-wrapper\">\n                <!-- <ion-input placeholder=\"Type a message...\" id=\"diet-chat-message\" [(ngModel)]=\"userDietComment\"></ion-input> -->\n                <ion-textarea #myInput id=\"input-field\" (ionFocus)=\"scroll()\" rows=\"2\" (keyup)=\"showImageIcon()\" (ionBlur)=\"showImageIcon()\" placeholder=\"Type a message...\" id=\"diet-chat-message\" [(ngModel)]=\"userDietComment\"></ion-textarea>\n                <input id=\"file-uploader\" type=\"file\" (change)=\"uploadFile($event)\" name=\"Upload Image\" hidden accept=\"image/x-png,image/gif,image/jpeg\"/>\n                <div id=\"image-icon\" *ngIf=\"addImage\">\n                    <!-- <ion-icon name=\"camera\" (click)=\"openCamera();\"></ion-icon> -->\n                    <ion-icon name=\"attach\" (click)=\"openGallery();\"></ion-icon>\n                </div>\n            </ion-col>\n            <ion-col size=\"2\">\n                <!-- <ion-button color=\"primary\" shape=\"round\" icon-only (click)=\"addUserComment();\">\n                    <ion-icon name=\"send\"></ion-icon>\n                </ion-button> -->\n                <span id=\"send\" (click)=\"addUserComment();\">\n                    <ion-icon name=\"send\"></ion-icon>\n                </span>\n            </ion-col>\n        </ion-row>\n    </ion-toolbar>\n</ion-footer>\n<div id=\"image-display-wrapper\" *ngIf=\"showImage\">\n    <!-- <p id=\"close\" (click)=\"closeImg()\">\n        <ion-icon name=\"close-circle\" color=\"primary\"></ion-icon>\n    </p> -->\n    <div id=\"data-wrapper\">\n        <ion-icon name=\"close-circle\" (click)=\"closeImg()\" color=\"primary\"></ion-icon>\n        <img id=\"user-img\" [src]=\"imgSrc\"/>\n    </div>\n</div>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Wellness Chat</ion-title>\n    </ion-toolbar>\n    <div id=\"progress-bar-wrapper\" *ngIf=\"percentage | async as pct\">\n        <ion-progress-bar color=\"green\" type=\"indeterminate\" buffer=\"0.2\" class=\"progress is-info\" [value]=\"pct/100\"></ion-progress-bar>\n    </div>\n</ion-header>\n\n<ion-content id=\"chat-app\" padding *ngIf=\"isClient\">\n    <div id=\"comment-wrapper\" *ngIf=\"!fakeChat\">\n        <div *ngFor=\"let comment of commentData\" [ngClass]=\"comment.userID == userID ? 'userClass' : 'adminClass'\">\n            <!-- <p class=\"msg-date\">{{getDateToDisplay(comment.time)}}</p> -->\n            <p class=\"msg-date\">{{comment.day}}</p>\n            <div class=\"chat-content-wrapper\">\n                <div class=\"message\" [innerHTML]=\"comment.message\" (click)=\"openImg(comment);\"></div>\n                <p class=\"time\">{{comment.time}}</p>\n                <!-- <p class=\"time\">{{timeDifference(comment.time)}}</p> -->\n            </div>\n        </div>\n    </div>\n    <div id=\"fake-chat\" *ngIf=\"fakeChat\">\n        <p class=\"left\"></p>\n        <p class=\"right\"></p>\n        <p class=\"left\"></p>\n        <p class=\"right\"></p>\n        <p class=\"right\"></p>\n        <p class=\"left\"></p>\n        <p class=\"left\"></p>\n        <p class=\"right\"></p>\n    </div>\n</ion-content>\n<ion-content *ngIf=\"!isClient\">\n    <div id=\"non-client-text\">\n        <ion-icon name=\"chatboxes\" color=\"success\"></ion-icon>\n        <p>Please contact admin for online coaching and chat support</p>\n    </div>\n</ion-content>\n<ion-footer *ngIf=\"isClient\">\n    <ion-toolbar>\n        <ion-row>\n            <ion-col id=\"text-area-wrapper\">\n                <!-- <ion-input placeholder=\"Type a message...\" id=\"diet-chat-message\" [(ngModel)]=\"userDietComment\"></ion-input> -->\n                <ion-textarea #myInput id=\"input-field\" (ionFocus)=\"scroll()\" rows=\"2\" (keyup)=\"showImageIcon()\" (ionBlur)=\"showImageIcon()\" placeholder=\"Type a message...\" id=\"diet-chat-message\" [(ngModel)]=\"userDietComment\"></ion-textarea>\n                <input id=\"file-uploader\" type=\"file\" (change)=\"uploadFile($event)\" name=\"Upload Image\" hidden accept=\"image/*\" capture=\"filesystem\"/>\n                <div id=\"image-icon\" *ngIf=\"addImage\">\n                    <ion-icon name=\"camera\" (click)=\"openCamera();\"></ion-icon>\n                    <ion-icon name=\"attach\" (click)=\"openGallery();\"></ion-icon>\n                </div>\n            </ion-col>\n            <ion-col size=\"2\">\n                <!-- <ion-button color=\"primary\" shape=\"round\" icon-only (click)=\"addUserComment();\">\n                    <ion-icon name=\"send\"></ion-icon>\n                </ion-button> -->\n                <span id=\"send\" (click)=\"addUserComment();\">\n                    <ion-icon name=\"send\"></ion-icon>\n                </span>\n            </ion-col>\n        </ion-row>\n    </ion-toolbar>\n</ion-footer>\n<div id=\"image-display-wrapper\" *ngIf=\"showImage\">\n    <!-- <p id=\"close\" (click)=\"closeImg()\">\n        <ion-icon name=\"close-circle\" color=\"primary\"></ion-icon>\n    </p> -->\n    <div id=\"data-wrapper\">\n        <ion-icon name=\"close-circle\" (click)=\"closeImg()\" color=\"primary\"></ion-icon>\n        <img id=\"user-img\" [src]=\"imgSrc\"/>\n    </div>\n</div>"
 
 /***/ }),
 
@@ -298,16 +298,46 @@ var ChatPage = /** @class */ (function () {
         console.log("blur called");
         this.addImage = (this.userDietComment.trim().length > 0) ? false : true;
     };
-    // openCamera(){
-    //   this.camera.getPicture(this.options).then((imageData) => {
-    //     // imageData is either a base64 encoded string or a file URI
-    //     // If it's base64 (DATA_URL):
-    //     let base64Image = 'data:image/jpeg;base64,' + imageData;
-    //     console.log("image data from upload>>>>", imageData);
-    //    }, (err) => {
-    //     // Handle error
-    //    });
-    // }
+    ChatPage.prototype.openCamera = function () {
+        return __awaiter(this, void 0, void 0, function () {
+            var result, filePath, image, imageBlob, pictures;
+            return __generator(this, function (_a) {
+                switch (_a.label) {
+                    case 0: return [4 /*yield*/, this.camera.getPicture(this.options)];
+                    case 1:
+                        result = _a.sent();
+                        filePath = "chatImages/" + this.userID + "/" + result.name;
+                        image = "data:image/jpeg;base64," + result;
+                        console.log("image from camera>>", result);
+                        console.log("image path from camera>>", filePath);
+                        imageBlob = this.b64toBlob(image, 'image/jpeg', 512);
+                        pictures = this.storage.ref(filePath);
+                        pictures.put(imageBlob).then(function (snapshot) {
+                            console.log('Uploaded a blob or file!');
+                        });
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    //https://stackoverflow.com/questions/16245767/creating-a-blob-from-a-base64-string-in-javascript
+    ChatPage.prototype.b64toBlob = function (b64Data, contentType, sliceSize) {
+        contentType = contentType || '';
+        sliceSize = sliceSize || 512;
+        var byteCharacters = atob(b64Data);
+        var byteArrays = [];
+        for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+            var slice = byteCharacters.slice(offset, offset + sliceSize);
+            var byteNumbers = new Array(slice.length);
+            for (var i = 0; i < slice.length; i++) {
+                byteNumbers[i] = slice.charCodeAt(i);
+            }
+            var byteArray = new Uint8Array(byteNumbers);
+            byteArrays.push(byteArray);
+        }
+        var blob = new Blob(byteArrays, { type: contentType });
+        return blob;
+    };
     ChatPage.prototype.openGallery = function () {
         document.getElementById('file-uploader').click();
     };

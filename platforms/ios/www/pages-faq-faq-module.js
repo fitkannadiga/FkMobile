@@ -62,7 +62,7 @@ var FaqPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>FAQ</ion-title>\n        <!-- <ion-button slot=\"end\" (click)=\"presentLangSelector()\" color=\"light\">{{presentLang}}</ion-button> -->\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list class=\"accordion-list\">\n        <div *ngFor=\"let item of finalFaqObject; let i = index\" no-lines no-padding>\n            <p class=\"question\" (click)=\"toggleSection(i)\">\n                <span class=\"q-text\">Q &nbsp;</span> {{item.question}}\n            </p>\n            <p class=\"answer\" *ngIf=\"item.open\" no-lines>{{item.answer}}</p>\n        </div>\n    </ion-list>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>FAQ</ion-title>\n        <!-- <ion-button slot=\"end\" (click)=\"presentLangSelector()\" color=\"light\">{{presentLang}}</ion-button> -->\n    </ion-toolbar>\n</ion-header>\n\n<ion-content padding>\n    <ion-list class=\"accordion-list\">\n        <div class=\"accordion-container\" *ngFor=\"let item of finalFaqObject; let i = index\">\n            <p class=\"question\" (click)=\"toggleSection(i, $event)\">\n                <span class=\"question-text\"><ion-icon [name]=\"(item.open) ? 'remove' : 'add'\"></ion-icon></span> \n                <span class=\"quesion\">{{item.question}}</span>\n            </p>\n            <p class=\"answer\" *ngIf=\"item.open\" no-lines>{{item.answer}}</p>\n        </div>\n    </ion-list>\n</ion-content>"
 
 /***/ }),
 
@@ -73,7 +73,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-list.accordion-list p.question {\n  background: #344597;\n  padding: 12px;\n  color: #FFF;\n  border-radius: 5px 5px 0px 0px;\n  margin-bottom: 0px; }\n\nion-list.accordion-list p.answer {\n  background: #a2a4ab;\n  padding: 12px;\n  margin-top: 0px;\n  border-radius: 0px 0px 5px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9mYXEvZmFxLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVRLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IsV0FBVztFQUNYLDhCQUE4QjtFQUM5QixrQkFBa0IsRUFBQTs7QUFOMUI7RUFTUSxtQkFBbUI7RUFDbkIsYUFBYTtFQUNiLGVBQWU7RUFDZiw4QkFBOEIsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL2ZhcS9mYXEucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWxpc3QuYWNjb3JkaW9uLWxpc3Qge1xuICAgIHAucXVlc3Rpb24ge1xuICAgICAgICBiYWNrZ3JvdW5kOiAjMzQ0NTk3O1xuICAgICAgICBwYWRkaW5nOiAxMnB4O1xuICAgICAgICBjb2xvcjogI0ZGRjtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogNXB4IDVweCAwcHggMHB4O1xuICAgICAgICBtYXJnaW4tYm90dG9tOiAwcHg7XG4gICAgfVxuICAgIHAuYW5zd2VyIHtcbiAgICAgICAgYmFja2dyb3VuZDogI2EyYTRhYjtcbiAgICAgICAgcGFkZGluZzogMTJweDtcbiAgICAgICAgbWFyZ2luLXRvcDogMHB4O1xuICAgICAgICBib3JkZXItcmFkaXVzOiAwcHggMHB4IDVweCA1cHg7XG4gICAgfVxufSJdfQ== */"
+module.exports = "ion-list.accordion-list {\n  font-size: 0.9rem;\n  padding-top: 0px !important; }\n  ion-list.accordion-list div.accordion-container {\n    padding-bottom: 4px; }\n  ion-list.accordion-list p.question {\n    background: #344597;\n    padding: 12px;\n    color: #FFF;\n    border-radius: 5px 5px 0px 0px;\n    margin-bottom: 0px; }\n  ion-list.accordion-list p.question span {\n      display: inline-block; }\n  ion-list.accordion-list p.question span.question-text {\n      width: 10%; }\n  ion-list.accordion-list p.question span.question {\n      width: 89%; }\n  ion-list.accordion-list p.answer {\n    background: #ededed;\n    padding: 12px;\n    margin-top: 0px;\n    border-radius: 0px 0px 5px 5px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9mYXEvZmFxLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFpQjtFQUNqQiwyQkFBMkIsRUFBQTtFQUYvQjtJQUlRLG1CQUFtQixFQUFBO0VBSjNCO0lBUVEsbUJBQW1CO0lBQ25CLGFBQWE7SUFDYixXQUFXO0lBQ1gsOEJBQThCO0lBQzlCLGtCQUFrQixFQUFBO0VBWjFCO01BY1kscUJBQXFCLEVBQUE7RUFkakM7TUFpQlksVUFBVSxFQUFBO0VBakJ0QjtNQW9CWSxVQUFVLEVBQUE7RUFwQnRCO0lBd0JRLG1CQUFtQjtJQUNuQixhQUFhO0lBQ2IsZUFBZTtJQUNmLDhCQUE4QixFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvZmFxL2ZhcS5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tbGlzdC5hY2NvcmRpb24tbGlzdCB7XG4gICAgZm9udC1zaXplOiAwLjlyZW07XG4gICAgcGFkZGluZy10b3A6IDBweCAhaW1wb3J0YW50O1xuICAgIGRpdi5hY2NvcmRpb24tY29udGFpbmVyIHtcbiAgICAgICAgcGFkZGluZy1ib3R0b206IDRweDtcbiAgICB9XG4gICAgcC5xdWVzdGlvbiB7XG4gICAgICAgIC8vIGJhY2tncm91bmQ6ICMzYzNlNDE7XG4gICAgICAgIGJhY2tncm91bmQ6ICMzNDQ1OTc7XG4gICAgICAgIHBhZGRpbmc6IDEycHg7XG4gICAgICAgIGNvbG9yOiAjRkZGO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA1cHggNXB4IDBweCAwcHg7XG4gICAgICAgIG1hcmdpbi1ib3R0b206IDBweDtcbiAgICAgICAgc3BhbiB7XG4gICAgICAgICAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG4gICAgICAgIH1cbiAgICAgICAgc3Bhbi5xdWVzdGlvbi10ZXh0IHtcbiAgICAgICAgICAgIHdpZHRoOiAxMCU7XG4gICAgICAgIH1cbiAgICAgICAgc3Bhbi5xdWVzdGlvbiB7XG4gICAgICAgICAgICB3aWR0aDogODklO1xuICAgICAgICB9XG4gICAgfVxuICAgIHAuYW5zd2VyIHtcbiAgICAgICAgYmFja2dyb3VuZDogI2VkZWRlZDtcbiAgICAgICAgcGFkZGluZzogMTJweDtcbiAgICAgICAgbWFyZ2luLXRvcDogMHB4O1xuICAgICAgICBib3JkZXItcmFkaXVzOiAwcHggMHB4IDVweCA1cHg7XG4gICAgfVxufSJdfQ== */"
 
 /***/ }),
 
@@ -139,6 +139,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
+
 var FaqPage = /** @class */ (function () {
     function FaqPage(afDataBase, commonService, alertCtrl) {
         var _this = this;
@@ -150,6 +151,7 @@ var FaqPage = /** @class */ (function () {
         this.presentLang = "English";
         this.langIdentifier = 'en';
         this.finalFaqObject = [];
+        this.previousIndex = 0;
         this.commonService.getFaq().then(function (data) {
             // console.log("faq data: ", data);
             _this.information = data;
@@ -158,14 +160,25 @@ var FaqPage = /** @class */ (function () {
     }
     FaqPage.prototype.ngOnInit = function () {
     };
-    FaqPage.prototype.toggleSection = function (i) {
-        // Close all the other opened accordion and then open the selected
-        for (var i_key in this.finalFaqObject) {
-            if (this.finalFaqObject[i_key].open) {
-                this.finalFaqObject[i_key].open = !this.finalFaqObject[i_key].open;
-            }
+    FaqPage.prototype.toggleSection = function (i, event) {
+        // debugger;
+        // IF - if opened, then close the dialouge
+        // ELSE - Cloose all the rest and open the clicked item and scroll
+        if (this.previousIndex == i) {
+            this.finalFaqObject[i].open = !this.finalFaqObject[i].open;
         }
-        this.finalFaqObject[i].open = !this.finalFaqObject[i].open;
+        else {
+            // Close all the other opened accordion and then open the selected
+            for (var i_key in this.finalFaqObject) {
+                if (this.finalFaqObject[i_key].open) {
+                    this.finalFaqObject[i_key].open = !this.finalFaqObject[i_key].open;
+                }
+            }
+            this.finalFaqObject[i].open = !this.finalFaqObject[i].open;
+            this.previousIndex = i;
+            // scroll to the selected element based on which is opened
+            this.content.scrollByPoint(event.x, event.y - 100, 1000);
+        }
     };
     FaqPage.prototype.presentLangSelector = function () {
         return __awaiter(this, void 0, void 0, function () {
@@ -231,6 +244,10 @@ var FaqPage = /** @class */ (function () {
             }
         }
     };
+    __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewChild"])(_ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonContent"]),
+        __metadata("design:type", _ionic_angular__WEBPACK_IMPORTED_MODULE_3__["IonContent"])
+    ], FaqPage.prototype, "content", void 0);
     FaqPage = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-faq',

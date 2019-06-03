@@ -62,7 +62,7 @@ var ProfilePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Profile Page</ion-title>\n    </ion-toolbar>\n    <div id=\"progress-bar-wrapper\" *ngIf=\"percentage | async as pct\">\n        <ion-progress-bar color=\"primary\" buffer=\"0.5\" class=\"progress is-info\" [value]=\"pct/100\"></ion-progress-bar>\n    </div>\n</ion-header>\n\n<ion-content padding>\n    <input id=\"file-uploader\" type=\"file\" (change)=\"uploadFile($event)\" name=\"Upload Image\" hidden accept=\"image/x-png,image/gif,image/jpeg\" />\n    <div id=\"image-upload-wrapper\">\n        <img id=\"user-img\" [src]=\"imgPath\" (click)=\"triggerUpload()\" onError=\"src = 'assets/default.png'\" />\n        <img id=\"edit-icon\" src=\"assets/icon/edit-image.png\" onError=\"src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'\" (click)=\"triggerUpload()\" />\n    </div>\n    <p id=\"user-name\">@{{profile.username}}</p>\n    <form id=\"user-profile-form\" #userProfileForm=\"ngForm\" (ngSubmit)=\"validateForm(userProfileForm)\" autocomplete=\"off\">\n        <ion-item>\n            <ion-label position=\"floating\">Full Name<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"fullname\" required [(ngModel)]=\"profile.fullname\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Email<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"email\" required [(ngModel)]=\"profile.email\" disabled=\"disabled\"></ion-input>\n        </ion-item>\n        <!--<ion-item>\n            <ion-label position=\"floating\">Age<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" name=\"age\" required [(ngModel)]=\"profile.age\"></ion-input>\n        </ion-item>-->\n        <ion-item>\n            <ion-label position=\"floating\">Date Of Birth<span class=\"danger\">*</span></ion-label>\n            <ion-datetime display-format=\"DD/MM/YYYY\" picker-format=\"DD MMMM YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime>\n            <!-- <ion-datetime displayFormat=\"MMM DD, YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime> -->\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n            <ion-select name=\"gender\" required [(ngModel)]=\"profile.gender\">\n                <ion-select-option value=\"female\">Female</ion-select-option>\n                <ion-select-option value=\"male\">Male</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Weight[kg]</ion-label>\n            <ion-input type=\"number\" name=\"weight\" [(ngModel)]=\"profile.weight\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Height[cms]</ion-label>\n            <ion-input type=\"number\" name=\"height\" [(ngModel)]=\"profile.height\"></ion-input>\n        </ion-item>\n        <ion-button class=\"fk-marginTop-25\" id=\"update-profile-btn\" color=\"secondary\" expand=\"full\" size=\"large\" type=\"submit\">Update Profile</ion-button>\n    </form>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Profile Page</ion-title>\n    </ion-toolbar>\n    <div id=\"progress-bar-wrapper\" *ngIf=\"percentage | async as pct\">\n        <ion-progress-bar color=\"primary\" buffer=\"0.5\" class=\"progress is-info\" [value]=\"pct/100\"></ion-progress-bar>\n    </div>\n</ion-header>\n\n<ion-content padding>\n    <input id=\"file-uploader\" type=\"file\" (change)=\"uploadFile($event)\" name=\"Upload Image\" hidden accept=\"image/*\" capture=\"filesystem\"/>\n    <div id=\"image-upload-wrapper\">\n        <img id=\"user-img\" [src]=\"imgPath\" (click)=\"triggerUpload()\" onError=\"src = 'assets/default.png'\" />\n        <img id=\"edit-icon\" src=\"assets/icon/edit-image.png\" onError=\"src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'\" (click)=\"triggerUpload()\" />\n    </div>\n    <p id=\"user-name\">@{{profile.username}}</p>\n    <form id=\"user-profile-form\" #userProfileForm=\"ngForm\" (ngSubmit)=\"validateForm(userProfileForm)\" autocomplete=\"off\">\n        <ion-item>\n            <ion-label position=\"floating\">Full Name<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"fullname\" required [(ngModel)]=\"profile.fullname\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Email<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"email\" required [(ngModel)]=\"profile.email\" disabled=\"disabled\"></ion-input>\n        </ion-item>\n        <!--<ion-item>\n            <ion-label position=\"floating\">Age<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"number\" name=\"age\" required [(ngModel)]=\"profile.age\"></ion-input>\n        </ion-item>-->\n        <ion-item>\n            <ion-label position=\"floating\">Date Of Birth<span class=\"danger\">*</span></ion-label>\n            <ion-datetime display-format=\"DD/MM/YYYY\" picker-format=\"DD MMMM YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime>\n            <!-- <ion-datetime displayFormat=\"MMM DD, YYYY\" name=\"dob\" required [(ngModel)]=\"profile.dob\"></ion-datetime> -->\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n            <ion-select name=\"gender\" required [(ngModel)]=\"profile.gender\">\n                <ion-select-option value=\"female\">Female</ion-select-option>\n                <ion-select-option value=\"male\">Male</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Weight[kg]</ion-label>\n            <ion-input type=\"number\" name=\"weight\" [(ngModel)]=\"profile.weight\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Height[cms]</ion-label>\n            <ion-input type=\"number\" name=\"height\" [(ngModel)]=\"profile.height\"></ion-input>\n        </ion-item>\n        <ion-button class=\"fk-marginTop-25\" id=\"update-profile-btn\" color=\"secondary\" expand=\"full\" size=\"large\" type=\"submit\">Update Profile</ion-button>\n    </form>\n</ion-content>"
 
 /***/ }),
 
@@ -189,23 +189,28 @@ var ProfilePage = /** @class */ (function () {
             this.presentLoading('Uploading Image...');
             var file = event.target.files[0];
             var fileRef = this.storage.ref(this.filePath);
-            this.storage.ref(this.filePath).put(file).then(function (data) {
-                console.log("data from upload image", data);
-                if (data.state == "success") {
-                    // this.imgPath = this.globalComp.getUserImage();
-                    _this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F' + _this.uid + '?alt=media' + '&random=' + Math.floor(Math.random() * 230) + 90;
-                    // loading data explicitly after the image loaded as we are not setting root page as tab.
-                    // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
-                    _this.events.publish('loadData');
-                    _this.presentToast('Profile image updated');
-                }
-                else {
-                    _this.presentToast('Problem uploading image. Please try after sometime.');
-                }
-                _this.dismissLoader();
-            }).catch(function (err) {
-                _this.presentToast('There was a problem uploading image. Try after sometime');
-            });
+            if (file.size <= 3000000) {
+                this.storage.ref(this.filePath).put(file).then(function (data) {
+                    console.log("data from upload image", data);
+                    if (data.state == "success") {
+                        // this.imgPath = this.globalComp.getUserImage();
+                        _this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F' + _this.uid + '?alt=media' + '&random=' + Math.floor(Math.random() * 230) + 90;
+                        // loading data explicitly after the image loaded as we are not setting root page as tab.
+                        // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
+                        _this.events.publish('loadData');
+                        _this.presentToast('Profile image updated');
+                    }
+                    else {
+                        _this.presentToast('Problem uploading image. Please try after sometime.');
+                    }
+                    _this.dismissLoader();
+                }).catch(function (err) {
+                    _this.presentToast('There was a problem uploading image. Try after sometime');
+                });
+            }
+            else {
+                this.presentToast('Please select a lower resolution image with size less than 3MB.');
+            }
         }
     };
     ProfilePage.prototype.cropUpload = function () {

@@ -196,16 +196,55 @@ export class ChatPage implements OnInit {
       this.addImage = (this.userDietComment.trim().length > 0) ? false : true;
   }
 
-  // openCamera(){
-  //   this.camera.getPicture(this.options).then((imageData) => {
-  //     // imageData is either a base64 encoded string or a file URI
-  //     // If it's base64 (DATA_URL):
-  //     let base64Image = 'data:image/jpeg;base64,' + imageData;
-  //     console.log("image data from upload>>>>", imageData);
-  //    }, (err) => {
-  //     // Handle error
-  //    });
-  // }
+  async openCamera(){
+
+    const result = await this.camera.getPicture(this.options);
+    const filePath =  `chatImages/${this.userID}/${result.name}`;
+    const image = `data:image/jpeg;base64,${result}`;
+
+    console.log("image from camera>>", result);
+    console.log("image path from camera>>", filePath);
+    const imageBlob = this.b64toBlob(image, 'image/jpeg', 512);
+    // const imageBlob = result.blob();
+    const pictures = this.storage.ref(filePath);
+    pictures.put(imageBlob).then(function(snapshot) {
+      console.log('Uploaded a blob or file!');
+    });
+    
+    // this.camera.getPicture(this.options).then((imageData) => {
+    //   // imageData is either a base64 encoded string or a file URI
+    //   // If it's base64 (DATA_URL):
+    //   let base64Image = 'data:image/jpeg;base64,' + imageData;
+    //   console.log("image data from upload>>>>", imageData);
+    //  }, (err) => {
+    //   // Handle error
+    //  });
+  }
+
+  //https://stackoverflow.com/questions/16245767/creating-a-blob-from-a-base64-string-in-javascript
+  b64toBlob(b64Data: string, contentType: string, sliceSize: number) {
+    contentType = contentType || '';
+    sliceSize = sliceSize || 512;
+
+    var byteCharacters = atob(b64Data);
+    var byteArrays = [];
+
+    for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+      var slice = byteCharacters.slice(offset, offset + sliceSize);
+
+      var byteNumbers = new Array(slice.length);
+      for (var i = 0; i < slice.length; i++) {
+        byteNumbers[i] = slice.charCodeAt(i);
+      }
+
+      var byteArray = new Uint8Array(byteNumbers);
+
+      byteArrays.push(byteArray);
+    }
+
+    var blob = new Blob(byteArrays, { type: contentType });
+    return blob;
+  }
 
   openGallery(){
     document.getElementById('file-uploader').click();

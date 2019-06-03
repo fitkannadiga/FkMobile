@@ -8,6 +8,11 @@ ion-content {
             ion-grid {
                 padding: 5px 0px;
             }
+            ion-row.content-row {
+                ion-col.article-desc {
+                    font-weight: bold;
+                }
+            }
             ion-row.count {
                 border-top: 1px solid #ededed;
                 padding: 5px 0px 0px;
