@@ -13,7 +13,7 @@
         <ion-card *ngFor="let article of articleDataObject; let i = index;">
             <ion-grid>
                 <ion-row class="content-row" (click)="openArticle(article, i);">
-                    <ion-col size="4">
+                    <ion-col size="4" class="article-img-wrapper">
                         <img class="article-img" [src]="article.img_path" onError="src = './assets/imgs/default.png'"/>
                     </ion-col>
                     <ion-col size="8" class="article-desc">

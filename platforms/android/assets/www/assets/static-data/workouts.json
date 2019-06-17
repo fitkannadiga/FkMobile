@@ -1,4 +1,13 @@
 [{
+        "workout_title": "Intense Push Workout",
+        "workout_sd": "Push workout focusing mainly on chest and tricpe to imporove strength and build mass.",
+        "workout_img": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/workout%2Fpush_workout.jpg?alt=media&token=99d71cf0-8215-4e9e-8ac4-a9e984cd8ae3",
+        "workout_video": "",
+        "workout_tags": ["Push Workout", "Chest", "Triceps"],
+        "workout_desc": "<p>This push workout basically focuses on 2 of the major upper body pushing muscles which are Upper Chest &amp; Tricep. We plan to work intense by not just increasing weight/volume also increasing intensity by performing some supersets. Workout goes as below.</p><p><strong>Warmup</strong></p><ul><li>5min Cardio</li><li>Stretching</li><li>Body Weight Pushups</li></ul><p><strong>Workout</strong></p><ol><li>Incline bench dumbbell press -&nbsp;<strong>4 sets</strong></li><li>SuperSet - <strong>3 Sets</strong><ol><li>Incline bench low pulley cable fly</li><li>Weighted Tricep dips</li></ol></li><li>SuperSet - <strong>5&nbsp;Sets</strong><ol><li>Seated landmine press</li><li>One arm overhead dumbbell press</li></ol></li><li>Decline push-up - <strong>3 sets</strong></li><li>Light weight tricep kickbacks -&nbsp;<strong>3 sets</strong></li></ol>",
+        "premium": false
+    },
+    {
         "workout_title": "Women's Home Workout",
         "workout_sd": "Best fat loss home workout for women who are working/Homemakers.",
         "workout_img": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/workout%2FPerfectSquatFeature.png?alt=media&token=62f99153-1e37-490c-95d0-93da913409f7",
@@ -11,7 +20,7 @@
         "workout_title": "Bicep complete workout",
         "workout_sd": "Focus on bicep anatomy to get better results.",
         "workout_img": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/workout%2FBuild-Bigger-Biceps-With-Isometrics-new.png?alt=media&token=f8cc9e78-d381-4b78-98c2-9769e912659f",
-        "workout_video": "IWKfrFHOayA",
+        "workout_video": "https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/videos%2Fyoutube%2Fbicep%20anatomy%20and%20turorial.mp4?alt=media&token=0dcc2941-bc87-4e1c-bbc8-9fe98d3690da",
         "workout_tags": ["Bicep", "Brachialis"],
         "workout_desc": "<p>This workout is based on the antomy of the bicep as explained in the video. There are two heads of bicep which is the reason we call Bi-cep in which Bi means 2. Apart from working on just the bicep heads, we need to focus on one more muscle which is Brachialis wich helps for the peak of the bicep.</p><p style='text-align: left;'><span style='text-decoration: underline;'><strong>Warmup</strong></span></p><ol><li style='text-align: left;'>light weight dumbell curls</li><li style='text-align: left;'>chin-ups</li></ol><p style='text-align: left;'><span style='text-decoration: underline;'><strong>Workout</strong></span></p><ol><li style='text-align: left;'>Alernating Dumbell Curls</li><li style='text-align: left;'>Ez rod Bicep Curl</li><li style='text-align: left;'>Cable Curls</li><li style='text-align: left;'>Rope Curls</li><li style='text-align: left;'>Concentration Curls</li></ol><p>Tip: Perform all the exercises to failure irrespective of the weight you pick but make sure you stay in the range of 8-15.</p>",
         "premium": false

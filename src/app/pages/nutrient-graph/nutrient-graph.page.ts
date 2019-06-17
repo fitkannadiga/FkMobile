@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NutrientGraphService } from '../../api/nutrient-graph.service';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,7 @@ declare var AmCharts: any;
   selector: 'app-nutrient-graph',
   templateUrl: './nutrient-graph.page.html',
   styleUrls: ['./nutrient-graph.page.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NutrientGraphPage implements OnInit {
 
@@ -83,9 +84,9 @@ export class NutrientGraphPage implements OnInit {
           "allLabels": [],
           "balloon": {},
           "colors": [
-            "#286383",
-            "#3A3A3A",
-            "#47ADE0"
+            "#F1BD31",
+            "#E56231",
+            "#478E48"
           ],
           "legend": {
             "enabled": true,

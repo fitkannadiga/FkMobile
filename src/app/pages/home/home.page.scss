@@ -111,6 +111,12 @@ div#hire-mentor-wrapper {
         border-radius: 10px;
         border: 1px solid #dcdcdc;
 
+        ion-col#coach-img {
+            img {
+                min-height: 80px;
+            }
+        }
+        
         ion-col#content {
             font-size: 0.8rem;
             p {

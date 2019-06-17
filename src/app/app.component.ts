@@ -165,6 +165,12 @@ export class AppComponent {
       } else {
       this.presentToast(msg.body);
       }
+      
+      if(msg.target == 'recipes'){
+        this.router.navigateByUrl('/recipes');
+      } else if(msg.target == 'workout'){
+        this.router.navigateByUrl('/workout');
+      }
     });
   }
 

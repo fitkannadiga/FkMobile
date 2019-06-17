@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MenuController, Events, ToastController } from '@ionic/angular';
 import { GlobalService } from '../api/global.service';
 import { Router } from '@angular/router';
+import { NetworkService } from '../api/network.service';
 
 @Component({
   selector: 'app-tabs',
@@ -11,8 +12,10 @@ import { Router } from '@angular/router';
 export class TabsPage {
 
   userData: any = {};
+  isConnected: any;
+  noNetwork: boolean = false;
 
-  constructor(public menuCtrl: MenuController, public events: Events, public globalComp: GlobalService, public router: Router, public toastr: ToastController){
+  constructor(public menuCtrl: MenuController, public events: Events, public globalComp: GlobalService, public router: Router, public toastr: ToastController, public networkService: NetworkService){
     this.globalComp.getUserInformationFirebase().then( (data) => {
       // console.log("tabs data", data);
       this.userData = data;
@@ -30,10 +33,31 @@ export class TabsPage {
         this.menuCtrl.enable(true);
       }
     });
+    this.networkSubscriber();
   }
   
   ngOnInit() {
     // this.menuCtrl.enable(true, 'myFitnessMenu');
+  }
+
+  networkSubscriber(): void {
+    this.networkService
+        .getNetworkStatus()
+        .pipe()
+        .subscribe((connected: boolean) => {
+            this.isConnected = connected;
+            console.log('[Home] isConnected', this.isConnected);
+            this.handleNotConnected(connected);
+        });
+  }
+
+  handleNotConnected(status){
+    console.log("internte status >>>",status);
+    if(!status){
+      this.noNetwork = true;
+    } else {
+      this.noNetwork = false;
+    }
   }
 
   async presentToast(toastMsg) {

@@ -9,53 +9,25 @@
 
 <ion-content padding>
     <h2 text-center color="carbs">Lifestyle Plans</h2>
-    <ion-card id="lifestyle-diet" (click)="openPaymentOption();">
-        <ion-card-header>
-            Diet Plan
-        </ion-card-header>
-        <ion-card-content>
-            Just &#8377; 1299/- <br/> Includes one time consultation & customized diet plan based on your lifestyle/Need.
-        </ion-card-content>
-    </ion-card>
-    <ion-card id="lifestyle-workout" (click)="openPaymentOption();">
-        <ion-card-header>
-            Workout Plan
-        </ion-card-header>
-        <ion-card-content>
-            Just &#8377; 799/- <br/> Customized workout plan which perfectly fits as per your busy schedule.
-        </ion-card-content>
-    </ion-card>
-    <ion-card id="lifestyle-daily-workout-video" (click)="openPaymentOption();">
-        <ion-card-header>
-            Daily Workout Video
-        </ion-card-header>
-        <ion-card-content>
-            Just &#8377; 2499/- <br/> Single customized video which demonstrates your workout to meet your goal.
-        </ion-card-content>
-    </ion-card>
-    <ion-card id="lifestyle-weekly-workout-video" (click)="openPaymentOption();">
-        <ion-card-header>
-            Weekly Workout Plan
-        </ion-card-header>
-        <ion-card-content>
-            Just &#8377; 4999/- <br/> Multiple video to demonstrates your weekly workout based on your split to meet your goal.
-        </ion-card-content>
-    </ion-card>
+    <div *ngIf="lifestylePlans.length > 0">
+        <ion-card *ngFor="let lPlan of lifestylePlans" [id]="lPlan.id" (click)="openPaymentOption();">
+            <ion-card-header>
+                {{lPlan.title}}
+            </ion-card-header>
+            <ion-card-content>
+                <div [innerHTML]="lPlan.description"></div>
+            </ion-card-content>
+        </ion-card>
+    </div>
     <h2 text-center color="carbs">Transformation Plans (3 Months)</h2>
-    <ion-card id="transformation-fat-shredder" (click)="openPaymentOption();">
-        <ion-card-header>
-            Fat Shredder
-        </ion-card-header>
-        <ion-card-content>
-            Just &#8377; 8999/- <br/> Includes one time consultation, daily updates from coach & revision of diet plan as and when needed to loss fat faster.
-        </ion-card-content>
-    </ion-card>
-    <ion-card id="transformation-be-fit" (click)="openPaymentOption();">
-        <ion-card-header>
-            Be Fit
-        </ion-card-header>
-        <ion-card-content>
-            Just &#8377; 9990/- <br/> Completely customized diet and workout plan with multiple voice call consultation and daily updates.
-        </ion-card-content>
-    </ion-card>
+    <div *ngIf="transformationPlans.length > 0">
+        <ion-card *ngFor="let tPlan of transformationPlans" [id]="tPlan.id" (click)="openPaymentOption();">
+            <ion-card-header>
+                {{tPlan.title}}
+            </ion-card-header>
+            <ion-card-content>
+                <div [innerHTML]="tPlan.description"></div>
+            </ion-card-content>
+        </ion-card>
+    </div>
 </ion-content>

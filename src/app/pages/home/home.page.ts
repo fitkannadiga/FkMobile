@@ -18,6 +18,7 @@ export class HomePage implements OnInit {
   fakeSlideData: any = Array<number>(3);
   homeWorkoutList: any = [];
   shortCard: any = [];
+  
   slideOpts = {
     autoplay: false,
     effect: 'flip',
@@ -25,6 +26,7 @@ export class HomePage implements OnInit {
     loop: true,
     allowTouchMove: true
   };
+  
   constructor(public menuCtrl: MenuController, public loadingController: LoadingController, public toastr: ToastController, public commonService: CommonService, public router: Router, private iab: InAppBrowser) {
     this.getBannerImages();
     this.getHomeWorkout();

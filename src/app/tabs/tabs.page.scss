@@ -1,1 +1,11 @@
-
+ion-tabs {
+    p#network-offline-msg {
+        z-index: 99999;
+        background-color: #f25454;
+        margin: 0;
+        padding: 4px;
+        font-size: 0.6rem;
+        text-align: center;
+        color: #000;
+    }
+}

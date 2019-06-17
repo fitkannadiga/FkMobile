@@ -198,6 +198,19 @@ export class CommonService {
         return promise;
     }
 
+    // get client subscription plans
+    getSubscriptioPlans(){
+        var promise = new Promise((resolve, reject) => {
+            this.afDataBase.database.ref(`/clientSubscriptionPlans`).once('value', (snapshot) => {
+                console.log("snapshot.val()>>", snapshot.val())
+                resolve(snapshot.val());
+            }).catch((err) => {
+                reject(err);
+            })
+        })
+        return promise;
+    }
+
     // get workouts
     getWorkouts(){
         var promise = new Promise((resolve, reject) => {

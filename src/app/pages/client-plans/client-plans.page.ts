@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LoadingController, ToastController, AlertController } from '@ionic/angular';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
+import { CommonService } from '../../api/common.service';
 
 declare var Instamojo;
 declare var cordova;
@@ -15,11 +16,28 @@ declare var cordova;
 export class ClientPlansPage implements OnInit {
 
   planLoader: any;
+  lifestylePlans: any  = [];
+  transformationPlans: any  = [];
 
-  constructor(public loadingController: LoadingController, public toastr: ToastController, public afDataBase: AngularFireDatabase, public IAB: InAppBrowser, public alertCtrl: AlertController) { 
+  constructor(public loadingController: LoadingController, public toastr: ToastController, public afDataBase: AngularFireDatabase, public IAB: InAppBrowser, public alertCtrl: AlertController, public commonService: CommonService) {
   }
 
   ngOnInit() {
+    this.getSubscriptionPlans();
+  }
+  
+
+  // get client plans for contact
+  getSubscriptionPlans(){
+    this.commonService.getSubscriptioPlans().then((data) => {
+      console.log("client plans data>>", data);
+      
+      this.lifestylePlans = data['lifestylePlans'];
+      this.transformationPlans = data['transformationPlans'];
+    },
+    function(error) {
+      console.log("erron in client sunscription plan>>", error);
+    });
   }
 
   openPaymentOption(){

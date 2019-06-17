@@ -32,6 +32,9 @@ export class IntervalTimerPage implements OnInit {
   restInterval: any;
 
   constructor(private tts: TextToSpeech, private insomnia: Insomnia, public platform: Platform, private router: Router) {
+    // setTimeout(() => {
+    //   this.subscribeBackButton();
+    // }, 1000);
     // subscribe to back button as we need to stop the timer on user back
     this.platform.backButton.subscribe((data)=> {
       if(this.router.url.indexOf('interval-timer') > -1){
@@ -60,6 +63,20 @@ export class IntervalTimerPage implements OnInit {
   }
 
   ionViewDidLoad() {
+  }
+
+  subscribeBackButton(){
+    // subscribe to back button as we need to stop the timer on user back
+    this.platform.backButton.subscribe((data)=> {
+      if(this.router.url.indexOf('interval-timer') > -1){
+        // clear the timers and stop everything
+        this.exitTimer();
+        this.tempRest = 0;
+        this.SetTimer = 0;
+        this.RestTimer = 0;
+        this.insomnia.allowSleepAgain();
+      }
+    });
   }
 
   initTimer(){

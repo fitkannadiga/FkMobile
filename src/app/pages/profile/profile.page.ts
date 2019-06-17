@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 import { GlobalService } from '../../api/global.service';
 import { Crop } from '@ionic-native/crop/ngx';
 import { Observable } from 'rxjs';
-
+import { Camera } from '@ionic-native/camera/ngx';
 
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-native/file-transfer/ngx';
@@ -21,9 +21,12 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@ionic-nati
 export class ProfilePage implements OnInit {
 
   profile : any = {};
+  public myPhotosRef: any;
+  public myPhoto: any;
 
   imgPath: any;
-  filePath = 'profileImage/' + window.localStorage.getItem("authID") + '/';
+  // filePath = 'profileImage' + window.localStorage.getItem("authID") + '/';
+  filePath = 'profileImage';
   uid: any;
   profileLoader: any;
 
@@ -36,7 +39,9 @@ export class ProfilePage implements OnInit {
   fileUrl: any = null;
   respData: any;
 
-  constructor(public toastr: ToastController, public loadingController: LoadingController, public afDataBase: AngularFireDatabase, public storage: AngularFireStorage, public events: Events,public router: Router, public globalComp: GlobalService, public crop: Crop, private imagePicker: ImagePicker,private transfer: FileTransfer) {}
+  constructor(public toastr: ToastController, public loadingController: LoadingController, public afDataBase: AngularFireDatabase, public storage: AngularFireStorage, public events: Events,public router: Router, public globalComp: GlobalService, public crop: Crop, private imagePicker: ImagePicker,private transfer: FileTransfer, public camera: Camera) {
+    this.myPhotosRef = this.storage.ref(this.filePath);
+  }
 
   ngOnInit() {
     this.presentLoading('Loading data...');
@@ -53,6 +58,36 @@ export class ProfilePage implements OnInit {
   ionViewDidLoad(){
   }
 
+  selectPhoto(): void {
+    this.camera.getPicture({
+      sourceType: this.camera.PictureSourceType.PHOTOLIBRARY,
+      destinationType: this.camera.DestinationType.DATA_URL,
+      quality: 50,
+      encodingType: this.camera.EncodingType.PNG,
+      targetWidth: 300,
+      targetHeight: 300,
+    }).then(imageData => {
+      this.presentLoading('Uploading Image...');
+      this.myPhoto = imageData;
+      console.log("selected image from galery>>", this.myPhoto);
+      // this.uploadPhoto();
+      this.myPhotosRef.child(window.localStorage.getItem("authID"))
+      .putString(this.myPhoto, 'base64', { contentType: 'image/png' })
+      .then((savedPicture) => {
+        // this.imgPath = savedPicture.downloadURL;
+        this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F'+this.uid+'?alt=media'+'&random='+Math.floor(Math.random()*230)+90;;
+        this.events.publish('loadData');
+        this.dismissLoader();
+        this.presentToast('Profile image updated');
+      }).catch((err)=>{
+        this.dismissLoader();
+        this.presentToast('There was a problem uploading image. Try after sometime');
+      });
+    }, error => {
+      console.log("ERROR -> " + JSON.stringify(error));
+    });
+  }
+
   triggerUpload(){
     document.getElementById('file-uploader').click();
   }
@@ -62,11 +97,11 @@ export class ProfilePage implements OnInit {
   uploadFile(event) {
     console.log("file length>>>>", event.target.files.length);
     if(event.target.files.length >= 1) {
-      this.presentLoading('Uploading Image...');
       const file = event.target.files[0];
       const fileRef = this.storage.ref(this.filePath);
 
       if(file.size <= 3000000){
+        this.presentLoading('Uploading Image...');
         this.storage.ref(this.filePath).put(file).then((data) => {
           console.log("data from upload image", data);
           if(data.state == "success"){

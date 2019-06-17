@@ -124,6 +124,9 @@ var IntervalTimerPage = /** @class */ (function () {
         this.tempSet = 0;
         this.tempInterval = 0;
         this.tempRest = 0;
+        // setTimeout(() => {
+        //   this.subscribeBackButton();
+        // }, 1000);
         // subscribe to back button as we need to stop the timer on user back
         this.platform.backButton.subscribe(function (data) {
             if (_this.router.url.indexOf('interval-timer') > -1) {
@@ -149,6 +152,20 @@ var IntervalTimerPage = /** @class */ (function () {
         // }
     };
     IntervalTimerPage.prototype.ionViewDidLoad = function () {
+    };
+    IntervalTimerPage.prototype.subscribeBackButton = function () {
+        var _this = this;
+        // subscribe to back button as we need to stop the timer on user back
+        this.platform.backButton.subscribe(function (data) {
+            if (_this.router.url.indexOf('interval-timer') > -1) {
+                // clear the timers and stop everything
+                _this.exitTimer();
+                _this.tempRest = 0;
+                _this.SetTimer = 0;
+                _this.RestTimer = 0;
+                _this.insomnia.allowSleepAgain();
+            }
+        });
     };
     IntervalTimerPage.prototype.initTimer = function () {
         // validate the timers for zeros in the sets/interval/rest

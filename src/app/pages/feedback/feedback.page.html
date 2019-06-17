@@ -18,7 +18,7 @@
 <ion-content padding>
     <p>How Happy are you with the services provided by Fit Kannadiga?</p>
     <div>
-        <img src="./assets/icon/emoticons/sad.svg" id="sad" class="emoticon" (click)="selectRating($event, '-1', 'sad')">
+        <img src="./assets/icon/emoticons/sad.svg" id="sad" class="emoticon" (click)="selectRating($event, '-1', 'sad')" tooltip="I'm a tooltip below a button" positionV="top" arrow>
         <img src="./assets/icon/emoticons/neutral.svg" id="neutral" class="emoticon" (click)="selectRating($event, '0', 'neutral')">
         <img src="./assets/icon/emoticons/happy.svg" id="happy" class="emoticon" (click)="selectRating($event, '1', 'happy')">
         <img src="./assets/icon/emoticons/satisfied.svg" id="satisfied" class="emoticon" (click)="selectRating($event, '2', 'satisfied')">

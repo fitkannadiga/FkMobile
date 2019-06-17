@@ -9,7 +9,7 @@ import { ArticleDetailsService } from '../../api/article-details.service';
   selector: 'app-article-details',
   templateUrl: './article-details.page.html',
   styleUrls: ['./article-details.page.scss'],
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.None
 })
 export class ArticleDetailsPage implements OnInit {
 

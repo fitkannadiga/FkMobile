@@ -159,9 +159,9 @@ var NutrientGraphPage = /** @class */ (function () {
             "allLabels": [],
             "balloon": {},
             "colors": [
-                "#286383",
-                "#3A3A3A",
-                "#47ADE0"
+                "#F1BD31",
+                "#E56231",
+                "#478E48"
             ],
             "legend": {
                 "enabled": true,
@@ -189,6 +189,7 @@ var NutrientGraphPage = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
             selector: 'app-nutrient-graph',
             template: __webpack_require__(/*! ./nutrient-graph.page.html */ "./src/app/pages/nutrient-graph/nutrient-graph.page.html"),
+            encapsulation: _angular_core__WEBPACK_IMPORTED_MODULE_0__["ViewEncapsulation"].None,
             styles: [__webpack_require__(/*! ./nutrient-graph.page.scss */ "./src/app/pages/nutrient-graph/nutrient-graph.page.scss")]
         }),
         __metadata("design:paramtypes", [_api_nutrient_graph_service__WEBPACK_IMPORTED_MODULE_1__["NutrientGraphService"], _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"]])

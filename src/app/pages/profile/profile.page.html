@@ -11,10 +11,10 @@
 </ion-header>
 
 <ion-content padding>
-    <input id="file-uploader" type="file" (change)="uploadFile($event)" name="Upload Image" hidden accept="image/*" capture="filesystem"/>
+    <input id="file-uploader" type="file" (change)="uploadFile($event)" name="Upload Image" hidden accept="image/*">
     <div id="image-upload-wrapper">
-        <img id="user-img" [src]="imgPath" (click)="triggerUpload()" onError="src = 'assets/default.png'" />
-        <img id="edit-icon" src="assets/icon/edit-image.png" onError="src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'" (click)="triggerUpload()" />
+        <img id="user-img" [src]="imgPath" (click)="selectPhoto()" onError="src = 'assets/default.png'" />
+        <img id="edit-icon" src="assets/icon/edit-image.png" onError="src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'" (click)="selectPhoto()" />
     </div>
     <p id="user-name">@{{profile.username}}</p>
     <form id="user-profile-form" #userProfileForm="ngForm" (ngSubmit)="validateForm(userProfileForm)" autocomplete="off">
