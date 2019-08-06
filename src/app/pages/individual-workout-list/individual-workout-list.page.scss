@@ -6,10 +6,36 @@ ion-content {
         right: 0;
         z-index: 9999;
         background-color: #FFF;
+        ion-searchbar{
+            padding: 0px !important;
+        }
     }
     ion-card {
         p {
             color: #000;
+        }
+    }
+    div#muscles-list-wrapper {
+        ion-card.muscle-card {
+            // min-height: 3rem;
+            // max-height: 3rem;
+            ion-col.img-card {
+                padding: 0px;
+                align-items: center;
+                align-content: center;
+                display: flex;
+                background: #000;
+                img {
+                    height: 45px;
+                }
+            }
+            ion-col.title-card {
+                display: flex;
+                align-items: center;
+                p {
+                    padding-left: 10px;
+                }
+            }
         }
     }
 }

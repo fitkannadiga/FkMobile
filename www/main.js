@@ -1,810 +1,407 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/es5/build lazy recursive ^\\.\\/.*\\.entry\\.js$ include: \\.entry\\.js$":
-/*!*********************************************************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/es5/build lazy ^\.\/.*\.entry\.js$ include: \.entry\.js$ namespace object ***!
-  \*********************************************************************************************************************/
+/***/ "./node_modules/@ionic/core/dist/esm-es5 lazy recursive ^\\.\\/.*\\.entry\\.js$ include: \\.entry\\.js$ exclude: \\.system\\.entry\\.js$":
+/*!*********************************************************************************************************************************************!*\
+  !*** ./node_modules/@ionic/core/dist/esm-es5 lazy ^\.\/.*\.entry\.js$ include: \.entry\.js$ exclude: \.system\.entry\.js$ namespace object ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./0owmtgfs.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/0owmtgfs.entry.js",
-		"common",
-		58
-	],
-	"./0owmtgfs.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/0owmtgfs.sc.entry.js",
-		"common",
-		59
-	],
-	"./0utrggve.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/0utrggve.entry.js",
-		"common",
-		60
-	],
-	"./0utrggve.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/0utrggve.sc.entry.js",
-		"common",
-		61
-	],
-	"./3hf0d5sl.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/3hf0d5sl.entry.js",
-		"common",
-		62
-	],
-	"./3hf0d5sl.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/3hf0d5sl.sc.entry.js",
-		"common",
-		63
-	],
-	"./47ctf96j.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/47ctf96j.entry.js",
-		0,
-		"common",
-		132
-	],
-	"./47ctf96j.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/47ctf96j.sc.entry.js",
-		0,
-		"common",
-		133
-	],
-	"./4jebvdzz.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4jebvdzz.entry.js",
-		"common",
-		10
-	],
-	"./4jebvdzz.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4jebvdzz.sc.entry.js",
-		"common",
-		11
-	],
-	"./4m739wpj.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4m739wpj.entry.js",
-		"common",
-		64
-	],
-	"./4m739wpj.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4m739wpj.sc.entry.js",
-		"common",
-		65
-	],
-	"./4ovfvgj2.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4ovfvgj2.entry.js",
-		0,
-		"common",
-		134
-	],
-	"./4ovfvgj2.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4ovfvgj2.sc.entry.js",
-		0,
-		"common",
-		135
-	],
-	"./4tejeecb.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4tejeecb.entry.js",
-		"common",
-		66
-	],
-	"./4tejeecb.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/4tejeecb.sc.entry.js",
-		"common",
-		67
-	],
-	"./5ccusvgf.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/5ccusvgf.entry.js",
-		"common",
-		68
-	],
-	"./5ccusvgf.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/5ccusvgf.sc.entry.js",
-		"common",
-		69
-	],
-	"./5ey3bs99.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/5ey3bs99.entry.js",
-		"common",
-		12
-	],
-	"./5ey3bs99.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/5ey3bs99.sc.entry.js",
+	"./ion-action-sheet-controller_8.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-action-sheet-controller_8.entry.js",
 		"common",
 		13
 	],
-	"./6f4biktp.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/6f4biktp.entry.js",
-		"common",
-		70
-	],
-	"./6f4biktp.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/6f4biktp.sc.entry.js",
-		"common",
-		71
-	],
-	"./8ldpeqpe.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/8ldpeqpe.entry.js",
+	"./ion-action-sheet-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-action-sheet-ios.entry.js",
 		"common",
 		14
 	],
-	"./8ldpeqpe.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/8ldpeqpe.sc.entry.js",
+	"./ion-action-sheet-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-action-sheet-md.entry.js",
 		"common",
 		15
 	],
-	"./8q1e6dus.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/8q1e6dus.entry.js",
+	"./ion-alert-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-alert-ios.entry.js",
 		"common",
 		16
 	],
-	"./8q1e6dus.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/8q1e6dus.sc.entry.js",
+	"./ion-alert-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-alert-md.entry.js",
 		"common",
 		17
 	],
-	"./96olk0dp.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/96olk0dp.entry.js",
-		136
-	],
-	"./96olk0dp.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/96olk0dp.sc.entry.js",
-		137
-	],
-	"./9rhd7ueu.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/9rhd7ueu.entry.js",
-		0,
-		"common",
-		138
-	],
-	"./9rhd7ueu.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/9rhd7ueu.sc.entry.js",
-		0,
-		"common",
-		139
-	],
-	"./9ynbzp83.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/9ynbzp83.entry.js",
+	"./ion-app_8-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-app_8-ios.entry.js",
+		1,
 		"common",
 		18
 	],
-	"./9ynbzp83.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/9ynbzp83.sc.entry.js",
+	"./ion-app_8-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-app_8-md.entry.js",
+		1,
 		"common",
 		19
 	],
-	"./afjpklm4.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/afjpklm4.entry.js",
-		"common",
-		72
-	],
-	"./afjpklm4.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/afjpklm4.sc.entry.js",
-		"common",
-		73
-	],
-	"./bhtvuxzz.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/bhtvuxzz.entry.js",
-		0,
-		"common",
-		140
-	],
-	"./bhtvuxzz.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/bhtvuxzz.sc.entry.js",
-		0,
-		"common",
-		141
-	],
-	"./c2kiol1t.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/c2kiol1t.entry.js",
+	"./ion-avatar_3-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-avatar_3-ios.entry.js",
 		"common",
 		20
 	],
-	"./c2kiol1t.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/c2kiol1t.sc.entry.js",
+	"./ion-avatar_3-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-avatar_3-md.entry.js",
 		"common",
 		21
 	],
-	"./ch8upsxn.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ch8upsxn.entry.js",
-		0,
-		"common",
-		114
-	],
-	"./ch8upsxn.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ch8upsxn.sc.entry.js",
-		0,
-		"common",
-		115
-	],
-	"./coytbtgb.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/coytbtgb.entry.js",
-		"common",
-		78
-	],
-	"./coytbtgb.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/coytbtgb.sc.entry.js",
-		"common",
-		79
-	],
-	"./cuwemyof.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/cuwemyof.entry.js",
-		"common",
-		80
-	],
-	"./cuwemyof.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/cuwemyof.sc.entry.js",
-		"common",
-		81
-	],
-	"./cyhnsxpk.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/cyhnsxpk.entry.js",
-		0,
-		"common",
-		144
-	],
-	"./cyhnsxpk.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/cyhnsxpk.sc.entry.js",
-		0,
-		"common",
-		145
-	],
-	"./dnpeoh7c.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/dnpeoh7c.entry.js",
+	"./ion-back-button-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-back-button-ios.entry.js",
 		"common",
 		22
 	],
-	"./dnpeoh7c.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/dnpeoh7c.sc.entry.js",
+	"./ion-back-button-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-back-button-md.entry.js",
 		"common",
 		23
 	],
-	"./ejzmat7r.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ejzmat7r.entry.js",
-		"common",
-		74
-	],
-	"./ejzmat7r.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ejzmat7r.sc.entry.js",
-		"common",
-		75
-	],
-	"./fcbdrndu.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/fcbdrndu.entry.js",
-		"common",
-		82
-	],
-	"./fcbdrndu.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/fcbdrndu.sc.entry.js",
-		"common",
-		83
-	],
-	"./ffukzwt6.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ffukzwt6.entry.js",
-		"common",
-		122
-	],
-	"./ffukzwt6.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ffukzwt6.sc.entry.js",
-		"common",
-		123
-	],
-	"./fhznfhbd.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/fhznfhbd.entry.js",
+	"./ion-backdrop-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-backdrop-ios.entry.js",
+		0,
 		"common",
 		24
 	],
-	"./fhznfhbd.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/fhznfhbd.sc.entry.js",
+	"./ion-backdrop-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-backdrop-md.entry.js",
+		0,
 		"common",
 		25
 	],
-	"./fiqi6app.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/fiqi6app.entry.js",
-		146
-	],
-	"./fiqi6app.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/fiqi6app.sc.entry.js",
-		147
-	],
-	"./g0yheybk.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/g0yheybk.entry.js",
-		0,
-		"common",
-		148
-	],
-	"./g0yheybk.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/g0yheybk.sc.entry.js",
-		0,
-		"common",
-		149
-	],
-	"./gvyg1bwh.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/gvyg1bwh.entry.js",
+	"./ion-button_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-button_2-ios.entry.js",
 		"common",
 		26
 	],
-	"./gvyg1bwh.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/gvyg1bwh.sc.entry.js",
+	"./ion-button_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-button_2-md.entry.js",
 		"common",
 		27
 	],
-	"./i9lnulrx.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/i9lnulrx.entry.js",
+	"./ion-card_5-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-card_5-ios.entry.js",
 		"common",
 		28
 	],
-	"./i9lnulrx.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/i9lnulrx.sc.entry.js",
+	"./ion-card_5-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-card_5-md.entry.js",
 		"common",
 		29
 	],
-	"./jdcptvrs.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jdcptvrs.entry.js",
-		"common",
-		84
-	],
-	"./jdcptvrs.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jdcptvrs.sc.entry.js",
-		"common",
-		85
-	],
-	"./jpkvsu5y.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jpkvsu5y.entry.js",
-		"common",
-		124
-	],
-	"./jpkvsu5y.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jpkvsu5y.sc.entry.js",
-		"common",
-		125
-	],
-	"./jtkjzkgg.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jtkjzkgg.entry.js",
+	"./ion-checkbox-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-checkbox-ios.entry.js",
 		"common",
 		30
 	],
-	"./jtkjzkgg.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jtkjzkgg.sc.entry.js",
+	"./ion-checkbox-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-checkbox-md.entry.js",
 		"common",
 		31
 	],
-	"./jwqvpjte.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jwqvpjte.entry.js",
-		"common",
-		86
-	],
-	"./jwqvpjte.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jwqvpjte.sc.entry.js",
-		"common",
-		87
-	],
-	"./jyrjuxdj.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jyrjuxdj.entry.js",
+	"./ion-chip-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-chip-ios.entry.js",
 		"common",
 		32
 	],
-	"./jyrjuxdj.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jyrjuxdj.sc.entry.js",
+	"./ion-chip-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-chip-md.entry.js",
 		"common",
 		33
 	],
-	"./jzmfoyaa.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jzmfoyaa.entry.js",
-		"common",
+	"./ion-col_3.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-col_3.entry.js",
 		34
 	],
-	"./jzmfoyaa.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/jzmfoyaa.sc.entry.js",
+	"./ion-datetime_3-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-datetime_3-ios.entry.js",
 		"common",
 		35
 	],
-	"./k1gbeuol.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/k1gbeuol.entry.js",
-		"common",
-		126
-	],
-	"./k1gbeuol.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/k1gbeuol.sc.entry.js",
-		"common",
-		127
-	],
-	"./lqvrsauo.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/lqvrsauo.entry.js",
-		"common",
-		88
-	],
-	"./lqvrsauo.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/lqvrsauo.sc.entry.js",
-		"common",
-		89
-	],
-	"./ly8zbpmk.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ly8zbpmk.entry.js",
+	"./ion-datetime_3-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-datetime_3-md.entry.js",
 		"common",
 		36
 	],
-	"./ly8zbpmk.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ly8zbpmk.sc.entry.js",
+	"./ion-fab_3-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-fab_3-ios.entry.js",
 		"common",
 		37
 	],
-	"./mny78lhg.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/mny78lhg.entry.js",
-		0,
-		"common",
-		150
-	],
-	"./mny78lhg.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/mny78lhg.sc.entry.js",
-		0,
-		"common",
-		151
-	],
-	"./n361sgpa.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/n361sgpa.entry.js",
+	"./ion-fab_3-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-fab_3-md.entry.js",
 		"common",
 		38
 	],
-	"./n361sgpa.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/n361sgpa.sc.entry.js",
-		"common",
+	"./ion-img.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-img.entry.js",
 		39
 	],
-	"./nr6wcehx.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/nr6wcehx.entry.js",
+	"./ion-infinite-scroll_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-infinite-scroll_2-ios.entry.js",
 		"common",
 		40
 	],
-	"./nr6wcehx.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/nr6wcehx.sc.entry.js",
+	"./ion-infinite-scroll_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-infinite-scroll_2-md.entry.js",
 		"common",
 		41
 	],
-	"./ntxo2f3d.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ntxo2f3d.entry.js",
+	"./ion-input-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-input-ios.entry.js",
 		"common",
 		42
 	],
-	"./ntxo2f3d.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ntxo2f3d.sc.entry.js",
+	"./ion-input-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-input-md.entry.js",
 		"common",
 		43
 	],
-	"./nxacca4l.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/nxacca4l.entry.js",
-		0,
-		"common",
-		152
-	],
-	"./nxacca4l.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/nxacca4l.sc.entry.js",
-		0,
-		"common",
-		153
-	],
-	"./nxghvzhm.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/nxghvzhm.entry.js",
+	"./ion-item-option_3-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-item-option_3-ios.entry.js",
 		"common",
 		44
 	],
-	"./nxghvzhm.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/nxghvzhm.sc.entry.js",
+	"./ion-item-option_3-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-item-option_3-md.entry.js",
 		"common",
 		45
 	],
-	"./oboc8zd4.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/oboc8zd4.entry.js",
-		"common",
-		90
-	],
-	"./oboc8zd4.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/oboc8zd4.sc.entry.js",
-		"common",
-		91
-	],
-	"./odqmlmdd.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/odqmlmdd.entry.js",
+	"./ion-item_8-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-item_8-ios.entry.js",
 		"common",
 		46
 	],
-	"./odqmlmdd.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/odqmlmdd.sc.entry.js",
+	"./ion-item_8-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-item_8-md.entry.js",
 		"common",
 		47
 	],
-	"./psxwmesv.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/psxwmesv.entry.js",
-		0,
-		"common",
-		154
-	],
-	"./psxwmesv.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/psxwmesv.sc.entry.js",
-		0,
-		"common",
-		155
-	],
-	"./qtcvseqn.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/qtcvseqn.entry.js",
-		0,
-		"common",
-		156
-	],
-	"./qtcvseqn.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/qtcvseqn.sc.entry.js",
-		0,
-		"common",
-		157
-	],
-	"./qvwswew4.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/qvwswew4.entry.js",
-		"common",
-		116
-	],
-	"./qvwswew4.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/qvwswew4.sc.entry.js",
-		"common",
-		117
-	],
-	"./raunowwy.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/raunowwy.entry.js",
-		"common",
-		92
-	],
-	"./raunowwy.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/raunowwy.sc.entry.js",
-		"common",
-		93
-	],
-	"./s0ahgtia.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/s0ahgtia.entry.js",
-		2,
-		"common",
-		158
-	],
-	"./s0ahgtia.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/s0ahgtia.sc.entry.js",
-		2,
-		"common",
-		159
-	],
-	"./sdfyvdro.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/sdfyvdro.entry.js",
-		"common",
-		94
-	],
-	"./sdfyvdro.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/sdfyvdro.sc.entry.js",
-		"common",
-		95
-	],
-	"./sghmhl28.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/sghmhl28.entry.js",
+	"./ion-loading-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-loading-ios.entry.js",
 		"common",
 		48
 	],
-	"./sghmhl28.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/sghmhl28.sc.entry.js",
+	"./ion-loading-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-loading-md.entry.js",
 		"common",
 		49
 	],
-	"./sjcqnbtt.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/sjcqnbtt.entry.js",
-		"common",
-		96
-	],
-	"./sjcqnbtt.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/sjcqnbtt.sc.entry.js",
-		"common",
-		97
-	],
-	"./t547wlk7.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/t547wlk7.entry.js",
-		"common",
-		118
-	],
-	"./t547wlk7.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/t547wlk7.sc.entry.js",
-		"common",
-		119
-	],
-	"./ta1bgxgm.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ta1bgxgm.entry.js",
-		"common",
-		98
-	],
-	"./ta1bgxgm.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ta1bgxgm.sc.entry.js",
-		"common",
-		99
-	],
-	"./tui62q7d.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/tui62q7d.entry.js",
-		"common",
-		100
-	],
-	"./tui62q7d.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/tui62q7d.sc.entry.js",
-		"common",
-		101
-	],
-	"./tylmm2yl.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/tylmm2yl.entry.js",
-		"common",
-		102
-	],
-	"./tylmm2yl.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/tylmm2yl.sc.entry.js",
-		"common",
-		103
-	],
-	"./uegz8gm3.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/uegz8gm3.entry.js",
-		"common",
-		104
-	],
-	"./uegz8gm3.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/uegz8gm3.sc.entry.js",
-		"common",
-		105
-	],
-	"./ugjythpm.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ugjythpm.entry.js",
-		2,
-		"common",
-		160
-	],
-	"./ugjythpm.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ugjythpm.sc.entry.js",
-		2,
-		"common",
-		161
-	],
-	"./unqw84tu.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/unqw84tu.entry.js",
-		"common",
-		128
-	],
-	"./unqw84tu.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/unqw84tu.sc.entry.js",
-		"common",
-		129
-	],
-	"./vjeei8vr.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/vjeei8vr.entry.js",
-		"common",
-		76
-	],
-	"./vjeei8vr.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/vjeei8vr.sc.entry.js",
-		"common",
-		77
-	],
-	"./wem5ffil.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/wem5ffil.entry.js",
+	"./ion-menu_4-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-menu_4-ios.entry.js",
 		0,
-		"common",
-		162
-	],
-	"./wem5ffil.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/wem5ffil.sc.entry.js",
-		0,
-		"common",
-		163
-	],
-	"./wy4rjeqs.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/wy4rjeqs.entry.js",
-		0,
-		"common",
-		120
-	],
-	"./wy4rjeqs.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/wy4rjeqs.sc.entry.js",
-		0,
-		"common",
-		121
-	],
-	"./xbafxwto.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xbafxwto.entry.js",
-		0,
-		"common",
-		164
-	],
-	"./xbafxwto.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xbafxwto.sc.entry.js",
-		0,
-		"common",
-		165
-	],
-	"./xfbndl84.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xfbndl84.entry.js",
 		"common",
 		50
 	],
-	"./xfbndl84.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xfbndl84.sc.entry.js",
+	"./ion-menu_4-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-menu_4-md.entry.js",
+		0,
 		"common",
 		51
 	],
-	"./xgnma4yj.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xgnma4yj.entry.js",
-		"common",
-		106
-	],
-	"./xgnma4yj.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xgnma4yj.sc.entry.js",
-		"common",
-		107
-	],
-	"./xrxaow8a.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xrxaow8a.entry.js",
-		"common",
-		108
-	],
-	"./xrxaow8a.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/xrxaow8a.sc.entry.js",
-		"common",
-		109
-	],
-	"./ycyyhg01.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ycyyhg01.entry.js",
-		"common",
-		110
-	],
-	"./ycyyhg01.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ycyyhg01.sc.entry.js",
-		"common",
-		111
-	],
-	"./ygh0szo0.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ygh0szo0.entry.js",
+	"./ion-modal-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-modal-ios.entry.js",
+		1,
 		"common",
 		52
 	],
-	"./ygh0szo0.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/ygh0szo0.sc.entry.js",
+	"./ion-modal-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-modal-md.entry.js",
+		1,
 		"common",
 		53
 	],
-	"./z9eemkqi.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/z9eemkqi.entry.js",
+	"./ion-nav_4.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-nav_4.entry.js",
+		1,
 		"common",
 		54
 	],
-	"./z9eemkqi.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/z9eemkqi.sc.entry.js",
+	"./ion-popover-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-popover-ios.entry.js",
+		1,
 		"common",
 		55
 	],
-	"./z9nt6ntd.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/z9nt6ntd.entry.js",
-		"common",
-		130
-	],
-	"./z9nt6ntd.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/z9nt6ntd.sc.entry.js",
-		"common",
-		131
-	],
-	"./zktscnoo.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/zktscnoo.entry.js",
-		"common",
-		112
-	],
-	"./zktscnoo.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/zktscnoo.sc.entry.js",
-		"common",
-		113
-	],
-	"./zykaqnfi.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/zykaqnfi.entry.js",
+	"./ion-popover-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-popover-md.entry.js",
+		1,
 		"common",
 		56
 	],
-	"./zykaqnfi.sc.entry.js": [
-		"./node_modules/@ionic/core/dist/esm/es5/build/zykaqnfi.sc.entry.js",
+	"./ion-progress-bar-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-progress-bar-ios.entry.js",
 		"common",
 		57
+	],
+	"./ion-progress-bar-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-progress-bar-md.entry.js",
+		"common",
+		58
+	],
+	"./ion-radio_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-radio_2-ios.entry.js",
+		"common",
+		59
+	],
+	"./ion-radio_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-radio_2-md.entry.js",
+		"common",
+		60
+	],
+	"./ion-range-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-range-ios.entry.js",
+		"common",
+		61
+	],
+	"./ion-range-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-range-md.entry.js",
+		"common",
+		62
+	],
+	"./ion-refresher_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-refresher_2-ios.entry.js",
+		"common",
+		63
+	],
+	"./ion-refresher_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-refresher_2-md.entry.js",
+		"common",
+		64
+	],
+	"./ion-reorder_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-reorder_2-ios.entry.js",
+		"common",
+		65
+	],
+	"./ion-reorder_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-reorder_2-md.entry.js",
+		"common",
+		66
+	],
+	"./ion-ripple-effect.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-ripple-effect.entry.js",
+		67
+	],
+	"./ion-route_4.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-route_4.entry.js",
+		"common",
+		68
+	],
+	"./ion-searchbar-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-searchbar-ios.entry.js",
+		"common",
+		69
+	],
+	"./ion-searchbar-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-searchbar-md.entry.js",
+		"common",
+		70
+	],
+	"./ion-segment_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-segment_2-ios.entry.js",
+		"common",
+		71
+	],
+	"./ion-segment_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-segment_2-md.entry.js",
+		"common",
+		72
+	],
+	"./ion-select_3-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-select_3-ios.entry.js",
+		"common",
+		73
+	],
+	"./ion-select_3-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-select_3-md.entry.js",
+		"common",
+		74
+	],
+	"./ion-slide_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-slide_2-ios.entry.js",
+		"common",
+		75
+	],
+	"./ion-slide_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-slide_2-md.entry.js",
+		"common",
+		76
+	],
+	"./ion-spinner.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-spinner.entry.js",
+		"common",
+		77
+	],
+	"./ion-split-pane-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-split-pane-ios.entry.js",
+		78
+	],
+	"./ion-split-pane-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-split-pane-md.entry.js",
+		79
+	],
+	"./ion-tab-bar_2-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-tab-bar_2-ios.entry.js",
+		"common",
+		80
+	],
+	"./ion-tab-bar_2-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-tab-bar_2-md.entry.js",
+		"common",
+		81
+	],
+	"./ion-tab_2.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-tab_2.entry.js",
+		"common",
+		10
+	],
+	"./ion-text.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-text.entry.js",
+		"common",
+		82
+	],
+	"./ion-textarea-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-textarea-ios.entry.js",
+		"common",
+		83
+	],
+	"./ion-textarea-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-textarea-md.entry.js",
+		"common",
+		84
+	],
+	"./ion-toast-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-toast-ios.entry.js",
+		"common",
+		85
+	],
+	"./ion-toast-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-toast-md.entry.js",
+		"common",
+		86
+	],
+	"./ion-toggle-ios.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-toggle-ios.entry.js",
+		"common",
+		87
+	],
+	"./ion-toggle-md.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-toggle-md.entry.js",
+		"common",
+		88
+	],
+	"./ion-virtual-scroll.entry.js": [
+		"./node_modules/@ionic/core/dist/esm-es5/ion-virtual-scroll.entry.js",
+		89
 	]
 };
 function webpackAsyncContext(req) {
@@ -824,7 +421,7 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = "./node_modules/@ionic/core/dist/esm/es5/build lazy recursive ^\\.\\/.*\\.entry\\.js$ include: \\.entry\\.js$";
+webpackAsyncContext.id = "./node_modules/@ionic/core/dist/esm-es5 lazy recursive ^\\.\\/.*\\.entry\\.js$ include: \\.entry\\.js$ exclude: \\.system\\.entry\\.js$";
 module.exports = webpackAsyncContext;
 
 /***/ }),
@@ -1691,7 +1288,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-app>\n    <ion-split-pane>\n        <ion-menu type=\"push\" id=\"myFitnessMenu\">\n            <ion-header>\n                <ion-toolbar id=\"user-toolbar\" color=\"medium\">\n                    <ion-row>\n                        <ion-col size=\"3\">\n                            <div id=\"user-img-wrapper\">\n                                <img id=\"user-img\" *ngIf=\"userProfile?.gender == 'male'\" [src]=\"imgPath\" (click)=\"openPage('/profile')\" onError=\"src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'\" />\n                                <img id=\"user-img\" *ngIf=\"userProfile?.gender == 'female'\" [src]=\"imgPath\" (click)=\"openPage('/profile')\" onError=\"src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_women.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'\" />\n                            </div>\n                        </ion-col>\n                        <ion-col id=\"user-data-wrapper\" (click)=\"openPage('/profile')\">\n                            <p class=\"user-full-name fk-bold\">{{userProfile?.fullname}}</p>\n                            <p class=\"user-name fk-bold\">@{{userProfile?.username}}</p>\n                        </ion-col>\n                    </ion-row>\n                </ion-toolbar>\n            </ion-header>\n            <ion-content>\n                <ion-list>\n                    <!-- <ion-item (click)=\"openPage('/profile')\">\n                        <ion-icon ios=\"ios-person\" md=\"md-person\"></ion-icon>&nbsp;&nbsp;&nbsp;My Profile\n                    </ion-item> -->\n                    <ion-item (click)=\"openPage('/workout')\">\n                        <ion-icon ios=\"ios-body\" md=\"md-body\"></ion-icon>\n                        <span class=\"title\">Workouts</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/tools')\">\n                        <ion-icon name=\"hammer\"></ion-icon>\n                        <span class=\"title\">Tools</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/articles')\">\n                        <ion-icon ios=\"ios-document\" md=\"md-document\"></ion-icon>\n                        <span class=\"title\">Articles</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/faq')\">\n                        <ion-icon name=\"help\"></ion-icon>\n                        <span class=\"title\">FAQ's</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/hire-coach')\">\n                        <ion-icon name=\"bicycle\"></ion-icon>\n                        <span class=\"title\">Hire Coach</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/custom-diet-workout')\">\n                        <ion-icon name=\"build\"></ion-icon>\n                        <span class=\"title\">My Plan</span>\n                    </ion-item>\n                    <!-- <ion-item (click)=\"openPage('/chat')\">\n                        <ion-icon name=\"chatbubbles\"></ion-icon>\n                        <span class=\"title\">Chat</span>\n                        <span *ngIf=\"newMsgCount > 0\" id=\"new-message\">{{newMsgCount}}</span>\n                    </ion-item> -->\n                    <ion-item (click)=\"openPage('/feedback')\">\n                        <ion-icon name=\"create\"></ion-icon>\n                        <span class=\"title\">Feedback</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/about')\">\n                        <ion-icon name=\"contacts\"></ion-icon>\n                        <span class=\"title\">About Us</span>\n                    </ion-item>\n                    <ion-item (click)=\"logout()\">\n                        <ion-icon name=\"log-out\"></ion-icon>\n                        <span class=\"title\">Logout</span>\n                    </ion-item>\n                </ion-list>\n            </ion-content>\n        </ion-menu>\n        <ion-router-outlet main></ion-router-outlet>\n    </ion-split-pane>\n</ion-app>"
+module.exports = "<ion-app>\n    <ion-split-pane>\n        <ion-menu type=\"push\" id=\"myFitnessMenu\">\n            <ion-header>\n                <ion-toolbar id=\"user-toolbar\" color=\"medium\">\n                    <ion-row>\n                        <ion-col size=\"3\">\n                            <div id=\"user-img-wrapper\">\n                                <img id=\"user-img\" *ngIf=\"userProfile?.gender == 'male'\" [src]=\"imgPath\" (click)=\"openPage('/profile')\" onError=\"src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_men.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'\" />\n                                <img id=\"user-img\" *ngIf=\"userProfile?.gender == 'female'\" [src]=\"imgPath\" (click)=\"openPage('/profile')\" onError=\"src = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/testimonials%2Fdefault_women.png?alt=media&token=66f623fa-4fb2-4f4f-b717-74877ae85cb5'\" />\n                            </div>\n                        </ion-col>\n                        <ion-col id=\"user-data-wrapper\" (click)=\"openPage('/profile')\">\n                            <p class=\"user-full-name fk-bold\">{{userProfile?.fullname}}</p>\n                            <p class=\"user-name fk-bold\">@{{userProfile?.username}}</p>\n                        </ion-col>\n                    </ion-row>\n                </ion-toolbar>\n            </ion-header>\n            <ion-content>\n                <ion-list id=\"menu-list\">\n                    <!-- <ion-item (click)=\"openPage('/profile')\">\n                        <ion-icon ios=\"ios-person\" md=\"md-person\"></ion-icon>&nbsp;&nbsp;&nbsp;My Profile\n                    </ion-item> -->\n                    <ion-item (click)=\"openPage('/workout')\">\n                        <ion-icon ios=\"ios-body\" md=\"md-body\"></ion-icon>\n                        <span class=\"title\">Workouts</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/tools')\">\n                        <ion-icon name=\"hammer\"></ion-icon>\n                        <span class=\"title\">Tools</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/articles')\">\n                        <ion-icon ios=\"ios-document\" md=\"md-document\"></ion-icon>\n                        <span class=\"title\">Articles</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/faq')\">\n                        <ion-icon name=\"help\"></ion-icon>\n                        <span class=\"title\">FAQ's</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/hire-coach')\">\n                        <ion-icon name=\"bicycle\"></ion-icon>\n                        <span class=\"title\">Hire Coach</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/custom-diet-workout')\">\n                        <ion-icon name=\"build\"></ion-icon>\n                        <span class=\"title\">My Plan</span>\n                    </ion-item>\n                    <!-- <ion-item (click)=\"openPage('/chat')\">\n                        <ion-icon name=\"chatbubbles\"></ion-icon>\n                        <span class=\"title\">Chat</span>\n                        <span *ngIf=\"newMsgCount > 0\" id=\"new-message\">{{newMsgCount}}</span>\n                    </ion-item> -->\n                    <ion-item (click)=\"openPage('/feedback')\">\n                        <ion-icon name=\"create\"></ion-icon>\n                        <span class=\"title\">Feedback</span>\n                    </ion-item>\n                    <ion-item (click)=\"openPage('/about')\">\n                        <ion-icon name=\"contacts\"></ion-icon>\n                        <span class=\"title\">About Us</span>\n                    </ion-item>\n                    <ion-item (click)=\"logout()\">\n                        <ion-icon name=\"log-out\"></ion-icon>\n                        <span class=\"title\">Logout</span>\n                    </ion-item>\n                </ion-list>\n            </ion-content>\n        </ion-menu>\n        <ion-router-outlet main></ion-router-outlet>\n    </ion-split-pane>\n</ion-app>"
 
 /***/ }),
 
@@ -1720,7 +1317,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _api_common_service__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./api/common.service */ "./src/app/api/common.service.ts");
 /* harmony import */ var _api_network_service__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./api/network.service */ "./src/app/api/network.service.ts");
 /* harmony import */ var _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/screen-orientation/ngx */ "./node_modules/@ionic-native/screen-orientation/ngx/index.js");
-/* harmony import */ var _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/background-mode/ngx */ "./node_modules/@ionic-native/background-mode/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1780,9 +1376,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
 var AppComponent = /** @class */ (function () {
-    function AppComponent(platform, db, splashScreen, statusBar, menuCtrl, router, afDataBase, events, globalComp, loadingController, toastr, network, fcm, navCtrl, commonService, networkService, screenOrientation, backgroundMode) {
+    function AppComponent(platform, db, splashScreen, statusBar, menuCtrl, router, afDataBase, events, globalComp, loadingController, toastr, network, fcm, navCtrl, commonService, networkService, screenOrientation) {
         this.platform = platform;
         this.db = db;
         this.splashScreen = splashScreen;
@@ -1800,7 +1395,6 @@ var AppComponent = /** @class */ (function () {
         this.commonService = commonService;
         this.networkService = networkService;
         this.screenOrientation = screenOrientation;
-        this.backgroundMode = backgroundMode;
         this.count = 0;
         this.userLogin = false;
         // chat support
@@ -1844,7 +1438,9 @@ var AppComponent = /** @class */ (function () {
                 _this.subscribeToMsgCount();
                 _this.getUserInformation();
                 _this.menuCtrl.enable(true);
-                _this.splashScreen.hide();
+                setTimeout(function () {
+                    _this.splashScreen.hide();
+                }, 1000);
                 setTimeout(function () {
                     _this.notificationSetup();
                 }, 2000);
@@ -2027,7 +1623,7 @@ var AppComponent = /** @class */ (function () {
             selector: 'app-root',
             template: __webpack_require__(/*! ./app.component.html */ "./src/app/app.component.html")
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_2__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_3__["StatusBar"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["MenuController"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__["AngularFireDatabase"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Events"], _api_global_service__WEBPACK_IMPORTED_MODULE_7__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_8__["Network"], _api_fcm_service__WEBPACK_IMPORTED_MODULE_9__["FcmService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["NavController"], _api_common_service__WEBPACK_IMPORTED_MODULE_12__["CommonService"], _api_network_service__WEBPACK_IMPORTED_MODULE_13__["NetworkService"], _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_14__["ScreenOrientation"], _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_15__["BackgroundMode"]])
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"], _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_4__["AngularFirestore"], _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_2__["SplashScreen"], _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_3__["StatusBar"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["MenuController"], _angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__["AngularFireDatabase"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Events"], _api_global_service__WEBPACK_IMPORTED_MODULE_7__["GlobalService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_8__["Network"], _api_fcm_service__WEBPACK_IMPORTED_MODULE_9__["FcmService"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["NavController"], _api_common_service__WEBPACK_IMPORTED_MODULE_12__["CommonService"], _api_network_service__WEBPACK_IMPORTED_MODULE_13__["NetworkService"], _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_14__["ScreenOrientation"]])
     ], AppComponent);
     return AppComponent;
 }());
@@ -2089,29 +1685,29 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pages_recipes_recipes_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/recipes/recipes.module */ "./src/app/pages/recipes/recipes.module.ts");
 /* harmony import */ var _pages_fit_book_fit_book_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/fit-book/fit-book.module */ "./src/app/pages/fit-book/fit-book.module.ts");
 /* harmony import */ var _pages_videos_videos_module__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/videos/videos.module */ "./src/app/pages/videos/videos.module.ts");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @ionic-native/firebase/ngx */ "./node_modules/@ionic-native/firebase/ngx/index.js");
-/* harmony import */ var _app_firebase_config__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./app.firebase.config */ "./src/app/app.firebase.config.ts");
-/* harmony import */ var _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/user-story/user-story.component */ "./src/app/components/user-story/user-story.component.ts");
-/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
-/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ng2-ckeditor */ "./node_modules/ng2-ckeditor/lib/ng2-ckeditor.js");
-/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_30___default = /*#__PURE__*/__webpack_require__.n(ng2_ckeditor__WEBPACK_IMPORTED_MODULE_30__);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./components/create-recipe/create-recipe.component */ "./src/app/components/create-recipe/create-recipe.component.ts");
-/* harmony import */ var _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/workout-info/workout-info.component */ "./src/app/components/workout-info/workout-info.component.ts");
-/* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/ngx/index.js");
-/* harmony import */ var _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @ionic-native/crop/ngx */ "./node_modules/@ionic-native/crop/ngx/index.js");
-/* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ "./node_modules/@ionic-native/ionic-webview/ngx/index.js");
-/* harmony import */ var _ionic_native_file_path_ngx__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @ionic-native/file-path/ngx */ "./node_modules/@ionic-native/file-path/ngx/index.js");
-/* harmony import */ var _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @ionic-native/file-transfer/ngx */ "./node_modules/@ionic-native/file-transfer/ngx/index.js");
-/* harmony import */ var _api_network_service__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! ./api/network.service */ "./src/app/api/network.service.ts");
-/* harmony import */ var _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! @ionic-native/screen-orientation/ngx */ "./node_modules/@ionic-native/screen-orientation/ngx/index.js");
-/* harmony import */ var _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @ionic-native/background-mode/ngx */ "./node_modules/@ionic-native/background-mode/ngx/index.js");
+/* harmony import */ var _ionic_native_google_plus_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/google-plus/ngx */ "./node_modules/@ionic-native/google-plus/ngx/index.js");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @ionic-native/firebase/ngx */ "./node_modules/@ionic-native/firebase/ngx/index.js");
+/* harmony import */ var _app_firebase_config__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./app.firebase.config */ "./src/app/app.firebase.config.ts");
+/* harmony import */ var _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/user-story/user-story.component */ "./src/app/components/user-story/user-story.component.ts");
+/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
+/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
+/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ng2-ckeditor */ "./node_modules/ng2-ckeditor/lib/bundles/ng2-ckeditor.umd.min.js");
+/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31__);
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/create-recipe/create-recipe.component */ "./src/app/components/create-recipe/create-recipe.component.ts");
+/* harmony import */ var _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/workout-info/workout-info.component */ "./src/app/components/workout-info/workout-info.component.ts");
+/* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/ngx/index.js");
+/* harmony import */ var _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @ionic-native/crop/ngx */ "./node_modules/@ionic-native/crop/ngx/index.js");
+/* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ "./node_modules/@ionic-native/ionic-webview/ngx/index.js");
+/* harmony import */ var _ionic_native_file_path_ngx__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @ionic-native/file-path/ngx */ "./node_modules/@ionic-native/file-path/ngx/index.js");
+/* harmony import */ var _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @ionic-native/file-transfer/ngx */ "./node_modules/@ionic-native/file-transfer/ngx/index.js");
+/* harmony import */ var _api_network_service__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./api/network.service */ "./src/app/api/network.service.ts");
+/* harmony import */ var _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @ionic-native/screen-orientation/ngx */ "./node_modules/@ionic-native/screen-orientation/ngx/index.js");
 /* harmony import */ var _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @ionic-native/image-picker/ngx */ "./node_modules/@ionic-native/image-picker/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2133,6 +1729,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 // PAGE MODULES
+
 
 
 
@@ -2163,7 +1760,6 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -2171,27 +1767,27 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
-                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_27__["UserStoryComponent"],
-                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_32__["CreateRecipeComponent"],
-                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_33__["WorkoutInfoComponent"]
+                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_28__["UserStoryComponent"],
+                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_33__["CreateRecipeComponent"],
+                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_34__["WorkoutInfoComponent"]
             ],
             entryComponents: [
-                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_27__["UserStoryComponent"],
-                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_32__["CreateRecipeComponent"],
-                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_33__["WorkoutInfoComponent"]
+                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_28__["UserStoryComponent"],
+                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_33__["CreateRecipeComponent"],
+                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_34__["WorkoutInfoComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _angular_fire__WEBPACK_IMPORTED_MODULE_20__["AngularFireModule"].initializeApp(_app_firebase_config__WEBPACK_IMPORTED_MODULE_26__["FIREBASE_CONFIG"]),
+                _angular_fire__WEBPACK_IMPORTED_MODULE_21__["AngularFireModule"].initializeApp(_app_firebase_config__WEBPACK_IMPORTED_MODULE_27__["FIREBASE_CONFIG"]),
                 _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                ng2_ckeditor__WEBPACK_IMPORTED_MODULE_30__["CKEditorModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_31__["FormsModule"],
-                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_21__["AngularFirestoreModule"],
-                _angular_fire_storage__WEBPACK_IMPORTED_MODULE_22__["AngularFireStorageModule"],
-                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_23__["AngularFireAuthModule"],
-                _angular_fire_database__WEBPACK_IMPORTED_MODULE_24__["AngularFireDatabaseModule"],
+                ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31__["CKEditorModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_32__["FormsModule"],
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_22__["AngularFirestoreModule"],
+                _angular_fire_storage__WEBPACK_IMPORTED_MODULE_23__["AngularFireStorageModule"],
+                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_24__["AngularFireAuthModule"],
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_25__["AngularFireDatabaseModule"],
                 _tabs_tabs_module__WEBPACK_IMPORTED_MODULE_14__["TabsPageModule"],
                 _pages_login_login_module__WEBPACK_IMPORTED_MODULE_13__["LoginPageModule"],
                 _pages_videos_videos_module__WEBPACK_IMPORTED_MODULE_19__["VideosPageModule"],
@@ -2208,19 +1804,19 @@ var AppModule = /** @class */ (function () {
                 _ionic_native_text_to_speech_ngx__WEBPACK_IMPORTED_MODULE_9__["TextToSpeech"],
                 _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_10__["Network"],
                 _ionic_native_insomnia_ngx__WEBPACK_IMPORTED_MODULE_12__["Insomnia"],
-                _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_25__["Firebase"],
-                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_28__["SocialSharing"],
-                _api_network_service__WEBPACK_IMPORTED_MODULE_39__["NetworkService"],
-                _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_29__["File"],
-                _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_34__["Camera"],
-                _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_35__["Crop"],
-                _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_36__["WebView"],
-                _ionic_native_file_path_ngx__WEBPACK_IMPORTED_MODULE_37__["FilePath"],
-                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_38__["FileTransfer"],
-                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_38__["FileTransferObject"],
-                _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_40__["ScreenOrientation"],
-                _ionic_native_background_mode_ngx__WEBPACK_IMPORTED_MODULE_41__["BackgroundMode"],
-                _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_42__["ImagePicker"]
+                _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_26__["Firebase"],
+                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_29__["SocialSharing"],
+                _api_network_service__WEBPACK_IMPORTED_MODULE_40__["NetworkService"],
+                _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_30__["File"],
+                _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_35__["Camera"],
+                _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_36__["Crop"],
+                _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_37__["WebView"],
+                _ionic_native_file_path_ngx__WEBPACK_IMPORTED_MODULE_38__["FilePath"],
+                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_39__["FileTransfer"],
+                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_39__["FileTransferObject"],
+                _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_41__["ScreenOrientation"],
+                _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_42__["ImagePicker"],
+                _ionic_native_google_plus_ngx__WEBPACK_IMPORTED_MODULE_20__["GooglePlus"]
             ],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
         })
@@ -2807,7 +2403,7 @@ var HomePageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n        </ion-buttons>\n        <ion-title>Home</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div *ngIf=\"!fakeslider\" id=\"slider-container\">\n        <ion-slides *ngIf=\"slideData\" pager=\"true\" [options]=\"slideOpts\">\n            <ion-slide *ngFor=\"let slide of slideData\" (click)=\"openSlideInfo(slide);\">\n                <img [src]=\"slide.img_path\" onError=\"src = './assets/imgs/default.png'\"/>\n            </ion-slide>\n        </ion-slides>\n    </div>\n    <div id=\"fake-slider-wrapper\" *ngIf=\"fakeslider\">\n        <ion-slides pager=\"true\" [options]=\"slideOpts\">\n            <ion-slide>\n                <div class=\"black-animation\">Fit Kannadiga</div>\n            </ion-slide>\n            <ion-slide>\n                <div class=\"green-animation\">Fit Kannadiga</div>\n            </ion-slide>\n            <ion-slide>\n                <div class=\"purple-animation\">Fit Kannadiga</div>\n            </ion-slide>\n        </ion-slides>\n    </div>\n    <div id=\"workout-list-wrapper\">\n        <ion-row id=\"header\">\n            <ion-col>Trending Workouts</ion-col>\n            <ion-col class=\"ion-text-right\"><span class=\"link\" color=\"primary\" (click)=\"openWorkoutPage()\">See All ></span></ion-col>\n        </ion-row>\n        <ion-row *ngIf=\"!fakeWorkout\" id=\"real-worouts\">\n            <ion-col *ngFor=\"let workout of homeWorkoutList\" (click)=\"openWorkoutPage()\">\n                <img [src]=\"workout.workout_img\" onError=\"src = './assets/imgs/default.png'\"/>\n                <p class=\"title\">{{workout.title}}</p>\n                <p>\n                    <ion-icon name=\"star\" *ngFor=\"let intenstity of getArray(workout.intensity)\"></ion-icon>\n                </p>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf=\"fakeWorkout\" id=\"fake-workout\">\n                <ion-col>\n                    <div class=\"image animate-skeleton-background\"></div>\n                    <p class=\"animate-skeleton-background\"></p>\n                    <p class=\"animate-skeleton-background\"></p>\n                </ion-col>\n                <ion-col>\n                    <div class=\"image animate-skeleton-background\"></div>\n                    <p class=\"animate-skeleton-background\"></p>\n                    <p class=\"animate-skeleton-background\"></p>\n                </ion-col>\n            </ion-row>\n    </div>\n    <div id=\"hire-mentor-wrapper\">\n        <ion-row *ngIf=\"!fakeHomeCard\" id=\"mentor-wrapper\" (click)=\"showHireCoach();\">\n            <ion-col size=\"5\" id=\"coach-img\">\n                    <img [src]=\"shortCard.img_src\"/>\n            </ion-col>\n            <ion-col id=\"content\">\n                    <p id=\"title\">{{shortCard.title}}</p>\n                    <p>{{shortCard.description}}</p>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf=\"fakeHomeCard\" id=\"fake-short-home-card\">\n                <ion-col size=\"5\" id=\"coach-img\">\n                        <p id=\"img\" class=\"animate-skeleton-background\"></p>\n                </ion-col>\n                <ion-col id=\"content\">\n                        <p id=\"title\" class=\"animate-skeleton-background\"></p>\n                        <p class=\"description animate-skeleton-background\"></p>\n                        <p class=\"description animate-skeleton-background\"></p>\n                </ion-col>\n            </ion-row>\n    </div>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-menu-button></ion-menu-button>\n        </ion-buttons>\n        <ion-title>Home</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div *ngIf=\"!fakeslider\" id=\"slider-container\">\n        <ion-slides *ngIf=\"slideData\" pager=\"true\" [options]=\"slideOpts\">\n            <ion-slide *ngFor=\"let slide of slideData\" (click)=\"openSlideInfo(slide);\">\n                <img [src]=\"slide.img_path\" onError=\"src = './assets/imgs/default.png'\"/>\n            </ion-slide>\n        </ion-slides>\n    </div>\n    <div id=\"fake-slider-wrapper\" *ngIf=\"fakeslider\">\n        <ion-slides pager=\"true\" [options]=\"slideOpts\">\n            <ion-slide>\n                <div class=\"black-animation\">Fit Kannadiga</div>\n            </ion-slide>\n            <ion-slide>\n                <div class=\"green-animation\">Fit Kannadiga</div>\n            </ion-slide>\n            <ion-slide>\n                <div class=\"purple-animation\">Fit Kannadiga</div>\n            </ion-slide>\n        </ion-slides>\n    </div>\n    <div id=\"workout-list-wrapper\">\n        <ion-row id=\"header\">\n            <ion-col>Trending Workouts</ion-col>\n            <ion-col class=\"ion-text-right\"><span class=\"link\" color=\"primary\" (click)=\"openWorkoutPage()\">See All ></span></ion-col>\n        </ion-row>\n        <ion-row *ngIf=\"!fakeWorkout\" id=\"real-worouts\">\n            <ion-col *ngFor=\"let workout of homeWorkoutList\" (click)=\"openWorkoutPage()\">\n                <div class=\"style-wrapper\">\n                    <img [src]=\"workout.workout_img\" onError=\"src = './assets/imgs/default.png'\"/>\n                    <div class=\"fill-color\" style=\"height: 150px; overflow: hidden;\" >\n                        <svg viewBox=\"0 0 500 150\" preserveAspectRatio=\"none\" style=\"height: 100%; width: 100%;\"><path d=\"M1.13,150.48 C32.16,143.58 344.24,172.20 500.56,2.47 L500.00,150.00 L1.13,150.48 Z\" style=\"stroke: none; fill: #3B4EAC;\"></path></svg>\n                    </div>\n                </div>\n                <p class=\"title\">{{workout.title}}</p>\n                <p>\n                    <ion-icon name=\"star\" *ngFor=\"let intenstity of getArray(workout.intensity)\"></ion-icon>\n                </p>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf=\"fakeWorkout\" id=\"fake-workout\">\n                <ion-col>\n                    <div class=\"image animate-skeleton-background\"></div>\n                    <p class=\"animate-skeleton-background\"></p>\n                    <p class=\"animate-skeleton-background\"></p>\n                </ion-col>\n                <ion-col>\n                    <div class=\"image animate-skeleton-background\"></div>\n                    <p class=\"animate-skeleton-background\"></p>\n                    <p class=\"animate-skeleton-background\"></p>\n                </ion-col>\n            </ion-row>\n    </div>\n    <div id=\"hire-mentor-wrapper\">\n        <ion-row [ngStyle]=\"{'background-color':shortCard.bg_color}\" *ngIf=\"!fakeHomeCard\" id=\"mentor-wrapper\" (click)=\"showHireCoach();\">\n            <ion-col size=\"3\" id=\"coach-img\">\n                    <img [src]=\"shortCard.img_src\"/>\n            </ion-col>\n            <ion-col id=\"content\">\n                    <p id=\"title\">{{shortCard.title}}</p>\n                    <p>{{shortCard.description}}</p>\n            </ion-col>\n        </ion-row>\n        <ion-row *ngIf=\"fakeHomeCard\" id=\"fake-short-home-card\">\n                <ion-col size=\"5\" id=\"coach-img\">\n                        <p id=\"img\" class=\"animate-skeleton-background\"></p>\n                </ion-col>\n                <ion-col id=\"content\">\n                        <p id=\"title\" class=\"animate-skeleton-background\"></p>\n                        <p class=\"description animate-skeleton-background\"></p>\n                        <p class=\"description animate-skeleton-background\"></p>\n                </ion-col>\n            </ion-row>\n    </div>\n</ion-content>"
 
 /***/ }),
 
@@ -2818,7 +2414,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "div#slider-container {\n  height: 40%; }\n  div#slider-container ion-slide img {\n    min-height: 32vh; }\n  div#fake-slider-wrapper {\n  height: 40%; }\n  div#fake-slider-wrapper ion-slides {\n    height: 100%; }\n  div#fake-slider-wrapper ion-slides ion-slide {\n      height: 100%; }\n  div#fake-slider-wrapper ion-slides ion-slide div {\n        width: 100%;\n        height: 100%;\n        padding-top: 10%; }\n  #workout-list-wrapper {\n  padding: 5px; }\n  #workout-list-wrapper ion-row#header {\n    font-weight: bold; }\n  #workout-list-wrapper span.link {\n    color: #3B4EAC;\n    font-size: 0.8rem; }\n  #workout-list-wrapper ion-row#real-worouts ion-col {\n    height: 140px;\n    border: 1px solid #dcdcdc;\n    border-radius: 10px;\n    margin: 2px;\n    padding: 0; }\n  #workout-list-wrapper ion-row#real-worouts ion-col img {\n      width: 100%;\n      border-radius: 10px 10px 0px 0px;\n      height: 90px; }\n  #workout-list-wrapper ion-row#real-worouts ion-col p.title {\n      font-weight: bold;\n      font-size: 0.8rem;\n      color: #222428; }\n  #workout-list-wrapper ion-row#real-worouts ion-col p {\n      margin: 1px 5px; }\n  #workout-list-wrapper ion-row#real-worouts ion-col p ion-icon {\n        color: #ffde25; }\n  #workout-list-wrapper ion-row#fake-workout ion-col {\n    height: 140px;\n    border: 1px solid #dcdcdc;\n    border-radius: 10px;\n    margin: 5px;\n    padding: 0; }\n  #workout-list-wrapper ion-row#fake-workout ion-col div.image {\n      height: 70px;\n      border: 1px solid #ededed;\n      border-radius: 10px 10px 0px 0px; }\n  #workout-list-wrapper ion-row#fake-workout ion-col p {\n      height: 15px;\n      margin: 10px 5px; }\n  div#hire-mentor-wrapper {\n  padding: 10px; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card {\n    border-radius: 10px;\n    border: 1px solid #dcdcdc;\n    height: 100px; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card ion-col#coach-img p#img {\n      height: 100%;\n      padding: 0;\n      margin: 0; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card ion-col#content p#title {\n      height: 20px;\n      margin: 0px 5px 15px; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card ion-col#content p.description {\n      height: 12px;\n      margin: 8px 5px; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper {\n    border-radius: 10px;\n    border: 1px solid #dcdcdc; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#coach-img img {\n      min-height: 80px; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#content {\n      font-size: 0.8rem; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#content p {\n        margin: 5px; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#content p#title {\n        font-weight: bold; }\n  .black-animation {\n  -webkit-animation: infinite blackColor 4s;\n  animation: 4s infinite blackColor;\n  opacity: 0.7; }\n  @keyframes blackColor {\n  0% {\n    background: #000; }\n  100% {\n    background: grey; } }\n  @-webkit-keyframes blackColor {\n  0% {\n    background: #000; }\n  100% {\n    background: grey; } }\n  .green-animation {\n  -webkit-animation: infinite greenColor 4s;\n  animation: 4s infinite greenColor;\n  opacity: 0.7; }\n  @keyframes greenColor {\n  0% {\n    background: #3f7e3f; }\n  100% {\n    background: #489b48; } }\n  @-webkit-keyframes greenColor {\n  0% {\n    background: #3f7e3f; }\n  100% {\n    background: #489b48; } }\n  .purple-animation {\n  -webkit-animation: infinite purpleColor 4s;\n  animation: 4s infinite purpleColor;\n  opacity: 0.9; }\n  @keyframes purpleColor {\n  0% {\n    background: #4e4e8f; }\n  100% {\n    background: #60608a; } }\n  @-webkit-keyframes purpleColor {\n  0% {\n    background: #4e4e8f; }\n  100% {\n    background: #60608a; } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksV0FBVyxFQUFBO0VBRGY7SUFJWSxnQkFBZ0IsRUFBQTtFQUk1QjtFQUNJLFdBQVcsRUFBQTtFQURmO0lBR1EsWUFBWSxFQUFBO0VBSHBCO01BS1ksWUFBWSxFQUFBO0VBTHhCO1FBUWdCLFdBQVc7UUFDWCxZQUFZO1FBQ1osZ0JBQWdCLEVBQUE7RUFNaEM7RUFDSSxZQUFZLEVBQUE7RUFEaEI7SUFHUSxpQkFBaUIsRUFBQTtFQUh6QjtJQU1RLGNBQWM7SUFDZCxpQkFBaUIsRUFBQTtFQVB6QjtJQVdZLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxVQUFVLEVBQUE7RUFmdEI7TUFpQmdCLFdBQVc7TUFDWCxnQ0FBZ0M7TUFDaEMsWUFBWSxFQUFBO0VBbkI1QjtNQXNCZ0IsaUJBQWlCO01BQ2pCLGlCQUFpQjtNQUNqQixjQUFjLEVBQUE7RUF4QjlCO01BMkJnQixlQUFlLEVBQUE7RUEzQi9CO1FBNkJvQixjQUFjLEVBQUE7RUE3QmxDO0lBb0NZLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxVQUFVLEVBQUE7RUF4Q3RCO01BMENnQixZQUFZO01BQ1oseUJBQXlCO01BQ3pCLGdDQUFnQyxFQUFBO0VBNUNoRDtNQStDZ0IsWUFBWTtNQUNaLGdCQUFnQixFQUFBO0VBTWhDO0VBQ0ksYUFBYSxFQUFBO0VBRGpCO0lBR1EsbUJBQW1CO0lBQ25CLHlCQUF5QjtJQUN6QixhQUFhLEVBQUE7RUFMckI7TUFRZ0IsWUFBWTtNQUNaLFVBQVU7TUFDVixTQUFTLEVBQUE7RUFWekI7TUFlZ0IsWUFBWTtNQUNaLG9CQUFvQixFQUFBO0VBaEJwQztNQW1CZ0IsWUFBWTtNQUNaLGVBQWUsRUFBQTtFQXBCL0I7SUFnQ1EsbUJBQW1CO0lBQ25CLHlCQUF5QixFQUFBO0VBakNqQztNQXFDZ0IsZ0JBQWdCLEVBQUE7RUFyQ2hDO01BMENZLGlCQUFpQixFQUFBO0VBMUM3QjtRQTRDZ0IsV0FBVyxFQUFBO0VBNUMzQjtRQStDZ0IsaUJBQWlCLEVBQUE7RUFLakM7RUFDSSx5Q0FBeUM7RUFDekMsaUNBQWlDO0VBQ2pDLFlBQVksRUFBQTtFQUdoQjtFQUNJO0lBQ0ksZ0JBQWdCLEVBQUE7RUFFcEI7SUFDSSxnQkFBZ0IsRUFBQSxFQUFBO0VBSXhCO0VBQ0k7SUFDSSxnQkFBZ0IsRUFBQTtFQUVwQjtJQUNJLGdCQUFnQixFQUFBLEVBQUE7RUFJeEI7RUFDSSx5Q0FBeUM7RUFDekMsaUNBQWlDO0VBQ2pDLFlBQVksRUFBQTtFQUdoQjtFQUNJO0lBQ0ksbUJBQTRCLEVBQUE7RUFFaEM7SUFDSSxtQkFBNEIsRUFBQSxFQUFBO0VBSXBDO0VBQ0k7SUFDSSxtQkFBNEIsRUFBQTtFQUVoQztJQUNJLG1CQUE0QixFQUFBLEVBQUE7RUFJcEM7RUFDSSwwQ0FBMEM7RUFDMUMsa0NBQWtDO0VBQ2xDLFlBQVksRUFBQTtFQUdoQjtFQUNJO0lBQ0ksbUJBQTRCLEVBQUE7RUFFaEM7SUFDSSxtQkFBNEIsRUFBQSxFQUFBO0VBSXBDO0VBQ0k7SUFDSSxtQkFBNEIsRUFBQTtFQUVoQztJQUNJLG1CQUE0QixFQUFBLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9ob21lL2hvbWUucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiZGl2I3NsaWRlci1jb250YWluZXIge1xuICAgIGhlaWdodDogNDAlO1xuICAgIGlvbi1zbGlkZXtcbiAgICAgICAgaW1nIHtcbiAgICAgICAgICAgIG1pbi1oZWlnaHQ6IDMydmg7XG4gICAgICAgIH1cbiAgICB9XG59XG5kaXYjZmFrZS1zbGlkZXItd3JhcHBlciB7XG4gICAgaGVpZ2h0OiA0MCU7XG4gICAgaW9uLXNsaWRlcyB7XG4gICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgaW9uLXNsaWRlIHtcbiAgICAgICAgICAgIGhlaWdodDogMTAwJTtcblxuICAgICAgICAgICAgZGl2IHtcbiAgICAgICAgICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgICAgICAgICAgcGFkZGluZy10b3A6IDEwJTtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbn1cblxuI3dvcmtvdXQtbGlzdC13cmFwcGVyIHtcbiAgICBwYWRkaW5nOiA1cHg7XG4gICAgaW9uLXJvdyNoZWFkZXIge1xuICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICB9XG4gICAgc3Bhbi5saW5rIHtcbiAgICAgICAgY29sb3I6ICMzQjRFQUM7XG4gICAgICAgIGZvbnQtc2l6ZTogMC44cmVtO1xuICAgIH1cbiAgICBpb24tcm93I3JlYWwtd29yb3V0c3tcbiAgICAgICAgaW9uLWNvbCB7XG4gICAgICAgICAgICBoZWlnaHQ6IDE0MHB4O1xuICAgICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2RjZGNkYztcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHg7XG4gICAgICAgICAgICBtYXJnaW46IDJweDtcbiAgICAgICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgICAgICBpbWd7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweCAxMHB4IDBweCAwcHg7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiA5MHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcC50aXRsZSB7XG4gICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAwLjhyZW07XG4gICAgICAgICAgICAgICAgY29sb3I6ICMyMjI0Mjg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBwIHtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDFweCA1cHg7XG4gICAgICAgICAgICAgICAgaW9uLWljb24ge1xuICAgICAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZGUyNTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG4gICAgaW9uLXJvdyNmYWtlLXdvcmtvdXR7XG4gICAgICAgIGlvbi1jb2wge1xuICAgICAgICAgICAgaGVpZ2h0OiAxNDBweDtcbiAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNkY2RjZGM7XG4gICAgICAgICAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgICAgZGl2LmltYWdle1xuICAgICAgICAgICAgICAgIGhlaWdodDogNzBweDtcbiAgICAgICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZWRlZGVkO1xuICAgICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHggMTBweCAwcHggMHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcCB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxNXB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMTBweCA1cHg7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG59XG5cbmRpdiNoaXJlLW1lbnRvci13cmFwcGVyIHtcbiAgICBwYWRkaW5nOiAxMHB4OyBcbiAgICBpb24tcm93I2Zha2Utc2hvcnQtaG9tZS1jYXJkIHtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2RjZGNkYztcbiAgICAgICAgaGVpZ2h0OiAxMDBweDtcbiAgICAgICAgaW9uLWNvbCNjb2FjaC1pbWcge1xuICAgICAgICAgICAgcCNpbWcge1xuICAgICAgICAgICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBpb24tY29sI2NvbnRlbnQge1xuICAgICAgICAgICAgcCN0aXRsZSB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAyMHB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMHB4IDVweCAxNXB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcC5kZXNjcmlwdGlvbiB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxMnB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogOHB4IDVweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbiAgICBpb24tcm93I21lbnRvci13cmFwcGVyIHtcbiAgICAgICAgLy8gYmFja2dyb3VuZDogcmdiYSgxNjYsMTMzLDIxNCwwLjg0KTtcbiAgICAgICAgLy8gYmFja2dyb3VuZDogLW1vei1saW5lYXItZ3JhZGllbnQobGVmdCwgcmdiYSgxNjYsMTMzLDIxNCwwLjg0KSAxMyUsIHJnYmEoMTU5LDEzNCwyMTcsMC44NCkgMjElLCByZ2JhKDkzLDE0NSwyNDMsMC45OSkgOTYlLCByZ2JhKDkzLDE0NSwyNDMsMSkgMTAwJSk7XG4gICAgICAgIC8vIGJhY2tncm91bmQ6IC13ZWJraXQtZ3JhZGllbnQobGVmdCB0b3AsIHJpZ2h0IHRvcCwgY29sb3Itc3RvcCgxMyUsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkpLCBjb2xvci1zdG9wKDIxJSwgcmdiYSgxNTksMTM0LDIxNywwLjg0KSksIGNvbG9yLXN0b3AoOTYlLCByZ2JhKDkzLDE0NSwyNDMsMC45OSkpLCBjb2xvci1zdG9wKDEwMCUsIHJnYmEoOTMsMTQ1LDI0MywxKSkpO1xuICAgICAgICAvLyBiYWNrZ3JvdW5kOiAtd2Via2l0LWxpbmVhci1ncmFkaWVudChsZWZ0LCByZ2JhKDE2NiwxMzMsMjE0LDAuODQpIDEzJSwgcmdiYSgxNTksMTM0LDIxNywwLjg0KSAyMSUsIHJnYmEoOTMsMTQ1LDI0MywwLjk5KSA5NiUsIHJnYmEoOTMsMTQ1LDI0MywxKSAxMDAlKTtcbiAgICAgICAgLy8gYmFja2dyb3VuZDogLW8tbGluZWFyLWdyYWRpZW50KGxlZnQsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkgMTMlLCByZ2JhKDE1OSwxMzQsMjE3LDAuODQpIDIxJSwgcmdiYSg5MywxNDUsMjQzLDAuOTkpIDk2JSwgcmdiYSg5MywxNDUsMjQzLDEpIDEwMCUpO1xuICAgICAgICAvLyBiYWNrZ3JvdW5kOiAtbXMtbGluZWFyLWdyYWRpZW50KGxlZnQsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkgMTMlLCByZ2JhKDE1OSwxMzQsMjE3LDAuODQpIDIxJSwgcmdiYSg5MywxNDUsMjQzLDAuOTkpIDk2JSwgcmdiYSg5MywxNDUsMjQzLDEpIDEwMCUpO1xuICAgICAgICAvLyBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkgMTMlLCByZ2JhKDE1OSwxMzQsMjE3LDAuODQpIDIxJSwgcmdiYSg5MywxNDUsMjQzLDAuOTkpIDk2JSwgcmdiYSg5MywxNDUsMjQzLDEpIDEwMCUpO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZGNkY2RjO1xuXG4gICAgICAgIGlvbi1jb2wjY29hY2gtaW1nIHtcbiAgICAgICAgICAgIGltZyB7XG4gICAgICAgICAgICAgICAgbWluLWhlaWdodDogODBweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBcbiAgICAgICAgaW9uLWNvbCNjb250ZW50IHtcbiAgICAgICAgICAgIGZvbnQtc2l6ZTogMC44cmVtO1xuICAgICAgICAgICAgcCB7XG4gICAgICAgICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBwI3RpdGxlIHtcbiAgICAgICAgICAgICAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbn1cbi5ibGFjay1hbmltYXRpb24ge1xuICAgIC13ZWJraXQtYW5pbWF0aW9uOiBpbmZpbml0ZSBibGFja0NvbG9yIDRzO1xuICAgIGFuaW1hdGlvbjogNHMgaW5maW5pdGUgYmxhY2tDb2xvcjtcbiAgICBvcGFjaXR5OiAwLjc7XG59XG5cbkBrZXlmcmFtZXMgYmxhY2tDb2xvciB7XG4gICAgMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiAjMDAwO1xuICAgIH1cbiAgICAxMDAlIHtcbiAgICAgICAgYmFja2dyb3VuZDogZ3JleTtcbiAgICB9XG59XG5cbkAtd2Via2l0LWtleWZyYW1lcyBibGFja0NvbG9yIHtcbiAgICAwJSB7XG4gICAgICAgIGJhY2tncm91bmQ6ICMwMDA7XG4gICAgfVxuICAgIDEwMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiBncmV5O1xuICAgIH1cbn1cblxuLmdyZWVuLWFuaW1hdGlvbiB7XG4gICAgLXdlYmtpdC1hbmltYXRpb246IGluZmluaXRlIGdyZWVuQ29sb3IgNHM7XG4gICAgYW5pbWF0aW9uOiA0cyBpbmZpbml0ZSBncmVlbkNvbG9yO1xuICAgIG9wYWNpdHk6IDAuNztcbn1cblxuQGtleWZyYW1lcyBncmVlbkNvbG9yIHtcbiAgICAwJSB7XG4gICAgICAgIGJhY2tncm91bmQ6IHJnYig2MywgMTI2LCA2Myk7XG4gICAgfVxuICAgIDEwMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2IoNzIsIDE1NSwgNzIpO1xuICAgIH1cbn1cblxuQC13ZWJraXQta2V5ZnJhbWVzIGdyZWVuQ29sb3Ige1xuICAgIDAlIHtcbiAgICAgICAgYmFja2dyb3VuZDogcmdiKDYzLCAxMjYsIDYzKTtcbiAgICB9XG4gICAgMTAwJSB7XG4gICAgICAgIGJhY2tncm91bmQ6IHJnYig3MiwgMTU1LCA3Mik7XG4gICAgfVxufVxuXG4ucHVycGxlLWFuaW1hdGlvbiB7XG4gICAgLXdlYmtpdC1hbmltYXRpb246IGluZmluaXRlIHB1cnBsZUNvbG9yIDRzO1xuICAgIGFuaW1hdGlvbjogNHMgaW5maW5pdGUgcHVycGxlQ29sb3I7XG4gICAgb3BhY2l0eTogMC45O1xufVxuXG5Aa2V5ZnJhbWVzIHB1cnBsZUNvbG9yIHtcbiAgICAwJSB7XG4gICAgICAgIGJhY2tncm91bmQ6IHJnYig3OCwgNzgsIDE0Myk7XG4gICAgfVxuICAgIDEwMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2IoOTYsIDk2LCAxMzgpO1xuICAgIH1cbn1cblxuQC13ZWJraXQta2V5ZnJhbWVzIHB1cnBsZUNvbG9yIHtcbiAgICAwJSB7XG4gICAgICAgIGJhY2tncm91bmQ6IHJnYig3OCwgNzgsIDE0Myk7XG4gICAgfVxuICAgIDEwMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2IoOTYsIDk2LCAxMzgpO1xuICAgIH1cbn0iXX0= */"
+module.exports = "div#slider-container {\n  height: 40%; }\n  div#slider-container ion-slide img {\n    min-height: 32vh; }\n  div#fake-slider-wrapper {\n  height: 40%; }\n  div#fake-slider-wrapper ion-slides {\n    height: 100%; }\n  div#fake-slider-wrapper ion-slides ion-slide {\n      height: 100%; }\n  div#fake-slider-wrapper ion-slides ion-slide div {\n        width: 100%;\n        height: 100%;\n        padding-top: 10%; }\n  #workout-list-wrapper {\n  padding: 5px; }\n  #workout-list-wrapper ion-row#header {\n    font-weight: bold; }\n  #workout-list-wrapper span.link {\n    color: #3B4EAC;\n    font-size: 0.8rem; }\n  #workout-list-wrapper ion-row#real-worouts ion-col {\n    height: 140px;\n    border: 1px solid #dcdcdc;\n    border-radius: 10px;\n    margin: 2px;\n    padding: 0;\n    background: #3B4EAC; }\n  #workout-list-wrapper ion-row#real-worouts ion-col div.style-wrapper {\n      position: relative; }\n  #workout-list-wrapper ion-row#real-worouts ion-col div.style-wrapper img {\n        width: 100%;\n        border-radius: 10px 10px 0px 0px;\n        height: 90px; }\n  #workout-list-wrapper ion-row#real-worouts ion-col div.style-wrapper div.fill-color {\n        height: 50% !important;\n        overflow: hidden;\n        position: absolute;\n        bottom: 5px; }\n  #workout-list-wrapper ion-row#real-worouts ion-col p.title {\n      font-weight: bold;\n      font-size: 0.8rem;\n      color: #fff; }\n  #workout-list-wrapper ion-row#real-worouts ion-col p {\n      margin: 1px 5px; }\n  #workout-list-wrapper ion-row#real-worouts ion-col p ion-icon {\n        color: #ffde25; }\n  #workout-list-wrapper ion-row#fake-workout ion-col {\n    height: 140px;\n    border: 1px solid #dcdcdc;\n    border-radius: 10px;\n    margin: 5px;\n    padding: 0; }\n  #workout-list-wrapper ion-row#fake-workout ion-col div.image {\n      height: 70px;\n      border: 1px solid #ededed;\n      border-radius: 10px 10px 0px 0px; }\n  #workout-list-wrapper ion-row#fake-workout ion-col p {\n      height: 15px;\n      margin: 10px 5px; }\n  div#hire-mentor-wrapper {\n  padding: 10px; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card {\n    border-radius: 10px;\n    border: 1px solid #dcdcdc;\n    height: 100px; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card ion-col#coach-img p#img {\n      height: 100%;\n      padding: 0;\n      margin: 0; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card ion-col#content p#title {\n      height: 20px;\n      margin: 0px 5px 15px; }\n  div#hire-mentor-wrapper ion-row#fake-short-home-card ion-col#content p.description {\n      height: 12px;\n      margin: 8px 5px; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper {\n    border-radius: 10px;\n    border: 1px solid #dcdcdc;\n    padding: 12px 0px; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#coach-img img {\n      vertical-align: middle; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#content {\n      font-size: 0.8rem; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#content p {\n        margin: 5px; }\n  div#hire-mentor-wrapper ion-row#mentor-wrapper ion-col#content p#title {\n        font-weight: bold; }\n  .black-animation {\n  -webkit-animation: infinite blackColor 4s;\n  animation: 4s infinite blackColor;\n  opacity: 0.7; }\n  @keyframes blackColor {\n  0% {\n    background: #000; }\n  100% {\n    background: grey; } }\n  @-webkit-keyframes blackColor {\n  0% {\n    background: #000; }\n  100% {\n    background: grey; } }\n  .green-animation {\n  -webkit-animation: infinite greenColor 4s;\n  animation: 4s infinite greenColor;\n  opacity: 0.7; }\n  @keyframes greenColor {\n  0% {\n    background: #3f7e3f; }\n  100% {\n    background: #489b48; } }\n  @-webkit-keyframes greenColor {\n  0% {\n    background: #3f7e3f; }\n  100% {\n    background: #489b48; } }\n  .purple-animation {\n  -webkit-animation: infinite purpleColor 4s;\n  animation: 4s infinite purpleColor;\n  opacity: 0.9; }\n  @keyframes purpleColor {\n  0% {\n    background: #4e4e8f; }\n  100% {\n    background: #60608a; } }\n  @-webkit-keyframes purpleColor {\n  0% {\n    background: #4e4e8f; }\n  100% {\n    background: #60608a; } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9ob21lL2hvbWUucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksV0FBVyxFQUFBO0VBRGY7SUFJWSxnQkFBZ0IsRUFBQTtFQUk1QjtFQUNJLFdBQVcsRUFBQTtFQURmO0lBR1EsWUFBWSxFQUFBO0VBSHBCO01BS1ksWUFBWSxFQUFBO0VBTHhCO1FBUWdCLFdBQVc7UUFDWCxZQUFZO1FBQ1osZ0JBQWdCLEVBQUE7RUFNaEM7RUFDSSxZQUFZLEVBQUE7RUFEaEI7SUFHUSxpQkFBaUIsRUFBQTtFQUh6QjtJQU1RLGNBQWM7SUFDZCxpQkFBaUIsRUFBQTtFQVB6QjtJQVdZLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxVQUFVO0lBQ1YsbUJBQW1CLEVBQUE7RUFoQi9CO01Ba0JnQixrQkFBa0IsRUFBQTtFQWxCbEM7UUFvQm9CLFdBQVc7UUFDWCxnQ0FBZ0M7UUFDaEMsWUFBWSxFQUFBO0VBdEJoQztRQXlCb0Isc0JBQXNCO1FBQ3RCLGdCQUFnQjtRQUNoQixrQkFBa0I7UUFDbEIsV0FBVyxFQUFBO0VBNUIvQjtNQWdDZ0IsaUJBQWlCO01BQ2pCLGlCQUFpQjtNQUVqQixXQUFXLEVBQUE7RUFuQzNCO01Bc0NnQixlQUFlLEVBQUE7RUF0Qy9CO1FBd0NvQixjQUFjLEVBQUE7RUF4Q2xDO0lBK0NZLGFBQWE7SUFDYix5QkFBeUI7SUFDekIsbUJBQW1CO0lBQ25CLFdBQVc7SUFDWCxVQUFVLEVBQUE7RUFuRHRCO01BcURnQixZQUFZO01BQ1oseUJBQXlCO01BQ3pCLGdDQUFnQyxFQUFBO0VBdkRoRDtNQTBEZ0IsWUFBWTtNQUNaLGdCQUFnQixFQUFBO0VBTWhDO0VBQ0ksYUFBYSxFQUFBO0VBRGpCO0lBR1EsbUJBQW1CO0lBQ25CLHlCQUF5QjtJQUN6QixhQUFhLEVBQUE7RUFMckI7TUFRZ0IsWUFBWTtNQUNaLFVBQVU7TUFDVixTQUFTLEVBQUE7RUFWekI7TUFlZ0IsWUFBWTtNQUNaLG9CQUFvQixFQUFBO0VBaEJwQztNQW1CZ0IsWUFBWTtNQUNaLGVBQWUsRUFBQTtFQXBCL0I7SUFnQ1EsbUJBQW1CO0lBQ25CLHlCQUF5QjtJQUN6QixpQkFBaUIsRUFBQTtFQWxDekI7TUFzQ2dCLHNCQUFzQixFQUFBO0VBdEN0QztNQTJDWSxpQkFBaUIsRUFBQTtFQTNDN0I7UUE2Q2dCLFdBQVcsRUFBQTtFQTdDM0I7UUFnRGdCLGlCQUFpQixFQUFBO0VBS2pDO0VBQ0kseUNBQXlDO0VBQ3pDLGlDQUFpQztFQUNqQyxZQUFZLEVBQUE7RUFHaEI7RUFDSTtJQUNJLGdCQUFnQixFQUFBO0VBRXBCO0lBQ0ksZ0JBQWdCLEVBQUEsRUFBQTtFQUl4QjtFQUNJO0lBQ0ksZ0JBQWdCLEVBQUE7RUFFcEI7SUFDSSxnQkFBZ0IsRUFBQSxFQUFBO0VBSXhCO0VBQ0kseUNBQXlDO0VBQ3pDLGlDQUFpQztFQUNqQyxZQUFZLEVBQUE7RUFHaEI7RUFDSTtJQUNJLG1CQUE0QixFQUFBO0VBRWhDO0lBQ0ksbUJBQTRCLEVBQUEsRUFBQTtFQUlwQztFQUNJO0lBQ0ksbUJBQTRCLEVBQUE7RUFFaEM7SUFDSSxtQkFBNEIsRUFBQSxFQUFBO0VBSXBDO0VBQ0ksMENBQTBDO0VBQzFDLGtDQUFrQztFQUNsQyxZQUFZLEVBQUE7RUFHaEI7RUFDSTtJQUNJLG1CQUE0QixFQUFBO0VBRWhDO0lBQ0ksbUJBQTRCLEVBQUEsRUFBQTtFQUlwQztFQUNJO0lBQ0ksbUJBQTRCLEVBQUE7RUFFaEM7SUFDSSxtQkFBNEIsRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvaG9tZS9ob21lLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdiNzbGlkZXItY29udGFpbmVyIHtcbiAgICBoZWlnaHQ6IDQwJTtcbiAgICBpb24tc2xpZGV7XG4gICAgICAgIGltZyB7XG4gICAgICAgICAgICBtaW4taGVpZ2h0OiAzMnZoO1xuICAgICAgICB9XG4gICAgfVxufVxuZGl2I2Zha2Utc2xpZGVyLXdyYXBwZXIge1xuICAgIGhlaWdodDogNDAlO1xuICAgIGlvbi1zbGlkZXMge1xuICAgICAgICBoZWlnaHQ6IDEwMCU7XG4gICAgICAgIGlvbi1zbGlkZSB7XG4gICAgICAgICAgICBoZWlnaHQ6IDEwMCU7XG5cbiAgICAgICAgICAgIGRpdiB7XG4gICAgICAgICAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgICAgICAgICAgICAgIHBhZGRpbmctdG9wOiAxMCU7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG59XG5cbiN3b3Jrb3V0LWxpc3Qtd3JhcHBlciB7XG4gICAgcGFkZGluZzogNXB4O1xuICAgIGlvbi1yb3cjaGVhZGVyIHtcbiAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgfVxuICAgIHNwYW4ubGluayB7XG4gICAgICAgIGNvbG9yOiAjM0I0RUFDO1xuICAgICAgICBmb250LXNpemU6IDAuOHJlbTtcbiAgICB9XG4gICAgaW9uLXJvdyNyZWFsLXdvcm91dHN7XG4gICAgICAgIGlvbi1jb2wge1xuICAgICAgICAgICAgaGVpZ2h0OiAxNDBweDtcbiAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNkY2RjZGM7XG4gICAgICAgICAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgICAgICAgICAgbWFyZ2luOiAycHg7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgICAgYmFja2dyb3VuZDogIzNCNEVBQztcbiAgICAgICAgICAgIGRpdi5zdHlsZS13cmFwcGVye1xuICAgICAgICAgICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgICAgICAgICBpbWd7XG4gICAgICAgICAgICAgICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICAgICAgICAgICAgICBib3JkZXItcmFkaXVzOiAxMHB4IDEwcHggMHB4IDBweDtcbiAgICAgICAgICAgICAgICAgICAgaGVpZ2h0OiA5MHB4O1xuICAgICAgICAgICAgICAgIH1cbiAgICAgICAgICAgICAgICBkaXYuZmlsbC1jb2xvciB7XG4gICAgICAgICAgICAgICAgICAgIGhlaWdodDogNTAlICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICAgICAgICAgIG92ZXJmbG93OiBoaWRkZW47XG4gICAgICAgICAgICAgICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICAgICAgICAgICAgYm90dG9tOiA1cHg7XG4gICAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcC50aXRsZSB7XG4gICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgICAgICAgICAgZm9udC1zaXplOiAwLjhyZW07XG4gICAgICAgICAgICAgICAgLy8gY29sb3I6ICMyMjI0Mjg7XG4gICAgICAgICAgICAgICAgY29sb3I6ICNmZmY7XG4gICAgICAgICAgICB9XG4gICAgICAgICAgICBwIHtcbiAgICAgICAgICAgICAgICBtYXJnaW46IDFweCA1cHg7XG4gICAgICAgICAgICAgICAgaW9uLWljb24ge1xuICAgICAgICAgICAgICAgICAgICBjb2xvcjogI2ZmZGUyNTtcbiAgICAgICAgICAgICAgICB9XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG4gICAgaW9uLXJvdyNmYWtlLXdvcmtvdXR7XG4gICAgICAgIGlvbi1jb2wge1xuICAgICAgICAgICAgaGVpZ2h0OiAxNDBweDtcbiAgICAgICAgICAgIGJvcmRlcjogMXB4IHNvbGlkICNkY2RjZGM7XG4gICAgICAgICAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgICAgICAgICAgbWFyZ2luOiA1cHg7XG4gICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgICAgZGl2LmltYWdle1xuICAgICAgICAgICAgICAgIGhlaWdodDogNzBweDtcbiAgICAgICAgICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZWRlZGVkO1xuICAgICAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDEwcHggMTBweCAwcHggMHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcCB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxNXB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMTBweCA1cHg7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG59XG5cbmRpdiNoaXJlLW1lbnRvci13cmFwcGVyIHtcbiAgICBwYWRkaW5nOiAxMHB4OyBcbiAgICBpb24tcm93I2Zha2Utc2hvcnQtaG9tZS1jYXJkIHtcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2RjZGNkYztcbiAgICAgICAgaGVpZ2h0OiAxMDBweDtcbiAgICAgICAgaW9uLWNvbCNjb2FjaC1pbWcge1xuICAgICAgICAgICAgcCNpbWcge1xuICAgICAgICAgICAgICAgIGhlaWdodDogMTAwJTtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgICAgICBpb24tY29sI2NvbnRlbnQge1xuICAgICAgICAgICAgcCN0aXRsZSB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAyMHB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMHB4IDVweCAxNXB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcC5kZXNjcmlwdGlvbiB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAxMnB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogOHB4IDVweDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgfVxuICAgIH1cbiAgICBpb24tcm93I21lbnRvci13cmFwcGVyIHtcbiAgICAgICAgLy8gYmFja2dyb3VuZDogcmdiYSgxNjYsMTMzLDIxNCwwLjg0KTtcbiAgICAgICAgLy8gYmFja2dyb3VuZDogLW1vei1saW5lYXItZ3JhZGllbnQobGVmdCwgcmdiYSgxNjYsMTMzLDIxNCwwLjg0KSAxMyUsIHJnYmEoMTU5LDEzNCwyMTcsMC44NCkgMjElLCByZ2JhKDkzLDE0NSwyNDMsMC45OSkgOTYlLCByZ2JhKDkzLDE0NSwyNDMsMSkgMTAwJSk7XG4gICAgICAgIC8vIGJhY2tncm91bmQ6IC13ZWJraXQtZ3JhZGllbnQobGVmdCB0b3AsIHJpZ2h0IHRvcCwgY29sb3Itc3RvcCgxMyUsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkpLCBjb2xvci1zdG9wKDIxJSwgcmdiYSgxNTksMTM0LDIxNywwLjg0KSksIGNvbG9yLXN0b3AoOTYlLCByZ2JhKDkzLDE0NSwyNDMsMC45OSkpLCBjb2xvci1zdG9wKDEwMCUsIHJnYmEoOTMsMTQ1LDI0MywxKSkpO1xuICAgICAgICAvLyBiYWNrZ3JvdW5kOiAtd2Via2l0LWxpbmVhci1ncmFkaWVudChsZWZ0LCByZ2JhKDE2NiwxMzMsMjE0LDAuODQpIDEzJSwgcmdiYSgxNTksMTM0LDIxNywwLjg0KSAyMSUsIHJnYmEoOTMsMTQ1LDI0MywwLjk5KSA5NiUsIHJnYmEoOTMsMTQ1LDI0MywxKSAxMDAlKTtcbiAgICAgICAgLy8gYmFja2dyb3VuZDogLW8tbGluZWFyLWdyYWRpZW50KGxlZnQsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkgMTMlLCByZ2JhKDE1OSwxMzQsMjE3LDAuODQpIDIxJSwgcmdiYSg5MywxNDUsMjQzLDAuOTkpIDk2JSwgcmdiYSg5MywxNDUsMjQzLDEpIDEwMCUpO1xuICAgICAgICAvLyBiYWNrZ3JvdW5kOiAtbXMtbGluZWFyLWdyYWRpZW50KGxlZnQsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkgMTMlLCByZ2JhKDE1OSwxMzQsMjE3LDAuODQpIDIxJSwgcmdiYSg5MywxNDUsMjQzLDAuOTkpIDk2JSwgcmdiYSg5MywxNDUsMjQzLDEpIDEwMCUpO1xuICAgICAgICAvLyBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsIHJnYmEoMTY2LDEzMywyMTQsMC44NCkgMTMlLCByZ2JhKDE1OSwxMzQsMjE3LDAuODQpIDIxJSwgcmdiYSg5MywxNDUsMjQzLDAuOTkpIDk2JSwgcmdiYSg5MywxNDUsMjQzLDEpIDEwMCUpO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgICAgICBib3JkZXI6IDFweCBzb2xpZCAjZGNkY2RjO1xuICAgICAgICBwYWRkaW5nOiAxMnB4IDBweDtcbiAgICAgICAgaW9uLWNvbCNjb2FjaC1pbWcge1xuICAgICAgICAgICAgaW1nIHtcbiAgICAgICAgICAgICAgICAvLyBtaW4taGVpZ2h0OiA4MHB4O1xuICAgICAgICAgICAgICAgIHZlcnRpY2FsLWFsaWduOiBtaWRkbGU7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIGlvbi1jb2wjY29udGVudCB7XG4gICAgICAgICAgICBmb250LXNpemU6IDAuOHJlbTtcbiAgICAgICAgICAgIHAge1xuICAgICAgICAgICAgICAgIG1hcmdpbjogNXB4O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgcCN0aXRsZSB7XG4gICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG59XG4uYmxhY2stYW5pbWF0aW9uIHtcbiAgICAtd2Via2l0LWFuaW1hdGlvbjogaW5maW5pdGUgYmxhY2tDb2xvciA0cztcbiAgICBhbmltYXRpb246IDRzIGluZmluaXRlIGJsYWNrQ29sb3I7XG4gICAgb3BhY2l0eTogMC43O1xufVxuXG5Aa2V5ZnJhbWVzIGJsYWNrQ29sb3Ige1xuICAgIDAlIHtcbiAgICAgICAgYmFja2dyb3VuZDogIzAwMDtcbiAgICB9XG4gICAgMTAwJSB7XG4gICAgICAgIGJhY2tncm91bmQ6IGdyZXk7XG4gICAgfVxufVxuXG5ALXdlYmtpdC1rZXlmcmFtZXMgYmxhY2tDb2xvciB7XG4gICAgMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiAjMDAwO1xuICAgIH1cbiAgICAxMDAlIHtcbiAgICAgICAgYmFja2dyb3VuZDogZ3JleTtcbiAgICB9XG59XG5cbi5ncmVlbi1hbmltYXRpb24ge1xuICAgIC13ZWJraXQtYW5pbWF0aW9uOiBpbmZpbml0ZSBncmVlbkNvbG9yIDRzO1xuICAgIGFuaW1hdGlvbjogNHMgaW5maW5pdGUgZ3JlZW5Db2xvcjtcbiAgICBvcGFjaXR5OiAwLjc7XG59XG5cbkBrZXlmcmFtZXMgZ3JlZW5Db2xvciB7XG4gICAgMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2IoNjMsIDEyNiwgNjMpO1xuICAgIH1cbiAgICAxMDAlIHtcbiAgICAgICAgYmFja2dyb3VuZDogcmdiKDcyLCAxNTUsIDcyKTtcbiAgICB9XG59XG5cbkAtd2Via2l0LWtleWZyYW1lcyBncmVlbkNvbG9yIHtcbiAgICAwJSB7XG4gICAgICAgIGJhY2tncm91bmQ6IHJnYig2MywgMTI2LCA2Myk7XG4gICAgfVxuICAgIDEwMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2IoNzIsIDE1NSwgNzIpO1xuICAgIH1cbn1cblxuLnB1cnBsZS1hbmltYXRpb24ge1xuICAgIC13ZWJraXQtYW5pbWF0aW9uOiBpbmZpbml0ZSBwdXJwbGVDb2xvciA0cztcbiAgICBhbmltYXRpb246IDRzIGluZmluaXRlIHB1cnBsZUNvbG9yO1xuICAgIG9wYWNpdHk6IDAuOTtcbn1cblxuQGtleWZyYW1lcyBwdXJwbGVDb2xvciB7XG4gICAgMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2IoNzgsIDc4LCAxNDMpO1xuICAgIH1cbiAgICAxMDAlIHtcbiAgICAgICAgYmFja2dyb3VuZDogcmdiKDk2LCA5NiwgMTM4KTtcbiAgICB9XG59XG5cbkAtd2Via2l0LWtleWZyYW1lcyBwdXJwbGVDb2xvciB7XG4gICAgMCUge1xuICAgICAgICBiYWNrZ3JvdW5kOiByZ2IoNzgsIDc4LCAxNDMpO1xuICAgIH1cbiAgICAxMDAlIHtcbiAgICAgICAgYmFja2dyb3VuZDogcmdiKDk2LCA5NiwgMTM4KTtcbiAgICB9XG59Il19 */"
 
 /***/ }),
 
@@ -3102,7 +2698,7 @@ var LoginPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-content padding>\n    <div id=\"login-wrapper\">\n        <img id=\"logo-img\" src=\"./assets/logo.png\" />\n        <form id=\"login-form\" #loginForm=\"ngForm\" (ngSubmit)=\"login()\" autocomplete=\"off\">\n            <ion-item>\n                <ion-label position=\"floating\">Email</ion-label>\n                <ion-input type=\"email\" required [(ngModel)]=\"email\" name=\"email\"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label position=\"floating\">Password</ion-label>\n                <ion-input type=\"Password\" required [(ngModel)]=\"password\" name=\"password\"></ion-input>\n            </ion-item>\n            <ion-button class=\"fk-marginTop-25\" id=\"login-btn\" expand=\"full\" size=\"large\" type=\"submit\">Login</ion-button>\n        </form>\n        <ion-row>\n            <ion-col>\n                <p id=\"new-user\">New User? <a routerLink=\"/registration\">Sign Up</a></p>\n                <p>Forgot Password? <span id=\"reset-link\" (click)=\"resetPassword()\">Reset Password</span></p>\n                <!-- <p id=\"google-login-btn\" (click)=\"loginWithGoogle()\">\n                    <img src=\"./assets/icon/google.png\" /> <span>Login with Google</span>\n                </p> -->\n                <!-- <ion-button expand=\"full\" size=\"large\" color=\"light\" (click)=\"loginWithGoogle()\">Google Login</ion-button> -->\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>"
+module.exports = "<ion-content padding>\n    <div id=\"login-wrapper\">\n        <img id=\"logo-img\" src=\"./assets/logo.png\" />\n        <form id=\"login-form\" #loginForm=\"ngForm\" (ngSubmit)=\"login()\" autocomplete=\"off\">\n            <ion-item>\n                <ion-label position=\"floating\">Email</ion-label>\n                <ion-input type=\"email\" required [(ngModel)]=\"email\" name=\"email\"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label position=\"floating\">Password</ion-label>\n                <ion-input type=\"Password\" required [(ngModel)]=\"password\" name=\"password\"></ion-input>\n            </ion-item>\n            <ion-button class=\"fk-marginTop-25\" id=\"login-btn\" expand=\"full\" size=\"large\" type=\"submit\" shape=\"round\">Login</ion-button>\n        </form>\n        <ion-row id=\"link-wrapper\">\n            <ion-col>\n                <p id=\"new-user\">\n                    <a routerLink=\"/registration\">Sign Up Now</a>\n                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                    <span id=\"reset-link\" (click)=\"resetPassword()\">Forgot Password?</span>\n                </p>\n                <!-- <p id=\"google-login-btn\" (click)=\"loginWithGoogle()\">\n                    <img src=\"./assets/icon/google.png\" /> <span>Login with Google</span>\n                </p> -->\n                <!-- <ion-button expand=\"full\" size=\"large\" color=\"light\" (click)=\"loginWithGoogle()\">Google Login</ion-button> -->\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>"
 
 /***/ }),
 
@@ -3113,7 +2709,7 @@ module.exports = "<ion-content padding>\n    <div id=\"login-wrapper\">\n       
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-content div#login-wrapper {\n  margin-top: 50px;\n  text-align: center; }\n  ion-content div#login-wrapper img#logo-img {\n    width: 30%; }\n  ion-content div#login-wrapper form {\n    text-align: center; }\n  ion-content div#login-wrapper form ion-item div.item-native {\n      padding-left: 0px !important; }\n  ion-content div#login-wrapper form ion-button {\n      --background: linear-gradient(40deg, #ffd86f, #fc6262) !important; }\n  ion-content div#login-wrapper p#new-user a {\n    text-decoration: none; }\n  ion-content div#login-wrapper span#reset-link {\n    color: #3B4EAC; }\n  ion-content div#login-wrapper p#google-login-btn {\n    background-color: #FFF;\n    padding: 10px;\n    border: 1px solid #ededed;\n    border-radius: 40px; }\n  ion-content div#login-wrapper p#google-login-btn img {\n      width: 20px;\n      float: left;\n      margin-left: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9sb2dpbi9sb2dpbi5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFFUSxnQkFBZ0I7RUFDaEIsa0JBQWtCLEVBQUE7RUFIMUI7SUFLWSxVQUFVLEVBQUE7RUFMdEI7SUFRWSxrQkFBa0IsRUFBQTtFQVI5QjtNQVVnQiw0QkFBNEIsRUFBQTtFQVY1QztNQWFnQixpRUFBYSxFQUFBO0VBYjdCO0lBa0JnQixxQkFBcUIsRUFBQTtFQWxCckM7SUF1QlksY0FBYyxFQUFBO0VBdkIxQjtJQTBCWSxzQkFBc0I7SUFDdEIsYUFBYTtJQUNiLHlCQUF5QjtJQUN6QixtQkFBbUIsRUFBQTtFQTdCL0I7TUErQmdCLFdBQVc7TUFDWCxXQUFXO01BQ1gsaUJBQWlCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9sb2dpbi9sb2dpbi5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyJpb24tY29udGVudCB7XG4gICAgZGl2I2xvZ2luLXdyYXBwZXIge1xuICAgICAgICBtYXJnaW4tdG9wOiA1MHB4O1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIGltZyNsb2dvLWltZyB7XG4gICAgICAgICAgICB3aWR0aDogMzAlO1xuICAgICAgICB9XG4gICAgICAgIGZvcm0ge1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgaW9uLWl0ZW0gZGl2Lml0ZW0tbmF0aXZlIHtcbiAgICAgICAgICAgICAgICBwYWRkaW5nLWxlZnQ6IDBweCAhaW1wb3J0YW50O1xuICAgICAgICAgICAgfVxuICAgICAgICAgICAgaW9uLWJ1dHRvbiB7XG4gICAgICAgICAgICAgICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNDBkZWcsICNmZmQ4NmYsICNmYzYyNjIpICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgcCNuZXctdXNlciB7XG4gICAgICAgICAgICBhIHtcbiAgICAgICAgICAgICAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgc3BhbiNyZXNldC1saW5rIHtcbiAgICAgICAgICAgIC8vIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xuICAgICAgICAgICAgY29sb3I6ICMzQjRFQUM7XG4gICAgICAgIH1cbiAgICAgICAgcCNnb29nbGUtbG9naW4tYnRuIHtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XG4gICAgICAgICAgICBwYWRkaW5nOiAxMHB4O1xuICAgICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2VkZWRlZDtcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDQwcHg7XG4gICAgICAgICAgICBpbWcge1xuICAgICAgICAgICAgICAgIHdpZHRoOiAyMHB4O1xuICAgICAgICAgICAgICAgIGZsb2F0OiBsZWZ0O1xuICAgICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfVxufSJdfQ== */"
+module.exports = "ion-content {\n  --background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,.6)), url(/assets/imgs/login_bg.jpg) no-repeat center center / cover; }\n  ion-content div#login-wrapper {\n    margin-top: 15vh;\n    text-align: center; }\n  ion-content div#login-wrapper img#logo-img {\n      width: 30%; }\n  ion-content div#login-wrapper form {\n      text-align: center; }\n  ion-content div#login-wrapper form ion-item {\n        --background: transparent !important; }\n  ion-content div#login-wrapper form ion-item div.item-native {\n        padding-left: 0px !important; }\n  ion-content div#login-wrapper form ion-button {\n        --background: linear-gradient(40deg, #ffd86f, #fc6262) !important; }\n  ion-content div#login-wrapper p#new-user a, ion-content div#login-wrapper p#new-user span {\n      text-decoration: none;\n      color: #3B4EAC;\n      font-weight: bold; }\n  ion-content div#login-wrapper span#reset-link {\n      color: #3B4EAC;\n      font-weight: bold; }\n  ion-content div#login-wrapper p#google-login-btn {\n      background-color: #FFF;\n      padding: 10px;\n      border: 1px solid #ededed;\n      border-radius: 40px; }\n  ion-content div#login-wrapper p#google-login-btn img {\n        width: 20px;\n        float: left;\n        margin-left: 20px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9sb2dpbi9sb2dpbi5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx3SUFBYSxFQUFBO0VBRGpCO0lBR1EsZ0JBQWdCO0lBQ2hCLGtCQUFrQixFQUFBO0VBSjFCO01BTVksVUFBVSxFQUFBO0VBTnRCO01BU1ksa0JBQWtCLEVBQUE7RUFUOUI7UUFXZ0Isb0NBQWEsRUFBQTtFQVg3QjtRQWNnQiw0QkFBNEIsRUFBQTtFQWQ1QztRQWlCZ0IsaUVBQWEsRUFBQTtFQWpCN0I7TUFzQmdCLHFCQUFxQjtNQUNyQixjQUFjO01BQ2QsaUJBQWlCLEVBQUE7RUF4QmpDO01BNkJZLGNBQWM7TUFDZCxpQkFBaUIsRUFBQTtFQTlCN0I7TUFpQ1ksc0JBQXNCO01BQ3RCLGFBQWE7TUFDYix5QkFBeUI7TUFDekIsbUJBQW1CLEVBQUE7RUFwQy9CO1FBc0NnQixXQUFXO1FBQ1gsV0FBVztRQUNYLGlCQUFpQixFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvbG9naW4vbG9naW4ucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNvbnRlbnQge1xuICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHJnYmEoMjU1LDI1NSwyNTUsMSksIHJnYmEoMjU1LDI1NSwyNTUsLjYpKSwgdXJsKC9hc3NldHMvaW1ncy9sb2dpbl9iZy5qcGcpIG5vLXJlcGVhdCBjZW50ZXIgY2VudGVyIC8gY292ZXI7XG4gICAgZGl2I2xvZ2luLXdyYXBwZXIge1xuICAgICAgICBtYXJnaW4tdG9wOiAxNXZoO1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIGltZyNsb2dvLWltZyB7XG4gICAgICAgICAgICB3aWR0aDogMzAlO1xuICAgICAgICB9XG4gICAgICAgIGZvcm0ge1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgaW9uLWl0ZW0ge1xuICAgICAgICAgICAgICAgIC0tYmFja2dyb3VuZDogdHJhbnNwYXJlbnQgIWltcG9ydGFudDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGlvbi1pdGVtIGRpdi5pdGVtLW5hdGl2ZSB7XG4gICAgICAgICAgICAgICAgcGFkZGluZy1sZWZ0OiAwcHggIWltcG9ydGFudDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIGlvbi1idXR0b24ge1xuICAgICAgICAgICAgICAgIC0tYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KDQwZGVnLCAjZmZkODZmLCAjZmM2MjYyKSAhaW1wb3J0YW50O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIHAjbmV3LXVzZXIge1xuICAgICAgICAgICAgYSwgc3BhbiB7XG4gICAgICAgICAgICAgICAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICAgICAgICAgICAgICAgIGNvbG9yOiAjM0I0RUFDO1xuICAgICAgICAgICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIHNwYW4jcmVzZXQtbGluayB7XG4gICAgICAgICAgICAvLyB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbiAgICAgICAgICAgIGNvbG9yOiAjM0I0RUFDO1xuICAgICAgICAgICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgICAgIH1cbiAgICAgICAgcCNnb29nbGUtbG9naW4tYnRuIHtcbiAgICAgICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XG4gICAgICAgICAgICBwYWRkaW5nOiAxMHB4O1xuICAgICAgICAgICAgYm9yZGVyOiAxcHggc29saWQgI2VkZWRlZDtcbiAgICAgICAgICAgIGJvcmRlci1yYWRpdXM6IDQwcHg7XG4gICAgICAgICAgICBpbWcge1xuICAgICAgICAgICAgICAgIHdpZHRoOiAyMHB4O1xuICAgICAgICAgICAgICAgIGZsb2F0OiBsZWZ0O1xuICAgICAgICAgICAgICAgIG1hcmdpbi1sZWZ0OiAyMHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgICAgIGlvbi1yb3cjbGluay13cmFwcGVyIHtcbiAgICAgICAgICAgIC8vIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgICAgIC8vIGJvdHRvbTogMTB2aDtcbiAgICAgICAgICAgIC8vIHdpZHRoOiAxMDAlO1xuICAgICAgICB9XG4gICAgfVxufSJdfQ== */"
 
 /***/ }),
 
@@ -3487,7 +3083,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-card.fake-data-wrapper div.fake-img-wrapper {\n  height: 200px; }\n\nion-card.fake-data-wrapper ion-card-content p {\n  height: 25px;\n  margin: 10px 0px; }\n\nion-card-header {\n  padding: 0px !important; }\n\nion-card-header img.recipe-img {\n    min-height: 200px; }\n\nion-card.recipe-card ion-card-content {\n  padding-top: 10px; }\n\nion-card.recipe-card ion-card-content ion-card-title {\n    padding: 5px 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9yZWNpcGVzL3JlY2lwZXMucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFJO0VBRVEsYUFBYSxFQUFBOztBQUZyQjtFQU1ZLFlBQVk7RUFDWixnQkFBZ0IsRUFBQTs7QUFLNUI7RUFDSSx1QkFBdUIsRUFBQTs7QUFEM0I7SUFHUSxpQkFBaUIsRUFBQTs7QUFJekI7RUFFUSxpQkFBaUIsRUFBQTs7QUFGekI7SUFJWSxnQkFBZ0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JlY2lwZXMvcmVjaXBlcy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgICAgaW9uLWNhcmQuZmFrZS1kYXRhLXdyYXBwZXIge1xuICAgICAgICBkaXYuZmFrZS1pbWctd3JhcHBlciB7XG4gICAgICAgICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgICB9XG4gICAgICAgIGlvbi1jYXJkLWNvbnRlbnQge1xuICAgICAgICAgICAgcCB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAyNXB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMTBweCAwcHg7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG4gICAgXG4gICAgaW9uLWNhcmQtaGVhZGVyIHtcbiAgICAgICAgcGFkZGluZzogMHB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIGltZy5yZWNpcGUtaW1nIHtcbiAgICAgICAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgICB9XG4gICAgfVxuICAgIFxuICAgIGlvbi1jYXJkLnJlY2lwZS1jYXJkIHtcbiAgICAgICAgaW9uLWNhcmQtY29udGVudCB7XG4gICAgICAgICAgICBwYWRkaW5nLXRvcDogMTBweDtcbiAgICAgICAgICAgIGlvbi1jYXJkLXRpdGxlIHtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiA1cHggMHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfSJdfQ== */"
+module.exports = "ion-card.fake-data-wrapper div.fake-img-wrapper {\n  height: 200px; }\n\nion-card.fake-data-wrapper ion-card-content p {\n  height: 25px;\n  margin: 10px 0px; }\n\nion-card-header {\n  padding: 0px !important; }\n\nion-card-header img.recipe-img {\n    min-height: 200px; }\n\nion-card.recipe-card {\n  margin: 0px 0px 15px !important; }\n\nion-card.recipe-card ion-card-content {\n    padding-top: 10px; }\n\nion-card.recipe-card ion-card-content ion-card-title {\n      padding: 5px 0px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9yZWNpcGVzL3JlY2lwZXMucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFJO0VBRVEsYUFBYSxFQUFBOztBQUZyQjtFQU1ZLFlBQVk7RUFDWixnQkFBZ0IsRUFBQTs7QUFLNUI7RUFDSSx1QkFBdUIsRUFBQTs7QUFEM0I7SUFHUSxpQkFBaUIsRUFBQTs7QUFJekI7RUFDSSwrQkFBK0IsRUFBQTs7QUFEbkM7SUFHUSxpQkFBaUIsRUFBQTs7QUFIekI7TUFLWSxnQkFBZ0IsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JlY2lwZXMvcmVjaXBlcy5wYWdlLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIgICAgaW9uLWNhcmQuZmFrZS1kYXRhLXdyYXBwZXIge1xuICAgICAgICBkaXYuZmFrZS1pbWctd3JhcHBlciB7XG4gICAgICAgICAgICBoZWlnaHQ6IDIwMHB4O1xuICAgICAgICB9XG4gICAgICAgIGlvbi1jYXJkLWNvbnRlbnQge1xuICAgICAgICAgICAgcCB7XG4gICAgICAgICAgICAgICAgaGVpZ2h0OiAyNXB4O1xuICAgICAgICAgICAgICAgIG1hcmdpbjogMTBweCAwcHg7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG4gICAgXG4gICAgaW9uLWNhcmQtaGVhZGVyIHtcbiAgICAgICAgcGFkZGluZzogMHB4ICFpbXBvcnRhbnQ7XG4gICAgICAgIGltZy5yZWNpcGUtaW1nIHtcbiAgICAgICAgICAgIG1pbi1oZWlnaHQ6IDIwMHB4O1xuICAgICAgICB9XG4gICAgfVxuICAgIFxuICAgIGlvbi1jYXJkLnJlY2lwZS1jYXJkIHtcbiAgICAgICAgbWFyZ2luOiAwcHggMHB4IDE1cHggIWltcG9ydGFudDtcbiAgICAgICAgaW9uLWNhcmQtY29udGVudCB7XG4gICAgICAgICAgICBwYWRkaW5nLXRvcDogMTBweDtcbiAgICAgICAgICAgIGlvbi1jYXJkLXRpdGxlIHtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiA1cHggMHB4O1xuICAgICAgICAgICAgfVxuICAgICAgICB9XG4gICAgfSJdfQ== */"
 
 /***/ }),
 
@@ -3750,7 +3346,7 @@ var RegistrationPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button (click)=\"removeData();\"></ion-back-button>\n        </ion-buttons>\n        <ion-title>Registration</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-content padding>\n    <!--<h1 class=\"fk-center\"></h1>-->\n    <form id=\"login-form\" #registrationForm=\"ngForm\" (ngSubmit)=\"signInUser()\" autocomplete=\"off\">\n        <ion-item>\n            <ion-label position=\"floating\">Full Name<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"fullname\" required [(ngModel)]=\"profile.fullname\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n            <ion-select name=\"gender\" required [(ngModel)]=\"profile.gender\">\n                <ion-select-option value=\"female\">Female</ion-select-option>\n                <ion-select-option value=\"male\">Male</ion-select-option>\n            </ion-select>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">User Name<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"text\" name=\"username\" required [(ngModel)]=\"profile.username\" (keyup)=\"checkUserName($event)\"></ion-input>\n        </ion-item>\n        <span id=\"user-name-info\">\n            <i>User Name is for unique identity</i>\n        </span>\n        <ion-item>\n            <ion-label position=\"floating\">Email<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"email\" name=\"email\" required [(ngModel)]=\"profile.email\"></ion-input>\n        </ion-item>\n        <ion-item>\n            <ion-label position=\"floating\">Password<span class=\"danger\">*</span></ion-label>\n            <ion-input type=\"password\" name=\"password\" required [(ngModel)]=\"profile.password\"></ion-input>\n        </ion-item>\n        <ion-button class=\"fk-marginTop-25\" id=\"login-btn\" expand=\"full\" size=\"large\" type=\"submit\" [disabled]=\"!registrationForm.form.valid\">Register</ion-button>\n    </form>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button (click)=\"removeData();\"></ion-back-button>\n        </ion-buttons>\n        <ion-title>Sign Up</ion-title>\n    </ion-toolbar>\n</ion-header>\n<ion-content>\n    <div id=\"reg-wrapper\">\n        <div id=\"top-notch\" style=\"height: 150px; overflow: hidden;\" ><svg viewBox=\"0 0 500 150\" preserveAspectRatio=\"none\" style=\"height: 100%; width: 100%;\"><path d=\"M0.00,147.53 C59.81,77.45 187.92,44.89 501.69,-0.48 L500.00,-0.48 L-1.12,-1.47 Z\" style=\"stroke: none; fill: #3B4EAC;\"></path></svg></div>\n        <div id=\"img-wrapper\">\n            <img id=\"logo-img\" src=\"./assets/logo.png\" />\n        </div>\n        <form id=\"login-form\" #registrationForm=\"ngForm\" (ngSubmit)=\"signInUser()\" autocomplete=\"off\">\n            <ion-item>\n                <ion-label position=\"floating\">Full Name<span class=\"danger\">*</span></ion-label>\n                <ion-input type=\"text\" name=\"fullname\" required [(ngModel)]=\"profile.fullname\"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label position=\"floating\">Gender<span class=\"danger\">*</span></ion-label>\n                <ion-select name=\"gender\" required [(ngModel)]=\"profile.gender\">\n                    <ion-select-option value=\"female\">Female</ion-select-option>\n                    <ion-select-option value=\"male\">Male</ion-select-option>\n                </ion-select>\n            </ion-item>\n            <ion-item>\n                <ion-label position=\"floating\">User Name<span class=\"danger\">*</span></ion-label>\n                <ion-input type=\"text\" name=\"username\" required [(ngModel)]=\"profile.username\" (keyup)=\"checkUserName($event)\"></ion-input>\n            </ion-item>\n            <span id=\"user-name-info\">User Name is for unique identity</span>\n            <ion-item>\n                <ion-label position=\"floating\">Email<span class=\"danger\">*</span></ion-label>\n                <ion-input type=\"email\" name=\"email\" required [(ngModel)]=\"profile.email\"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label position=\"floating\">Password<span class=\"danger\">*</span></ion-label>\n                <ion-input type=\"password\" name=\"password\" required [(ngModel)]=\"profile.password\"></ion-input>\n            </ion-item>\n            <div id=\"reg-btn\">\n                    <ion-button class=\"fk-marginTop-25\" size=\"default\" type=\"submit\" [disabled]=\"!registrationForm.form.valid\" shape=\"round\">Register</ion-button>\n            </div>\n        </form>\n        <div id=\"bottom-notch\" style=\"height: 150px; overflow: hidden;\" ><svg viewBox=\"0 0 500 150\" preserveAspectRatio=\"none\" style=\"height: 100%; width: 100%;\"><path d=\"M0.00,147.53 C230.25,105.09 400.67,89.30 501.69,-0.48 L502.25,151.47 L0.57,151.47 Z\" style=\"stroke: none; fill: #3B4EAC;\"></path></svg></div>\n    </div>\n</ion-content>"
 
 /***/ }),
 
@@ -3761,7 +3357,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "span#user-name-info {\n  font-size: 0.6rem; }\n\nion-button {\n  --background: linear-gradient(40deg, #ffd86f, #fc6262) !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9yZWdpc3RyYXRpb24vcmVnaXN0cmF0aW9uLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLGlCQUFpQixFQUFBOztBQUVyQjtFQUNJLGlFQUFhLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9yZWdpc3RyYXRpb24vcmVnaXN0cmF0aW9uLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbInNwYW4jdXNlci1uYW1lLWluZm8ge1xuICAgIGZvbnQtc2l6ZTogMC42cmVtO1xufVxuaW9uLWJ1dHRvbiB7XG4gICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNDBkZWcsICNmZmQ4NmYsICNmYzYyNjIpICFpbXBvcnRhbnQ7XG59Il19 */"
+module.exports = "div#reg-wrapper span#user-name-info {\n  font-size: 0.6rem;\n  display: block;\n  text-align: right;\n  width: 100%;\n  color: #dc6161;\n  padding-top: 3px; }\n\ndiv#reg-wrapper div#top-notch {\n  width: 100%;\n  position: absolute;\n  top: 0;\n  z-index: 1; }\n\ndiv#reg-wrapper div#bottom-notch {\n  width: 100%;\n  position: absolute;\n  bottom: 0;\n  z-index: 1; }\n\ndiv#reg-wrapper div#img-wrapper {\n  text-align: center; }\n\ndiv#reg-wrapper div#img-wrapper img#logo-img {\n    padding-top: 5px;\n    width: 25%;\n    position: relative;\n    z-index: 9999; }\n\ndiv#reg-wrapper form#login-form {\n  padding: 16px 16px 0px;\n  position: relative;\n  z-index: 9999; }\n\ndiv#reg-wrapper form#login-form div#reg-btn {\n    text-align: center; }\n\ndiv#reg-wrapper form#login-form div#reg-btn ion-button {\n      --background: linear-gradient(40deg, #ffd86f, #fc6262) !important; }\n\ndiv#reg-wrapper form#login-form ion-item {\n    --background: transparent; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9yZWdpc3RyYXRpb24vcmVnaXN0cmF0aW9uLnBhZ2Uuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUVRLGlCQUFpQjtFQUNqQixjQUFjO0VBQ2QsaUJBQWlCO0VBQ2pCLFdBQVc7RUFDWCxjQUFjO0VBQ2QsZ0JBQWdCLEVBQUE7O0FBUHhCO0VBVVEsV0FBVztFQUNYLGtCQUFrQjtFQUNsQixNQUFNO0VBQ04sVUFBVSxFQUFBOztBQWJsQjtFQWdCUSxXQUFXO0VBQ1gsa0JBQWtCO0VBQ2xCLFNBQVM7RUFDVCxVQUFVLEVBQUE7O0FBbkJsQjtFQXNCUSxrQkFBa0IsRUFBQTs7QUF0QjFCO0lBd0JZLGdCQUFnQjtJQUNoQixVQUFVO0lBQ1Ysa0JBQWtCO0lBQ2xCLGFBQWEsRUFBQTs7QUEzQnpCO0VBK0JRLHNCQUFzQjtFQUN0QixrQkFBa0I7RUFDbEIsYUFBYSxFQUFBOztBQWpDckI7SUFtQ1ksa0JBQWtCLEVBQUE7O0FBbkM5QjtNQXFDZ0IsaUVBQWEsRUFBQTs7QUFyQzdCO0lBMENZLHlCQUFhLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9yZWdpc3RyYXRpb24vcmVnaXN0cmF0aW9uLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImRpdiNyZWctd3JhcHBlciB7XG4gICAgc3BhbiN1c2VyLW5hbWUtaW5mbyB7XG4gICAgICAgIGZvbnQtc2l6ZTogMC42cmVtO1xuICAgICAgICBkaXNwbGF5OiBibG9jaztcbiAgICAgICAgdGV4dC1hbGlnbjogcmlnaHQ7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBjb2xvcjogI2RjNjE2MTtcbiAgICAgICAgcGFkZGluZy10b3A6IDNweDtcbiAgICB9XG4gICAgZGl2I3RvcC1ub3RjaCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIHRvcDogMDtcbiAgICAgICAgei1pbmRleDogMTtcbiAgICB9XG4gICAgZGl2I2JvdHRvbS1ub3RjaCB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgICAgIGJvdHRvbTogMDtcbiAgICAgICAgei1pbmRleDogMTtcbiAgICB9XG4gICAgZGl2I2ltZy13cmFwcGVyIHtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBpbWcjbG9nby1pbWcge1xuICAgICAgICAgICAgcGFkZGluZy10b3A6IDVweDtcbiAgICAgICAgICAgIHdpZHRoOiAyNSU7XG4gICAgICAgICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICAgICAgICB6LWluZGV4OiA5OTk5O1xuICAgICAgICB9XG4gICAgfVxuICAgIGZvcm0jbG9naW4tZm9ybSB7XG4gICAgICAgIHBhZGRpbmc6IDE2cHggMTZweCAwcHg7XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgei1pbmRleDogOTk5OTtcbiAgICAgICAgZGl2I3JlZy1idG4ge1xuICAgICAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICAgICAgaW9uLWJ1dHRvbiB7XG4gICAgICAgICAgICAgICAgLS1iYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQoNDBkZWcsICNmZmQ4NmYsICNmYzYyNjIpICFpbXBvcnRhbnQ7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICAgICAgXG4gICAgICAgIGlvbi1pdGVtIHtcbiAgICAgICAgICAgIC0tYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7XG4gICAgICAgIH1cbiAgICB9XG59Il19 */"
 
 /***/ }),
 

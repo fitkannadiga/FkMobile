@@ -35,7 +35,12 @@
         </ion-row>
         <ion-row *ngIf="!fakeWorkout" id="real-worouts">
             <ion-col *ngFor="let workout of homeWorkoutList" (click)="openWorkoutPage()">
-                <img [src]="workout.workout_img" onError="src = './assets/imgs/default.png'"/>
+                <div class="style-wrapper">
+                    <img [src]="workout.workout_img" onError="src = './assets/imgs/default.png'"/>
+                    <div class="fill-color" style="height: 150px; overflow: hidden;" >
+                        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M1.13,150.48 C32.16,143.58 344.24,172.20 500.56,2.47 L500.00,150.00 L1.13,150.48 Z" style="stroke: none; fill: #3B4EAC;"></path></svg>
+                    </div>
+                </div>
                 <p class="title">{{workout.title}}</p>
                 <p>
                     <ion-icon name="star" *ngFor="let intenstity of getArray(workout.intensity)"></ion-icon>
@@ -56,8 +61,8 @@
             </ion-row>
     </div>
     <div id="hire-mentor-wrapper">
-        <ion-row *ngIf="!fakeHomeCard" id="mentor-wrapper" (click)="showHireCoach();">
-            <ion-col size="5" id="coach-img">
+        <ion-row [ngStyle]="{'background-color':shortCard.bg_color}" *ngIf="!fakeHomeCard" id="mentor-wrapper" (click)="showHireCoach();">
+            <ion-col size="3" id="coach-img">
                     <img [src]="shortCard.img_src"/>
             </ion-col>
             <ion-col id="content">

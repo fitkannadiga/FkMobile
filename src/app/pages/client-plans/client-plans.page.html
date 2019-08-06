@@ -19,7 +19,7 @@
             </ion-card-content>
         </ion-card>
     </div>
-    <h2 text-center color="carbs">Transformation Plans (3 Months)</h2>
+    <h2 text-center color="carbs">Transformation Plans</h2>
     <div *ngIf="transformationPlans.length > 0">
         <ion-card *ngFor="let tPlan of transformationPlans" [id]="tPlan.id" (click)="openPaymentOption();">
             <ion-card-header>

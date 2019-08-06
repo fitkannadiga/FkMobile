@@ -31,14 +31,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-ionic-webview": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-ionic-webview@^3.0.0"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-ionic-keyboard": {
     "source": {
       "type": "registry",
@@ -93,7 +85,9 @@
       "id": "cordova-plugin-x-socialsharing@^5.4.4"
     },
     "is_top_level": true,
-    "variables": {}
+    "variables": {
+      "ANDROID_SUPPORT_V4_VERSION": "24.1.1+"
+    }
   },
   "es6-promise-plugin": {
     "source": {
@@ -151,18 +145,34 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-background-mode": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-background-mode"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-telerik-imagepicker": {
     "source": {
       "type": "registry",
       "id": "cordova-plugin-telerik-imagepicker"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-background-mode": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-background-mode@^0.7.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ionic-webview": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-ionic-webview@latest"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-googleplus": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-googleplus"
     },
     "is_top_level": true,
     "variables": {}

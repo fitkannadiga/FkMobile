@@ -7,7 +7,7 @@
     "question": "How many eggs can i have in a day?",
     "lang": "en"
 }, {
-    "answer": "Do not use any fat burners. These just mimic to make our body burn more calories and it does not effect much and will be waste of money. Watch my video on 'Fat Burners' to know more!",
+    "answer": "Fat burners just mimic our body to burn more calories by increasing the internal temperature which is in other words called as Thermogenesis. It is not a magic pill to shred your body fat. A clean and healthy diet with consistency on caloric deficit will help you lose fat at better rate.",
     "question": "Will fat burner help to lose fat?",
     "lang": "en"
 }, {
@@ -15,15 +15,15 @@
     "question": "Does Green Tea help in fat loss?",
     "lang": "en"
 }, {
-    "answer": "Yes, Absolutely!. You can lose weight just by following a 20min workout at home.",
-    "question": "Can i workout at home and lose weight?",
+    "answer": "Yes, Absolutely!. You can lose weight just by following a 20min simple home workout. Something is alwats better than nothing.",
+    "question": "Can I workout at home and lose weight?",
     "lang": "en"
 }, {
-    "answer": "No. As Whey protein is made of quality milk, there are no side effects from it. But few people have problem with digestion of milk. So, be careful if you are one among those.",
+    "answer": "As Whey protein is made of quality milk, there are no such side effects from it. But few people are lactose intolerant, in which you can go for any plant based protein.",
     "question": "Does Whey have any side effects?",
     "lang": "en"
 }, {
-    "answer": "It depends. If you are a beginner, you do not need supplement to stay fit. If you want to cut down some fat you might have to drop little carbs in which case you might have to consume little higher protein and then you can consider having it.",
+    "answer": "It depends. If you are a beginner, you do not need supplement to stay fit. If you want to cut down some fat you might have to drop little carbs in which case you might have to consume little higher protein and then you can consider having it. But always try to cover the protein intake with whole foods.",
     "question": "Is whey protein necessary?",
     "lang": "en"
 }, {
@@ -31,19 +31,39 @@
     "question": "Should i train 2 muscles in one day?",
     "lang": "en"
 }, {
-    "answer": "Yes, Absolutely!. There is not much of an anatomical change when compared with male. So, you can absolutely workout in gym like rest of the men's. Focus on one major thing to fix your basics and posture and then lift heavy to avoid injuries.",
-    "question": "Can women workout in gym?",
+    "answer": "Yes, Absolutely! There is not much of an anatomical change when compared with male. So, you can absolutely workout in gym like rest of the men. Focus on one major thing to fix your basics and posture and then lift heavy to avoid injuries. Upper-Lower-Cardio split would be best to start with.",
+    "question": "Can Women workout in gym?",
     "lang": "en"
 }, {
     "answer": "Yes. Just because they are antagonist it does not mean that we can never train them together. Provided to try to isolate both of them we can absolutely work on same day split.",
-    "question": "Can i train Bicep and Tricep together?",
+    "question": "Can I train Bicep and Tricep together?",
     "lang": "en"
 }, {
-    "answer": "If you are a pro lifter then you can use it. But just to gain weight, there are other alternative to do this. Try to eat healthy and increase the calories consumed every 15-20 days based on how you feel. Watch my video on weight gaining tips to know more!",
+    "answer": "Mass gainers provide a lot of calories per serving which is close to 1500 calories. Unless you are competing or you are in Off season where you are supposed to be on caloric surplus, Then you may think of using it. But not for normal healthy lifestyle transformations no need.",
     "question": "Will Mass gainer help me to gain muscle?",
     "lang": "en"
 }, {
-    "answer": "Pre-Workout meal is basically a meal to just boost your metabolic rate which inturn helps for fat burning. But this is not compulsory. This meal is completely optional and can be consumed based on how u feel during workout. If you are feeling low in energy or dizzy during workout then make sure you have one 60-90 min before workout",
+    "answer": "Pre-Workout meal is basically a meal to just boost your metabolic rate which inturn helps for fat burning. But this is not compulsory because few perform better without a meal before workout and few perform better with it. So, you try both a pick whats best for you.",
     "question": "Is Pre-Workout meal necessary?",
-    "lang": "ka"
+    "lang": "en"
+},
+{
+    "answer": "Yes, it will. But the weight gain will be completely unhealthy and it majorly reduces your metabolic rate and also alters your hormones in the long run. So there are many cons of using it as a tool to gain weight.",
+    "question": "Will Beer help me gain weight?",
+    "lang": "en"
+},
+{
+    "answer": "Rest can be classified into Active/Passive, Where you completely lie on the bed whole day watching something without spending much energy so that your body gets chance to store and recover or on the other hand you can always go for a Walk/Massage/Theraphy to help increase your recovery.",
+    "question": "What should I do on rest days?",
+    "lang": "en"
+},
+{
+    "answer": "Always eat more that what you burn on a daily basis (TEE).",
+    "question": "What is the easiest way to gain weight?",
+    "lang": "en"
+},
+{
+    "answer": "All are good but it depends on how much you are ready to invest. The problem with cheap whey is that they add more of low quality protein which will be difficult for body to consume it. So, pick a brand based on your need.",
+    "question": "Which whey is best?",
+    "lang": "en"
 }]

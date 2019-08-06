@@ -62,7 +62,7 @@ var SplitDetailsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Workout Details</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card>\n        <div class=\"videowrapper embed-responsive embed-responsive-16by9\" *ngIf=\"workoutDetails.workout_video != ''\">\n            <video #videoPlayer id=\"yt_video_player\" autoplay width=\"100%\" class=\"embed-responsive-item\" autobuffer controls [poster]=\"firebasePoster\" playsinline [src]=\"firebaseSource\"></video>\n        </div>\n        <img *ngIf=\"workoutDetails.workout_video == ''\" [src]=\"workoutDetails.workout_img\" [alt]=\"workoutDetails.workout_title\" />\n        <ion-card-content>\n            <ion-card-title>\n                {{workoutDetails.workout_title}}\n            </ion-card-title>\n            <div [innerHTML]=\"workoutDetails.workout_desc\"></div>\n        </ion-card-content>\n    </ion-card>\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Workout Details</ion-title>\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <ion-card id=\"workout-details-card\">\n        <div class=\"videowrapper embed-responsive embed-responsive-16by9\" *ngIf=\"workoutDetails.workout_video != ''\">\n            <video #videoPlayer id=\"yt_video_player\" autoplay width=\"100%\" class=\"embed-responsive-item\" autobuffer controls [poster]=\"firebasePoster\" playsinline [src]=\"firebaseSource\"></video>\n        </div>\n        <img *ngIf=\"workoutDetails.workout_video == ''\" [src]=\"workoutDetails.workout_img\" [alt]=\"workoutDetails.workout_title\" />\n        <ion-card-content>\n            <ion-card-title>\n                {{workoutDetails.workout_title}}\n            </ion-card-title>\n            <div [innerHTML]=\"workoutDetails.workout_desc\"></div>\n        </ion-card-content>\n    </ion-card>\n</ion-content>"
 
 /***/ }),
 
@@ -73,7 +73,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3NwbGl0LWRldGFpbHMvc3BsaXQtZGV0YWlscy5wYWdlLnNjc3MifQ== */"
+module.exports = "ion-content ion-card#workout-details-card {\n  margin: 0px !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9zcGxpdC1kZXRhaWxzL3NwbGl0LWRldGFpbHMucGFnZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBRVEsc0JBQXNCLEVBQUEiLCJmaWxlIjoic3JjL2FwcC9wYWdlcy9zcGxpdC1kZXRhaWxzL3NwbGl0LWRldGFpbHMucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNvbnRlbnQge1xuICAgIGlvbi1jYXJkI3dvcmtvdXQtZGV0YWlscy1jYXJkIHtcbiAgICAgICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICB9XG59Il19 */"
 
 /***/ }),
 

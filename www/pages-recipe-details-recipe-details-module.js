@@ -73,7 +73,7 @@ module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "ion-content {\n  color: #000; }\n  ion-content ion-card ion-card-content {\n    color: #000; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9yZWNpcGUtZGV0YWlscy9yZWNpcGUtZGV0YWlscy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFXLEVBQUE7RUFEZjtJQUlZLFdBQVcsRUFBQSIsImZpbGUiOiJzcmMvYXBwL3BhZ2VzL3JlY2lwZS1kZXRhaWxzL3JlY2lwZS1kZXRhaWxzLnBhZ2Uuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImlvbi1jb250ZW50IHtcbiAgICBjb2xvcjogIzAwMDtcbiAgICBpb24tY2FyZCB7XG4gICAgICAgIGlvbi1jYXJkLWNvbnRlbnQge1xuICAgICAgICAgICAgY29sb3I6ICMwMDA7XG4gICAgICAgIH1cbiAgICB9XG59Il19 */"
+module.exports = "ion-content {\n  color: #000; }\n  ion-content ion-card {\n    margin: 0px !important; }\n  ion-content ion-card ion-card-content {\n      color: #000; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yYWdoYXZlbmRyYXYvcHJvamVjdHMvRmtNb2JpbGUvc3JjL2FwcC9wYWdlcy9yZWNpcGUtZGV0YWlscy9yZWNpcGUtZGV0YWlscy5wYWdlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSxXQUFXLEVBQUE7RUFEZjtJQUdRLHNCQUFzQixFQUFBO0VBSDlCO01BS1ksV0FBVyxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcGFnZXMvcmVjaXBlLWRldGFpbHMvcmVjaXBlLWRldGFpbHMucGFnZS5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiaW9uLWNvbnRlbnQge1xuICAgIGNvbG9yOiAjMDAwO1xuICAgIGlvbi1jYXJkIHtcbiAgICAgICAgbWFyZ2luOiAwcHggIWltcG9ydGFudDtcbiAgICAgICAgaW9uLWNhcmQtY29udGVudCB7XG4gICAgICAgICAgICBjb2xvcjogIzAwMDtcbiAgICAgICAgfVxuICAgIH1cbn0iXX0= */"
 
 /***/ }),
 

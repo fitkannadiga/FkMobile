@@ -10,28 +10,48 @@
 
 <ion-content>
     <div *ngIf="!fakeData" id="article-wrapper">
-        <ion-card *ngFor="let article of articleDataObject; let i = index;">
-            <ion-grid>
-                <ion-row class="content-row" (click)="openArticle(article, i);">
-                    <ion-col size="4" class="article-img-wrapper">
-                        <img class="article-img" [src]="article.img_path" onError="src = './assets/imgs/default.png'"/>
-                    </ion-col>
-                    <ion-col size="8" class="article-desc">
-                        {{article.title}}
-                    </ion-col>
-                </ion-row>
-                <ion-row class="count">
-                    <ion-col size="6" class="fk-center views">
-                        <ion-icon color="primary" ios="ios-eye" md="md-eye"></ion-icon> {{article.view}} Views
-                    </ion-col>
-                    <ion-col size="6" class="fk-center">
-                        <ion-icon color="secondary" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon> {{article.comment ? totalComments(article.comment) : 0 }} Comments
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+        <ion-card class="article-card" *ngFor="let article of articleDataObject; let i = index;" (click)="openArticle(article, i);">
+            <ion-card-header>
+                <img class="article-img" [src]="article.img_path" onError="src = './assets/imgs/default.png'"/>
+                <div class="flow" style="height: 150px; overflow: hidden;" >
+                    <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                        <path d="M-28.21,155.42 C205.41,102.13 408.01,202.78 500.00,3.47 L502.82,149.50 L-4.51,101.14 Z" style="stroke: none; fill: #3B4EAC;">
+                        </path>
+                    </svg>
+                </div>
+                <div class="view-comment-wrapper">
+                    <span class="stat-info">
+                        <ion-icon color="primary" ios="ios-eye" md="md-eye"></ion-icon>
+                        <span class="text">{{article.view}}</span>
+                    </span>
+                    <span class="stat-info">
+                        <ion-icon color="secondary" ios="ios-chatbubbles" md="md-chatbubbles"></ion-icon>
+                        <span class="text">{{article.comment ? totalComments(article.comment) : 0 }}</span>
+                    </span>
+                </div>
+            </ion-card-header>
+            <ion-card-content>
+                <ion-card-title>
+                    {{article.title}}
+                </ion-card-title>
+                <p class="short-desc">
+                    {{article.short_description}}
+                </p>
+            </ion-card-content>
         </ion-card>
     </div>
-    <div *ngIf="fakeData" id="fake-article-wrapper">
+    <div *ngIf="fakeData">
+        <ion-card class="fake-data-wrapper" *ngFor="let list of fakeList">
+            <ion-card-header>
+                <div class="fake-img-wrapper animate-skeleton-background"></div>
+            </ion-card-header>
+            <ion-card-content>
+                <p class="animate-skeleton-background"></p>
+                <p class="animate-skeleton-background"></p>
+            </ion-card-content>
+        </ion-card>
+    </div>
+    <!-- <div *ngIf="fakeData" id="fake-article-wrapper">
         <ion-card *ngFor="let list of fakeList">
             <ion-grid>
                 <ion-row class="content">
@@ -52,5 +72,5 @@
                 </ion-row>
             </ion-grid>
         </ion-card>
-    </div>
+    </div> -->
 </ion-content>

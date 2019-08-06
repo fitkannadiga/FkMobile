@@ -1,6 +1,46 @@
-span#user-name-info {
-    font-size: 0.6rem;
-}
-ion-button {
-    --background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+div#reg-wrapper {
+    span#user-name-info {
+        font-size: 0.6rem;
+        display: block;
+        text-align: right;
+        width: 100%;
+        color: #dc6161;
+        padding-top: 3px;
+    }
+    div#top-notch {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+    div#bottom-notch {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+    }
+    div#img-wrapper {
+        text-align: center;
+        img#logo-img {
+            padding-top: 5px;
+            width: 25%;
+            position: relative;
+            z-index: 9999;
+        }
+    }
+    form#login-form {
+        padding: 16px 16px 0px;
+        position: relative;
+        z-index: 9999;
+        div#reg-btn {
+            text-align: center;
+            ion-button {
+                --background: linear-gradient(40deg, #ffd86f, #fc6262) !important;
+            }
+        }
+        
+        ion-item {
+            --background: transparent;
+        }
+    }
 }

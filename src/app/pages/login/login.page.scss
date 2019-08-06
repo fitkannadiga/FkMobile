@@ -1,12 +1,16 @@
 ion-content {
+    --background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,.6)), url(/assets/imgs/login_bg.jpg) no-repeat center center / cover;
     div#login-wrapper {
-        margin-top: 50px;
+        margin-top: 15vh;
         text-align: center;
         img#logo-img {
             width: 30%;
         }
         form {
             text-align: center;
+            ion-item {
+                --background: transparent !important;
+            }
             ion-item div.item-native {
                 padding-left: 0px !important;
             }
@@ -15,13 +19,16 @@ ion-content {
             }
         }
         p#new-user {
-            a {
+            a, span {
                 text-decoration: none;
+                color: #3B4EAC;
+                font-weight: bold;
             }
         }
         span#reset-link {
             // text-decoration: underline;
             color: #3B4EAC;
+            font-weight: bold;
         }
         p#google-login-btn {
             background-color: #FFF;
@@ -33,6 +40,11 @@ ion-content {
                 float: left;
                 margin-left: 20px;
             }
+        }
+        ion-row#link-wrapper {
+            // position: absolute;
+            // bottom: 10vh;
+            // width: 100%;
         }
     }
 }

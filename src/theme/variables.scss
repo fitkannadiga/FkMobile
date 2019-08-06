@@ -1,21 +1,17 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
 @font-face {
-    font-family: 'Avenir-Next-LT-Pro-Italic_5191';
+    font-family: 'AvenirNextLTPro-Regular';
     font-weight: 300;
     font-style: normal;
-    src: url('../assets/fonts/gitchgitch/gitchgitch-italic.otf');
-    src: url('../assets/fonts/ketchup/ketchup-Bold.otf');
-    src: url('../assets/fonts/caviar/CaviarDreams.ttf');
-    src: url('../assets/fonts/Avenir-LT-Std-95-Black-Oblique_5178.ttf');
-    src: url('../assets/fonts/Avenir-Next-LT-Pro-Italic_5191.ttf');
+    src: url('../assets/fonts/AvenirNextLTPro-Regular.otf');
 }
 
 :root,
 :root[mode=ios],
 :root[mode=md] {
-    --ion-font-family: "Avenir-Next-LT-Pro-Italic_5191" !important;
-    font-family: "Avenir-Next-LT-Pro-Italic_5191" !important;
+    --ion-font-family: "AvenirNextLTPro-Regular" !important;
+    font-family: "AvenirNextLTPro-Regular" !important;
 }
 
 

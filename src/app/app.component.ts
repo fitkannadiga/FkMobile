@@ -18,7 +18,6 @@ import { CommonService } from './api/common.service';
 
 import { NetworkService } from './api/network.service';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { BackgroundMode } from '@ionic-native/background-mode/ngx';
 
 @Component({
   selector: 'app-root',
@@ -40,7 +39,7 @@ export class AppComponent {
   isConnected: any;
 
 
-  constructor(public platform: Platform, public db: AngularFirestore,private splashScreen: SplashScreen,private statusBar: StatusBar,public menuCtrl: MenuController,private router: Router, public afDataBase: AngularFireDatabase, public events: Events, public globalComp: GlobalService, public loadingController: LoadingController, public toastr: ToastController, public network: Network, private fcm: FcmService, public navCtrl: NavController, public commonService: CommonService, public networkService: NetworkService, private screenOrientation: ScreenOrientation, private backgroundMode: BackgroundMode) {
+  constructor(public platform: Platform, public db: AngularFirestore,private splashScreen: SplashScreen,private statusBar: StatusBar,public menuCtrl: MenuController,private router: Router, public afDataBase: AngularFireDatabase, public events: Events, public globalComp: GlobalService, public loadingController: LoadingController, public toastr: ToastController, public network: Network, private fcm: FcmService, public navCtrl: NavController, public commonService: CommonService, public networkService: NetworkService, private screenOrientation: ScreenOrientation) {
     // this.splashScreen.show();
     if(window.localStorage.getItem("login-success") == "success"){
       this.rootPage = TabsPage;
@@ -79,7 +78,9 @@ export class AppComponent {
         this.subscribeToMsgCount();
         this.getUserInformation();
         this.menuCtrl.enable(true);
-        this.splashScreen.hide();
+        setTimeout(() =>{
+          this.splashScreen.hide();
+        },1000);
 
         setTimeout(()=> {
           this.notificationSetup();

@@ -22,6 +22,7 @@ import {RegistrationPageModule} from './pages/registration/registration.module';
 import {RecipesPageModule} from './pages/recipes/recipes.module';
 import {FitBookPageModule} from './pages/fit-book/fit-book.module';
 import {VideosPageModule} from './pages/videos/videos.module';
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
 
 // ANGULAR FIRE MODULES
 import { AngularFireModule } from '@angular/fire';
@@ -50,7 +51,6 @@ import { FileTransfer, FileTransferObject } from '@ionic-native/file-transfer/ng
 
 import { NetworkService } from './api/network.service';
 import { ScreenOrientation } from '@ionic-native/screen-orientation/ngx';
-import { BackgroundMode } from '@ionic-native/background-mode/ngx';
 import { ImagePicker } from '@ionic-native/image-picker/ngx';
 
 @NgModule({
@@ -104,8 +104,8 @@ import { ImagePicker } from '@ionic-native/image-picker/ngx';
     FileTransfer,
     FileTransferObject,
     ScreenOrientation,
-    BackgroundMode,
-    ImagePicker
+    ImagePicker,
+    GooglePlus
   ],
   bootstrap: [AppComponent]
 })

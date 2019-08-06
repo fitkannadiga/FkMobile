@@ -191,28 +191,28 @@ var ProfilePage = /** @class */ (function () {
             destinationType: this.camera.DestinationType.DATA_URL,
             quality: 50,
             encodingType: this.camera.EncodingType.PNG,
-            targetWidth: 300,
-            targetHeight: 300,
         }).then(function (imageData) {
-            _this.presentLoading('Uploading Image...');
             _this.myPhoto = imageData;
-            console.log("selected image from galery>>", _this.myPhoto);
-            // this.uploadPhoto();
-            _this.myPhotosRef.child(window.localStorage.getItem("authID"))
-                .putString(_this.myPhoto, 'base64', { contentType: 'image/png' })
-                .then(function (savedPicture) {
-                // this.imgPath = savedPicture.downloadURL;
-                _this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F' + _this.uid + '?alt=media' + '&random=' + Math.floor(Math.random() * 230) + 90;
-                ;
-                _this.events.publish('loadData');
-                _this.dismissLoader();
-                _this.presentToast('Profile image updated');
-            }).catch(function (err) {
-                _this.dismissLoader();
-                _this.presentToast('There was a problem uploading image. Try after sometime');
-            });
+            _this.uploadPhotoToFirebase();
         }, function (error) {
             console.log("ERROR -> " + JSON.stringify(error));
+            _this.presentToast(JSON.stringify(error));
+        });
+    };
+    ProfilePage.prototype.uploadPhotoToFirebase = function () {
+        var _this = this;
+        this.myPhotosRef.child(window.localStorage.getItem("authID"))
+            .putString(this.myPhoto, 'base64', { contentType: 'image/png' })
+            .then(function (savedPicture) {
+            // this.imgPath = savedPicture.downloadURL;
+            _this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F' + _this.uid + '?alt=media' + '&random=' + Math.floor(Math.random() * 230) + 90;
+            ;
+            _this.events.publish('loadData');
+            _this.dismissLoader();
+            _this.presentToast('Profile image updated');
+        }).catch(function (err) {
+            _this.dismissLoader();
+            _this.presentToast('There was a problem uploading image. Try after sometime');
         });
     };
     ProfilePage.prototype.triggerUpload = function () {
@@ -248,55 +248,6 @@ var ProfilePage = /** @class */ (function () {
                 this.presentToast('Please select a lower resolution image with size less than 3MB.');
             }
         }
-    };
-    ProfilePage.prototype.cropUpload = function () {
-        var _this = this;
-        this.imagePicker.getPictures({ maximumImagesCount: 1, outputType: 0 }).then(function (results) {
-            for (var i = 0; i < results.length; i++) {
-                console.log('Image URI: ' + results[i]);
-                _this.crop.crop(results[i], { quality: 100 })
-                    .then(function (newImage) {
-                    console.log('new image path is: ' + newImage);
-                    var fileTransfer = _this.transfer.create();
-                    var uploadOpts = {
-                        fileKey: 'file',
-                        fileName: newImage.substr(newImage.lastIndexOf('/') + 1)
-                    };
-                    // fileTransfer.upload(newImage, this.filePath, uploadOpts).then((data) => {
-                    //    console.log(data);
-                    //    this.respData = JSON.parse(data.response);
-                    //    console.log(this.respData);
-                    //    this.fileUrl = this.respData.fileUrl;
-                    //    this.presentToast(this.fileUrl);
-                    //  }, (err) => {
-                    //    console.log(err);
-                    //  });
-                    _this.storage.ref(_this.filePath).put(newImage).then(function (data) {
-                        console.log("data from upload image", data);
-                        if (data.state == "success") {
-                            // this.imgPath = this.globalComp.getUserImage();
-                            _this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F' + _this.uid + '?alt=media' + '&random=' + Math.floor(Math.random() * 230) + 90;
-                            // loading data explicitly after the image loaded as we are not setting root page as tab.
-                            // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
-                            _this.events.publish('loadData');
-                            _this.presentToast('Profile image updated');
-                        }
-                        else {
-                            _this.presentToast('Problem uploading image. Please try after sometime.');
-                        }
-                        _this.dismissLoader();
-                    }).catch(function (err) {
-                        _this.presentToast('There was a problem uploading image. Try after sometime');
-                    });
-                }, function (error) {
-                    _this.presentToast('Error cropping image >> ERROR BLOCK');
-                    console.error('Error cropping image', error);
-                });
-            }
-        }, function (err) {
-            console.log(err);
-            _this.presentToast('Error cropping image >> Image picker BLOCK');
-        });
     };
     ProfilePage.prototype.validateForm = function (form) {
         if (form.valid) {

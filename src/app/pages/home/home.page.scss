@@ -38,15 +38,26 @@ div#fake-slider-wrapper {
             border-radius: 10px;
             margin: 2px;
             padding: 0;
-            img{
-                width: 100%;
-                border-radius: 10px 10px 0px 0px;
-                height: 90px;
+            background: #3B4EAC;
+            div.style-wrapper{
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 10px 10px 0px 0px;
+                    height: 90px;
+                }
+                div.fill-color {
+                    height: 50% !important;
+                    overflow: hidden;
+                    position: absolute;
+                    bottom: 5px;
+                }
             }
             p.title {
                 font-weight: bold;
                 font-size: 0.8rem;
-                color: #222428;
+                // color: #222428;
+                color: #fff;
             }
             p {
                 margin: 1px 5px;
@@ -110,10 +121,11 @@ div#hire-mentor-wrapper {
         // background: linear-gradient(to right, rgba(166,133,214,0.84) 13%, rgba(159,134,217,0.84) 21%, rgba(93,145,243,0.99) 96%, rgba(93,145,243,1) 100%);
         border-radius: 10px;
         border: 1px solid #dcdcdc;
-
+        padding: 12px 0px;
         ion-col#coach-img {
             img {
-                min-height: 80px;
+                // min-height: 80px;
+                vertical-align: middle;
             }
         }
         

@@ -17,11 +17,14 @@ ion-content#split-wrapper {
         padding-bottom: 60px;
     }
     span.tags {
-        padding: 5px;
-        background-color: #dcdcdc;
+        padding: 4px 10px;
+        background-color: #A8B0DD;
         margin: 5px;
         font-weight: bold;
-        border-radius: 5px;
+        border-radius: 20px;
+        font-size: 0.7rem;
+        text-align: center;
+        color: #fff;
     }
     p.card-title {
         color: #000;

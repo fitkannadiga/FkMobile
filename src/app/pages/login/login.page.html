@@ -10,12 +10,15 @@
                 <ion-label position="floating">Password</ion-label>
                 <ion-input type="Password" required [(ngModel)]="password" name="password"></ion-input>
             </ion-item>
-            <ion-button class="fk-marginTop-25" id="login-btn" expand="full" size="large" type="submit">Login</ion-button>
+            <ion-button class="fk-marginTop-25" id="login-btn" expand="full" size="large" type="submit" shape="round">Login</ion-button>
         </form>
-        <ion-row>
+        <ion-row id="link-wrapper">
             <ion-col>
-                <p id="new-user">New User? <a routerLink="/registration">Sign Up</a></p>
-                <p>Forgot Password? <span id="reset-link" (click)="resetPassword()">Reset Password</span></p>
+                <p id="new-user">
+                    <a routerLink="/registration">Sign Up Now</a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span id="reset-link" (click)="resetPassword()">Forgot Password?</span>
+                </p>
                 <!-- <p id="google-login-btn" (click)="loginWithGoogle()">
                     <img src="./assets/icon/google.png" /> <span>Login with Google</span>
                 </p> -->

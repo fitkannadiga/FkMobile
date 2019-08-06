@@ -1,226 +1,364 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[65],{
 
-/***/ "./node_modules/@ionic/core/dist/esm/es5/build/4m739wpj.sc.entry.js":
+/***/ "./node_modules/@ionic/core/dist/esm-es5/ion-reorder_2-ios.entry.js":
 /*!**************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/es5/build/4m739wpj.sc.entry.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm-es5/ion-reorder_2-ios.entry.js ***!
   \**************************************************************************/
-/*! exports provided: IonSegment, IonSegmentButton */
+/*! exports provided: ion_reorder, ion_reorder_group */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonSegment", function() { return Segment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "IonSegmentButton", function() { return SegmentButton; });
-/* harmony import */ var _ionic_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../ionic.core.js */ "./node_modules/@ionic/core/dist/esm/es5/ionic.core.js");
-/* harmony import */ var _chunk_7c632336_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-7c632336.js */ "./node_modules/@ionic/core/dist/esm/es5/build/chunk-7c632336.js");
-var Segment=function(){function e(){this.disabled=!1,this.scrollable=!1}return e.prototype.valueChanged=function(e){this.updateButtons(),this.ionChange.emit({value:e})},e.prototype.segmentClick=function(e){this.value=e.target.value},e.prototype.componentWillLoad=function(){this.emitStyle()},e.prototype.componentDidLoad=function(){if(null==this.value){var e=this.getButtons().find(function(e){return e.checked});e&&(this.value=e.value)}this.updateButtons()},e.prototype.emitStyle=function(){this.ionStyle.emit({segment:!0})},e.prototype.updateButtons=function(){for(var e=this.value,t=0,n=this.getButtons();t<n.length;t++){var o=n[t];o.checked=o.value===e}},e.prototype.getButtons=function(){return Array.from(this.el.querySelectorAll("ion-segment-button"))},e.prototype.hostData=function(){return{class:Object.assign({},Object(_chunk_7c632336_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this.color),{"segment-disabled":this.disabled,"segment-scrollable":this.scrollable})}},Object.defineProperty(e,"is",{get:function(){return"ion-segment"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"encapsulation",{get:function(){return"scoped"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"properties",{get:function(){return{color:{type:String,attr:"color"},disabled:{type:Boolean,attr:"disabled"},el:{elementRef:!0},mode:{type:String,attr:"mode"},scrollable:{type:Boolean,attr:"scrollable"},value:{type:String,attr:"value",mutable:!0,watchCallbacks:["valueChanged"]}}},enumerable:!0,configurable:!0}),Object.defineProperty(e,"events",{get:function(){return[{name:"ionChange",method:"ionChange",bubbles:!0,cancelable:!0,composed:!0},{name:"ionStyle",method:"ionStyle",bubbles:!0,cancelable:!0,composed:!0}]},enumerable:!0,configurable:!0}),Object.defineProperty(e,"listeners",{get:function(){return[{name:"ionSelect",method:"segmentClick"}]},enumerable:!0,configurable:!0}),Object.defineProperty(e,"style",{get:function(){return".sc-ion-segment-ios-h{--indicator-color-checked:initial;--ripple-color:initial;--color-activated:initial;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;font-family:var(--ion-font-family,inherit);text-align:center}.sc-ion-segment-ios-s > .segment-button-disabled, .segment-disabled.sc-ion-segment-ios-h{pointer-events:none}.segment-scrollable.sc-ion-segment-ios-h{-ms-flex-pack:start;justify-content:start;width:auto;overflow-x:scroll}.segment-scrollable.sc-ion-segment-ios-h::-webkit-scrollbar{display:none}.sc-ion-segment-ios-h{--background:transparent;--background-hover:rgba(var(--ion-color-primary-rgb,56,128,255),0.1);--background-activated:rgba(var(--ion-color-primary-rgb,56,128,255),0.16);--background-checked:var(--ion-color-primary,#3880ff);--color:var(--ion-color-primary,#3880ff);--color-checked:var(--ion-color-primary-contrast,#fff);--color-disabled:rgba(var(--ion-color-primary-rgb,56,128,255),0.3);--color-checked-disabled:rgba(var(--ion-color-primary-contrast-rgb,255,255,255),0.3);--border-color:var(--ion-color-primary,#3880ff);--indicator-color:transparent}.segment-disabled.sc-ion-segment-ios-h{opacity:.3}.sc-ion-segment-ios-h.ion-color.sc-ion-segment-ios-s > ion-segment-button{--border-color:var(--ion-color-base);--background-hover:rgba(var(--ion-color-base-rgb),0.04);background:transparent;color:var(--ion-color-base)}.sc-ion-segment-ios-h.ion-color.sc-ion-segment-ios-s > .activated{background:rgba(var(--ion-color-base-rgb),.16);color:var(--ion-color-base)}.sc-ion-segment-ios-h.ion-color.sc-ion-segment-ios-s > .segment-button-checked, .sc-ion-segment-ios-h.ion-color.sc-ion-segment-ios-s > .segment-button-checked.activated{background:var(--ion-color-base);color:var(--ion-color-contrast)}.sc-ion-segment-ios-h.ion-color.sc-ion-segment-ios-s > .segment-button-disabled{color:rgba(var(--ion-color-base-rgb),.3)}.sc-ion-segment-ios-h.ion-color.sc-ion-segment-ios-s > .segment-button-checked.segment-button-disabled{color:rgba(var(--ion-color-contrast-rgb),.3)}.sc-ion-segment-ios-hion-toolbar.sc-ion-segment-ios-s > ion-segment-button, ion-toolbar .sc-ion-segment-ios-h.sc-ion-segment-ios-s > ion-segment-button{max-width:100px;font-size:12px;line-height:22px}.sc-ion-segment-ios-hion-toolbar:not(.ion-color).sc-ion-segment-ios-s > ion-segment-button, ion-toolbar .sc-ion-segment-ios-h:not(.ion-color).sc-ion-segment-ios-s > ion-segment-button{border-color:var(--ion-toolbar-color-checked,var(--border-color));color:var(--ion-toolbar-color-unchecked,var(--color))}.sc-ion-segment-ios-hion-toolbar:not(.ion-color).sc-ion-segment-ios-s > .segment-button-checked, ion-toolbar .sc-ion-segment-ios-h:not(.ion-color).sc-ion-segment-ios-s > .segment-button-checked{color:var(--ion-toolbar-color-checked,var(--color-checked))}.sc-ion-segment-ios-hion-toolbar.ion-color:not(.ion-color).sc-ion-segment-ios-s > ion-segment-button, ion-toolbar.ion-color .sc-ion-segment-ios-h:not(.ion-color).sc-ion-segment-ios-s > ion-segment-button{--color:var(--ion-color-contrast);--color-disabled:rgba(var(--ion-color-contrast-rgb),0.3);--color-checked:var(--ion-color-base);--color-checked-disabled:rgba(var(--ion-color-contrast-rgb),0.3);--background-hover:rgba(var(--ion-color-contrast-rgb),0.1);--background-activated:rgba(var(--ion-color-contrast-rgb),0.16);--background-checked:var(--ion-color-contrast);--border-color:var(--ion-color-contrast)}"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"styleMode",{get:function(){return"ios"},enumerable:!0,configurable:!0}),e}(),ids=0,SegmentButton=function(){function e(){this.checked=!1,this.disabled=!1,this.layout="icon-top",this.value="ion-sb-"+ids++}return e.prototype.checkedChanged=function(e,t){e&&!t&&this.ionSelect.emit()},e.prototype.onClick=function(){this.checked=!0},Object.defineProperty(e.prototype,"hasLabel",{get:function(){return!!this.el.querySelector("ion-label")},enumerable:!0,configurable:!0}),Object.defineProperty(e.prototype,"hasIcon",{get:function(){return!!this.el.querySelector("ion-icon")},enumerable:!0,configurable:!0}),e.prototype.hostData=function(){var e,t=this,n=t.disabled,o=t.hasIcon,r=t.hasLabel;return{"aria-disabled":n?"true":null,class:(e={"segment-button-has-label":r,"segment-button-has-icon":o,"segment-button-has-label-only":r&&!o,"segment-button-has-icon-only":o&&!r,"segment-button-disabled":n,"segment-button-checked":t.checked},e["segment-button-layout-"+t.layout]=!0,e["ion-activatable"]=!0,e["ion-activatable-instant"]=!0,e)}},e.prototype.render=function(){return[Object(_ionic_core_js__WEBPACK_IMPORTED_MODULE_0__["h"])("button",{type:"button","aria-pressed":this.checked?"true":null,class:"button-native",disabled:this.disabled},Object(_ionic_core_js__WEBPACK_IMPORTED_MODULE_0__["h"])("slot",null),"md"===this.mode&&Object(_ionic_core_js__WEBPACK_IMPORTED_MODULE_0__["h"])("ion-ripple-effect",null)),Object(_ionic_core_js__WEBPACK_IMPORTED_MODULE_0__["h"])("div",{class:"segment-button-indicator"})]},Object.defineProperty(e,"is",{get:function(){return"ion-segment-button"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"encapsulation",{get:function(){return"shadow"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"properties",{get:function(){return{checked:{type:Boolean,attr:"checked",mutable:!0,watchCallbacks:["checkedChanged"]},disabled:{type:Boolean,attr:"disabled"},el:{elementRef:!0},layout:{type:String,attr:"layout"},mode:{type:String,attr:"mode"},value:{type:String,attr:"value"}}},enumerable:!0,configurable:!0}),Object.defineProperty(e,"events",{get:function(){return[{name:"ionSelect",method:"ionSelect",bubbles:!0,cancelable:!0,composed:!0}]},enumerable:!0,configurable:!0}),Object.defineProperty(e,"listeners",{get:function(){return[{name:"click",method:"onClick"}]},enumerable:!0,configurable:!0}),Object.defineProperty(e,"style",{get:function(){return".sc-ion-segment-button-ios-h{--padding-start:0;--padding-end:0;--padding-top:0;--padding-bottom:0;-ms-flex:1 0 auto;flex:1 0 auto;-ms-flex-direction:column;flex-direction:column;height:auto;border-width:var(--border-width);border-style:var(--border-style);border-color:var(--border-color);background:var(--background);color:var(--color);text-decoration:none;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;-webkit-font-kerning:none;font-kerning:none}.sc-ion-segment-button-ios-h:first-of-type{border-top-left-radius:var(--border-radius);border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:var(--border-radius)}[dir=rtl].sc-ion-segment-button-ios-h:first-of-type{border-top-left-radius:0;border-top-right-radius:var(--border-radius);border-bottom-right-radius:var(--border-radius);border-bottom-left-radius:0}.sc-ion-segment-button-ios-h:not(:first-of-type){border-left-width:0}.sc-ion-segment-button-ios-h:last-of-type{border-top-left-radius:0;border-top-right-radius:var(--border-radius);border-bottom-right-radius:var(--border-radius);border-bottom-left-radius:0}[dir=rtl].sc-ion-segment-button-ios-h:last-of-type{border-top-left-radius:var(--border-radius);border-top-right-radius:0;border-bottom-right-radius:0;border-bottom-left-radius:var(--border-radius)}.button-native.sc-ion-segment-button-ios{border-radius:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;letter-spacing:inherit;text-decoration:inherit;text-overflow:inherit;text-transform:inherit;text-align:inherit;white-space:inherit;color:inherit;margin-left:var(--margin-start);margin-right:var(--margin-end);margin-top:var(--margin-top);margin-bottom:var(--margin-bottom);padding-left:var(--padding-start);padding-right:var(--padding-end);padding-top:var(--padding-top);padding-bottom:var(--padding-bottom);display:-ms-flexbox;display:flex;position:relative;-ms-flex-direction:inherit;flex-direction:inherit;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center;width:100%;min-width:inherit;max-width:inherit;height:auto;min-height:inherit;max-height:inherit;-webkit-transition:var(--transition);transition:var(--transition);border:none;outline:none;background:transparent;contain:content;cursor:pointer}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.button-native.sc-ion-segment-button-ios{margin-left:unset;margin-right:unset;-webkit-margin-start:var(--margin-start);margin-inline-start:var(--margin-start);-webkit-margin-end:var(--margin-end);margin-inline-end:var(--margin-end);padding-left:unset;padding-right:unset;-webkit-padding-start:var(--padding-start);padding-inline-start:var(--padding-start);-webkit-padding-end:var(--padding-end);padding-inline-end:var(--padding-end)}}.segment-button-indicator.sc-ion-segment-button-ios{-ms-flex-item-align:end;align-self:flex-end;width:100%;height:2px;background-color:var(--indicator-color);opacity:1}.segment-button-checked.sc-ion-segment-button-ios-h{background:var(--background-checked);color:var(--color-checked)}.segment-button-checked.sc-ion-segment-button-ios-h   .segment-button-indicator.sc-ion-segment-button-ios{background-color:var(--indicator-color-checked,var(--color-checked))}.activated.sc-ion-segment-button-ios-h{color:var(--color-activated,var(--color))}.segment-button-disabled.sc-ion-segment-button-ios-h{color:var(--color-disabled)}.segment-button-disabled.segment-button-checked.sc-ion-segment-button-ios-h{color:var(--color-checked-disabled)}.sc-ion-segment-button-ios-s > ion-icon{-ms-flex-order:-1;order:-1}.sc-ion-segment-button-ios-s > ion-label{display:block;-ms-flex-item-align:center;align-self:center;line-height:22px;text-overflow:ellipsis;white-space:nowrap;-webkit-box-sizing:border-box;box-sizing:border-box}.segment-button-layout-icon-start.sc-ion-segment-button-ios-h{-ms-flex-direction:row;flex-direction:row}.segment-button-layout-icon-end.sc-ion-segment-button-ios-h{-ms-flex-direction:row-reverse;flex-direction:row-reverse}.segment-button-layout-icon-bottom.sc-ion-segment-button-ios-h{-ms-flex-direction:column-reverse;flex-direction:column-reverse}.sc-ion-segment-button-ios-h.segment-button-layout-icon-hide .sc-ion-segment-button-ios-s > ion-icon, .sc-ion-segment-button-ios-h.segment-button-layout-label-hide .sc-ion-segment-button-ios-s > ion-label{display:none}ion-ripple-effect.sc-ion-segment-button-ios{color:var(--ripple-color,var(--color-checked))}.sc-ion-segment-button-ios-h{--border-radius:4px;--border-width:1px;--border-style:solid;--transition:100ms all linear;min-height:24px;font-size:13px;line-height:37px}.segment-button-indicator.sc-ion-segment-button-ios{display:none}.sc-ion-segment-button-ios-s > ion-icon{font-size:26px}.sc-ion-segment-button-ios-h.segment-button-layout-icon-start .sc-ion-segment-button-ios-s > ion-label{margin-left:2px;margin-right:0}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.sc-ion-segment-button-ios-h.segment-button-layout-icon-start .sc-ion-segment-button-ios-s > ion-label{margin-left:unset;margin-right:unset;-webkit-margin-start:2px;margin-inline-start:2px;-webkit-margin-end:0;margin-inline-end:0}}.sc-ion-segment-button-ios-h.segment-button-layout-icon-end .sc-ion-segment-button-ios-s > ion-label{margin-left:0;margin-right:2px}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.sc-ion-segment-button-ios-h.segment-button-layout-icon-end .sc-ion-segment-button-ios-s > ion-label{margin-left:unset;margin-right:unset;-webkit-margin-start:0;margin-inline-start:0;-webkit-margin-end:2px;margin-inline-end:2px}}\@media (any-hover:hover){.sc-ion-segment-button-ios-h:hover:not(.segment-button-checked){background:var(--background-hover)}}.activated.sc-ion-segment-button-ios-h{background:var(--background-activated)}.segment-button-checked.activated.sc-ion-segment-button-ios-h{background:var(--background-checked);color:var(--color-checked)}"},enumerable:!0,configurable:!0}),Object.defineProperty(e,"styleMode",{get:function(){return"ios"},enumerable:!0,configurable:!0}),e}();
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_reorder", function() { return Reorder; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_reorder_group", function() { return ReorderGroup; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-84f6bf13.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-84f6bf13.js");
+/* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-1074393c.js");
+/* harmony import */ var _chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-4e92c885.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-4e92c885.js");
 
-/***/ }),
 
-/***/ "./node_modules/@ionic/core/dist/esm/es5/build/chunk-7c632336.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/es5/build/chunk-7c632336.js ***!
-  \***********************************************************************/
-/*! exports provided: a, b, c, d, e */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getClassMap; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return openURL; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return createColorClasses; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return hostContext; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return createThemedClasses; });
-/* harmony import */ var _polyfills_tslib_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../polyfills/tslib.js */ "./node_modules/@ionic/core/dist/esm/es5/polyfills/tslib.js");
-function hostContext(t,e){return null!==e.closest(t)}function createColorClasses(t){var e;return"string"==typeof t&&t.length>0?((e={"ion-color":!0})["ion-color-"+t]=!0,e):void 0}function createThemedClasses(t,e){var r;return(r={})[e]=!0,r[e+"-"+t]=void 0!==t,r}function getClassList(t){return void 0!==t?(Array.isArray(t)?t:t.split(" ")).filter(function(t){return null!=t}).map(function(t){return t.trim()}).filter(function(t){return""!==t}):[]}function getClassMap(t){var e={};return getClassList(t).forEach(function(t){return e[t]=!0}),e}var SCHEME=/^[a-z][a-z0-9+\-.]*:/;function openURL(t,e,r,n){return _polyfills_tslib_js__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this,void 0,void 0,function(){var s;return _polyfills_tslib_js__WEBPACK_IMPORTED_MODULE_0__["__generator"](this,function(o){switch(o.label){case 0:return null==e||"#"===e[0]||SCHEME.test(e)?[3,2]:(s=t.document.querySelector("ion-router"))?(null!=r&&r.preventDefault(),[4,s.componentOnReady()]):[3,2];case 1:return o.sent(),[2,s.push(e,n)];case 2:return[2,!1]}})})}
 
-/***/ }),
-
-/***/ "./node_modules/@ionic/core/dist/esm/es5/polyfills/tslib.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm/es5/polyfills/tslib.js ***!
-  \******************************************************************/
-/*! exports provided: __extends, __assign, __rest, __decorate, __param, __metadata, __awaiter, __generator, __exportStar, __values, __read, __spread, __await, __makeTemplateObject, __importStar, __importDefault */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__extends", function() { return __extends; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__assign", function() { return __assign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__rest", function() { return __rest; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__decorate", function() { return __decorate; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__param", function() { return __param; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__metadata", function() { return __metadata; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__awaiter", function() { return __awaiter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__generator", function() { return __generator; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__exportStar", function() { return __exportStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__values", function() { return __values; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__read", function() { return __read; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__spread", function() { return __spread; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__await", function() { return __await; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__makeTemplateObject", function() { return __makeTemplateObject; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importStar", function() { return __importStar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "__importDefault", function() { return __importDefault; });
-// REV: 9dd9aa322c893e5e0b3f1609b1126314ccf37bbb
-
-/*! *****************************************************************************
-Copyright (c) Microsoft Corporation. All rights reserved.
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use
-this file except in compliance with the License. You may obtain a copy of the
-License at http://www.apache.org/licenses/LICENSE-2.0
-THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
-WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
-MERCHANTABLITY OR NON-INFRINGEMENT.
-See the Apache Version 2.0 License for specific language governing permissions
-and limitations under the License.
-***************************************************************************** */
-/* global Reflect, Promise */
-
-var extendStatics = function(d, b) {
-  extendStatics = Object.setPrototypeOf ||
-      ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-      function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-  return extendStatics(d, b);
+var Reorder = /** @class */ (function () {
+    function Reorder(hostRef) {
+        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+    }
+    Reorder.prototype.onClick = function (ev) {
+        ev.preventDefault();
+        ev.stopImmediatePropagation();
+    };
+    Reorder.prototype.hostData = function () {
+        var _a;
+        var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        return {
+            class: (_a = {},
+                _a[mode] = true,
+                _a)
+        };
+    };
+    Reorder.prototype.__stencil_render = function () {
+        return (Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { name: "reorder", lazy: false, class: "reorder-icon" })));
+    };
+    Reorder.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
+    Object.defineProperty(Reorder, "style", {
+        get: function () { return ":host([slot]){display:none;line-height:0;z-index:100}.reorder-icon{display:block;font-size:22px;font-size:34px;opacity:.4}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return Reorder;
+}());
+var ReorderGroup = /** @class */ (function () {
+    function ReorderGroup(hostRef) {
+        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        this.lastToIndex = -1;
+        this.cachedHeights = [];
+        this.scrollElTop = 0;
+        this.scrollElBottom = 0;
+        this.scrollElInitial = 0;
+        this.containerTop = 0;
+        this.containerBottom = 0;
+        this.state = 0 /* Idle */;
+        /**
+         * If `true`, the reorder will be hidden.
+         */
+        this.disabled = true;
+        this.ionItemReorder = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionItemReorder", 7);
+    }
+    ReorderGroup.prototype.disabledChanged = function () {
+        if (this.gesture) {
+            this.gesture.setDisabled(this.disabled);
+        }
+    };
+    ReorderGroup.prototype.componentDidLoad = function () {
+        return tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"](this, void 0, void 0, function () {
+            var contentEl, _a, _b;
+            var _this = this;
+            return tslib__WEBPACK_IMPORTED_MODULE_0__["__generator"](this, function (_c) {
+                switch (_c.label) {
+                    case 0:
+                        contentEl = this.el.closest('ion-content');
+                        if (!contentEl) return [3 /*break*/, 3];
+                        return [4 /*yield*/, contentEl.componentOnReady()];
+                    case 1:
+                        _c.sent();
+                        _a = this;
+                        return [4 /*yield*/, contentEl.getScrollElement()];
+                    case 2:
+                        _a.scrollEl = _c.sent();
+                        _c.label = 3;
+                    case 3:
+                        _b = this;
+                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./index-8421816f.js */ "./node_modules/@ionic/core/dist/esm-es5/index-8421816f.js"))];
+                    case 4:
+                        _b.gesture = (_c.sent()).createGesture({
+                            el: this.el,
+                            gestureName: 'reorder',
+                            gesturePriority: 110,
+                            threshold: 0,
+                            direction: 'y',
+                            passive: false,
+                            canStart: function (detail) { return _this.canStart(detail); },
+                            onStart: function (ev) { return _this.onStart(ev); },
+                            onMove: function (ev) { return _this.onMove(ev); },
+                            onEnd: function () { return _this.onEnd(); },
+                        });
+                        this.disabledChanged();
+                        return [2 /*return*/];
+                }
+            });
+        });
+    };
+    ReorderGroup.prototype.componentDidUnload = function () {
+        this.onEnd();
+        if (this.gesture) {
+            this.gesture.destroy();
+            this.gesture = undefined;
+        }
+    };
+    /**
+     * Completes the reorder operation. Must be called by the `ionItemReorder` event.
+     *
+     * If a list of items is passed, the list will be reordered and returned in the
+     * proper order.
+     *
+     * If no parameters are passed or if `true` is passed in, the reorder will complete
+     * and the item will remain in the position it was dragged to. If `false` is passed,
+     * the reorder will complete and the item will bounce back to its original position.
+     *
+     * @param listOrReorder A list of items to be sorted and returned in the new order or a
+     * boolean of whether or not the reorder should reposition the item.
+     */
+    ReorderGroup.prototype.complete = function (listOrReorder) {
+        return Promise.resolve(this.completeSync(listOrReorder));
+    };
+    ReorderGroup.prototype.canStart = function (ev) {
+        if (this.selectedItemEl || this.state !== 0 /* Idle */) {
+            return false;
+        }
+        var target = ev.event.target;
+        var reorderEl = target.closest('ion-reorder');
+        if (!reorderEl) {
+            return false;
+        }
+        var item = findReorderItem(reorderEl, this.el);
+        if (!item) {
+            return false;
+        }
+        ev.data = item;
+        return true;
+    };
+    ReorderGroup.prototype.onStart = function (ev) {
+        ev.event.preventDefault();
+        var item = this.selectedItemEl = ev.data;
+        var heights = this.cachedHeights;
+        heights.length = 0;
+        var el = this.el;
+        var children = el.children;
+        if (!children || children.length === 0) {
+            return;
+        }
+        var sum = 0;
+        for (var i = 0; i < children.length; i++) {
+            var child = children[i];
+            sum += child.offsetHeight;
+            heights.push(sum);
+            child.$ionIndex = i;
+        }
+        var box = el.getBoundingClientRect();
+        this.containerTop = box.top;
+        this.containerBottom = box.bottom;
+        if (this.scrollEl) {
+            var scrollBox = this.scrollEl.getBoundingClientRect();
+            this.scrollElInitial = this.scrollEl.scrollTop;
+            this.scrollElTop = scrollBox.top + AUTO_SCROLL_MARGIN;
+            this.scrollElBottom = scrollBox.bottom - AUTO_SCROLL_MARGIN;
+        }
+        else {
+            this.scrollElInitial = 0;
+            this.scrollElTop = 0;
+            this.scrollElBottom = 0;
+        }
+        this.lastToIndex = indexForItem(item);
+        this.selectedItemHeight = item.offsetHeight;
+        this.state = 1 /* Active */;
+        item.classList.add(ITEM_REORDER_SELECTED);
+        Object(_chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__["a"])();
+    };
+    ReorderGroup.prototype.onMove = function (ev) {
+        var selectedItem = this.selectedItemEl;
+        if (!selectedItem) {
+            return;
+        }
+        // Scroll if we reach the scroll margins
+        var scroll = this.autoscroll(ev.currentY);
+        // // Get coordinate
+        var top = this.containerTop - scroll;
+        var bottom = this.containerBottom - scroll;
+        var currentY = Math.max(top, Math.min(ev.currentY, bottom));
+        var deltaY = scroll + currentY - ev.startY;
+        var normalizedY = currentY - top;
+        var toIndex = this.itemIndexForTop(normalizedY);
+        if (toIndex !== this.lastToIndex) {
+            var fromIndex = indexForItem(selectedItem);
+            this.lastToIndex = toIndex;
+            Object(_chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__["b"])();
+            this.reorderMove(fromIndex, toIndex);
+        }
+        // Update selected item position
+        selectedItem.style.transform = "translateY(" + deltaY + "px)";
+    };
+    ReorderGroup.prototype.onEnd = function () {
+        var _this = this;
+        var selectedItem = this.selectedItemEl;
+        this.state = 2 /* Complete */;
+        if (!selectedItem) {
+            this.state = 0 /* Idle */;
+            return;
+        }
+        var toIndex = this.lastToIndex;
+        var fromIndex = indexForItem(selectedItem);
+        if (toIndex === fromIndex) {
+            selectedItem.style.transition = 'transform 200ms ease-in-out';
+            setTimeout(function () { return _this.completeSync(); }, 200);
+        }
+        else {
+            this.ionItemReorder.emit({
+                from: fromIndex,
+                to: toIndex,
+                complete: this.completeSync.bind(this)
+            });
+        }
+        Object(_chunk_4e92c885_js__WEBPACK_IMPORTED_MODULE_3__["c"])();
+    };
+    ReorderGroup.prototype.completeSync = function (listOrReorder) {
+        var selectedItemEl = this.selectedItemEl;
+        if (selectedItemEl && this.state === 2 /* Complete */) {
+            var children = this.el.children;
+            var len = children.length;
+            var toIndex = this.lastToIndex;
+            var fromIndex = indexForItem(selectedItemEl);
+            if (!listOrReorder || listOrReorder === true) {
+                var ref = (fromIndex < toIndex)
+                    ? children[toIndex + 1]
+                    : children[toIndex];
+                this.el.insertBefore(selectedItemEl, ref);
+            }
+            if (Array.isArray(listOrReorder)) {
+                listOrReorder = reorderArray(listOrReorder, fromIndex, toIndex);
+            }
+            for (var i = 0; i < len; i++) {
+                children[i].style['transform'] = '';
+            }
+            selectedItemEl.style.transition = '';
+            selectedItemEl.classList.remove(ITEM_REORDER_SELECTED);
+            this.selectedItemEl = undefined;
+            this.state = 0 /* Idle */;
+        }
+        return listOrReorder;
+    };
+    ReorderGroup.prototype.itemIndexForTop = function (deltaY) {
+        var heights = this.cachedHeights;
+        var i = 0;
+        // TODO: since heights is a sorted array of integers, we can do
+        // speed up the search using binary search. Remember that linear-search is still
+        // faster than binary-search for small arrays (<64) due CPU branch misprediction.
+        for (i = 0; i < heights.length; i++) {
+            if (heights[i] > deltaY) {
+                break;
+            }
+        }
+        return i;
+    };
+    /********* DOM WRITE ********* */
+    ReorderGroup.prototype.reorderMove = function (fromIndex, toIndex) {
+        var itemHeight = this.selectedItemHeight;
+        var children = this.el.children;
+        for (var i = 0; i < children.length; i++) {
+            var style = children[i].style;
+            var value = '';
+            if (i > fromIndex && i <= toIndex) {
+                value = "translateY(" + -itemHeight + "px)";
+            }
+            else if (i < fromIndex && i >= toIndex) {
+                value = "translateY(" + itemHeight + "px)";
+            }
+            style['transform'] = value;
+        }
+    };
+    ReorderGroup.prototype.autoscroll = function (posY) {
+        if (!this.scrollEl) {
+            return 0;
+        }
+        var amount = 0;
+        if (posY < this.scrollElTop) {
+            amount = -SCROLL_JUMP;
+        }
+        else if (posY > this.scrollElBottom) {
+            amount = SCROLL_JUMP;
+        }
+        if (amount !== 0) {
+            this.scrollEl.scrollBy(0, amount);
+        }
+        return this.scrollEl.scrollTop - this.scrollElInitial;
+    };
+    ReorderGroup.prototype.hostData = function () {
+        var _a;
+        var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        return {
+            class: (_a = {},
+                _a[mode] = true,
+                _a['reorder-enabled'] = !this.disabled,
+                _a['reorder-list-active'] = this.state !== 0 /* Idle */,
+                _a)
+        };
+    };
+    Object.defineProperty(ReorderGroup.prototype, "el", {
+        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        enumerable: true,
+        configurable: true
+    });
+    Object.defineProperty(ReorderGroup, "watchers", {
+        get: function () {
+            return {
+                "disabled": ["disabledChanged"]
+            };
+        },
+        enumerable: true,
+        configurable: true
+    });
+    ReorderGroup.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
+    Object.defineProperty(ReorderGroup, "style", {
+        get: function () { return ".reorder-list-active>*{-webkit-transition:-webkit-transform .3s;transition:-webkit-transform .3s;transition:transform .3s;transition:transform .3s,-webkit-transform .3s;will-change:transform}.reorder-enabled{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.reorder-enabled ion-reorder{display:block;cursor:-webkit-grab;cursor:grab;pointer-events:all;-ms-touch-action:none;touch-action:none}.reorder-selected,.reorder-selected ion-reorder{cursor:-webkit-grabbing;cursor:grabbing}.reorder-selected{position:relative;-webkit-transition:none!important;transition:none!important;-webkit-box-shadow:0 0 10px rgba(0,0,0,.4);box-shadow:0 0 10px rgba(0,0,0,.4);opacity:.8;z-index:100}.reorder-visible ion-reorder .reorder-icon{-webkit-transform:translateZ(0);transform:translateZ(0)}"; },
+        enumerable: true,
+        configurable: true
+    });
+    return ReorderGroup;
+}());
+var indexForItem = function (element) {
+    return element['$ionIndex'];
+};
+var findReorderItem = function (node, container) {
+    var parent;
+    while (node) {
+        parent = node.parentElement;
+        if (parent === container) {
+            return node;
+        }
+        node = parent;
+    }
+    return undefined;
+};
+var AUTO_SCROLL_MARGIN = 60;
+var SCROLL_JUMP = 10;
+var ITEM_REORDER_SELECTED = 'reorder-selected';
+var reorderArray = function (array, from, to) {
+    var element = array[from];
+    array.splice(from, 1);
+    array.splice(to, 0, element);
+    return array.slice();
 };
 
-function __extends(d, b) {
-  extendStatics(d, b);
-  function __() { this.constructor = d; }
-  d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
 
-var __assign = function() {
-  __assign = Object.assign || function __assign(t) {
-      for (var s, i = 1, n = arguments.length; i < n; i++) {
-          s = arguments[i];
-          for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
-      }
-      return t;
-  }
-  return __assign.apply(this, arguments);
-}
-
-function __rest(s, e) {
-  var t = {};
-  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-      t[p] = s[p];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function")
-      for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
-          t[p[i]] = s[p[i]];
-  return t;
-}
-
-function __decorate(decorators, target, key, desc) {
-  var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-  if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-  else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-  return c > 3 && r && Object.defineProperty(target, key, r), r;
-}
-
-function __param(paramIndex, decorator) {
-  return function (target, key) { decorator(target, key, paramIndex); }
-}
-
-function __metadata(metadataKey, metadataValue) {
-  if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(metadataKey, metadataValue);
-}
-
-function __awaiter(thisArg, _arguments, P, generator) {
-  return new (P || (P = Promise))(function (resolve, reject) {
-      function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-      function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-      function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
-      step((generator = generator.apply(thisArg, _arguments || [])).next());
-  });
-}
-
-function __generator(thisArg, body) {
-  var _ = { label: 0, sent: function() { if (t[0] & 1) throw t[1]; return t[1]; }, trys: [], ops: [] }, f, y, t, g;
-  return g = { next: verb(0), "throw": verb(1), "return": verb(2) }, typeof Symbol === "function" && (g[Symbol.iterator] = function() { return this; }), g;
-  function verb(n) { return function (v) { return step([n, v]); }; }
-  function step(op) {
-      if (f) throw new TypeError("Generator is already executing.");
-      while (_) try {
-          if (f = 1, y && (t = op[0] & 2 ? y["return"] : op[0] ? y["throw"] || ((t = y["return"]) && t.call(y), 0) : y.next) && !(t = t.call(y, op[1])).done) return t;
-          if (y = 0, t) op = [op[0] & 2, t.value];
-          switch (op[0]) {
-              case 0: case 1: t = op; break;
-              case 4: _.label++; return { value: op[1], done: false };
-              case 5: _.label++; y = op[1]; op = [0]; continue;
-              case 7: op = _.ops.pop(); _.trys.pop(); continue;
-              default:
-                  if (!(t = _.trys, t = t.length > 0 && t[t.length - 1]) && (op[0] === 6 || op[0] === 2)) { _ = 0; continue; }
-                  if (op[0] === 3 && (!t || (op[1] > t[0] && op[1] < t[3]))) { _.label = op[1]; break; }
-                  if (op[0] === 6 && _.label < t[1]) { _.label = t[1]; t = op; break; }
-                  if (t && _.label < t[2]) { _.label = t[2]; _.ops.push(op); break; }
-                  if (t[2]) _.ops.pop();
-                  _.trys.pop(); continue;
-          }
-          op = body.call(thisArg, _);
-      } catch (e) { op = [6, e]; y = 0; } finally { f = t = 0; }
-      if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
-  }
-}
-
-function __exportStar(m, exports) {
-  for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-}
-
-function __values(o) {
-  var m = typeof Symbol === "function" && o[Symbol.iterator], i = 0;
-  if (m) return m.call(o);
-  return {
-      next: function () {
-          if (o && i >= o.length) o = void 0;
-          return { value: o && o[i++], done: !o };
-      }
-  };
-}
-
-function __read(o, n) {
-  var m = typeof Symbol === "function" && o[Symbol.iterator];
-  if (!m) return o;
-  var i = m.call(o), r, ar = [], e;
-  try {
-      while ((n === void 0 || n-- > 0) && !(r = i.next()).done) ar.push(r.value);
-  }
-  catch (error) { e = { error: error }; }
-  finally {
-      try {
-          if (r && !r.done && (m = i["return"])) m.call(i);
-      }
-      finally { if (e) throw e.error; }
-  }
-  return ar;
-}
-
-function __spread() {
-  for (var ar = [], i = 0; i < arguments.length; i++)
-      ar = ar.concat(__read(arguments[i]));
-  return ar;
-}
-
-function __await(v) {
-  return this instanceof __await ? (this.v = v, this) : new __await(v);
-}
-
-function __makeTemplateObject(cooked, raw) {
-  if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-  return cooked;
-};
-
-function __importStar(mod) {
-  if (mod && mod.__esModule) return mod;
-  var result = {};
-  if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-  result.default = mod;
-  return result;
-}
-
-function __importDefault(mod) {
-  return (mod && mod.__esModule) ? mod : { default: mod };
-}
 
 /***/ })
 

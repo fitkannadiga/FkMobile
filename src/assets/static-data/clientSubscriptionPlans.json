@@ -3,45 +3,45 @@
         {
             "id": "lifestyle0",
             "title": "Diet Plan",
-            "description": "Just &#8377; 1299/- <br/> Includes one time consultation & customized diet plan based on your lifestyle/Need.",
-            "cost": "1299",
+            "description": "Just &#8377; 2499/- <br/> Includes one time consultation & single customized diet plan to help reach your Goal.",
+            "cost": "2499",
             "link": ""
         },
         {
             "id": "lifestyle1",
             "title": "Workout Plan",
-            "description": "Just &#8377; 1999/- <br/> Customized workout plan which perfectly fits as per your busy schedule.",
+            "description": "Just &#8377; 1999/- <br/> Customized workout plan which perfectly fits in your busy schedule (No Video Included).",
             "cost": "1999",
             "link": ""
         },
         {
             "id": "lifestyle2",
-            "title": "Daily Workout Video Plan",
-            "description": "Just &#8377; 2499/- <br/> Single customized video which demonstrates your workout to meet your goal.",
+            "title": "Workout Video Plan",
+            "description": "Just &#8377; 2499/- <br/> Single customized workout video which demonstrates HIIT/Rehab workout to meet your goal with proper demostration of each exercise.",
             "cost": "2499",
             "link": ""
         },
         {
             "id": "lifestyle3",
             "title": "Weekly Workout Video Plan",
-            "description": "Just &#8377; 4999/- <br/> Multiple video to demonstrates your weekly workout based on your split to meet your goal.",
-            "cost": "4999",
+            "description": "Just &#8377; 7999/- <br/> Multiple videos to demonstrate your weekly workout plan based on your split to meet your goal.",
+            "cost": "7999",
             "link": ""
         }
     ],
     "transformationPlans": [
         {
             "id": "transformation0",
-            "title": "Fat Cutter",
-            "description": "Just &#8377; 8999/- <br/> Includes one time consultation, daily updates from coach & revision of diet plan as and when needed to loss fat faster.",
-            "cost": "8999",
+            "title": "90 Day Transfromation Pack",
+            "description": "Just &#8377; 11,199/- <br/> 90 day plan which Includes multiple consultations over Voice/Video Call & Whatsapp with the revision of diet & Workout as and when needed make process faster.",
+            "cost": "11,199",
             "link": ""
         },
         {
             "id": "transformation1",
             "title": " Be Fit",
-            "description": "Just &#8377; 9990/- <br/> Completely customized diet and workout plan with multiple voice call consultation and daily updates.",
-            "cost": "9990",
+            "description": "Just &#8377; 8970/- <br/> 60 day plan which includes customized diet and workout plan which includes multiple consultations over Phone & Whatsapp to transform to a better you.",
+            "cost": "8970",
             "link": ""
         }
     ]

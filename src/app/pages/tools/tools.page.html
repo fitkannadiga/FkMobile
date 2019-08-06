@@ -7,28 +7,17 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-    <!-- <ion-row>
-        <ion-col (click)="openPage('/bmrcalculator');">
-            <img src="https://cdn3.iconfinder.com/data/icons/ketogenic-diet-color/64/calories-burn-metabolism-energy-food-64.png" onError="src = './assets/imgs/default.png'"/>
-            <p>BMR Calculator</p>
+<ion-content>
+    <ion-row *ngFor="let tools of TollList" (click)="openPage(tools.action);">
+        <ion-col size="4" class="img-wrapper">
+            <img [src]="tools.imgPath"/>
         </ion-col>
-        <ion-col (click)="openPage('/interval-timer');">
-            <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Stopwatch-64.png" onError="src = './assets/imgs/default.png'"/>
-            <p>Fitness Timer</p>
+        <ion-col size="8" class="description-wrapper">
+            <h3>{{tools.title}}</h3>
+            <p>{{tools.description}}</p>
         </ion-col>
     </ion-row>
-    <ion-row>
-        <ion-col (click)="openPage('/macros-calci');">
-            <img src="https://cdn3.iconfinder.com/data/icons/business-icons-4/128/chart-6-64.png" onError="src = './assets/imgs/default.png'"/>
-            <p>Macros Finder</p>
-        </ion-col>
-        <ion-col (click)="openPage('WeightCalciPage');">
-            <img src="https://cdn3.iconfinder.com/data/icons/fitness-general/512/Weigher-64.png" />
-            <p>Weight Calculator</p>
-        </ion-col>
-    </ion-row> -->
-    <div class="tool-wrapper" (click)="openPage('/bmrcalculator');">
+    <!-- <div class="tool-wrapper" (click)="openPage('/bmrcalculator');">
         <div class="img-wrapper tool-sections">
             <img src="https://cdn3.iconfinder.com/data/icons/ketogenic-diet-color/64/calories-burn-metabolism-energy-food-64.png" onError="src = './assets/imgs/default.png'"/>
         </div>
@@ -54,5 +43,5 @@
             <p class="title">Macros Finder</p>
             <p class="description">Breaks down your daily calories to Carbs, Protein & Fats for particular diet</p>
         </div>
-    </div>
+    </div> -->
 </ion-content>

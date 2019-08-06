@@ -108,6 +108,13 @@ ion-menu#myFitnessMenu {
             }
         }
     }
+    ion-content {
+        ion-list#menu-list {
+            ion-icon {
+                color: #000 !important;
+            }
+        }
+    }
     ion-toolbar::after {
         content: "";
         background-image: url('./assets/logo.png');

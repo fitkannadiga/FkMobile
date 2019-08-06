@@ -1,57 +1,107 @@
 ion-content {
-    --background: var(--ion-background-color, #dcdcdc);
+    --background: var(--ion-background-color, #fff);
     div#article-wrapper {
-        ion-card {
-            color: #000 !important;
+        ion-card.article-card {
             background-color: #FFF;
-            margin: 20px 15px;
-            ion-grid {
-                padding: 5px 0px;
-            }
-            ion-row.content-row {
-                ion-col.article-desc {
-                    font-weight: bold;
+            margin: 10px 0px 15px !important;
+            ion-card-header {
+                padding: 0px !important;
+                div {
+                    bottom: -19px;
+                    position: absolute;
+                    width: 100%;
                 }
-                ion-col.article-img-wrapper {
-                    img.article-img{
-                        min-height: 60px;
+                div.view-comment-wrapper {
+                    text-align: right;
+                    font-size: 0.8rem;
+                    position: absolute;
+                    bottom: -40px;
+                    span.stat-info {
+                        display: inline-block;
+                        padding: 0px 10px;
+                        ion-icon, span.text {
+                            display: inline-block;
+                            padding-right: 5px;
+                        }
                     }
                 }
             }
-            ion-row.count {
-                border-top: 1px solid #ededed;
-                padding: 5px 0px 0px;
-                margin-top: 5px;
-                ion-col.views {
-                    border-right: 1px solid #ededed;
+            ion-card-content {
+                padding: 45px 10px 10px;
+                word-break: break-word;
+                ion-card-title {
+                    font-size: 1rem;
+                    font-weight: bold;
                 }
-                ion-icon {
-                    vertical-align: middle;
+                p.short-desc{
+                    font-size: 0.8rem;
                 }
             }
+            
+        }
+        // ion-card {
+        //     color: #000 !important;
+        //     background-color: #FFF;
+        //     margin: 20px 15px;
+        //     ion-grid {
+        //         padding: 5px 0px;
+        //     }
+        //     ion-row.content-row {
+        //         ion-col.article-desc {
+        //             font-weight: bold;
+        //         }
+        //         ion-col.article-img-wrapper {
+        //             img.article-img{
+        //                 min-height: 60px;
+        //             }
+        //         }
+        //     }
+        //     ion-row.count {
+        //         border-top: 1px solid #ededed;
+        //         padding: 5px 0px 0px;
+        //         margin-top: 5px;
+        //         ion-col.views {
+        //             border-right: 1px solid #ededed;
+        //         }
+        //         ion-icon {
+        //             vertical-align: middle;
+        //         }
+        //     }
+        // }
+    }
+}
+
+ion-card.fake-data-wrapper {
+    div.fake-img-wrapper {
+        height: 200px;
+    }
+    ion-card-content {
+        p {
+            height: 25px;
+            margin: 10px 0px;
         }
     }
 }
 
-div#fake-article-wrapper {
-    ion-card {
-        background-color: #FFF;
-        height: 100px;
-        ion-grid {
-            height: 100%;
-        }
-        ion-row.count {
-            height: 30%;
-        }
-        ion-row.content {
-            height: 70%;
-            div {
-                height: 100%;
-            }
-        }
-        p {
-            height: 20px;
-            margin: 0px !important;
-        }
-    }
-}
+// div#fake-article-wrapper {
+//     ion-card {
+//         background-color: #FFF;
+//         height: 100px;
+//         ion-grid {
+//             height: 100%;
+//         }
+//         ion-row.count {
+//             height: 30%;
+//         }
+//         ion-row.content {
+//             height: 70%;
+//             div {
+//                 height: 100%;
+//             }
+//         }
+//         p {
+//             height: 20px;
+//             margin: 0px !important;
+//         }
+//     }
+// }

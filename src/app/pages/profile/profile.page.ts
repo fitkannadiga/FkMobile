@@ -64,14 +64,17 @@ export class ProfilePage implements OnInit {
       destinationType: this.camera.DestinationType.DATA_URL,
       quality: 50,
       encodingType: this.camera.EncodingType.PNG,
-      targetWidth: 300,
-      targetHeight: 300,
     }).then(imageData => {
-      this.presentLoading('Uploading Image...');
       this.myPhoto = imageData;
-      console.log("selected image from galery>>", this.myPhoto);
-      // this.uploadPhoto();
-      this.myPhotosRef.child(window.localStorage.getItem("authID"))
+      this.uploadPhotoToFirebase();
+    }, error => {
+      console.log("ERROR -> " + JSON.stringify(error));
+      this.presentToast(JSON.stringify(error));
+    });
+  }
+
+  uploadPhotoToFirebase(){
+    this.myPhotosRef.child(window.localStorage.getItem("authID"))
       .putString(this.myPhoto, 'base64', { contentType: 'image/png' })
       .then((savedPicture) => {
         // this.imgPath = savedPicture.downloadURL;
@@ -79,12 +82,9 @@ export class ProfilePage implements OnInit {
         this.events.publish('loadData');
         this.dismissLoader();
         this.presentToast('Profile image updated');
-      }).catch((err)=>{
+    }).catch((err)=>{
         this.dismissLoader();
         this.presentToast('There was a problem uploading image. Try after sometime');
-      });
-    }, error => {
-      console.log("ERROR -> " + JSON.stringify(error));
     });
   }
 
@@ -123,58 +123,6 @@ export class ProfilePage implements OnInit {
       }
       
     }
-  }
-
-
-  cropUpload() {
-    this.imagePicker.getPictures({ maximumImagesCount: 1, outputType: 0 }).then((results) => {
-      for (let i = 0; i < results.length; i++) {
-          console.log('Image URI: ' + results[i]);
-          this.crop.crop(results[i], { quality: 100 })
-            .then(
-              newImage => {
-                console.log('new image path is: ' + newImage);
-                const fileTransfer: FileTransferObject = this.transfer.create();
-                const uploadOpts: FileUploadOptions = {
-                   fileKey: 'file',
-                   fileName: newImage.substr(newImage.lastIndexOf('/') + 1)
-                };
-  
-                // fileTransfer.upload(newImage, this.filePath, uploadOpts).then((data) => {
-                //    console.log(data);
-                //    this.respData = JSON.parse(data.response);
-                //    console.log(this.respData);
-                //    this.fileUrl = this.respData.fileUrl;
-                //    this.presentToast(this.fileUrl);
-                //  }, (err) => {
-                //    console.log(err);
-                //  });
-                this.storage.ref(this.filePath).put(newImage).then((data) => {
-                  console.log("data from upload image", data);
-                  if(data.state == "success"){
-                    // this.imgPath = this.globalComp.getUserImage();
-                    this.imgPath = 'https://firebasestorage.googleapis.com/v0/b/fit-kannadiga.appspot.com/o/profileImage%2F'+this.uid+'?alt=media'+'&random='+Math.floor(Math.random()*230)+90;
-                    // loading data explicitly after the image loaded as we are not setting root page as tab.
-                    // as we are setting the root page to TabsPage in the update profile function, it triggers the loadData function anyways 
-                    this.events.publish('loadData');
-                    this.presentToast('Profile image updated');
-                  } else {
-                    this.presentToast('Problem uploading image. Please try after sometime.');
-                  }
-                  this.dismissLoader();
-                }).catch((err)=>{
-                  this.presentToast('There was a problem uploading image. Try after sometime');
-                });
-              },
-              error => {
-                this.presentToast('Error cropping image >> ERROR BLOCK');
-                console.error('Error cropping image', error)
-              }
-            );
-      }
-    }, (err) => { 
-      console.log(err); 
-      this.presentToast('Error cropping image >> Image picker BLOCK');});
   }
 
   validateForm(form){
