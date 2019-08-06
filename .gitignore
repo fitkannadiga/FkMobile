@@ -5,10 +5,10 @@
 /plugins
 
 # dependencies
-/node_modules
-package-lock.json
-google-services.json
-GoogleService-Info.plist
+# /node_modules
+# package-lock.json
+# google-services.json
+# GoogleService-Info.plist
 
 # profiling files
 chrome-profiler-events.json
