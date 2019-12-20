@@ -12,7 +12,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_refresher", function() { return Refresher; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_refresher_content", function() { return RefresherContent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-84f6bf13.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-84f6bf13.js");
+/* harmony import */ var _chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-d0403a2f.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-d0403a2f.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-1074393c.js");
 /* harmony import */ var _chunk_cae2ca23_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-cae2ca23.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-cae2ca23.js");
 
@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Refresher = /** @class */ (function () {
     function Refresher(hostRef) {
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.appliedStyles = false;
         this.didStart = false;
         this.progress = 0;
@@ -71,9 +71,9 @@ var Refresher = /** @class */ (function () {
          * If `true`, the refresher will be hidden.
          */
         this.disabled = false;
-        this.ionRefresh = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionRefresh", 7);
-        this.ionPull = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionPull", 7);
-        this.ionStart = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionStart", 7);
+        this.ionRefresh = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionRefresh", 7);
+        this.ionPull = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionPull", 7);
+        this.ionStart = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionStart", 7);
     }
     Refresher.prototype.disabledChanged = function () {
         if (this.gesture) {
@@ -92,22 +92,19 @@ var Refresher = /** @class */ (function () {
                             return [2 /*return*/];
                         }
                         contentEl = this.el.closest('ion-content');
-                        if (!contentEl) return [3 /*break*/, 3];
-                        return [4 /*yield*/, contentEl.componentOnReady()];
-                    case 1:
-                        _c.sent();
+                        if (!contentEl) return [3 /*break*/, 2];
                         _a = this;
                         return [4 /*yield*/, contentEl.getScrollElement()];
-                    case 2:
+                    case 1:
                         _a.scrollEl = _c.sent();
-                        return [3 /*break*/, 4];
-                    case 3:
+                        return [3 /*break*/, 3];
+                    case 2:
                         console.error('ion-refresher did not attach, make sure the parent is an ion-content.');
-                        _c.label = 4;
-                    case 4:
+                        _c.label = 3;
+                    case 3:
                         _b = this;
-                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./index-8421816f.js */ "./node_modules/@ionic/core/dist/esm-es5/index-8421816f.js"))];
-                    case 5:
+                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./index-f4f18d97.js */ "./node_modules/@ionic/core/dist/esm-es5/index-f4f18d97.js"))];
+                    case 4:
                         _b.gesture = (_c.sent()).createGesture({
                             el: this.el.closest('ion-content'),
                             gestureName: 'refresher',
@@ -321,7 +318,7 @@ var Refresher = /** @class */ (function () {
     Refresher.prototype.setCss = function (y, duration, overflowVisible, delay) {
         var _this = this;
         this.appliedStyles = (y > 0);
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["w"])(function () {
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["w"])(function () {
             if (_this.scrollEl) {
                 var style = _this.scrollEl.style;
                 style.transform = ((y > 0) ? "translateY(" + y + "px) translateZ(0px)" : 'translateZ(0px)');
@@ -331,12 +328,10 @@ var Refresher = /** @class */ (function () {
             }
         });
     };
-    Refresher.prototype.hostData = function () {
+    Refresher.prototype.render = function () {
         var _a;
-        var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
-        return {
-            slot: 'fixed',
-            class: (_a = {},
+        var mode = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { slot: "fixed", class: (_a = {},
                 _a[mode] = true,
                 // Used internally for styling
                 _a["refresher-" + mode] = true,
@@ -346,11 +341,10 @@ var Refresher = /** @class */ (function () {
                 _a['refresher-refreshing'] = this.state === 8 /* Refreshing */,
                 _a['refresher-cancelling'] = this.state === 16 /* Cancelling */,
                 _a['refresher-completing'] = this.state === 32 /* Completing */,
-                _a)
-        };
+                _a) }));
     };
     Object.defineProperty(Refresher.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -363,7 +357,6 @@ var Refresher = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    Refresher.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
     Object.defineProperty(Refresher, "style", {
         get: function () { return "ion-refresher{left:0;top:0;display:none;position:absolute;width:100%;height:60px;z-index:-1}:host-context([dir=rtl]) ion-refresher,[dir=rtl] ion-refresher{left:unset;right:unset;right:0}ion-refresher.refresher-active{display:block}ion-refresher-content{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;-ms-flex-pack:center;justify-content:center;height:100%}.refresher-pulling,.refresher-refreshing{display:none;width:100%}.refresher-pulling-icon,.refresher-refreshing-icon{-webkit-transform-origin:center;transform-origin:center;-webkit-transition:.2s;transition:.2s;font-size:30px;text-align:center}:host-context([dir=rtl]) .refresher-pulling-icon,:host-context([dir=rtl]) .refresher-refreshing-icon,[dir=rtl] .refresher-pulling-icon,[dir=rtl] .refresher-refreshing-icon{-webkit-transform-origin:calc(100% - center);transform-origin:calc(100% - center)}.refresher-pulling-text,.refresher-refreshing-text{font-size:16px;text-align:center}.refresher-pulling ion-refresher-content .refresher-pulling,.refresher-ready ion-refresher-content .refresher-pulling{display:block}.refresher-ready ion-refresher-content .refresher-pulling-icon{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.refresher-cancelling ion-refresher-content .refresher-pulling,.refresher-refreshing ion-refresher-content .refresher-refreshing{display:block}.refresher-cancelling ion-refresher-content .refresher-pulling-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-completing ion-refresher-content .refresher-refreshing{display:block}.refresher-completing ion-refresher-content .refresher-refreshing-icon{-webkit-transform:scale(0);transform:scale(0)}.refresher-md .refresher-pulling-icon,.refresher-md .refresher-pulling-text,.refresher-md .refresher-refreshing-icon,.refresher-md .refresher-refreshing-text{color:var(--ion-text-color,#000)}.refresher-md .refresher-refreshing .spinner-crescent circle,.refresher-md .refresher-refreshing .spinner-lines-md line,.refresher-md .refresher-refreshing .spinner-lines-small-md line{stroke:var(--ion-text-color,#000)}.refresher-md .refresher-refreshing .spinner-bubbles circle,.refresher-md .refresher-refreshing .spinner-circles circle,.refresher-md .refresher-refreshing .spinner-dots circle{fill:var(--ion-text-color,#000)}"; },
         enumerable: true,
@@ -373,37 +366,24 @@ var Refresher = /** @class */ (function () {
 }());
 var RefresherContent = /** @class */ (function () {
     function RefresherContent(hostRef) {
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
     }
     RefresherContent.prototype.componentWillLoad = function () {
         if (this.pullingIcon === undefined) {
             this.pullingIcon = _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].get('refreshingIcon', 'arrow-down');
         }
         if (this.refreshingSpinner === undefined) {
-            var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+            var mode = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
             this.refreshingSpinner = _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].get('refreshingSpinner', _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__["b"].get('spinner', mode === 'ios' ? 'lines' : 'crescent'));
         }
     };
-    RefresherContent.prototype.hostData = function () {
-        var _a;
-        var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
-        return {
-            class: (_a = {},
-                _a[mode] = true,
-                _a)
-        };
+    RefresherContent.prototype.render = function () {
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { class: Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this) }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-pulling" }, this.pullingIcon &&
+            Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-pulling-icon" }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { icon: this.pullingIcon, lazy: false })), this.pullingText &&
+            Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-pulling-text", innerHTML: Object(_chunk_cae2ca23_js__WEBPACK_IMPORTED_MODULE_3__["s"])(this.pullingText) })), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-refreshing" }, this.refreshingSpinner &&
+            Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-refreshing-icon" }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-spinner", { name: this.refreshingSpinner })), this.refreshingText &&
+            Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-refreshing-text", innerHTML: Object(_chunk_cae2ca23_js__WEBPACK_IMPORTED_MODULE_3__["s"])(this.refreshingText) }))));
     };
-    RefresherContent.prototype.__stencil_render = function () {
-        return [
-            Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-pulling" }, this.pullingIcon &&
-                Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-pulling-icon" }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { icon: this.pullingIcon, lazy: false })), this.pullingText &&
-                Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-pulling-text", innerHTML: Object(_chunk_cae2ca23_js__WEBPACK_IMPORTED_MODULE_3__["s"])(this.pullingText) })),
-            Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-refreshing" }, this.refreshingSpinner &&
-                Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-refreshing-icon" }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-spinner", { name: this.refreshingSpinner })), this.refreshingText &&
-                Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "refresher-refreshing-text", innerHTML: Object(_chunk_cae2ca23_js__WEBPACK_IMPORTED_MODULE_3__["s"])(this.refreshingText) }))
-        ];
-    };
-    RefresherContent.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
     return RefresherContent;
 }());
 

@@ -13,9 +13,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_item_options", function() { return ItemOptions; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_item_sliding", function() { return ItemSliding; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-84f6bf13.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-84f6bf13.js");
+/* harmony import */ var _chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-d0403a2f.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-d0403a2f.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-1074393c.js");
-/* harmony import */ var _chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-ba834eff.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-ba834eff.js");
+/* harmony import */ var _chunk_353a032e_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-353a032e.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-353a032e.js");
 /* harmony import */ var _chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./chunk-c90aaa66.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-c90aaa66.js");
 
 
@@ -34,7 +34,7 @@ __webpack_require__.r(__webpack_exports__);
  */
 var ItemOption = /** @class */ (function () {
     function ItemOption(hostRef) {
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         /**
          * If `true`, the user cannot interact with the item option.
          */
@@ -58,7 +58,7 @@ var ItemOption = /** @class */ (function () {
         var _a;
         var _b = this, disabled = _b.disabled, expandable = _b.expandable, href = _b.href;
         var TagType = href === undefined ? 'button' : 'a';
-        var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
         var attrs = (TagType === 'button')
             ? { type: this.type }
             : {
@@ -66,10 +66,10 @@ var ItemOption = /** @class */ (function () {
                 href: this.href,
                 target: this.target
             };
-        return (Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, class: Object.assign({}, Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_3__["c"])(this.color), (_a = {}, _a[mode] = true, _a['item-option-disabled'] = disabled, _a['item-option-expandable'] = expandable, _a['ion-activatable'] = true, _a)) }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(TagType, Object.assign({}, attrs, { class: "button-native", disabled: disabled }), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("span", { class: "button-inner" }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "top" }), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "horizontal-wrapper" }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "start" }), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "icon-only" }), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "end" })), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "bottom" })), mode === 'md' && Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-ripple-effect", null))));
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, class: Object.assign({}, Object(_chunk_353a032e_js__WEBPACK_IMPORTED_MODULE_3__["c"])(this.color), (_a = {}, _a[mode] = true, _a['item-option-disabled'] = disabled, _a['item-option-expandable'] = expandable, _a['ion-activatable'] = true, _a)) }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(TagType, Object.assign({}, attrs, { class: "button-native", disabled: disabled }), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("span", { class: "button-inner" }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "top" }), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "horizontal-wrapper" }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "start" }), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "icon-only" }), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "end" })), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "bottom" })), mode === 'md' && Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-ripple-effect", null))));
     };
     Object.defineProperty(ItemOption.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -82,13 +82,13 @@ var ItemOption = /** @class */ (function () {
 }());
 var ItemOptions = /** @class */ (function () {
     function ItemOptions(hostRef) {
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         /**
          * The side the option button should be on. Possible values: `"start"` and `"end"`. If you have multiple `ion-item-options`, a side must be provided for each.
          *
          */
         this.side = 'end';
-        this.ionSwipe = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionSwipe", 7);
+        this.ionSwipe = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionSwipe", 7);
     }
     /** @internal */
     ItemOptions.prototype.fireSwipeEvent = function () {
@@ -101,26 +101,23 @@ var ItemOptions = /** @class */ (function () {
             });
         });
     };
-    ItemOptions.prototype.hostData = function () {
+    ItemOptions.prototype.render = function () {
         var _a;
-        var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        var mode = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
         var isEnd = Object(_chunk_c90aaa66_js__WEBPACK_IMPORTED_MODULE_4__["i"])(this.side);
-        return {
-            class: (_a = {},
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { class: (_a = {},
                 _a[mode] = true,
                 // Used internally for styling
                 _a["item-options-" + mode] = true,
                 _a['item-options-start'] = !isEnd,
                 _a['item-options-end'] = isEnd,
-                _a)
-        };
+                _a) }));
     };
     Object.defineProperty(ItemOptions.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
-    ItemOptions.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
     Object.defineProperty(ItemOptions, "style", {
         get: function () { return "ion-item-options{top:0;right:0;-ms-flex-pack:end;justify-content:flex-end;display:none;position:absolute;height:100%;font-size:14px;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;z-index:1}:host-context([dir=rtl]) ion-item-options,[dir=rtl] ion-item-options{-ms-flex-pack:start;justify-content:flex-start}:host-context([dir=rtl]) ion-item-options:not(.item-options-end),[dir=rtl] ion-item-options:not(.item-options-end){right:auto;left:0;-ms-flex-pack:end;justify-content:flex-end}.item-options-start{right:auto;left:0;-ms-flex-pack:start;justify-content:flex-start}:host-context([dir=rtl]) .item-options-start,[dir=rtl] .item-options-start{-ms-flex-pack:end;justify-content:flex-end}.item-options-start ion-item-option:first-child{padding-right:var(--ion-safe-area-left)}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.item-options-start ion-item-option:first-child{padding-right:unset;-webkit-padding-end:var(--ion-safe-area-left);padding-inline-end:var(--ion-safe-area-left)}}.item-options-end ion-item-option:last-child{padding-right:var(--ion-safe-area-right)}\@supports ((-webkit-margin-start:0) or (margin-inline-start:0)) or (-webkit-margin-start:0){.item-options-end ion-item-option:last-child{padding-right:unset;-webkit-padding-end:var(--ion-safe-area-right);padding-inline-end:var(--ion-safe-area-right)}}:host-context([dir=rtl]) .item-sliding-active-slide.item-sliding-active-options-start ion-item-options:not(.item-options-end),[dir=rtl] .item-sliding-active-slide.item-sliding-active-options-start ion-item-options:not(.item-options-end){width:100%;visibility:visible}.item-sliding-active-slide ion-item-options{display:-ms-flexbox;display:flex;visibility:hidden}.item-sliding-active-slide.item-sliding-active-options-end ion-item-options:not(.item-options-start),.item-sliding-active-slide.item-sliding-active-options-start .item-options-start{width:100%;visibility:visible}.item-options-md{border-bottom-style:solid;border-bottom-color:var(--ion-item-border-color,var(--ion-border-color,var(--ion-color-step-150,rgba(0,0,0,.13))))}.item-options-md,.list-md-lines-none .item-options-md{border-bottom-width:0}.list-md-lines-full .item-options-md,.list-md-lines-inset .item-options-md.item-options-end{border-bottom-width:1px}"; },
         enumerable: true,
@@ -133,7 +130,7 @@ var ELASTIC_FACTOR = 0.55;
 var openSlidingItem;
 var ItemSliding = /** @class */ (function () {
     function ItemSliding(hostRef) {
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.item = null;
         this.openAmount = 0;
         this.initialOpenAmount = 0;
@@ -146,7 +143,7 @@ var ItemSliding = /** @class */ (function () {
          * If `true`, the user cannot interact with the sliding item.
          */
         this.disabled = false;
-        this.ionDrag = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionDrag", 7);
+        this.ionDrag = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionDrag", 7);
     }
     ItemSliding.prototype.disabledChanged = function () {
         if (this.gesture) {
@@ -165,7 +162,7 @@ var ItemSliding = /** @class */ (function () {
                     case 1:
                         _b.sent();
                         _a = this;
-                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./index-8421816f.js */ "./node_modules/@ionic/core/dist/esm-es5/index-8421816f.js"))];
+                        return [4 /*yield*/, Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e("common")]).then(__webpack_require__.bind(null, /*! ./index-f4f18d97.js */ "./node_modules/@ionic/core/dist/esm-es5/index-f4f18d97.js"))];
                     case 2:
                         _a.gesture = (_b.sent()).createGesture({
                             el: this.el,
@@ -481,22 +478,20 @@ var ItemSliding = /** @class */ (function () {
             return 0;
         }
     };
-    ItemSliding.prototype.hostData = function () {
+    ItemSliding.prototype.render = function () {
         var _a;
-        var mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
-        return {
-            class: (_a = {},
+        var mode = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { class: (_a = {},
                 _a[mode] = true,
                 _a['item-sliding-active-slide'] = (this.state !== 2 /* Disabled */),
                 _a['item-sliding-active-options-end'] = (this.state & 8 /* End */) !== 0,
                 _a['item-sliding-active-options-start'] = (this.state & 16 /* Start */) !== 0,
                 _a['item-sliding-active-swipe-end'] = (this.state & 32 /* SwipeEnd */) !== 0,
                 _a['item-sliding-active-swipe-start'] = (this.state & 64 /* SwipeStart */) !== 0,
-                _a)
-        };
+                _a) }));
     };
     Object.defineProperty(ItemSliding.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -509,7 +504,6 @@ var ItemSliding = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    ItemSliding.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData()); };
     Object.defineProperty(ItemSliding, "style", {
         get: function () { return "ion-item-sliding{display:block;position:relative;width:100%;overflow:hidden}ion-item-sliding,ion-item-sliding .item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.item-sliding-active-slide .item{position:relative;-webkit-transition:-webkit-transform .5s cubic-bezier(.36,.66,.04,1);transition:-webkit-transform .5s cubic-bezier(.36,.66,.04,1);transition:transform .5s cubic-bezier(.36,.66,.04,1);transition:transform .5s cubic-bezier(.36,.66,.04,1),-webkit-transform .5s cubic-bezier(.36,.66,.04,1);opacity:1;z-index:2;pointer-events:none;will-change:transform}.item-sliding-active-swipe-end .item-options-end .item-option-expandable{padding-left:100%;-ms-flex-order:1;order:1;-webkit-transition-duration:.6s;transition-duration:.6s;-webkit-transition-property:padding-left;transition-property:padding-left}:host-context([dir=rtl]) .item-sliding-active-swipe-end .item-options-end .item-option-expandable,[dir=rtl] .item-sliding-active-swipe-end .item-options-end .item-option-expandable{-ms-flex-order:-1;order:-1}.item-sliding-active-swipe-start .item-options-start .item-option-expandable{padding-right:100%;-ms-flex-order:-1;order:-1;-webkit-transition-duration:.6s;transition-duration:.6s;-webkit-transition-property:padding-right;transition-property:padding-right}:host-context([dir=rtl]) .item-sliding-active-swipe-start .item-options-start .item-option-expandable,[dir=rtl] .item-sliding-active-swipe-start .item-options-start .item-option-expandable{-ms-flex-order:1;order:1}"; },
         enumerable: true,

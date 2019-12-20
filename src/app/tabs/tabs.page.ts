@@ -13,7 +13,6 @@ export class TabsPage {
 
   userData: any = {};
   isConnected: any;
-  noNetwork: boolean = false;
 
   constructor(public menuCtrl: MenuController, public events: Events, public globalComp: GlobalService, public router: Router, public toastr: ToastController, public networkService: NetworkService){
     this.globalComp.getUserInformationFirebase().then( (data) => {
@@ -47,17 +46,7 @@ export class TabsPage {
         .subscribe((connected: boolean) => {
             this.isConnected = connected;
             console.log('[Home] isConnected', this.isConnected);
-            this.handleNotConnected(connected);
         });
-  }
-
-  handleNotConnected(status){
-    console.log("internte status >>>",status);
-    if(!status){
-      this.noNetwork = true;
-    } else {
-      this.noNetwork = false;
-    }
   }
 
   async presentToast(toastMsg) {

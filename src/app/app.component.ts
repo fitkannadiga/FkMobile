@@ -75,7 +75,7 @@ export class AppComponent {
       if(this.userLogin){
         this.userID = window.localStorage.getItem('authID');
         this.navCtrl.navigateRoot('/tabs');
-        this.subscribeToMsgCount();
+        // this.subscribeToMsgCount();
         this.getUserInformation();
         this.menuCtrl.enable(true);
         setTimeout(() =>{

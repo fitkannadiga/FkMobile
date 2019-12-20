@@ -71,7 +71,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_tab", function() { return Tab; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_tabs", function() { return Tabs; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-84f6bf13.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-84f6bf13.js");
+/* harmony import */ var _chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-d0403a2f.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-d0403a2f.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-1074393c.js");
 /* harmony import */ var _chunk_00265c49_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-00265c49.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-00265c49.js");
 
@@ -80,7 +80,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var Tab = /** @class */ (function () {
     function Tab(hostRef) {
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.loaded = false;
         /** @internal */
         this.active = false;
@@ -117,27 +117,18 @@ var Tab = /** @class */ (function () {
             });
         });
     };
-    Tab.prototype.hostData = function () {
+    Tab.prototype.render = function () {
         var _a = this, tab = _a.tab, active = _a.active, component = _a.component;
-        return {
-            'role': 'tabpanel',
-            'aria-hidden': !active ? 'true' : null,
-            'aria-labelledby': "tab-button-" + tab,
-            'class': {
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { role: "tabpanel", "aria-hidden": !active ? 'true' : null, "aria-labelledby": "tab-button-" + tab, class: {
                 'ion-page': component === undefined,
                 'tab-hidden': !active
-            }
-        };
-    };
-    Tab.prototype.__stencil_render = function () {
-        return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null);
+            } }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)));
     };
     Object.defineProperty(Tab.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
-    Tab.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
     Object.defineProperty(Tab, "style", {
         get: function () { return ":host(.tab-hidden){display:none!important}"; },
         enumerable: true,
@@ -153,7 +144,7 @@ var Tab = /** @class */ (function () {
 var Tabs = /** @class */ (function () {
     function Tabs(hostRef) {
         var _this = this;
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.transitioning = false;
         this.tabs = [];
         /** @internal */
@@ -171,9 +162,9 @@ var Tabs = /** @class */ (function () {
                 _this.select(selectedTab);
             }
         };
-        this.ionNavWillLoad = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionNavWillLoad", 7);
-        this.ionTabsWillChange = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionTabsWillChange", 3);
-        this.ionTabsDidChange = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionTabsDidChange", 3);
+        this.ionNavWillLoad = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionNavWillLoad", 7);
+        this.ionTabsWillChange = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionTabsWillChange", 3);
+        this.ionTabsDidChange = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["c"])(this, "ionTabsDidChange", 3);
     }
     Tabs.prototype.componentWillLoad = function () {
         var _this = this;
@@ -345,10 +336,10 @@ var Tabs = /** @class */ (function () {
         return selectedTab !== undefined && selectedTab !== leavingTab && !this.transitioning;
     };
     Tabs.prototype.render = function () {
-        return (Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onIonTabButtonClick: this.onTabClicked }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "top" }), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "tabs-inner" }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)), Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "bottom" })));
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onIonTabButtonClick: this.onTabClicked }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "top" }), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("div", { class: "tabs-inner" }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", null)), Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("slot", { name: "bottom" })));
     };
     Object.defineProperty(Tabs.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });

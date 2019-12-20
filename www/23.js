@@ -11,9 +11,9 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_back_button", function() { return BackButton; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-84f6bf13.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-84f6bf13.js");
+/* harmony import */ var _chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-d0403a2f.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-d0403a2f.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-1074393c.js");
-/* harmony import */ var _chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-ba834eff.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-ba834eff.js");
+/* harmony import */ var _chunk_353a032e_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./chunk-353a032e.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-353a032e.js");
 
 
 
@@ -24,8 +24,8 @@ __webpack_require__.r(__webpack_exports__);
 var BackButton = /** @class */ (function () {
     function BackButton(hostRef) {
         var _this = this;
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
-        this.mode = Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        this.mode = Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["d"])(this);
         /**
          * If `true`, the user cannot interact with the button.
          */
@@ -51,7 +51,7 @@ var BackButton = /** @class */ (function () {
                         if (_a) {
                             return [2 /*return*/, nav.pop({ skipIfBusy: true })];
                         }
-                        return [2 /*return*/, Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_3__["o"])(this.defaultHref, ev, 'back')];
+                        return [2 /*return*/, Object(_chunk_353a032e_js__WEBPACK_IMPORTED_MODULE_3__["o"])(this.defaultHref, ev, 'back')];
                 }
             });
         }); };
@@ -94,10 +94,10 @@ var BackButton = /** @class */ (function () {
         var _a;
         var _b = this, color = _b.color, defaultHref = _b.defaultHref, disabled = _b.disabled, type = _b.type, mode = _b.mode, hasIconOnly = _b.hasIconOnly, backButtonIcon = _b.backButtonIcon, backButtonText = _b.backButtonText;
         var showBackButton = defaultHref !== undefined;
-        return (Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, class: Object.assign({}, Object(_chunk_ba834eff_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color), (_a = {}, _a[mode] = true, _a['button'] = true, _a['back-button-disabled'] = disabled, _a['back-button-has-icon-only'] = hasIconOnly, _a['ion-activatable'] = true, _a['ion-focusable'] = true, _a['show-back-button'] = showBackButton, _a)) }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("button", { type: type, disabled: disabled, class: "button-native" }, Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("span", { class: "button-inner" }, backButtonIcon && Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { icon: backButtonIcon, lazy: false }), backButtonText && Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("span", { class: "button-text" }, backButtonText)), mode === 'md' && Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-ripple-effect", { type: this.rippleType }))));
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { onClick: this.onClick, class: Object.assign({}, Object(_chunk_353a032e_js__WEBPACK_IMPORTED_MODULE_3__["c"])(color), (_a = {}, _a[mode] = true, _a['button'] = true, _a['back-button-disabled'] = disabled, _a['back-button-has-icon-only'] = hasIconOnly, _a['ion-activatable'] = true, _a['ion-focusable'] = true, _a['show-back-button'] = showBackButton, _a)) }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("button", { type: type, disabled: disabled, class: "button-native" }, Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("span", { class: "button-inner" }, backButtonIcon && Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-icon", { icon: backButtonIcon, lazy: false }), backButtonText && Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("span", { class: "button-text" }, backButtonText)), mode === 'md' && Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])("ion-ripple-effect", { type: this.rippleType }))));
     };
     Object.defineProperty(BackButton.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });

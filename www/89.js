@@ -11,7 +11,7 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ion_virtual_scroll", function() { return VirtualScroll; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-84f6bf13.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-84f6bf13.js");
+/* harmony import */ var _chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-d0403a2f.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-d0403a2f.js");
 /* harmony import */ var _chunk_1074393c_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-1074393c.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-1074393c.js");
 
 
@@ -276,7 +276,7 @@ var positionForIndex = function (index, cells, heightIndex) {
 var VirtualScroll = /** @class */ (function () {
     function VirtualScroll(hostRef) {
         var _this = this;
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["r"])(this, hostRef);
         this.range = { offset: 0, length: 0 };
         this.viewportHeight = 0;
         this.cells = [];
@@ -428,8 +428,8 @@ var VirtualScroll = /** @class */ (function () {
             this.timerUpdate = undefined;
         }
         // schedule DOM operations into the stencil queue
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["f"])(this.readVS.bind(this));
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["w"])(this.writeVS.bind(this));
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["f"])(this.readVS.bind(this));
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["w"])(this.writeVS.bind(this));
     };
     VirtualScroll.prototype.readVS = function () {
         var _a = this, contentEl = _a.contentEl, scrollEl = _a.scrollEl, el = _a.el;
@@ -562,22 +562,14 @@ var VirtualScroll = /** @class */ (function () {
             case CELL_TYPE_FOOTER: return this.renderFooter(value, index);
         }
     };
-    VirtualScroll.prototype.hostData = function () {
-        return {
-            style: {
-                height: this.totalHeight + "px"
-            }
-        };
-    };
-    VirtualScroll.prototype.__stencil_render = function () {
+    VirtualScroll.prototype.render = function () {
         var _this = this;
-        if (this.renderItem) {
-            return (Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(VirtualProxy, { dom: this.virtualDom }, this.virtualDom.map(function (node) { return _this.renderVirtualNode(node); })));
-        }
-        return undefined;
+        return (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["H"], { style: {
+                height: this.totalHeight + "px"
+            } }, this.renderItem && (Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["h"])(VirtualProxy, { dom: this.virtualDom }, this.virtualDom.map(function (node) { return _this.renderVirtualNode(node); })))));
     };
     Object.defineProperty(VirtualScroll.prototype, "el", {
-        get: function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
+        get: function () { return Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["e"])(this); },
         enumerable: true,
         configurable: true
     });
@@ -593,7 +585,6 @@ var VirtualScroll = /** @class */ (function () {
         enumerable: true,
         configurable: true
     });
-    VirtualScroll.prototype.render = function () { return Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["h"])(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["H"], this.hostData(), this.__stencil_render()); };
     Object.defineProperty(VirtualScroll, "style", {
         get: function () { return "ion-virtual-scroll{display:block;position:relative;width:100%;contain:strict;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}ion-virtual-scroll>.virtual-loading{opacity:0}ion-virtual-scroll>.virtual-item{position:absolute!important;top:0!important;right:0!important;left:0!important;-webkit-transition-duration:0ms;transition-duration:0ms;will-change:transform}"; },
         enumerable: true,

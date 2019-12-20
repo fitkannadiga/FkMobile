@@ -5,9 +5,9 @@ import { Router } from '@angular/router';
 
 import * as firebase from 'firebase';
 import { Observable } from 'rxjs';
-import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { AngularFireDatabase } from '@angular/fire/database';
 import { GlobalService } from '../../api/global.service';
+import { InternetStatusService } from '../../api/internet-status.service';
 
 @Component({
   selector: 'app-login',
@@ -21,7 +21,7 @@ export class LoginPage implements OnInit {
   loading: any;
   user: Observable<firebase.User>;
 
-  constructor(public navCtrl:NavController, public loadingController: LoadingController, private fire:AngularFireAuth, public toastr: ToastController, public router: Router, public menuCtrl: MenuController, public platform: Platform, private gplus: GooglePlus, public afDataBase: AngularFireDatabase, public globalService: GlobalService) { 
+  constructor(public navCtrl:NavController, public loadingController: LoadingController, private fire:AngularFireAuth, public toastr: ToastController, public router: Router, public menuCtrl: MenuController, public platform: Platform, public afDataBase: AngularFireDatabase, public globalService: GlobalService, public internetStatus: InternetStatusService) { 
     this.user = this.fire.authState;
   }
 
@@ -29,7 +29,16 @@ export class LoginPage implements OnInit {
   }
 
   login(){
+    // check if internet connection is active
+    let internetConnected = this.internetStatus.getNewtowrkStatus();
+    if(internetConnected) {
+      this.initLogin();
+    } else {
+      this.presentToast("Please check your internet connection!");
+    }
+  }
 
+  initLogin(){
     // before registering the user, validate the email id
     let formValid = this.validateFormFields();
     if(formValid){
@@ -107,73 +116,6 @@ export class LoginPage implements OnInit {
       });
     }
   }
-
-  loginWithGoogle(){
-    // if (this.platform.is('cordova')) {
-    //   this.nativeGoogleLogin();
-    // } else {
-    //   this.webGoogleLogin();
-    // }
-
-    this.webGoogleLogin();
-  }
-
-  async nativeGoogleLogin(): Promise<void> {
-    try {
-  
-      const gplusUser = await this.gplus.login({
-        'webClientId': '615957787738-c848hlq7nvre64p51heiaeau00l42699.apps.googleusercontent.com',
-        'offline': true,
-        'scopes': 'profile email'
-      })
-  
-      return await this.fire.auth.signInWithCredential(firebase.auth.GoogleAuthProvider.credential(gplusUser.idToken)).then(data => {
-        this.presentLoading('Please wait...');
-        let userData = {
-          'fullname': data.displayName,
-          'email': data.email
-        }
-
-        console.log("data from the google auth>>>", JSON.stringify(data));
-
-        window.localStorage.setItem("authID", data.uid);
-        window.localStorage.setItem("login-success", "success");
-        
-        this.presentToast('Google login success');
-        this.afDataBase.database.ref(`profiles/`+data.uid).set(userData).then(() => {
-          this.dismissLoader();
-          this.presentToast("We are happy to have you on board!");
-          this.navCtrl.navigateRoot('/tabs');
-          this.menuCtrl.enable(true);
-          setTimeout(()=> {
-            this.dismissLoader();
-          },1000);
-        });
-
-      }).catch(error => {
-        console.log("error from the google auth>>>", JSON.stringify(error));
-        this.presentToast('Google login failed. Please check if it was correct credentials.');
-        setTimeout(()=> {
-          this.dismissLoader();
-        },1000);
-      })
-  
-    } catch(err) {
-      console.log(err)
-      this.presentToast('Google login failure' + err);
-    }
-  }
-  
-
-  webGoogleLogin(){
-    const provider = new firebase.auth.GoogleAuthProvider();
-    const credential = this.fire.auth.signInWithPopup(provider).then((data) => {
-      console.log("google web login success", data);
-    }).catch(error => {
-      console.log("google web login failure", error);
-    })
-  }
-
 
   async presentLoading(msg) {
     this.loading = await this.loadingController.create({

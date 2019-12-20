@@ -62,7 +62,7 @@ var ArticlesPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Articles</ion-title>\n        <!-- <ion-button slot=\"end\" (click)=\"presentLangSelector()\" color=\"light\">{{presentLang}}</ion-button> -->\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div *ngIf=\"!fakeData\" id=\"article-wrapper\">\n        <ion-card class=\"article-card\" *ngFor=\"let article of articleDataObject; let i = index;\" (click)=\"openArticle(article, i);\">\n            <ion-card-header>\n                <img class=\"article-img\" [src]=\"article.img_path\" onError=\"src = './assets/imgs/default.png'\"/>\n                <div class=\"flow\" style=\"height: 150px; overflow: hidden;\" >\n                    <svg viewBox=\"0 0 500 150\" preserveAspectRatio=\"none\" style=\"height: 100%; width: 100%;\">\n                        <path d=\"M-28.21,155.42 C205.41,102.13 408.01,202.78 500.00,3.47 L502.82,149.50 L-4.51,101.14 Z\" style=\"stroke: none; fill: #3B4EAC;\">\n                        </path>\n                    </svg>\n                </div>\n                <div class=\"view-comment-wrapper\">\n                    <span class=\"stat-info\">\n                        <ion-icon color=\"primary\" ios=\"ios-eye\" md=\"md-eye\"></ion-icon>\n                        <span class=\"text\">{{article.view}}</span>\n                    </span>\n                    <span class=\"stat-info\">\n                        <ion-icon color=\"secondary\" ios=\"ios-chatbubbles\" md=\"md-chatbubbles\"></ion-icon>\n                        <span class=\"text\">{{article.comment ? totalComments(article.comment) : 0 }}</span>\n                    </span>\n                </div>\n            </ion-card-header>\n            <ion-card-content>\n                <ion-card-title>\n                    {{article.title}}\n                </ion-card-title>\n                <p class=\"short-desc\">\n                    {{article.short_description}}\n                </p>\n            </ion-card-content>\n        </ion-card>\n    </div>\n    <div *ngIf=\"fakeData\">\n        <ion-card class=\"fake-data-wrapper\" *ngFor=\"let list of fakeList\">\n            <ion-card-header>\n                <div class=\"fake-img-wrapper animate-skeleton-background\"></div>\n            </ion-card-header>\n            <ion-card-content>\n                <p class=\"animate-skeleton-background\"></p>\n                <p class=\"animate-skeleton-background\"></p>\n            </ion-card-content>\n        </ion-card>\n    </div>\n    <!-- <div *ngIf=\"fakeData\" id=\"fake-article-wrapper\">\n        <ion-card *ngFor=\"let list of fakeList\">\n            <ion-grid>\n                <ion-row class=\"content\">\n                    <ion-col size=\"4\">\n                        <div class=\"animate-skeleton-background\"></div>\n                    </ion-col>\n                    <ion-col size=\"8\">\n                        <p class=\"animate-skeleton-background\"></p>\n                    </ion-col>\n                </ion-row>\n                <ion-row class=\"count\">\n                    <ion-col size=\"6\">\n                        <p class=\"animate-skeleton-background\"></p>\n                    </ion-col>\n                    <ion-col size=\"6\">\n                        <p class=\"animate-skeleton-background\"></p>\n                    </ion-col>\n                </ion-row>\n            </ion-grid>\n        </ion-card>\n    </div> -->\n</ion-content>"
+module.exports = "<ion-header>\n    <ion-toolbar>\n        <ion-buttons slot=\"start\">\n            <ion-back-button></ion-back-button>\n        </ion-buttons>\n        <ion-title>Articles</ion-title>\n        <!-- <ion-button slot=\"end\" (click)=\"presentLangSelector()\" color=\"light\">{{presentLang}}</ion-button> -->\n    </ion-toolbar>\n</ion-header>\n\n<ion-content>\n    <div *ngIf=\"!fakeData\" id=\"article-wrapper\">\n        <ion-card class=\"article-card\" *ngFor=\"let article of articleDataObject; let i = index;\" (click)=\"openArticle(article, i);\">\n            <ion-card-header>\n                <img class=\"article-img\" [src]=\"article.img_path\" onError=\"src = './assets/imgs/default.png'\"/>\n                <div class=\"flow\" style=\"height: 150px; overflow: hidden;\" >\n                    <svg viewBox=\"0 0 500 150\" preserveAspectRatio=\"none\" style=\"height: 100%; width: 100%;\">\n                        <path d=\"M-28.21,155.42 C205.41,102.13 408.01,202.78 500.00,3.47 L502.82,149.50 L-4.51,101.14 Z\" style=\"stroke: none; fill: #3B4EAC;\">\n                        </path>\n                    </svg>\n                </div>\n                <div class=\"view-comment-wrapper\">\n                    <span class=\"stat-info\">\n                        <ion-icon color=\"primary\" ios=\"ios-eye\" md=\"md-eye\"></ion-icon>\n                        <span class=\"text\">{{article.view}}</span>\n                    </span>\n                    <span class=\"stat-info\">\n                        <ion-icon color=\"secondary\" ios=\"ios-chatbubbles\" md=\"md-chatbubbles\"></ion-icon>\n                        <span class=\"text\">{{article.comment ? totalComments(article.comment) : 0 }}</span>\n                    </span>\n                </div>\n            </ion-card-header>\n            <ion-card-content>\n                <ion-card-title>\n                    {{article.title}}\n                </ion-card-title>\n                <p class=\"short-desc\">\n                    {{article.short_description}}\n                </p>\n            </ion-card-content>\n        </ion-card>\n    </div>\n    <div *ngIf=\"fakeData\">\n        <ion-card class=\"fake-data-wrapper\" *ngFor=\"let list of fakeList\">\n            <ion-card-header>\n                <div class=\"fake-img-wrapper animate-skeleton-background\"></div>\n            </ion-card-header>\n            <ion-card-content>\n                <p class=\"animate-skeleton-background\"></p>\n                <p class=\"animate-skeleton-background\"></p>\n            </ion-card-content>\n        </ion-card>\n    </div>\n</ion-content>"
 
 /***/ }),
 
@@ -94,8 +94,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _api_article_details_service__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../api/article-details.service */ "./src/app/api/article-details.service.ts");
 /* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -147,10 +145,8 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 
-
-
 var ArticlesPage = /** @class */ (function () {
-    function ArticlesPage(loadingController, events, alertCtrl, commonService, IAB, toastr, router, articleService, afDataBase, socialShare, file) {
+    function ArticlesPage(loadingController, events, alertCtrl, commonService, IAB, toastr, router, articleService, afDataBase) {
         var _this = this;
         this.loadingController = loadingController;
         this.events = events;
@@ -161,8 +157,6 @@ var ArticlesPage = /** @class */ (function () {
         this.router = router;
         this.articleService = articleService;
         this.afDataBase = afDataBase;
-        this.socialShare = socialShare;
-        this.file = file;
         this.presentLang = 'English';
         this.orderingCommentObj = [];
         this.share = false;
@@ -332,113 +326,6 @@ var ArticlesPage = /** @class */ (function () {
             return view + 1;
         });
     };
-    ArticlesPage.prototype.openShareOptions = function (data, event) {
-        event.preventDefault();
-        this.share = true;
-        this.dataForShare = data;
-    };
-    ArticlesPage.prototype.shareTwitter = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var url;
-            return __generator(this, function (_a) {
-                this.share = false;
-                url = 'https://www.facebook.com/fitkannadiga';
-                // Either URL or Image
-                this.socialShare.shareViaTwitter(null, null, url).then(function () {
-                    // Success
-                }).catch(function (e) {
-                    // Error!
-                });
-                return [2 /*return*/];
-            });
-        });
-    };
-    ArticlesPage.prototype.shareWhatsApp = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var url;
-            return __generator(this, function (_a) {
-                // Text + Image or URL works
-                this.share = false;
-                url = 'https://www.facebook.com/fitkannadiga';
-                this.socialShare.shareViaWhatsApp(this.dataForShare.title, null, url).then(function () {
-                    // Success
-                }).catch(function (e) {
-                    // Error!
-                });
-                return [2 /*return*/];
-            });
-        });
-    };
-    ArticlesPage.prototype.resolveLocalFile = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/, this.file.copyFile(this.file.applicationDirectory + "www/assets/imgs/", 'logo.png', this.file.cacheDirectory, new Date().getTime() + ".png")];
-            });
-        });
-    };
-    ArticlesPage.prototype.removeTempFile = function (name) {
-        this.file.removeFile(this.file.cacheDirectory, name);
-    };
-    ArticlesPage.prototype.shareEmail = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                return [2 /*return*/];
-            });
-        });
-    };
-    ArticlesPage.prototype.shareFacebook = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                // Image or URL works
-                this.socialShare.shareViaFacebook('Fit Kannadiga', './assets/imgs/logo.png', 'https://www.facebook.com/fitkanndiga').then(function () {
-                    console.log("fb shared successfully!!");
-                }).catch(function (error) {
-                    console.log("FB error", error);
-                });
-                return [2 /*return*/];
-            });
-        });
-    };
-    ArticlesPage.prototype.shareInstagram = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            return __generator(this, function (_a) {
-                this.socialShare.shareViaInstagram(null, './assets/imgs/logo.png').then(function () {
-                    // this.removeTempFile(data.name);
-                    console.log("insta shared");
-                }).catch(function (error) {
-                    console.log("INSTA error", error);
-                });
-                return [2 /*return*/];
-            });
-        });
-    };
-    // facebookShare(){
-    //   this.share = false;
-    //   let url = 'https://www.facebook.com/fitkannadiga';
-    //   this.socialShare.shareViaFacebook(this.dataForShare.title, this.dataForShare.img_path, url).then((data)=> {
-    //     console.log("facebook share successful!!!", data);
-    //   }).catch(error => {
-    //     console.log("facebook share failure!!!");
-    //   });
-    // }
-    // whatsappShare(){
-    //   this.share = false;
-    //   let url = 'https://www.facebook.com/fitkannadiga';
-    //   this.socialShare.shareViaWhatsApp(this.dataForShare.title, this.dataForShare.img_path, url).then((data)=> {
-    //     console.log("whatsapp share successful!!!", data);
-    //   }).catch(error => {
-    //     console.log("whatsapp share failure!!!");
-    //   });
-    // }
-    // instaShare(){
-    //   this.share = false;
-    //   let url = 'https://www.facebook.com/fitkannadiga';
-    //   this.socialShare.shareViaWhatsApp(this.dataForShare.title, this.dataForShare.img_path, url).then((data)=> {
-    //     console.log("whatsapp share successful!!!", data);
-    //   }).catch(error => {
-    //     console.log("whatsapp share failure!!!");
-    //   });
-    // }
     ArticlesPage.prototype.presentLoading = function (msg) {
         return __awaiter(this, void 0, void 0, function () {
             var _a;
@@ -494,7 +381,7 @@ var ArticlesPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./articles.page.html */ "./src/app/pages/articles/articles.page.html"),
             styles: [__webpack_require__(/*! ./articles.page.scss */ "./src/app/pages/articles/articles.page.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Events"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["AlertController"], _api_common_service__WEBPACK_IMPORTED_MODULE_2__["CommonService"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_3__["InAppBrowser"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _api_article_details_service__WEBPACK_IMPORTED_MODULE_5__["ArticleDetailsService"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__["AngularFireDatabase"], _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_8__["SocialSharing"], _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_7__["File"]])
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Events"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["AlertController"], _api_common_service__WEBPACK_IMPORTED_MODULE_2__["CommonService"], _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_3__["InAppBrowser"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"], _api_article_details_service__WEBPACK_IMPORTED_MODULE_5__["ArticleDetailsService"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__["AngularFireDatabase"]])
     ], ArticlesPage);
     return ArticlesPage;
 }());

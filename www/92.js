@@ -1,15 +1,14 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[92],{
 
-/***/ "./node_modules/@ionic/core/dist/esm-es5/shadow-css-bbdf056f-05cd1ccb.js":
+/***/ "./node_modules/@ionic/core/dist/esm-es5/shadow-css-9e778f69-c68d0961.js":
 /*!*******************************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm-es5/shadow-css-bbdf056f-05cd1ccb.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm-es5/shadow-css-9e778f69-c68d0961.js ***!
   \*******************************************************************************/
-/*! exports provided: ShadowCss, scopeCss */
+/*! exports provided: scopeCss */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ShadowCss", function() { return ShadowCss; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "scopeCss", function() { return scopeCss; });
 /**
  * @license
@@ -22,334 +21,35 @@ __webpack_require__.r(__webpack_exports__);
  * https://github.com/webcomponents/webcomponentsjs/blob/4efecd7e0e/src/ShadowCSS/ShadowCSS.js
  * https://github.com/angular/angular/blob/master/packages/compiler/src/shadow_css.ts
  */
-var ShadowCss = /** @class */ (function () {
-    function ShadowCss() {
-        this.strictStyling = true;
-    }
-    ShadowCss.prototype.shimCssText = function (cssText, scopeId, hostScopeId, slotScopeId, commentOriginalSelector) {
-        if (hostScopeId === void 0) { hostScopeId = ''; }
-        if (slotScopeId === void 0) { slotScopeId = ''; }
-        if (commentOriginalSelector === void 0) { commentOriginalSelector = false; }
-        var commentsWithHash = extractCommentsWithHash(cssText);
-        cssText = stripComments(cssText);
-        var orgSelectors = [];
-        if (commentOriginalSelector) {
-            var processCommentedSelector_1 = function (rule) {
-                var placeholder = "/*!@___" + orgSelectors.length + "___*/";
-                var comment = "/*!@" + rule.selector + "*/";
-                orgSelectors.push({ placeholder: placeholder, comment: comment });
-                rule.selector = placeholder + rule.selector;
-                return rule;
-            };
-            cssText = processRules(cssText, function (rule) {
-                if (rule.selector[0] !== '@') {
-                    return processCommentedSelector_1(rule);
-                }
-                else if (rule.selector.startsWith('@media') || rule.selector.startsWith('@supports') ||
-                    rule.selector.startsWith('@page') || rule.selector.startsWith('@document')) {
-                    rule.content = processRules(rule.content, processCommentedSelector_1);
-                    return rule;
-                }
-                return rule;
-            });
-        }
-        var scopedCssText = this._scopeCssText(cssText, scopeId, hostScopeId, slotScopeId, commentOriginalSelector);
-        cssText = [scopedCssText].concat(commentsWithHash).join('\n');
-        if (commentOriginalSelector) {
-            orgSelectors.forEach(function (_a) {
-                var placeholder = _a.placeholder, comment = _a.comment;
-                cssText = cssText.replace(placeholder, comment);
-            });
-        }
-        return cssText;
+var safeSelector = function (selector) {
+    var placeholders = [];
+    var index = 0;
+    var content;
+    // Replaces attribute selectors with placeholders.
+    // The WS in [attr="va lue"] would otherwise be interpreted as a selector separator.
+    selector = selector.replace(/(\[[^\]]*\])/g, function (_, keep) {
+        var replaceBy = "__ph-" + index + "__";
+        placeholders.push(keep);
+        index++;
+        return replaceBy;
+    });
+    // Replaces the expression in `:nth-child(2n + 1)` with a placeholder.
+    // WS and "+" would otherwise be interpreted as selector separators.
+    content = selector.replace(/(:nth-[-\w]+)(\([^)]+\))/g, function (_, pseudo, exp) {
+        var replaceBy = "__ph-" + index + "__";
+        placeholders.push(exp);
+        index++;
+        return pseudo + replaceBy;
+    });
+    var ss = {
+        content: content,
+        placeholders: placeholders,
     };
-    ShadowCss.prototype._scopeCssText = function (cssText, scopeId, hostScopeId, slotScopeId, commentOriginalSelector) {
-        // replace :host and :host-context -shadowcsshost and -shadowcsshost respectively
-        cssText = this._insertPolyfillHostInCssText(cssText);
-        cssText = this._convertColonHost(cssText);
-        cssText = this._convertColonHostContext(cssText);
-        cssText = this._convertColonSlotted(cssText, slotScopeId);
-        cssText = this._convertShadowDOMSelectors(cssText);
-        if (scopeId) {
-            cssText = this._scopeSelectors(cssText, scopeId, hostScopeId, slotScopeId, commentOriginalSelector);
-        }
-        cssText = cssText.replace(/-shadowcsshost-no-combinator/g, "." + hostScopeId);
-        cssText = cssText.replace(/>\s*\*\s+([^{, ]+)/gm, ' $1 ');
-        return cssText.trim();
-    };
-    /*
-     * convert a rule like :host(.foo) > .bar { }
-     *
-     * to
-     *
-     * .foo<scopeName> > .bar
-    */
-    ShadowCss.prototype._convertColonHost = function (cssText) {
-        return this._convertColonRule(cssText, _cssColonHostRe, this._colonHostPartReplacer);
-    };
-    /*
-   * convert a rule like ::slotted(.foo) { }
-  */
-    ShadowCss.prototype._convertColonSlotted = function (cssText, slotAttr) {
-        var regExp = _cssColonSlottedRe;
-        return cssText.replace(regExp, function () {
-            var m = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                m[_i] = arguments[_i];
-            }
-            if (m[2]) {
-                var compound = m[2].trim();
-                var suffix = m[3];
-                var sel = '.' + slotAttr + ' > ' + compound + suffix;
-                return sel;
-            }
-            else {
-                return _polyfillHostNoCombinator + m[3];
-            }
-        });
-    };
-    /*
-     * convert a rule like :host-context(.foo) > .bar { }
-     *
-     * to
-     *
-     * .foo<scopeName> > .bar, .foo scopeName > .bar { }
-     *
-     * and
-     *
-     * :host-context(.foo:host) .bar { ... }
-     *
-     * to
-     *
-     * .foo<scopeName> .bar { ... }
-    */
-    ShadowCss.prototype._convertColonHostContext = function (cssText) {
-        return this._convertColonRule(cssText, _cssColonHostContextRe, this._colonHostContextPartReplacer);
-    };
-    ShadowCss.prototype._convertColonRule = function (cssText, regExp, partReplacer) {
-        // m[1] = :host(-context), m[2] = contents of (), m[3] rest of rule
-        return cssText.replace(regExp, function () {
-            var m = [];
-            for (var _i = 0; _i < arguments.length; _i++) {
-                m[_i] = arguments[_i];
-            }
-            if (m[2]) {
-                var parts = m[2].split(',');
-                var r = [];
-                for (var i = 0; i < parts.length; i++) {
-                    var p = parts[i].trim();
-                    if (!p)
-                        break;
-                    r.push(partReplacer(_polyfillHostNoCombinator, p, m[3]));
-                }
-                return r.join(',');
-            }
-            else {
-                return _polyfillHostNoCombinator + m[3];
-            }
-        });
-    };
-    ShadowCss.prototype._colonHostContextPartReplacer = function (host, part, suffix) {
-        if (part.indexOf(_polyfillHost) > -1) {
-            return this._colonHostPartReplacer(host, part, suffix);
-        }
-        else {
-            return host + part + suffix + ', ' + part + ' ' + host + suffix;
-        }
-    };
-    ShadowCss.prototype._colonHostPartReplacer = function (host, part, suffix) {
-        return host + part.replace(_polyfillHost, '') + suffix;
-    };
-    /*
-     * Convert combinators like ::shadow and pseudo-elements like ::content
-     * by replacing with space.
-    */
-    ShadowCss.prototype._convertShadowDOMSelectors = function (cssText) {
-        return _shadowDOMSelectorsRe.reduce(function (result, pattern) { return result.replace(pattern, ' '); }, cssText);
-    };
-    // change a selector like 'div' to 'name div'
-    ShadowCss.prototype._scopeSelectors = function (cssText, scopeSelector, hostSelector, slotSelector, commentOriginalSelector) {
-        var _this = this;
-        return processRules(cssText, function (rule) {
-            var selector = rule.selector;
-            var content = rule.content;
-            if (rule.selector[0] !== '@') {
-                selector =
-                    _this._scopeSelector(rule.selector, scopeSelector, hostSelector, slotSelector, _this.strictStyling);
-            }
-            else if (rule.selector.startsWith('@media') || rule.selector.startsWith('@supports') ||
-                rule.selector.startsWith('@page') || rule.selector.startsWith('@document')) {
-                content = _this._scopeSelectors(rule.content, scopeSelector, hostSelector, slotSelector, commentOriginalSelector);
-            }
-            selector = selector.replace(/\s{2,}/g, ' ').trim();
-            return new CssRule(selector, content);
-        });
-    };
-    ShadowCss.prototype._scopeSelector = function (selector, scopeSelector, hostSelector, slotSelector, strict) {
-        var _this = this;
-        return selector.split(',')
-            .map(function (shallowPart) {
-            if (slotSelector && shallowPart.indexOf('.' + slotSelector) > -1) {
-                return shallowPart.trim();
-            }
-            if (_this._selectorNeedsScoping(shallowPart, scopeSelector)) {
-                return strict ?
-                    _this._applyStrictSelectorScope(shallowPart, scopeSelector, hostSelector).trim() :
-                    _this._applySelectorScope(shallowPart, scopeSelector, hostSelector).trim();
-            }
-            else {
-                return shallowPart.trim();
-            }
-        })
-            .join(', ');
-    };
-    ShadowCss.prototype._selectorNeedsScoping = function (selector, scopeSelector) {
-        var re = this._makeScopeMatcher(scopeSelector);
-        return !re.test(selector);
-    };
-    ShadowCss.prototype._makeScopeMatcher = function (scopeSelector) {
-        var lre = /\[/g;
-        var rre = /\]/g;
-        scopeSelector = scopeSelector.replace(lre, '\\[').replace(rre, '\\]');
-        return new RegExp('^(' + scopeSelector + ')' + _selectorReSuffix, 'm');
-    };
-    ShadowCss.prototype._applySelectorScope = function (selector, scopeSelector, hostSelector) {
-        // Difference from webcomponents.js: scopeSelector could not be an array
-        return this._applySimpleSelectorScope(selector, scopeSelector, hostSelector);
-    };
-    // scope via name and [is=name]
-    ShadowCss.prototype._applySimpleSelectorScope = function (selector, scopeSelector, hostSelector) {
-        // In Android browser, the lastIndex is not reset when the regex is used in String.replace()
-        _polyfillHostRe.lastIndex = 0;
-        if (_polyfillHostRe.test(selector)) {
-            var replaceBy_1 = this.strictStyling ? "." + hostSelector : scopeSelector;
-            return selector
-                .replace(_polyfillHostNoCombinatorRe, function (_, selector) {
-                return selector.replace(/([^:]*)(:*)(.*)/, function (_, before, colon, after) {
-                    return before + replaceBy_1 + colon + after;
-                });
-            })
-                .replace(_polyfillHostRe, replaceBy_1 + ' ');
-        }
-        return scopeSelector + ' ' + selector;
-    };
-    ShadowCss.prototype._applyStrictSelectorScope = function (selector, scopeSelector, hostSelector) {
-        var _this = this;
-        var isRe = /\[is=([^\]]*)\]/g;
-        scopeSelector = scopeSelector.replace(isRe, function (_) {
-            var parts = [];
-            for (var _i = 1; _i < arguments.length; _i++) {
-                parts[_i - 1] = arguments[_i];
-            }
-            return parts[0];
-        });
-        var className = '.' + scopeSelector;
-        var _scopeSelectorPart = function (p) {
-            var scopedP = p.trim();
-            if (!scopedP) {
-                return '';
-            }
-            if (p.indexOf(_polyfillHostNoCombinator) > -1) {
-                scopedP = _this._applySimpleSelectorScope(p, scopeSelector, hostSelector);
-            }
-            else {
-                // remove :host since it should be unnecessary
-                var t = p.replace(_polyfillHostRe, '');
-                if (t.length > 0) {
-                    var matches = t.match(/([^:]*)(:*)(.*)/);
-                    if (matches) {
-                        scopedP = matches[1] + className + matches[2] + matches[3];
-                    }
-                }
-            }
-            return scopedP;
-        };
-        var safeContent = new SafeSelector(selector);
-        selector = safeContent.content();
-        var scopedSelector = '';
-        var startIndex = 0;
-        var res;
-        var sep = /( |>|\+|~(?!=))\s*/g;
-        // If a selector appears before :host it should not be shimmed as it
-        // matches on ancestor elements and not on elements in the host's shadow
-        // `:host-context(div)` is transformed to
-        // `-shadowcsshost-no-combinatordiv, div -shadowcsshost-no-combinator`
-        // the `div` is not part of the component in the 2nd selectors and should not be scoped.
-        // Historically `component-tag:host` was matching the component so we also want to preserve
-        // this behavior to avoid breaking legacy apps (it should not match).
-        // The behavior should be:
-        // - `tag:host` -> `tag[h]` (this is to avoid breaking legacy apps, should not match anything)
-        // - `tag :host` -> `tag [h]` (`tag` is not scoped because it's considered part of a
-        //   `:host-context(tag)`)
-        var hasHost = selector.indexOf(_polyfillHostNoCombinator) > -1;
-        // Only scope parts after the first `-shadowcsshost-no-combinator` when it is present
-        var shouldScope = !hasHost;
-        while ((res = sep.exec(selector)) !== null) {
-            var separator = res[1];
-            var part_1 = selector.slice(startIndex, res.index).trim();
-            shouldScope = shouldScope || part_1.indexOf(_polyfillHostNoCombinator) > -1;
-            var scopedPart = shouldScope ? _scopeSelectorPart(part_1) : part_1;
-            scopedSelector += scopedPart + " " + separator + " ";
-            startIndex = sep.lastIndex;
-        }
-        var part = selector.substring(startIndex);
-        shouldScope = shouldScope || part.indexOf(_polyfillHostNoCombinator) > -1;
-        scopedSelector += shouldScope ? _scopeSelectorPart(part) : part;
-        // replace the placeholders with their original values
-        return safeContent.restore(scopedSelector);
-    };
-    ShadowCss.prototype._insertPolyfillHostInCssText = function (selector) {
-        selector = selector
-            .replace(_colonHostContextRe, _polyfillHostContext)
-            .replace(_colonHostRe, _polyfillHost)
-            .replace(_colonSlottedRe, _polyfillSlotted);
-        return selector;
-    };
-    return ShadowCss;
-}());
-var SafeSelector = /** @class */ (function () {
-    function SafeSelector(selector) {
-        var _this = this;
-        this.placeholders = [];
-        this.index = 0;
-        // Replaces attribute selectors with placeholders.
-        // The WS in [attr="va lue"] would otherwise be interpreted as a selector separator.
-        selector = selector.replace(/(\[[^\]]*\])/g, function (_, keep) {
-            var replaceBy = "__ph-" + _this.index + "__";
-            _this.placeholders.push(keep);
-            _this.index++;
-            return replaceBy;
-        });
-        // Replaces the expression in `:nth-child(2n + 1)` with a placeholder.
-        // WS and "+" would otherwise be interpreted as selector separators.
-        this._content = selector.replace(/(:nth-[-\w]+)(\([^)]+\))/g, function (_, pseudo, exp) {
-            var replaceBy = "__ph-" + _this.index + "__";
-            _this.placeholders.push(exp);
-            _this.index++;
-            return pseudo + replaceBy;
-        });
-    }
-    SafeSelector.prototype.restore = function (content) {
-        var _this = this;
-        return content.replace(/__ph-(\d+)__/g, function (_, index) { return _this.placeholders[+index]; });
-    };
-    SafeSelector.prototype.content = function () { return this._content; };
-    return SafeSelector;
-}());
-var CssRule = /** @class */ (function () {
-    function CssRule(selector, content) {
-        this.selector = selector;
-        this.content = content;
-    }
-    return CssRule;
-}());
-var StringWithEscapedBlocks = /** @class */ (function () {
-    function StringWithEscapedBlocks(escapedString, blocks) {
-        this.escapedString = escapedString;
-        this.blocks = blocks;
-    }
-    return StringWithEscapedBlocks;
-}());
+    return ss;
+};
+var restoreSafeSelector = function (placeholders, content) {
+    return content.replace(/__ph-(\d+)__/g, function (_, index) { return placeholders[+index]; });
+};
 var _polyfillHost = '-shadowcsshost';
 var _polyfillSlotted = '-shadowcssslotted';
 // note: :host-context pre-processed to -shadowcsshostcontext.
@@ -401,7 +101,11 @@ var processRules = function (input, ruleCallback) {
             suffix = suffix.substring(BLOCK_PLACEHOLDER.length + 1);
             contentPrefix = '{';
         }
-        var rule = ruleCallback(new CssRule(selector, content));
+        var cssRule = {
+            selector: selector,
+            content: content
+        };
+        var rule = ruleCallback(cssRule);
         return "" + m[1] + rule.selector + m[3] + contentPrefix + rule.content + suffix;
     });
 };
@@ -435,11 +139,250 @@ var escapeBlocks = function (input) {
         escapedBlocks.push(currentBlockParts.join(''));
         resultParts.push(BLOCK_PLACEHOLDER);
     }
-    return new StringWithEscapedBlocks(resultParts.join(''), escapedBlocks);
+    var strEscapedBlocks = {
+        escapedString: resultParts.join(''),
+        blocks: escapedBlocks
+    };
+    return strEscapedBlocks;
+};
+var insertPolyfillHostInCssText = function (selector) {
+    selector = selector
+        .replace(_colonHostContextRe, _polyfillHostContext)
+        .replace(_colonHostRe, _polyfillHost)
+        .replace(_colonSlottedRe, _polyfillSlotted);
+    return selector;
+};
+var convertColonRule = function (cssText, regExp, partReplacer) {
+    // m[1] = :host(-context), m[2] = contents of (), m[3] rest of rule
+    return cssText.replace(regExp, function () {
+        var m = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            m[_i] = arguments[_i];
+        }
+        if (m[2]) {
+            var parts = m[2].split(',');
+            var r = [];
+            for (var i = 0; i < parts.length; i++) {
+                var p = parts[i].trim();
+                if (!p)
+                    break;
+                r.push(partReplacer(_polyfillHostNoCombinator, p, m[3]));
+            }
+            return r.join(',');
+        }
+        else {
+            return _polyfillHostNoCombinator + m[3];
+        }
+    });
+};
+var colonHostPartReplacer = function (host, part, suffix) {
+    return host + part.replace(_polyfillHost, '') + suffix;
+};
+var convertColonHost = function (cssText) {
+    return convertColonRule(cssText, _cssColonHostRe, colonHostPartReplacer);
+};
+var colonHostContextPartReplacer = function (host, part, suffix) {
+    if (part.indexOf(_polyfillHost) > -1) {
+        return colonHostPartReplacer(host, part, suffix);
+    }
+    else {
+        return host + part + suffix + ', ' + part + ' ' + host + suffix;
+    }
+};
+var convertColonSlotted = function (cssText, slotAttr) {
+    var regExp = _cssColonSlottedRe;
+    return cssText.replace(regExp, function () {
+        var m = [];
+        for (var _i = 0; _i < arguments.length; _i++) {
+            m[_i] = arguments[_i];
+        }
+        if (m[2]) {
+            var compound = m[2].trim();
+            var suffix = m[3];
+            var sel = '.' + slotAttr + ' > ' + compound + suffix;
+            return sel;
+        }
+        else {
+            return _polyfillHostNoCombinator + m[3];
+        }
+    });
+};
+var convertColonHostContext = function (cssText) {
+    return convertColonRule(cssText, _cssColonHostContextRe, colonHostContextPartReplacer);
+};
+var convertShadowDOMSelectors = function (cssText) {
+    return _shadowDOMSelectorsRe.reduce(function (result, pattern) { return result.replace(pattern, ' '); }, cssText);
+};
+var makeScopeMatcher = function (scopeSelector) {
+    var lre = /\[/g;
+    var rre = /\]/g;
+    scopeSelector = scopeSelector.replace(lre, '\\[').replace(rre, '\\]');
+    return new RegExp('^(' + scopeSelector + ')' + _selectorReSuffix, 'm');
+};
+var selectorNeedsScoping = function (selector, scopeSelector) {
+    var re = makeScopeMatcher(scopeSelector);
+    return !re.test(selector);
+};
+var applySimpleSelectorScope = function (selector, scopeSelector, hostSelector) {
+    // In Android browser, the lastIndex is not reset when the regex is used in String.replace()
+    _polyfillHostRe.lastIndex = 0;
+    if (_polyfillHostRe.test(selector)) {
+        var replaceBy_1 = "." + hostSelector;
+        return selector
+            .replace(_polyfillHostNoCombinatorRe, function (_, selector) {
+            return selector.replace(/([^:]*)(:*)(.*)/, function (_, before, colon, after) {
+                return before + replaceBy_1 + colon + after;
+            });
+        })
+            .replace(_polyfillHostRe, replaceBy_1 + ' ');
+    }
+    return scopeSelector + ' ' + selector;
+};
+var applyStrictSelectorScope = function (selector, scopeSelector, hostSelector) {
+    var isRe = /\[is=([^\]]*)\]/g;
+    scopeSelector = scopeSelector.replace(isRe, function (_) {
+        var parts = [];
+        for (var _i = 1; _i < arguments.length; _i++) {
+            parts[_i - 1] = arguments[_i];
+        }
+        return parts[0];
+    });
+    var className = '.' + scopeSelector;
+    var _scopeSelectorPart = function (p) {
+        var scopedP = p.trim();
+        if (!scopedP) {
+            return '';
+        }
+        if (p.indexOf(_polyfillHostNoCombinator) > -1) {
+            scopedP = applySimpleSelectorScope(p, scopeSelector, hostSelector);
+        }
+        else {
+            // remove :host since it should be unnecessary
+            var t = p.replace(_polyfillHostRe, '');
+            if (t.length > 0) {
+                var matches = t.match(/([^:]*)(:*)(.*)/);
+                if (matches) {
+                    scopedP = matches[1] + className + matches[2] + matches[3];
+                }
+            }
+        }
+        return scopedP;
+    };
+    var safeContent = safeSelector(selector);
+    selector = safeContent.content;
+    var scopedSelector = '';
+    var startIndex = 0;
+    var res;
+    var sep = /( |>|\+|~(?!=))\s*/g;
+    // If a selector appears before :host it should not be shimmed as it
+    // matches on ancestor elements and not on elements in the host's shadow
+    // `:host-context(div)` is transformed to
+    // `-shadowcsshost-no-combinatordiv, div -shadowcsshost-no-combinator`
+    // the `div` is not part of the component in the 2nd selectors and should not be scoped.
+    // Historically `component-tag:host` was matching the component so we also want to preserve
+    // this behavior to avoid breaking legacy apps (it should not match).
+    // The behavior should be:
+    // - `tag:host` -> `tag[h]` (this is to avoid breaking legacy apps, should not match anything)
+    // - `tag :host` -> `tag [h]` (`tag` is not scoped because it's considered part of a
+    //   `:host-context(tag)`)
+    var hasHost = selector.indexOf(_polyfillHostNoCombinator) > -1;
+    // Only scope parts after the first `-shadowcsshost-no-combinator` when it is present
+    var shouldScope = !hasHost;
+    while ((res = sep.exec(selector)) !== null) {
+        var separator = res[1];
+        var part_1 = selector.slice(startIndex, res.index).trim();
+        shouldScope = shouldScope || part_1.indexOf(_polyfillHostNoCombinator) > -1;
+        var scopedPart = shouldScope ? _scopeSelectorPart(part_1) : part_1;
+        scopedSelector += scopedPart + " " + separator + " ";
+        startIndex = sep.lastIndex;
+    }
+    var part = selector.substring(startIndex);
+    shouldScope = shouldScope || part.indexOf(_polyfillHostNoCombinator) > -1;
+    scopedSelector += shouldScope ? _scopeSelectorPart(part) : part;
+    // replace the placeholders with their original values
+    return restoreSafeSelector(safeContent.placeholders, scopedSelector);
+};
+var scopeSelector = function (selector, scopeSelectorText, hostSelector, slotSelector) {
+    return selector.split(',')
+        .map(function (shallowPart) {
+        if (slotSelector && shallowPart.indexOf('.' + slotSelector) > -1) {
+            return shallowPart.trim();
+        }
+        if (selectorNeedsScoping(shallowPart, scopeSelectorText)) {
+            return applyStrictSelectorScope(shallowPart, scopeSelectorText, hostSelector).trim();
+        }
+        else {
+            return shallowPart.trim();
+        }
+    })
+        .join(', ');
+};
+var scopeSelectors = function (cssText, scopeSelectorText, hostSelector, slotSelector, commentOriginalSelector) {
+    return processRules(cssText, function (rule) {
+        var selector = rule.selector;
+        var content = rule.content;
+        if (rule.selector[0] !== '@') {
+            selector = scopeSelector(rule.selector, scopeSelectorText, hostSelector, slotSelector);
+        }
+        else if (rule.selector.startsWith('@media') || rule.selector.startsWith('@supports') ||
+            rule.selector.startsWith('@page') || rule.selector.startsWith('@document')) {
+            content = scopeSelectors(rule.content, scopeSelectorText, hostSelector, slotSelector);
+        }
+        var cssRule = {
+            selector: selector.replace(/\s{2,}/g, ' ').trim(),
+            content: content
+        };
+        return cssRule;
+    });
+};
+var scopeCssText = function (cssText, scopeId, hostScopeId, slotScopeId, commentOriginalSelector) {
+    cssText = insertPolyfillHostInCssText(cssText);
+    cssText = convertColonHost(cssText);
+    cssText = convertColonHostContext(cssText);
+    cssText = convertColonSlotted(cssText, slotScopeId);
+    cssText = convertShadowDOMSelectors(cssText);
+    if (scopeId) {
+        cssText = scopeSelectors(cssText, scopeId, hostScopeId, slotScopeId);
+    }
+    cssText = cssText.replace(/-shadowcsshost-no-combinator/g, "." + hostScopeId);
+    cssText = cssText.replace(/>\s*\*\s+([^{, ]+)/gm, ' $1 ');
+    return cssText.trim();
 };
 var scopeCss = function (cssText, scopeId, commentOriginalSelector) {
-    var sc = new ShadowCss();
-    return sc.shimCssText(cssText, scopeId, scopeId + '-h', scopeId + '-s', commentOriginalSelector);
+    var hostScopeId = scopeId + '-h';
+    var slotScopeId = scopeId + '-s';
+    var commentsWithHash = extractCommentsWithHash(cssText);
+    cssText = stripComments(cssText);
+    var orgSelectors = [];
+    if (commentOriginalSelector) {
+        var processCommentedSelector_1 = function (rule) {
+            var placeholder = "/*!@___" + orgSelectors.length + "___*/";
+            var comment = "/*!@" + rule.selector + "*/";
+            orgSelectors.push({ placeholder: placeholder, comment: comment });
+            rule.selector = placeholder + rule.selector;
+            return rule;
+        };
+        cssText = processRules(cssText, function (rule) {
+            if (rule.selector[0] !== '@') {
+                return processCommentedSelector_1(rule);
+            }
+            else if (rule.selector.startsWith('@media') || rule.selector.startsWith('@supports') ||
+                rule.selector.startsWith('@page') || rule.selector.startsWith('@document')) {
+                rule.content = processRules(rule.content, processCommentedSelector_1);
+                return rule;
+            }
+            return rule;
+        });
+    }
+    var scopedCssText = scopeCssText(cssText, scopeId, hostScopeId, slotScopeId);
+    cssText = [scopedCssText].concat(commentsWithHash).join('\n');
+    if (commentOriginalSelector) {
+        orgSelectors.forEach(function (_a) {
+            var placeholder = _a.placeholder, comment = _a.comment;
+            cssText = cssText.replace(placeholder, comment);
+        });
+    }
+    return cssText;
 };
 
 

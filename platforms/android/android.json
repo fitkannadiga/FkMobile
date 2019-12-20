@@ -4,8 +4,405 @@
     "uninstalled": []
   },
   "config_munge": {
-    "files": {}
+    "files": {
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BackgroundMode\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundMode\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"BackgroundModeExt\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.background.BackgroundModeExt\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"KeepRunning\" value=\"true\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Camera\"><param name=\"android-package\" value=\"org.apache.cordova.camera.CameraLauncher\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"FirebasePlugin\"><param name=\"android-package\" value=\"org.apache.cordova.firebase.FirebasePlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Insomnia\"><param name=\"android-package\" value=\"nl.xservices.plugins.Insomnia\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"CDVOrientation\"><param name=\"android-package\" value=\"cordova.plugins.screenorientation.CDVOrientation\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"FCMPlugin\"><param name=\"android-package\" value=\"com.gae.scaffolder.plugin.FCMPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<service android:name=\"de.appplant.cordova.plugin.background.ForegroundService\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:enabled=\"true\" android:exported=\"false\" android:name=\"com.google.android.gms.measurement.AppMeasurementService\" />",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"org.apache.cordova.firebase.FirebasePluginMessagingService\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"org.apache.cordova.firebase.FirebasePluginInstanceIDService\"><intent-filter><action android:name=\"com.google.firebase.INSTANCE_ID_EVENT\" /></intent-filter></service>",
+              "count": 1
+            },
+            {
+              "xml": "<receiver android:name=\"org.apache.cordova.firebase.OnNotificationOpenReceiver\" />",
+              "count": 1
+            },
+            {
+              "xml": "<activity android:exported=\"true\" android:launchMode=\"singleTop\" android:name=\"com.gae.scaffolder.plugin.FCMPluginActivity\"><intent-filter><action android:name=\"FCM_PLUGIN_ACTIVITY\" /><category android:name=\"android.intent.category.DEFAULT\" /></intent-filter></activity>",
+              "count": 1
+            },
+            {
+              "xml": "<service android:name=\"com.gae.scaffolder.plugin.MyFirebaseMessagingService\" android:stopWithTask=\"false\"><intent-filter><action android:name=\"com.google.firebase.MESSAGING_EVENT\" /></intent-filter></service>",
+              "count": 1
+            }
+          ],
+          "/manifest": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+              "count": 1
+            }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 2
+            },
+            {
+              "xml": "<uses-permission android:name=\"android.permission.WAKE_LOCK\" />",
+              "count": 1
+            }
+          ],
+          "application": [
+            {
+              "xml": "<provider android:authorities=\"${applicationId}.provider\" android:exported=\"false\" android:grantUriPermissions=\"true\" android:name=\"org.apache.cordova.camera.FileProvider\"><meta-data android:name=\"android.support.FILE_PROVIDER_PATHS\" android:resource=\"@xml/camera_provider_paths\" /></provider>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" onload=\"true\" value=\"io.ionic.keyboard.IonicKeyboard\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"TTS\"><param name=\"android-package\" value=\"com.wordsbaking.cordova.tts.TTS\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
   },
-  "installed_plugins": {},
-  "dependent_plugins": {}
+  "installed_plugins": {
+    "cordova-android-firebase-gradle-release": {
+      "FIREBASE-CORE": "17.0.0",
+      "FIREBASE-ADS": "18.0.0",
+      "FIREBASE-ANALYTICS": "17.0.0",
+      "FIREBASE-APPINDEXING": "19.0.0",
+      "FIREBASE-AUTH": "18.0.0",
+      "FIREBASE-FIRESTORE": "20.0.0",
+      "FIREBASE-FUNCTIONS": "18.0.0",
+      "FIREBASE-MESSAGING": "19.0.0",
+      "FIREBASE-STORAGE": "18.0.0",
+      "FIREBASE-CRASH": "16.2.1",
+      "CRASHLYTICS": "2.10.1",
+      "FIREBASE-DYNAMIC-LINKS": "18.0.0",
+      "FIREBASE-INVITES": "17.0.0",
+      "FIREBASE-INAPPMESSAGING": "18.0.1",
+      "FIREBASE-INAPPMESSAGING-DISPLAY": "18.0.1",
+      "FIREBASE-ML-VISION": "21.0.0",
+      "FIREBASE-ML-VISION-IMAGE-LABEL-MODEL": "18.0.0",
+      "FIREBASE-ML-VISION-FACE-MODEL": "18.0.0",
+      "FIREBASE-ML-VISION-OBJECT-DETECTION-MODEL": "17.0.0",
+      "FIREBASE-ML-NATURAL-LANGUAGE": "20.0.0",
+      "FIREBASE-ML-NATURAL-LANGUAGE-LANGUAGE-ID-MODEL": "20.0.0",
+      "FIREBASE-ML-NATURAL-LANGUAGE-TRANSLATE-MODEL": "20.0.0",
+      "FIREBASE-ML-NATURAL-LANGUAGE-SMART-REPLY-MODEL": "20.0.0",
+      "FIREBASE-ML-MODEL-INTERPRETER": "20.0.0",
+      "FIREBASE-ML-VISION-AUTOML": "17.0.0",
+      "FIREBASE-PERF": "18.0.0",
+      "FIREBASE-DATABASE": "18.0.0",
+      "FIREBASE-CONFIG": "18.0.0",
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-android-play-services-gradle-release": {
+      "PLAY_SERVICES_VERSION": "+",
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-android-support-v4": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-background-mode": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-firebase": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-insomnia": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-tts": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    },
+    "cordova-plugin-fcm-with-dependecy-updated": {
+      "FCM_CORE_VERSION": "16.0.9",
+      "FCM_VERSION": "18.0.0",
+      "GRADLE_TOOLS_VERSION": "3.5.0",
+      "GOOGLE_SERVICES_VERSION": "4.2.0",
+      "PACKAGE_NAME": "com.ionic.fitkannadiga"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova-plugin-background-mode.BackgroundMode",
+      "file": "plugins/cordova-plugin-background-mode/www/background-mode.js",
+      "pluginId": "cordova-plugin-background-mode",
+      "clobbers": [
+        "cordova.plugins.backgroundMode",
+        "plugin.backgroundMode"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.Camera",
+      "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "Camera"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.CameraPopoverOptions",
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverOptions"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.camera",
+      "file": "plugins/cordova-plugin-camera/www/Camera.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "navigator.camera"
+      ]
+    },
+    {
+      "id": "cordova-plugin-camera.CameraPopoverHandle",
+      "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+      "pluginId": "cordova-plugin-camera",
+      "clobbers": [
+        "CameraPopoverHandle"
+      ]
+    },
+    {
+      "id": "cordova-plugin-firebase.FirebasePlugin",
+      "file": "plugins/cordova-plugin-firebase/www/firebase.js",
+      "pluginId": "cordova-plugin-firebase",
+      "clobbers": [
+        "FirebasePlugin"
+      ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
+    },
+    {
+      "id": "cordova-plugin-insomnia.Insomnia",
+      "file": "plugins/cordova-plugin-insomnia/www/Insomnia.js",
+      "pluginId": "cordova-plugin-insomnia",
+      "clobbers": [
+        "window.plugins.insomnia"
+      ]
+    },
+    {
+      "id": "cordova-plugin-ionic-keyboard.keyboard",
+      "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
+      "pluginId": "cordova-plugin-ionic-keyboard",
+      "clobbers": [
+        "window.Keyboard"
+      ]
+    },
+    {
+      "id": "cordova-plugin-network-information.network",
+      "file": "plugins/cordova-plugin-network-information/www/network.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "navigator.connection",
+        "navigator.network.connection"
+      ]
+    },
+    {
+      "id": "cordova-plugin-network-information.Connection",
+      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "Connection"
+      ]
+    },
+    {
+      "id": "es6-promise-plugin.Promise",
+      "file": "plugins/es6-promise-plugin/www/promise.js",
+      "pluginId": "es6-promise-plugin",
+      "runs": true
+    },
+    {
+      "id": "cordova-plugin-screen-orientation.screenorientation",
+      "file": "plugins/cordova-plugin-screen-orientation/www/screenorientation.js",
+      "pluginId": "cordova-plugin-screen-orientation",
+      "clobbers": [
+        "cordova.plugins.screenorientation"
+      ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
+    },
+    {
+      "id": "cordova-plugin-statusbar.statusbar",
+      "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+      "pluginId": "cordova-plugin-statusbar",
+      "clobbers": [
+        "window.StatusBar"
+      ]
+    },
+    {
+      "id": "cordova-plugin-tts.tts",
+      "file": "plugins/cordova-plugin-tts/www/tts.js",
+      "pluginId": "cordova-plugin-tts",
+      "clobbers": [
+        "TTS"
+      ]
+    },
+    {
+      "id": "cordova-plugin-fcm-with-dependecy-updated.FCMPlugin",
+      "file": "plugins/cordova-plugin-fcm-with-dependecy-updated/www/FCMPlugin.js",
+      "pluginId": "cordova-plugin-fcm-with-dependecy-updated",
+      "clobbers": [
+        "FCMPlugin"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-android-firebase-gradle-release": "4.0.0",
+    "cordova-android-play-services-gradle-release": "2.1.0",
+    "cordova-plugin-android-support-v4": "21.0.1",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-background-mode": "0.7.3",
+    "cordova-plugin-camera": "4.1.0",
+    "cordova-plugin-firebase": "2.0.5",
+    "cordova-plugin-inappbrowser": "3.0.0",
+    "cordova-plugin-insomnia": "4.3.0",
+    "cordova-plugin-ionic-keyboard": "2.1.3",
+    "cordova-plugin-network-information": "2.0.2",
+    "es6-promise-plugin": "4.2.2",
+    "cordova-plugin-screen-orientation": "3.0.2",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-tts": "0.2.3",
+    "cordova-plugin-whitelist": "1.3.3",
+    "cordova-plugin-fcm-with-dependecy-updated": "4.1.0"
+  }
 }

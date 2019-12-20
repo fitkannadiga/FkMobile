@@ -7,9 +7,6 @@ import { Router } from '@angular/router';
 import { ArticleDetailsService } from '../../api/article-details.service';
 import { AngularFireDatabase } from '@angular/fire/database';
 
-import { File } from '@ionic-native/file/ngx';
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.page.html',
@@ -48,7 +45,7 @@ export class ArticlesPage implements OnInit {
       fullscreen : 'yes',//Windows only    
   };
 
-  constructor(public loadingController: LoadingController, public events: Events, private alertCtrl: AlertController, public commonService: CommonService, public IAB: InAppBrowser, public toastr: ToastController, public router: Router, public articleService: ArticleDetailsService, public afDataBase: AngularFireDatabase, public socialShare: SocialSharing, public file: File) {
+  constructor(public loadingController: LoadingController, public events: Events, private alertCtrl: AlertController, public commonService: CommonService, public IAB: InAppBrowser, public toastr: ToastController, public router: Router, public articleService: ArticleDetailsService, public afDataBase: AngularFireDatabase) {
     this.loaderCounter = 0;
     this.getArticles();
 
@@ -190,102 +187,6 @@ export class ArticlesPage implements OnInit {
       return view + 1;
     })
   }
-
-  openShareOptions(data, event){
-    event.preventDefault();
-    this.share = true;
-    this.dataForShare = data;
-  }
-
-  async shareTwitter() {
-    this.share = false;
-    let url = 'https://www.facebook.com/fitkannadiga';
-    // Either URL or Image
-    this.socialShare.shareViaTwitter(null, null, url).then(() => {
-      // Success
-    }).catch((e) => {
-      // Error!
-    });
-  }
- 
-  async shareWhatsApp() {
-    // Text + Image or URL works
-    this.share = false;
-    let url = 'https://www.facebook.com/fitkannadiga';
-    this.socialShare.shareViaWhatsApp(this.dataForShare.title, null, url).then(() => {
-      // Success
-    }).catch((e) => {
-      // Error!
-    });
-  }
- 
-  async resolveLocalFile() {
-    return this.file.copyFile(`${this.file.applicationDirectory}www/assets/imgs/`, 'logo.png', this.file.cacheDirectory, `${new Date().getTime()}.png`);
-  }
- 
-  removeTempFile(name) {
-    this.file.removeFile(this.file.cacheDirectory, name);
-  }
- 
-  async shareEmail() {
-    // let file = await this.resolveLocalFile().then((data)=> {
-    //   console.log("data from file", data);
-    // });
- 
-    // this.socialShare.shareViaEmail(this.dataForShare.title, 'Download Fit Kannadiga app for more!', ['fitkannadiga@gmail.com'], null, null, file.nativeURL).then(() => {
-    //   this.removeTempFile(file.name);
-    // }).catch((e) => {
-    //   // Error!
-    // });
-  }
- 
-  async shareFacebook() {
-    // Image or URL works
-    this.socialShare.shareViaFacebook('Fit Kannadiga', './assets/imgs/logo.png', 'https://www.facebook.com/fitkanndiga').then(() => {
-      console.log("fb shared successfully!!");
-    }).catch((error) => {
-      console.log("FB error", error);
-    });
-  }
-
-  async shareInstagram() {
-      this.socialShare.shareViaInstagram(null, './assets/imgs/logo.png').then(() => {
-        // this.removeTempFile(data.name);
-        console.log("insta shared");
-      }).catch((error) => {
-        console.log("INSTA error", error);
-      });
-  }
-
-  // facebookShare(){
-  //   this.share = false;
-  //   let url = 'https://www.facebook.com/fitkannadiga';
-  //   this.socialShare.shareViaFacebook(this.dataForShare.title, this.dataForShare.img_path, url).then((data)=> {
-  //     console.log("facebook share successful!!!", data);
-  //   }).catch(error => {
-  //     console.log("facebook share failure!!!");
-  //   });
-  // }
-
-  // whatsappShare(){
-  //   this.share = false;
-  //   let url = 'https://www.facebook.com/fitkannadiga';
-  //   this.socialShare.shareViaWhatsApp(this.dataForShare.title, this.dataForShare.img_path, url).then((data)=> {
-  //     console.log("whatsapp share successful!!!", data);
-  //   }).catch(error => {
-  //     console.log("whatsapp share failure!!!");
-  //   });
-  // }
-
-  // instaShare(){
-  //   this.share = false;
-  //   let url = 'https://www.facebook.com/fitkannadiga';
-  //   this.socialShare.shareViaWhatsApp(this.dataForShare.title, this.dataForShare.img_path, url).then((data)=> {
-  //     console.log("whatsapp share successful!!!", data);
-  //   }).catch(error => {
-  //     console.log("whatsapp share failure!!!");
-  //   });
-  // }
 
   async presentLoading(msg) {
     this.articleLoader = await this.loadingController.create({

@@ -465,11 +465,6 @@ var map = {
 		"common",
 		"pages-bmrcalculator-bmrcalculator-module"
 	],
-	"./pages/chat/chat.module": [
-		"./src/app/pages/chat/chat.module.ts",
-		"common",
-		"pages-chat-chat-module"
-	],
 	"./pages/client-diet/client-diet.module": [
 		"./src/app/pages/client-diet/client-diet.module.ts",
 		"common",
@@ -1091,6 +1086,56 @@ var GlobalService = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/api/internet-status.service.ts":
+/*!************************************************!*\
+  !*** ./src/app/api/internet-status.service.ts ***!
+  \************************************************/
+/*! exports provided: InternetStatusService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InternetStatusService", function() { return InternetStatusService; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _network_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./network.service */ "./src/app/api/network.service.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var InternetStatusService = /** @class */ (function () {
+    function InternetStatusService(networkService) {
+        var _this = this;
+        this.networkService = networkService;
+        this.networkService
+            .getNetworkStatus()
+            .pipe()
+            .subscribe(function (connected) {
+            _this.isConnected = connected;
+        });
+    }
+    InternetStatusService.prototype.getNewtowrkStatus = function () {
+        return this.isConnected;
+    };
+    InternetStatusService = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])({
+            providedIn: 'root'
+        }),
+        __metadata("design:paramtypes", [_network_service__WEBPACK_IMPORTED_MODULE_1__["NetworkService"]])
+    ], InternetStatusService);
+    return InternetStatusService;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/api/network.service.ts":
 /*!****************************************!*\
   !*** ./src/app/api/network.service.ts ***!
@@ -1260,7 +1305,6 @@ var routes = [
     { path: 'faq', loadChildren: './pages/faq/faq.module#FaqPageModule' },
     { path: 'feedback', loadChildren: './pages/feedback/feedback.module#FeedbackPageModule' },
     { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
-    { path: 'chat', loadChildren: './pages/chat/chat.module#ChatPageModule' },
     { path: 'create-recipe', loadChildren: './pages/create-recipe/create-recipe.module#CreateRecipePageModule' }
 ];
 var AppRoutingModule = /** @class */ (function () {
@@ -1435,7 +1479,7 @@ var AppComponent = /** @class */ (function () {
             if (_this.userLogin) {
                 _this.userID = window.localStorage.getItem('authID');
                 _this.navCtrl.navigateRoot('/tabs');
-                _this.subscribeToMsgCount();
+                // this.subscribeToMsgCount();
                 _this.getUserInformation();
                 _this.menuCtrl.enable(true);
                 setTimeout(function () {
@@ -1669,52 +1713,50 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
-/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
-/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
-/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _ionic_native_text_to_speech_ngx__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @ionic-native/text-to-speech/ngx */ "./node_modules/@ionic-native/text-to-speech/ngx/index.js");
-/* harmony import */ var _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/network/ngx */ "./node_modules/@ionic-native/network/ngx/index.js");
-/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
-/* harmony import */ var _ionic_native_insomnia_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic-native/insomnia/ngx */ "./node_modules/@ionic-native/insomnia/ngx/index.js");
-/* harmony import */ var _pages_login_login_module__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./pages/login/login.module */ "./src/app/pages/login/login.module.ts");
-/* harmony import */ var _tabs_tabs_module__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./tabs/tabs.module */ "./src/app/tabs/tabs.module.ts");
-/* harmony import */ var _pages_home_home_module__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./pages/home/home.module */ "./src/app/pages/home/home.module.ts");
-/* harmony import */ var _pages_registration_registration_module__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./pages/registration/registration.module */ "./src/app/pages/registration/registration.module.ts");
-/* harmony import */ var _pages_recipes_recipes_module__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./pages/recipes/recipes.module */ "./src/app/pages/recipes/recipes.module.ts");
-/* harmony import */ var _pages_fit_book_fit_book_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/fit-book/fit-book.module */ "./src/app/pages/fit-book/fit-book.module.ts");
-/* harmony import */ var _pages_videos_videos_module__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./pages/videos/videos.module */ "./src/app/pages/videos/videos.module.ts");
-/* harmony import */ var _ionic_native_google_plus_ngx__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! @ionic-native/google-plus/ngx */ "./node_modules/@ionic-native/google-plus/ngx/index.js");
-/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
-/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
-/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
-/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! @ionic-native/firebase/ngx */ "./node_modules/@ionic-native/firebase/ngx/index.js");
-/* harmony import */ var _app_firebase_config__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./app.firebase.config */ "./src/app/app.firebase.config.ts");
-/* harmony import */ var _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./components/user-story/user-story.component */ "./src/app/components/user-story/user-story.component.ts");
-/* harmony import */ var _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @ionic-native/social-sharing/ngx */ "./node_modules/@ionic-native/social-sharing/ngx/index.js");
-/* harmony import */ var _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @ionic-native/file/ngx */ "./node_modules/@ionic-native/file/ngx/index.js");
-/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ng2-ckeditor */ "./node_modules/ng2-ckeditor/lib/bundles/ng2-ckeditor.umd.min.js");
-/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31___default = /*#__PURE__*/__webpack_require__.n(ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31__);
-/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
-/* harmony import */ var _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./components/create-recipe/create-recipe.component */ "./src/app/components/create-recipe/create-recipe.component.ts");
-/* harmony import */ var _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./components/workout-info/workout-info.component */ "./src/app/components/workout-info/workout-info.component.ts");
-/* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/ngx/index.js");
-/* harmony import */ var _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! @ionic-native/crop/ngx */ "./node_modules/@ionic-native/crop/ngx/index.js");
-/* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ "./node_modules/@ionic-native/ionic-webview/ngx/index.js");
-/* harmony import */ var _ionic_native_file_path_ngx__WEBPACK_IMPORTED_MODULE_38__ = __webpack_require__(/*! @ionic-native/file-path/ngx */ "./node_modules/@ionic-native/file-path/ngx/index.js");
-/* harmony import */ var _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_39__ = __webpack_require__(/*! @ionic-native/file-transfer/ngx */ "./node_modules/@ionic-native/file-transfer/ngx/index.js");
-/* harmony import */ var _api_network_service__WEBPACK_IMPORTED_MODULE_40__ = __webpack_require__(/*! ./api/network.service */ "./src/app/api/network.service.ts");
-/* harmony import */ var _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_41__ = __webpack_require__(/*! @ionic-native/screen-orientation/ngx */ "./node_modules/@ionic-native/screen-orientation/ngx/index.js");
-/* harmony import */ var _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_42__ = __webpack_require__(/*! @ionic-native/image-picker/ngx */ "./node_modules/@ionic-native/image-picker/ngx/index.js");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var _ionic_angular__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic/angular */ "./node_modules/@ionic/angular/dist/fesm5.js");
+/* harmony import */ var _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ionic-native/splash-screen/ngx */ "./node_modules/@ionic-native/splash-screen/ngx/index.js");
+/* harmony import */ var _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @ionic-native/status-bar/ngx */ "./node_modules/@ionic-native/status-bar/ngx/index.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _ionic_native_text_to_speech_ngx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @ionic-native/text-to-speech/ngx */ "./node_modules/@ionic-native/text-to-speech/ngx/index.js");
+/* harmony import */ var _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @ionic-native/network/ngx */ "./node_modules/@ionic-native/network/ngx/index.js");
+/* harmony import */ var _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @ionic-native/in-app-browser/ngx */ "./node_modules/@ionic-native/in-app-browser/ngx/index.js");
+/* harmony import */ var _ionic_native_insomnia_ngx__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @ionic-native/insomnia/ngx */ "./node_modules/@ionic-native/insomnia/ngx/index.js");
+/* harmony import */ var _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @ionic-native/camera/ngx */ "./node_modules/@ionic-native/camera/ngx/index.js");
+/* harmony import */ var _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @ionic-native/ionic-webview/ngx */ "./node_modules/@ionic-native/ionic-webview/ngx/index.js");
+/* harmony import */ var _api_network_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./api/network.service */ "./src/app/api/network.service.ts");
+/* harmony import */ var _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @ionic-native/screen-orientation/ngx */ "./node_modules/@ionic-native/screen-orientation/ngx/index.js");
+/* harmony import */ var _pages_login_login_module__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./pages/login/login.module */ "./src/app/pages/login/login.module.ts");
+/* harmony import */ var _tabs_tabs_module__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./tabs/tabs.module */ "./src/app/tabs/tabs.module.ts");
+/* harmony import */ var _pages_home_home_module__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pages/home/home.module */ "./src/app/pages/home/home.module.ts");
+/* harmony import */ var _pages_registration_registration_module__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pages/registration/registration.module */ "./src/app/pages/registration/registration.module.ts");
+/* harmony import */ var _pages_recipes_recipes_module__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./pages/recipes/recipes.module */ "./src/app/pages/recipes/recipes.module.ts");
+/* harmony import */ var _pages_fit_book_fit_book_module__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./pages/fit-book/fit-book.module */ "./src/app/pages/fit-book/fit-book.module.ts");
+/* harmony import */ var _pages_videos_videos_module__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./pages/videos/videos.module */ "./src/app/pages/videos/videos.module.ts");
+/* harmony import */ var _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./components/create-recipe/create-recipe.component */ "./src/app/components/create-recipe/create-recipe.component.ts");
+/* harmony import */ var _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./components/workout-info/workout-info.component */ "./src/app/components/workout-info/workout-info.component.ts");
+/* harmony import */ var _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./components/user-story/user-story.component */ "./src/app/components/user-story/user-story.component.ts");
+/* harmony import */ var _angular_fire__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! @angular/fire */ "./node_modules/@angular/fire/index.js");
+/* harmony import */ var _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! @angular/fire/firestore */ "./node_modules/@angular/fire/firestore/index.js");
+/* harmony import */ var _angular_fire_storage__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! @angular/fire/storage */ "./node_modules/@angular/fire/storage/index.js");
+/* harmony import */ var _angular_fire_auth__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! @angular/fire/auth */ "./node_modules/@angular/fire/auth/index.js");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! @ionic-native/firebase/ngx */ "./node_modules/@ionic-native/firebase/ngx/index.js");
+/* harmony import */ var _app_firebase_config__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./app.firebase.config */ "./src/app/app.firebase.config.ts");
+/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ng2-ckeditor */ "./node_modules/ng2-ckeditor/lib/bundles/ng2-ckeditor.umd.min.js");
+/* harmony import */ var ng2_ckeditor__WEBPACK_IMPORTED_MODULE_35___default = /*#__PURE__*/__webpack_require__.n(ng2_ckeditor__WEBPACK_IMPORTED_MODULE_35__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
 
 
 
@@ -1736,6 +1778,9 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+// COMPONENTS FOR SUB PAGES
+
+
 
 // ANGULAR FIRE MODULES
 
@@ -1745,20 +1790,7 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// CUSTOM MODULES IMPORTED
 
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -1766,59 +1798,51 @@ var AppModule = /** @class */ (function () {
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"],
-                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_28__["UserStoryComponent"],
-                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_33__["CreateRecipeComponent"],
-                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_34__["WorkoutInfoComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"],
+                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_27__["UserStoryComponent"],
+                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_25__["CreateRecipeComponent"],
+                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_26__["WorkoutInfoComponent"]
             ],
             entryComponents: [
-                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_28__["UserStoryComponent"],
-                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_33__["CreateRecipeComponent"],
-                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_34__["WorkoutInfoComponent"]
+                _components_user_story_user_story_component__WEBPACK_IMPORTED_MODULE_27__["UserStoryComponent"],
+                _components_create_recipe_create_recipe_component__WEBPACK_IMPORTED_MODULE_25__["CreateRecipeComponent"],
+                _components_workout_info_workout_info_component__WEBPACK_IMPORTED_MODULE_26__["WorkoutInfoComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-                _angular_fire__WEBPACK_IMPORTED_MODULE_21__["AngularFireModule"].initializeApp(_app_firebase_config__WEBPACK_IMPORTED_MODULE_27__["FIREBASE_CONFIG"]),
-                _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicModule"].forRoot(),
-                _app_routing_module__WEBPACK_IMPORTED_MODULE_7__["AppRoutingModule"],
+                _angular_fire__WEBPACK_IMPORTED_MODULE_28__["AngularFireModule"].initializeApp(_app_firebase_config__WEBPACK_IMPORTED_MODULE_34__["FIREBASE_CONFIG"]),
+                _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicModule"].forRoot(),
+                _app_routing_module__WEBPACK_IMPORTED_MODULE_8__["AppRoutingModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
-                ng2_ckeditor__WEBPACK_IMPORTED_MODULE_31__["CKEditorModule"],
-                _angular_forms__WEBPACK_IMPORTED_MODULE_32__["FormsModule"],
-                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_22__["AngularFirestoreModule"],
-                _angular_fire_storage__WEBPACK_IMPORTED_MODULE_23__["AngularFireStorageModule"],
-                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_24__["AngularFireAuthModule"],
-                _angular_fire_database__WEBPACK_IMPORTED_MODULE_25__["AngularFireDatabaseModule"],
-                _tabs_tabs_module__WEBPACK_IMPORTED_MODULE_14__["TabsPageModule"],
-                _pages_login_login_module__WEBPACK_IMPORTED_MODULE_13__["LoginPageModule"],
-                _pages_videos_videos_module__WEBPACK_IMPORTED_MODULE_19__["VideosPageModule"],
-                _pages_fit_book_fit_book_module__WEBPACK_IMPORTED_MODULE_18__["FitBookPageModule"],
-                _pages_recipes_recipes_module__WEBPACK_IMPORTED_MODULE_17__["RecipesPageModule"],
-                _pages_registration_registration_module__WEBPACK_IMPORTED_MODULE_16__["RegistrationPageModule"],
-                _pages_home_home_module__WEBPACK_IMPORTED_MODULE_15__["HomePageModule"]
+                ng2_ckeditor__WEBPACK_IMPORTED_MODULE_35__["CKEditorModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_4__["FormsModule"],
+                _angular_fire_firestore__WEBPACK_IMPORTED_MODULE_29__["AngularFirestoreModule"],
+                _angular_fire_storage__WEBPACK_IMPORTED_MODULE_30__["AngularFireStorageModule"],
+                _angular_fire_auth__WEBPACK_IMPORTED_MODULE_31__["AngularFireAuthModule"],
+                _angular_fire_database__WEBPACK_IMPORTED_MODULE_32__["AngularFireDatabaseModule"],
+                _tabs_tabs_module__WEBPACK_IMPORTED_MODULE_19__["TabsPageModule"],
+                _pages_login_login_module__WEBPACK_IMPORTED_MODULE_18__["LoginPageModule"],
+                _pages_videos_videos_module__WEBPACK_IMPORTED_MODULE_24__["VideosPageModule"],
+                _pages_fit_book_fit_book_module__WEBPACK_IMPORTED_MODULE_23__["FitBookPageModule"],
+                _pages_recipes_recipes_module__WEBPACK_IMPORTED_MODULE_22__["RecipesPageModule"],
+                _pages_registration_registration_module__WEBPACK_IMPORTED_MODULE_21__["RegistrationPageModule"],
+                _pages_home_home_module__WEBPACK_IMPORTED_MODULE_20__["HomePageModule"]
             ],
             providers: [
-                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_6__["StatusBar"],
-                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_5__["SplashScreen"],
-                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_4__["IonicRouteStrategy"] },
-                _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_11__["InAppBrowser"],
-                _ionic_native_text_to_speech_ngx__WEBPACK_IMPORTED_MODULE_9__["TextToSpeech"],
-                _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_10__["Network"],
-                _ionic_native_insomnia_ngx__WEBPACK_IMPORTED_MODULE_12__["Insomnia"],
-                _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_26__["Firebase"],
-                _ionic_native_social_sharing_ngx__WEBPACK_IMPORTED_MODULE_29__["SocialSharing"],
-                _api_network_service__WEBPACK_IMPORTED_MODULE_40__["NetworkService"],
-                _ionic_native_file_ngx__WEBPACK_IMPORTED_MODULE_30__["File"],
-                _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_35__["Camera"],
-                _ionic_native_crop_ngx__WEBPACK_IMPORTED_MODULE_36__["Crop"],
-                _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_37__["WebView"],
-                _ionic_native_file_path_ngx__WEBPACK_IMPORTED_MODULE_38__["FilePath"],
-                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_39__["FileTransfer"],
-                _ionic_native_file_transfer_ngx__WEBPACK_IMPORTED_MODULE_39__["FileTransferObject"],
-                _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_41__["ScreenOrientation"],
-                _ionic_native_image_picker_ngx__WEBPACK_IMPORTED_MODULE_42__["ImagePicker"],
-                _ionic_native_google_plus_ngx__WEBPACK_IMPORTED_MODULE_20__["GooglePlus"]
+                _ionic_native_status_bar_ngx__WEBPACK_IMPORTED_MODULE_7__["StatusBar"],
+                _ionic_native_splash_screen_ngx__WEBPACK_IMPORTED_MODULE_6__["SplashScreen"],
+                { provide: _angular_router__WEBPACK_IMPORTED_MODULE_2__["RouteReuseStrategy"], useClass: _ionic_angular__WEBPACK_IMPORTED_MODULE_5__["IonicRouteStrategy"] },
+                _ionic_native_in_app_browser_ngx__WEBPACK_IMPORTED_MODULE_12__["InAppBrowser"],
+                _ionic_native_text_to_speech_ngx__WEBPACK_IMPORTED_MODULE_10__["TextToSpeech"],
+                _ionic_native_network_ngx__WEBPACK_IMPORTED_MODULE_11__["Network"],
+                _ionic_native_insomnia_ngx__WEBPACK_IMPORTED_MODULE_13__["Insomnia"],
+                _ionic_native_firebase_ngx__WEBPACK_IMPORTED_MODULE_33__["Firebase"],
+                _api_network_service__WEBPACK_IMPORTED_MODULE_16__["NetworkService"],
+                _ionic_native_camera_ngx__WEBPACK_IMPORTED_MODULE_14__["Camera"],
+                _ionic_native_ionic_webview_ngx__WEBPACK_IMPORTED_MODULE_15__["WebView"],
+                _ionic_native_screen_orientation_ngx__WEBPACK_IMPORTED_MODULE_17__["ScreenOrientation"]
             ],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_8__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_9__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -2698,7 +2722,7 @@ var LoginPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-content padding>\n    <div id=\"login-wrapper\">\n        <img id=\"logo-img\" src=\"./assets/logo.png\" />\n        <form id=\"login-form\" #loginForm=\"ngForm\" (ngSubmit)=\"login()\" autocomplete=\"off\">\n            <ion-item>\n                <ion-label position=\"floating\">Email</ion-label>\n                <ion-input type=\"email\" required [(ngModel)]=\"email\" name=\"email\"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label position=\"floating\">Password</ion-label>\n                <ion-input type=\"Password\" required [(ngModel)]=\"password\" name=\"password\"></ion-input>\n            </ion-item>\n            <ion-button class=\"fk-marginTop-25\" id=\"login-btn\" expand=\"full\" size=\"large\" type=\"submit\" shape=\"round\">Login</ion-button>\n        </form>\n        <ion-row id=\"link-wrapper\">\n            <ion-col>\n                <p id=\"new-user\">\n                    <a routerLink=\"/registration\">Sign Up Now</a>\n                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                    <span id=\"reset-link\" (click)=\"resetPassword()\">Forgot Password?</span>\n                </p>\n                <!-- <p id=\"google-login-btn\" (click)=\"loginWithGoogle()\">\n                    <img src=\"./assets/icon/google.png\" /> <span>Login with Google</span>\n                </p> -->\n                <!-- <ion-button expand=\"full\" size=\"large\" color=\"light\" (click)=\"loginWithGoogle()\">Google Login</ion-button> -->\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>"
+module.exports = "<ion-content padding>\n    <div id=\"login-wrapper\">\n        <img id=\"logo-img\" src=\"./assets/logo.png\" />\n        <form id=\"login-form\" #loginForm=\"ngForm\" (ngSubmit)=\"login()\" autocomplete=\"off\">\n            <ion-item>\n                <ion-label position=\"floating\">Email</ion-label>\n                <ion-input type=\"email\" required [(ngModel)]=\"email\" name=\"email\"></ion-input>\n            </ion-item>\n            <ion-item>\n                <ion-label position=\"floating\">Password</ion-label>\n                <ion-input type=\"Password\" required [(ngModel)]=\"password\" name=\"password\"></ion-input>\n            </ion-item>\n            <ion-button class=\"fk-marginTop-25\" id=\"login-btn\" expand=\"full\" size=\"large\" type=\"submit\" shape=\"round\">Login</ion-button>\n        </form>\n        <ion-row id=\"link-wrapper\">\n            <ion-col>\n                <p id=\"new-user\">\n                    <a routerLink=\"/registration\">Sign Up Now</a>\n                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n                    <span id=\"reset-link\" (click)=\"resetPassword()\">Forgot Password?</span>\n                </p>\n            </ion-col>\n        </ion-row>\n    </div>\n</ion-content>"
 
 /***/ }),
 
@@ -2729,9 +2753,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! firebase */ "./node_modules/firebase/dist/index.cjs.js");
 /* harmony import */ var firebase__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(firebase__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _ionic_native_google_plus_ngx__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ionic-native/google-plus/ngx */ "./node_modules/@ionic-native/google-plus/ngx/index.js");
-/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
-/* harmony import */ var _api_global_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../api/global.service */ "./src/app/api/global.service.ts");
+/* harmony import */ var _angular_fire_database__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/fire/database */ "./node_modules/@angular/fire/database/index.js");
+/* harmony import */ var _api_global_service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../api/global.service */ "./src/app/api/global.service.ts");
+/* harmony import */ var _api_internet_status_service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../api/internet-status.service */ "./src/app/api/internet-status.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2785,7 +2809,7 @@ var __generator = (undefined && undefined.__generator) || function (thisArg, bod
 
 
 var LoginPage = /** @class */ (function () {
-    function LoginPage(navCtrl, loadingController, fire, toastr, router, menuCtrl, platform, gplus, afDataBase, globalService) {
+    function LoginPage(navCtrl, loadingController, fire, toastr, router, menuCtrl, platform, afDataBase, globalService, internetStatus) {
         this.navCtrl = navCtrl;
         this.loadingController = loadingController;
         this.fire = fire;
@@ -2793,9 +2817,9 @@ var LoginPage = /** @class */ (function () {
         this.router = router;
         this.menuCtrl = menuCtrl;
         this.platform = platform;
-        this.gplus = gplus;
         this.afDataBase = afDataBase;
         this.globalService = globalService;
+        this.internetStatus = internetStatus;
         this.email = "";
         this.password = "";
         this.user = this.fire.authState;
@@ -2803,6 +2827,16 @@ var LoginPage = /** @class */ (function () {
     LoginPage.prototype.ngOnInit = function () {
     };
     LoginPage.prototype.login = function () {
+        // check if internet connection is active
+        var internetConnected = this.internetStatus.getNewtowrkStatus();
+        if (internetConnected) {
+            this.initLogin();
+        }
+        else {
+            this.presentToast("Please check your internet connection!");
+        }
+    };
+    LoginPage.prototype.initLogin = function () {
         var _this = this;
         // before registering the user, validate the email id
         var formValid = this.validateFormFields();
@@ -2878,74 +2912,6 @@ var LoginPage = /** @class */ (function () {
             });
         }
     };
-    LoginPage.prototype.loginWithGoogle = function () {
-        // if (this.platform.is('cordova')) {
-        //   this.nativeGoogleLogin();
-        // } else {
-        //   this.webGoogleLogin();
-        // }
-        this.webGoogleLogin();
-    };
-    LoginPage.prototype.nativeGoogleLogin = function () {
-        return __awaiter(this, void 0, void 0, function () {
-            var gplusUser, err_1;
-            var _this = this;
-            return __generator(this, function (_a) {
-                switch (_a.label) {
-                    case 0:
-                        _a.trys.push([0, 3, , 4]);
-                        return [4 /*yield*/, this.gplus.login({
-                                'webClientId': '615957787738-c848hlq7nvre64p51heiaeau00l42699.apps.googleusercontent.com',
-                                'offline': true,
-                                'scopes': 'profile email'
-                            })];
-                    case 1:
-                        gplusUser = _a.sent();
-                        return [4 /*yield*/, this.fire.auth.signInWithCredential(firebase__WEBPACK_IMPORTED_MODULE_4__["auth"].GoogleAuthProvider.credential(gplusUser.idToken)).then(function (data) {
-                                _this.presentLoading('Please wait...');
-                                var userData = {
-                                    'fullname': data.displayName,
-                                    'email': data.email
-                                };
-                                console.log("data from the google auth>>>", JSON.stringify(data));
-                                window.localStorage.setItem("authID", data.uid);
-                                window.localStorage.setItem("login-success", "success");
-                                _this.presentToast('Google login success');
-                                _this.afDataBase.database.ref("profiles/" + data.uid).set(userData).then(function () {
-                                    _this.dismissLoader();
-                                    _this.presentToast("We are happy to have you on board!");
-                                    _this.navCtrl.navigateRoot('/tabs');
-                                    _this.menuCtrl.enable(true);
-                                    setTimeout(function () {
-                                        _this.dismissLoader();
-                                    }, 1000);
-                                });
-                            }).catch(function (error) {
-                                console.log("error from the google auth>>>", JSON.stringify(error));
-                                _this.presentToast('Google login failed. Please check if it was correct credentials.');
-                                setTimeout(function () {
-                                    _this.dismissLoader();
-                                }, 1000);
-                            })];
-                    case 2: return [2 /*return*/, _a.sent()];
-                    case 3:
-                        err_1 = _a.sent();
-                        console.log(err_1);
-                        this.presentToast('Google login failure' + err_1);
-                        return [3 /*break*/, 4];
-                    case 4: return [2 /*return*/];
-                }
-            });
-        });
-    };
-    LoginPage.prototype.webGoogleLogin = function () {
-        var provider = new firebase__WEBPACK_IMPORTED_MODULE_4__["auth"].GoogleAuthProvider();
-        var credential = this.fire.auth.signInWithPopup(provider).then(function (data) {
-            console.log("google web login success", data);
-        }).catch(function (error) {
-            console.log("google web login failure", error);
-        });
-    };
     LoginPage.prototype.presentLoading = function (msg) {
         return __awaiter(this, void 0, void 0, function () {
             var _a;
@@ -3001,7 +2967,7 @@ var LoginPage = /** @class */ (function () {
             template: __webpack_require__(/*! ./login.page.html */ "./src/app/pages/login/login.page.html"),
             styles: [__webpack_require__(/*! ./login.page.scss */ "./src/app/pages/login/login.page.scss")]
         }),
-        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["NavController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["MenuController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"], _ionic_native_google_plus_ngx__WEBPACK_IMPORTED_MODULE_5__["GooglePlus"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_6__["AngularFireDatabase"], _api_global_service__WEBPACK_IMPORTED_MODULE_7__["GlobalService"]])
+        __metadata("design:paramtypes", [_ionic_angular__WEBPACK_IMPORTED_MODULE_1__["NavController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["LoadingController"], _angular_fire_auth__WEBPACK_IMPORTED_MODULE_2__["AngularFireAuth"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["ToastController"], _angular_router__WEBPACK_IMPORTED_MODULE_3__["Router"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["MenuController"], _ionic_angular__WEBPACK_IMPORTED_MODULE_1__["Platform"], _angular_fire_database__WEBPACK_IMPORTED_MODULE_5__["AngularFireDatabase"], _api_global_service__WEBPACK_IMPORTED_MODULE_6__["GlobalService"], _api_internet_status_service__WEBPACK_IMPORTED_MODULE_7__["InternetStatusService"]])
     ], LoginPage);
     return LoginPage;
 }());
@@ -4032,7 +3998,7 @@ var TabsPageModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<ion-tabs>\n    <p id=\"network-offline-msg\" *ngIf=\"noNetwork\">Please Check Network Connection</p>\n    <ion-tab-bar slot=\"bottom\">\n        <ion-tab-button tab=\"home\">\n            <ion-icon name=\"home\"></ion-icon>\n            <ion-label>Home</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"recipes\">\n            <ion-icon name=\"pizza\"></ion-icon>\n            <ion-label>Recipes</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"videos\">\n            <ion-icon name=\"videocam\"></ion-icon>\n            <ion-label>Videos</ion-label>\n        </ion-tab-button>\n        <!-- \n        <ion-tab-button tab=\"fitbook\">\n            <ion-icon name=\"book\"></ion-icon>\n            <ion-label>Fit Book</ion-label>\n        </ion-tab-button> -->\n    </ion-tab-bar>\n</ion-tabs>"
+module.exports = "<ion-tabs>\n    <p id=\"network-offline-msg\" *ngIf=\"!isConnected\">Please Check Network Connection</p>\n    <ion-tab-bar slot=\"bottom\">\n        <ion-tab-button tab=\"home\">\n            <ion-icon name=\"home\"></ion-icon>\n            <ion-label>Home</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"recipes\">\n            <ion-icon name=\"pizza\"></ion-icon>\n            <ion-label>Recipes</ion-label>\n        </ion-tab-button>\n\n        <ion-tab-button tab=\"videos\">\n            <ion-icon name=\"videocam\"></ion-icon>\n            <ion-label>Videos</ion-label>\n        </ion-tab-button>\n        <!-- \n        <ion-tab-button tab=\"fitbook\">\n            <ion-icon name=\"book\"></ion-icon>\n            <ion-label>Fit Book</ion-label>\n        </ion-tab-button> -->\n    </ion-tab-bar>\n</ion-tabs>"
 
 /***/ }),
 
@@ -4121,7 +4087,6 @@ var TabsPage = /** @class */ (function () {
         this.toastr = toastr;
         this.networkService = networkService;
         this.userData = {};
-        this.noNetwork = false;
         this.globalComp.getUserInformationFirebase().then(function (data) {
             // console.log("tabs data", data);
             _this.userData = data;
@@ -4153,17 +4118,7 @@ var TabsPage = /** @class */ (function () {
             .subscribe(function (connected) {
             _this.isConnected = connected;
             console.log('[Home] isConnected', _this.isConnected);
-            _this.handleNotConnected(connected);
         });
-    };
-    TabsPage.prototype.handleNotConnected = function (status) {
-        console.log("internte status >>>", status);
-        if (!status) {
-            this.noNetwork = true;
-        }
-        else {
-            this.noNetwork = false;
-        }
     };
     TabsPage.prototype.presentToast = function (toastMsg) {
         return __awaiter(this, void 0, void 0, function () {

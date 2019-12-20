@@ -59,9 +59,9 @@ var detachComponent = function (delegate, element) {
 
 /***/ }),
 
-/***/ "./node_modules/@ionic/core/dist/esm-es5/chunk-7507b2b9.js":
+/***/ "./node_modules/@ionic/core/dist/esm-es5/chunk-3c9755dd.js":
 /*!*****************************************************************!*\
-  !*** ./node_modules/@ionic/core/dist/esm-es5/chunk-7507b2b9.js ***!
+  !*** ./node_modules/@ionic/core/dist/esm-es5/chunk-3c9755dd.js ***!
   \*****************************************************************/
 /*! exports provided: d, l, s, t */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -73,7 +73,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return setPageHidden; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return transition; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
-/* harmony import */ var _chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-84f6bf13.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-84f6bf13.js");
+/* harmony import */ var _chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./chunk-d0403a2f.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-d0403a2f.js");
 /* harmony import */ var _chunk_94c4865f_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./chunk-94c4865f.js */ "./node_modules/@ionic/core/dist/esm-es5/chunk-94c4865f.js");
 var _this = undefined;
 
@@ -83,7 +83,7 @@ var iosTransitionAnimation = function () { return __webpack_require__.e(/*! impo
 var mdTransitionAnimation = function () { return __webpack_require__.e(/*! import() */ 91).then(__webpack_require__.bind(null, /*! ./md.transition-90b00ffe.js */ "./node_modules/@ionic/core/dist/esm-es5/md.transition-90b00ffe.js")); };
 var transition = function (opts) {
     return new Promise(function (resolve, reject) {
-        Object(_chunk_84f6bf13_js__WEBPACK_IMPORTED_MODULE_1__["w"])(function () {
+        Object(_chunk_d0403a2f_js__WEBPACK_IMPORTED_MODULE_1__["w"])(function () {
             beforeTransition(opts);
             runTransition(opts).then(function (result) {
                 if (result.animation) {

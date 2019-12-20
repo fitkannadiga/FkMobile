@@ -39,7 +39,6 @@ const routes: Routes = [
   { path: 'faq', loadChildren: './pages/faq/faq.module#FaqPageModule' },
   { path: 'feedback', loadChildren: './pages/feedback/feedback.module#FeedbackPageModule' },
   { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
-  { path: 'chat', loadChildren: './pages/chat/chat.module#ChatPageModule' },
   { path: 'create-recipe', loadChildren: './pages/create-recipe/create-recipe.module#CreateRecipePageModule' }
 ];
 
