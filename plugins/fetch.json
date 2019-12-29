@@ -87,14 +87,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-firebase": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-firebase@2.0.5"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-camera": {
     "source": {
       "type": "registry",
@@ -129,66 +121,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-android-play-services-gradle-release": {
+  "cordova-plugin-ionic-webview": {
     "source": {
       "type": "registry",
-      "id": "cordova-android-play-services-gradle-release@^2.0.0"
-    },
-    "is_top_level": true,
-    "variables": {
-      "PLAY_SERVICES_VERSION": "+"
-    }
-  },
-  "cordova-android-firebase-gradle-release": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-android-firebase-gradle-release@^4.0.0"
-    },
-    "is_top_level": true,
-    "variables": {
-      "FIREBASE_VERSION": "+",
-      "FIREBASE-CORE": "17.0.0",
-      "FIREBASE-ADS": "18.0.0",
-      "FIREBASE-ANALYTICS": "17.0.0",
-      "FIREBASE-APPINDEXING": "19.0.0",
-      "FIREBASE-AUTH": "18.0.0",
-      "FIREBASE-FIRESTORE": "20.0.0",
-      "FIREBASE-FUNCTIONS": "18.0.0",
-      "FIREBASE-MESSAGING": "19.0.0",
-      "FIREBASE-STORAGE": "18.0.0",
-      "FIREBASE-CRASH": "16.2.1",
-      "CRASHLYTICS": "2.10.1",
-      "FIREBASE-DYNAMIC-LINKS": "18.0.0",
-      "FIREBASE-INVITES": "17.0.0",
-      "FIREBASE-INAPPMESSAGING": "18.0.1",
-      "FIREBASE-INAPPMESSAGING-DISPLAY": "18.0.1",
-      "FIREBASE-ML-VISION": "21.0.0",
-      "FIREBASE-ML-VISION-IMAGE-LABEL-MODEL": "18.0.0",
-      "FIREBASE-ML-VISION-FACE-MODEL": "18.0.0",
-      "FIREBASE-ML-VISION-OBJECT-DETECTION-MODEL": "17.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE": "20.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE-LANGUAGE-ID-MODEL": "20.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE-TRANSLATE-MODEL": "20.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE-SMART-REPLY-MODEL": "20.0.0",
-      "FIREBASE-ML-MODEL-INTERPRETER": "20.0.0",
-      "FIREBASE-ML-VISION-AUTOML": "17.0.0",
-      "FIREBASE-PERF": "18.0.0",
-      "FIREBASE-DATABASE": "18.0.0",
-      "FIREBASE-CONFIG": "18.0.0"
-    }
-  },
-  "cordova-plugin-android-support-v4": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-android-support-v4@^21.0.1"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-fcm-with-dependecy-updated": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-fcm-with-dependecy-updated"
+      "id": "cordova-plugin-ionic-webview@latest"
     },
     "is_top_level": true,
     "variables": {}
