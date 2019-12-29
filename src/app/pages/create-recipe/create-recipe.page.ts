@@ -12,6 +12,7 @@ export class CreateRecipePage implements OnInit {
   short_desc: any;
   description: any;
   editorConfig: any = {};
+  ckeditorContent: string = '<p>Some html</p>';
 
   constructor(public modal: ModalController) {
     this.editorConfig = {removeButtons:'Save,NewPage,Preview,Print,Templates,Cut,Copy,Paste,PasteText,PasteFromWord,Undo,Redo,Find,Replace,SelectAll,Scayt,Strike,Subscript,Superscript,CopyFormatting,RemoveFormat,Blockquote,CreateDiv,JustifyLeft,JustifyCenter,JustifyRight,JustifyBlock,BidiLtr,BidiRtl,Language,Anchor,Flash,HorizontalRule,Smiley,SpecialChar,PageBreak,Iframe,Styles,Font,FontSize,BGColor,ShowBlocks,About',toolbarGroups:[{ name: 'basicstyles', groups: [ 'basicstyles' ] },{ name: 'paragraph',   groups: [ 'list'] },{ name: 'links' },{ name: 'styles' },{ name: 'colors' }]
@@ -25,5 +26,9 @@ export class CreateRecipePage implements OnInit {
     // validate all fields and also text editor
 
   }
+
+  onChange($event){} onEditorChange($event){} onReady($event){} onFocus($event){} 
+  onBlur($event){} onContentDom($event){} onFileUploadRequest($event){} onFileUploadResponse($event){}
+  onPaste($event){} onDrop($event){}
 
 }

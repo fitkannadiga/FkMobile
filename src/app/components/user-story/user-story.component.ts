@@ -8,7 +8,7 @@ import { ModalController } from '@ionic/angular';
 })
 export class UserStoryComponent implements OnInit {
 
-  @Input() value: number;
+  @Input() value: any;
 
   constructor(public modal: ModalController) { }
 

@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { CreateRecipePage } from './create-recipe.page';
+import { CKEditorModule } from 'ng2-ckeditor';
 
 const routes: Routes = [
   {
@@ -18,7 +19,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule,CKEditorModule,
     RouterModule.forChild(routes)
   ],
   declarations: [CreateRecipePage]
